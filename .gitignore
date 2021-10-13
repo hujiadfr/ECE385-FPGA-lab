@@ -37,6 +37,7 @@
 *.html
 *.jdi
 *.jpg
+*.sld
 # *.mif
 *.pin
 *.pof
