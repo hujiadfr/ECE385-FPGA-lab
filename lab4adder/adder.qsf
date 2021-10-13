@@ -127,7 +127,7 @@ set_location_assignment PIN_AG18 -to Bhex3[5]
 set_location_assignment PIN_AA14 -to Bhex3[6]
 set_location_assignment PIN_F17 -to CO
 set_location_assignment PIN_AB28 -to SW[0]
-set_location_assignment PIN_Y2 -to Run
+set_location_assignment PIN_R24 -to Run
 set_location_assignment PIN_AC28 -to SW[1]
 set_location_assignment PIN_AC27 -to SW[2]
 set_location_assignment PIN_AD27 -to SW[3]
@@ -159,7 +159,7 @@ set_location_assignment PIN_J16 -to Sum[12]
 set_location_assignment PIN_H17 -to Sum[13]
 set_location_assignment PIN_F15 -to Sum[14]
 set_location_assignment PIN_G15 -to Sum[15]
-set_location_assignment PIN_R24 -to Reset
+set_location_assignment PIN_M23 -to Reset
 set_location_assignment PIN_M21 -to LoadB
-set_location_assignment PIN_M23 -to Clk
+set_location_assignment PIN_Y2 -to Clk
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
