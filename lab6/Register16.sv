@@ -1,5 +1,5 @@
 module reg_16 (
-        input logic Clk, Reset, Load
+        input logic Clk, Reset, Load,
         input logic [15:0] Din,
         output logic Shift_Out,
         output logic [15:0] Dout
