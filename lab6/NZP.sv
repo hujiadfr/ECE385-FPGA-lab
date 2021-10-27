@@ -1,7 +1,7 @@
 module NZP
 (
-    input logic[15:0] Bus;
-    output logic[2:0] NZP_val;
+    input logic[15:0] Bus,
+    output logic[2:0] NZP_val
 );
 
 always_comb

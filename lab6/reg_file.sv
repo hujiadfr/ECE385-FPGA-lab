@@ -14,28 +14,20 @@ module reg_file(input logic Clk,
 	
 //transfer the Correspond register
 
-	case (SR1)
 		reg_16 u_reg_16(
 			//ports
 			.Clk       		( Clk       		),
 			.Reset     		( Reset     		),
+			.Load			( LD_REG			),
 			.Din       		( Bus_In       		),
-			.load			( LD_REG			),
-			.Shift_Out 		(  		),
 			.Dout      		( SR1_Out      		)
 		);
-	endcase
-	case (SR2)
-		reg_16 u_reg_16(
+		reg_16 u2_reg_16(
 			//ports
 			.Clk       		( Clk       		),
 			.Reset     		( Reset     		),
+			.Load			( LD_REG			),
 			.Din       		( Bus_In       		),
-			.load			( LD_REG			),
-			.Shift_Out 		(  		),
 			.Dout      		( SR2_Out      		)
 		);
-	endcase
-	
-
 endmodule

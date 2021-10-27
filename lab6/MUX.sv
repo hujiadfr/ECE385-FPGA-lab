@@ -52,9 +52,9 @@ always_comb
     begin
         case(Select)
             4'b0001: Out = A;
-			4'b0010: Out = B;
-			4'b0100: Out = C;
-			4'b1000: Out = D;
+				4'b0010: Out = B;
+				4'b0100: Out = C;
+				4'b1000: Out = D;
 			default: Out = 16'h0000;
         endcase
     end
