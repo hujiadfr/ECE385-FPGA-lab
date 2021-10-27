@@ -72,7 +72,7 @@ HexDriver hex_driver4 (PC[3:0], HEX4);
 assign ADDR = { 4'b00, MAR }; //Note, our external SRAM chip is 1Mx16, but address space is only 64Kx16
 assign MIO_EN = ~OE;
 
-// You need to make your own datapath module and connect everything to the datapath
+// TODO You need to make your own datapath module and connect everything to the datapath
 // Be careful about whether Reset is active high or low
 datapath d0 (/* Please fill in the signals.... */);
 
