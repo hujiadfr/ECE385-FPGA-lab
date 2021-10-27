@@ -17,26 +17,6 @@ module Mux2
 	end
 endmodule
 
-//3 to 1 Mux
-module Mux3
-(
-    input logic Select,
-    input logic [15:0] A,
-    input logic [15:0] B,
-    input logic [15:0] C,
-    output logic [15:0] Out
-);
-    always_comb 
-    begin
-        case(Select)
-			2'b00: Out = A;
-			2'b01: Out = B;
-			2'b10: Out = C;
-			2'b11: Out = D;
-		endcase    
-    end
-endmodule
-
 //4 to 1 MUX
 module Mux4
 (
@@ -50,6 +30,27 @@ module Mux4
     always_comb 
     begin
         case(Select)
+            2'b00: Out = A;
+            2'b01: Out = B;
+            2'b10: Out = C;
+            2'b11: Out = D;
+        endcase
+    end
+endmodule
+
+//prepare for bus
+module Mux_Bus
+(
+    input logic Select,
+    input logic [15:0] A,
+    input logic [15:0] B,
+    input logic [15:0] C,
+    input logic [15:0] D,
+    output logic [15:0] Out
+);
+always_comb 
+    begin
+        case(Select)
             4'b0001: Out = A;
 			4'b0010: Out = B;
 			4'b0100: Out = C;
@@ -57,3 +58,4 @@ module Mux4
 			default: Out = 16'h0000;
         endcase
     end
+endmodule
