@@ -1,4 +1,4 @@
-module HexDriver (input  logic[3:0]  In0,
+module HexDriver (input  logic [3:0]  In0,
                   output logic [6:0]  Out0);
 	
 	always_comb
@@ -15,13 +15,13 @@ module HexDriver (input  logic[3:0]  In0,
 	 	   4'b1000   : Out0 = 7'b0000000; // '8'
 		   4'b1001   : Out0 = 7'b0010000; // '9'
 	 	   4'b1010   : Out0 = 7'b0001000; // 'A'
-	 	   4'b1011   : Out0 = 7'b0000011; // 'B'
+	 	   4'b1011   : Out0 = 7'b0000011; // 'b'
 	 	   4'b1100   : Out0 = 7'b1000110; // 'C'
-		   4'b1101   : Out0 = 7'b0100001; // 'D'
+		   4'b1101   : Out0 = 7'b0100001; // 'd'
 	 	   4'b1110   : Out0 = 7'b0000110; // 'E'
 	 	   4'b1111   : Out0 = 7'b0001110; // 'F'
-	 	   default   : Out0 = 7'bXXXXXXX; // undefined output
-        endcase
+	 	   default   : Out0 = 7'bX;
+	  	 endcase
 	end
 
 endmodule

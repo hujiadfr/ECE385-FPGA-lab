@@ -1,6 +1,7 @@
 //------------------------------------------------------------------------------
 // Company:        UIUC ECE Dept.
 // Engineer:       Stephen Kempf
+
 //
 // Create Date:    
 // Design Name:    ECE 385 Lab 6 Given Code - SLC-3 
@@ -69,15 +70,15 @@ HexDriver hex_driver4 (PC[3:0], HEX4);
 // Connect MAR to ADDR, which is also connected as an input into MEM2IO.
 // MEM2IO will determine what gets put onto Data_CPU (which serves as a potential
 // input into MDR)
+
+
 assign ADDR = { 4'b00, MAR }; //Note, our external SRAM chip is 1Mx16, but address space is only 64Kx16
+//assign ADDR =16'hFFFF;
 assign MIO_EN = ~OE;
 
-// TODO You need to make your own datapath module and connect everything to the datapath
+// You need to make your own datapath module and connect everything to the datapath
 // Be careful about whether Reset is active high or low
-datapath d0 (.*);
-
-
-
+datapath d0 (.*/* Please fill in the signals.... */);
 
 // Our SRAM and I/O controller
 Mem2IO memory_subsystem(
