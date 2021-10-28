@@ -7,7 +7,7 @@ module Control_Unit (
 
     output logic SHIFT_XAB,     // when high, shift XAB
                  fn,            // 0 when ADD, 1 when SUB.
-                 LoadA, LoadB, LoadX, Clear_XA,control_add
+                 LoadA, LoadB, LoadX, Clear_XA,control_add //control add is signal to control status o f9bit_adder
 );
     enum logic [4:0] {REST,ADD1,SHIFT1,ADD2,SHIFT2,ADD3,SHIFT3,ADD4,SHIFT4,ADD5,SHIFT5,ADD6,SHIFT6,ADD7,SHIFT7,SUB,SHIFT8,END} curr_state, next_state;
 

@@ -1,8 +1,8 @@
 module reg_8 (
-        input logic Clk, Reset, Load, Shift_In, Shift_En,
-        input logic [7:0] Din,
-        output logic Shift_Out,
-        output logic [7:0] Dout
+        input logic Clk, Reset, Load, Shift_In, Shift_En, //shift in is bit from last register, and shift_En control the shift status
+        input logic [7:0] Din,  //parallel load
+        output logic Shift_Out, //output bit for shift
+        output logic [7:0] Dout 
     );
     always_ff @ (posedge Clk or posedge Reset) begin
         if (Reset) // Asynchronous Reset
