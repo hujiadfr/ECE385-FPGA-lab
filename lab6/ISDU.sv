@@ -187,7 +187,112 @@ module ISDU (   input logic         Clk,
 				end
 
 			// You need to finish the rest of states.....
-
+			// DR<-SR1&OP2 set CC
+			S_05 :
+				begin
+					SR2MUX = IR_5;
+					SR1MUX = 1'b1;
+					ALUK = 2'b01;
+					GateALU = 1'b1;
+					LD_REG = 1'b1;
+					LD_CC = 1'b1;
+					LD_BEN = 1'b1;
+				end
+			// DR<-NOT(SR) set CC
+			S_09 :
+				begin
+					SR1MUX = 1'b1;
+					ALUK = 2'b10;
+					GateALU = 1'b1;
+					LD_REG = 1'b1;
+					LD_CC = 1'b1;
+					LD_BEN = 1'b1;
+				end
+			
+			// MAR<-B+off6
+			S_06 :
+				begin
+					SR1MUX = 1'b1;
+					ADDR1MUX = 1'b1;
+					ADDR2MUX = 2'b01;
+					GateMARMUX = 1'b1;
+					LD_MAR = 1'b1;
+				end
+			
+			// MDR<-M[MAR]
+			S_25_1 :
+				begin
+					Mem_OE = 1'b0;
+				end
+			S_25_2 :
+				begin 
+					Mem_OE = 1'b0;
+					LD_MDR = 1'b1;
+				end
+			// DR<-MDR set CC
+			S_27:
+				begin
+					GateMDR = 1'b1;
+					LD_REG = 1'b1;
+					LD_CC = 1'b1;
+					LD_BEN = 1'b1;
+				end
+			// MAR<-B+off6
+			S_07:
+				begin
+					SR1MUX = 1'b1;
+					ADDR1MUX = 1'b1;
+					ADDR2MUX = 2'b01;
+					GateMARMUX = 1'b1;
+					LD_MAR = 1'b1;
+				end
+			// MDR<-SR
+			S_23:
+				begin
+					ALUK = 2'b11;
+					GateALU = 1'b1;
+					LD_MDR = 1'b1;
+				end
+			// M[MAR]<-MDR
+			S_16_1:
+				begin
+					Mem_WE = 1'b0;
+				end
+			S_16_2:
+				begin
+					Mem_WE = 1'b0;
+				end
+			// R7<-PC
+			S_04:
+				begin
+					GatePC = 1'b1;
+					LD_REG = 1'b1;
+					DRMUX = IR_11;
+				end
+			// PC<-PC+off11
+			S_21:
+				begin
+					ADDR2MUX = 2'b11;
+					PCMUX = 2'b10;
+					LD_PC = 1'b1;
+				end
+			// PC<-BaseR
+			S_12:
+				begin
+					SR1MUX = 1'b1;
+					ADDR1MUX = 1'b1;
+					ADDR2MUX = 2'b00;
+					PCMUX = 2'b10;
+					LD_PC = 1'b1;
+				end	
+			
+			//PC<-PC+off9
+			S_22:
+				begin
+					ADDR2MUX = 2'b10;
+					PCMUX = 2'b10;
+					LD_PC = 1'b1;
+				end
 			default : ;
 		endcase
 	end 

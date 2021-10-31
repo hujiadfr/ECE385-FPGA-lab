@@ -1,20 +1,19 @@
-module datapath(input logic Clk,
-					 input logic Reset,
-					 input logic LD_MAR, LD_MDR, LD_IR, LD_BEN, LD_CC, LD_REG, LD_PC, LD_LED,
-					 input logic GatePC, GateMDR, GateALU, GateMARMUX,
-					 input logic [1:0] PCMUX, ADDR2MUX, ALUK,
-					 input logic DRMUX, SR1MUX, SR2MUX, ADDR1MUX,
-					 input logic MIO_EN,
-					 input logic [15:0]MDR_In,
-					 output logic BEN,
-					 output logic [11:0]LED,
-					 output logic [15:0]IR,
-					 output logic [15:0]MAR,
-					 output logic [15:0]MDR,
-					 output logic [15:0]PC);
-
-					 
-
+module datapath(
+	input logic Clk,
+	input logic Reset,
+	input logic LD_MAR, LD_MDR, LD_IR, LD_BEN, LD_CC, LD_REG, LD_PC, LD_LED,
+	input logic GatePC, GateMDR, GateALU, GateMARMUX,
+	input logic [1:0] PCMUX, ADDR2MUX, ALUK,
+	input logic DRMUX, SR1MUX, SR2MUX, ADDR1MUX,
+	input logic MIO_EN,
+	input logic [15:0]MDR_In,
+	output logic BEN,
+	output logic [11:0]LED,
+	output logic [15:0]IR,
+	output logic [15:0]MAR,
+	output logic [15:0]MDR,
+	output logic [15:0]PC
+);
 logic [15:0] Bus,PC_IN,ADD_OUT,MDR_DATA,ALU_OUT,Adder_OUT,MDR_value;
 					 
 //create registers
@@ -41,8 +40,8 @@ Mux_bus  bus_mux(.Select({GatePC, GateMDR, GateALU, GateMARMUX}),.A(Adder_OUT),.
 
 always_comb
 begin	 
-ADD_OUT=16'b0;
-PC_next=PC+1;
+	ADD_OUT=16'b0;
+	PC_next=PC+1;
 end
 
 endmodule

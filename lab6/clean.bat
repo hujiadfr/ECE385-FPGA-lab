@@ -33,6 +33,7 @@ for /r . %%a in (db) do (
         del "%%a\*.syn_hier_info"
         del "%%a\*_heursitic.dat"
         del "%%a\*.tmw_info"
+        del "%%a\*.bak"
 
         echo "delete" %%a
         rd "%%a"
