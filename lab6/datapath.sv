@@ -14,7 +14,7 @@ module datapath(
 	output logic [15:0]MDR,
 	output logic [15:0]PC
 );
-logic [15:0] Bus,PC_IN,MAR_In,ADD_OUT,MDR_DATA,ALU_OUT,Adder_OUT,MDR_value,SR1_Out,SR2_Out,ALUB,SEXT11,SEXT9,SEXT6,SEXT5,PC_next;
+logic [15:0] Bus,PC_IN,MAR_In,ADD_OUT,MDR_DATA,ALU_OUT,MDR_value,SR1_Out,SR2_Out,ALUB,SEXT11,SEXT9,SEXT6,SEXT5,PC_next;
 logic [2:0] DR_In, SR1;
 logic [15:0] Add2, Add1;
 logic [2:0] NZP,NZP_com;
@@ -66,7 +66,7 @@ Mux2 MDR_mux(.Select(MIO_EN),.A(Bus),.B(MDR_In),.out(MDR_value));
 	 
 Mux_bus  bus_mux(
 	.Select({GatePC, GateMDR, GateALU, GateMARMUX}),
-	.A(Adder_OUT),
+	.A(ADD_OUT),
 	.B(ALU_OUT),
 	.C(MDR),
 	.D(PC),
@@ -92,7 +92,7 @@ Mux2 ADDR1_Mux(
 
 //ALU LEFT input
 Mux2 SR2_Mux(
-	.Select 		( SR1MUX 		),
+	.Select 		( SR2MUX 		),
 	.A      		( SR2_Out  		),
 	.B      		( SEXT5     	),
 	.out    		( ALUB    		)
