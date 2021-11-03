@@ -100,16 +100,16 @@ timeprecision 1ns;
 		Run = 1;
 		
 	
-	// Basic I/O Test 1		
-	#2 Reset = 1;
-	#2 Run = 0;
-	   S = 16'h0003;
-	// change switch values to see if hex display is correct
-	#100 S = 16'hFFFF;
-   #100 S = 16'h0000;	
-	// reset program
-	#100 Reset = 0;
-	   Run = 1;
+//	// Basic I/O Test 1		
+//	#2 Reset = 1;
+//	#2 Run = 0;
+//	   S = 16'h0003;
+//	// change switch values to see if hex display is correct
+//	#100 S = 16'hFFFF;
+//   #100 S = 16'h0000;	
+//	// reset program
+//	#100 Reset = 0;
+//	   Run = 1;
 	
 	
 	
@@ -168,23 +168,23 @@ timeprecision 1ns;
 //	
 //	
 //	
-//	// Multiplication Test
-//	#10 Reset = 1;
-//	#10 Continue = 1;
-//		Run = 0;
-//		S = 16'h0031;
-//	// x2020 multiplies x0005, and the result should be xA0A0
-//	// enter x0005
-//	#200 S = 16'h0005;
-//	   Continue = 0;
-//	#10 Continue = 1;
-//	// enter x2020
-//	#150 S = 16'h2020;
-//	   Continue = 0;
-//	#10 Continue = 1;
-//	// reset program
-//	#1000 Reset = 0;
-//	   Run = 1;
+	// Multiplication Test
+	#10 Reset = 1;
+	#10 Continue = 1;
+		Run = 0;
+		S = 16'h0031;
+	// x2020 multiplies x0005, and the result should be xA0A0
+	// enter x0005
+	#200 S = 16'h0005;
+	   Continue = 0;
+	#10 Continue = 1;
+	// enter x2020
+	#150 S = 16'h2020;
+	   Continue = 0;
+	#10 Continue = 1;
+	// reset program
+	#1000 Reset = 0;
+	   Run = 1;
 //		
 //		
 //		

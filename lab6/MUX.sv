@@ -13,6 +13,21 @@ module Mux2 (
 	end
 endmodule
 
+module Mux2_3 (
+        input logic Select,
+        input logic [2:0] A,
+		  input logic [2:0] B,
+        output logic [2:0] out
+    );
+   always_comb
+	begin
+			case(Select)
+			1'b0: out=A;
+			1'b1: out=B;
+			endcase
+	end
+endmodule
+
 
 
 module Mux4 (

@@ -29,11 +29,11 @@ reg_16 PC_reg(.*,.Load(LD_PC),.Din(PC_IN),.Dout(PC));
 
 reg_16 IR_reg(.*,.Load(LD_IR),.Din(Bus),.Dout(IR));
 
-reg_16 LED_reg(.*,.Load(LD_LED),.Din(IR[11:0]),.Dout(LED));
+reg_12 LED_reg(.*,.Load(LD_LED),.Din(IR[11:0]),.Dout(LED));
 
-reg_16 NZP_reg(.*,.Load(LD_CC),.Din(NZP_com),.Dout(NZP));
+reg_3 NZP_reg(.*,.Load(LD_CC),.Din(NZP_com),.Dout(NZP));
 
-reg_16 BEN_reg(.*,.Load(LD_BEN),.Din(BEN_com),.Dout(BEN));
+reg_1 BEN_reg(.*,.Load(LD_BEN),.Din(BEN_com),.Dout(BEN));
 
 /*----------Reg_file---------*/
 reg_file u_Reg_file(
@@ -98,7 +98,7 @@ Mux2 SR2_Mux(
 );
 
 //REG FILE SR1 INPUT
-Mux2 Mux_SR1(
+Mux2_3 Mux_SR1(
 	//ports
 	.Select 		( SR1MUX 		),
 	.A      		( IR[11:9] 		),
@@ -107,7 +107,7 @@ Mux2 Mux_SR1(
 );
 
 //REG FILE DR input
-Mux2 Mux_DR(
+Mux2_3 Mux_DR(
 	.Select 		( DRMUX 		),
 	.A      		( IR[11:9]      ),
 	.B      		( 3'b111      	),

@@ -134,7 +134,8 @@ module ISDU (   input logic         Clk,
 			S_33_2 : 
 				Next_state = S_35;
 			S_35 : 
-				Next_state = PauseIR1;
+				Next_state = S_32;
+			//	Next_state = PauseIR1;
 			// PauseIR1 and PauseIR2 are only for Week 1 such that TAs can see 
 			// the values in IR.
 			PauseIR1 : 
@@ -149,20 +150,60 @@ module ISDU (   input logic         Clk,
 					Next_state = S_18;
 			S_32 : 
 				case (Opcode)
-					4'b0001 : 
+					4'b0001 :	// ADD 
 						Next_state = S_01;
-
+					4'b0101 : 	// AND
+						Next_state = S_05;
+					4'b1001 :	// Not 
+						Next_state = S_09;
+					4'b0110 :	// LDR 
+						Next_state = S_06;
+					4'b0111 : 	// STR
+						Next_state = S_07;
+					4'b0100 : 	// JSR
+						Next_state = S_04;
+					4'b1100 :	// JMP 
+						Next_state = S_12;
+					4'b0000 : 	// BR
+						Next_state = S_00;
+					4'b1101 :	//	PSE 
+						Next_state = PauseIR1;
 					// You need to finish the rest of opcodes.....
-
 					default : 
 						Next_state = S_18;
 				endcase
-			S_01 : 
-				Next_state = S_18;
-
+			
+			// LDR
+			S_06:
+				Next_state = S_25_1;
+			S_25_1:
+				Next_state = S_25_2;
+			S_25_2:
+				Next_state = S_27;
+			
+			// STR
+			S_07:
+				Next_state = S_23;
+			S_23:
+				Next_state = S_16_1;
+			S_16_1:
+				Next_state = S_16_2;
+			
+			// JSR
+			S_04:
+				Next_state = S_21;
+			
+			// BR
+			S_00:
+				if (BEN)
+					Next_state = S_22;
+				else
+					Next_state = S_18;
+			
 			// You need to finish the rest of states.....
 
-			default : ;
+			default :
+					Next_state = S_18;
 
 		endcase
 		
@@ -188,20 +229,25 @@ module ISDU (   input logic         Clk,
 					GateMDR = 1'b1;
 					LD_IR = 1'b1;
 				end
-			PauseIR1: ;
+			PauseIR1: 
+					LD_LED = 1'b1;
 			PauseIR2: ;
 			S_32 : 
 				LD_BEN = 1'b1;
 			S_01 : 
 				begin 
 					SR2MUX = IR_5;
+					SR1MUX = 1'b1;
 					ALUK = 2'b00;
 					GateALU = 1'b1;
 					LD_REG = 1'b1;
+					LD_CC = 1'b1;
+					LD_BEN = 1'b1;
 					// incomplete...
 				end
-
+				
 			// You need to finish the rest of states.....
+			
 			// DR<-SR1&OP2 set CC
 			S_05 :
 				begin
@@ -317,4 +363,4 @@ module ISDU (   input logic         Clk,
 	assign Mem_UB = 1'b0;
 	assign Mem_LB = 1'b0;
 	
-endmodule 
+endmodule
