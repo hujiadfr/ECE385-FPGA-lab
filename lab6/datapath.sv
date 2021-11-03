@@ -14,8 +14,9 @@ module datapath(
 	output logic [15:0]MDR,
 	output logic [15:0]PC
 );
-logic [15:0] Bus,PC_IN,MAR_In,ADD_OUT,MDR_DATA,ALU_OUT,Adder_OUT,MDR_value,SR1_out,SR2_Out,ALUB,SEXT11,SEXT9,SEXT6,SEXT5,PC_next;
+logic [15:0] Bus,PC_IN,MAR_In,ADD_OUT,MDR_DATA,ALU_OUT,Adder_OUT,MDR_value,SR1_Out,SR2_Out,ALUB,SEXT11,SEXT9,SEXT6,SEXT5,PC_next;
 logic [2:0] DR_In, SR1;
+logic [15:0] Add2, Add1;
 logic [2:0] NZP,NZP_com;
 logic BEN_com;
 
@@ -121,7 +122,7 @@ ALU u_ALU(
 	.A       		( SR1_Out       ),
 	.B       		( ALUB     		),
 	.ALUK    		( ALUK    		),
-	.ALU_Out 		( ALU_Out 		)
+	.ALU_Out 		( ALU_OUT 		)
 );
 
 
