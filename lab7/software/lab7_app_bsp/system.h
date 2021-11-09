@@ -4,7 +4,7 @@
  * Machine generated for CPU 'nios2_gen2_0' in SOPC Builder design 'lab7_soc'
  * SOPC Builder design path: ../../lab7_soc.sopcinfo
  *
- * Generated: Wed Nov 10 00:02:47 CST 2021
+ * Generated: Wed Nov 10 01:38:02 CST 2021
  */
 
 /*
@@ -182,12 +182,39 @@
 
 
 /*
+ * key configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_key altera_avalon_pio
+#define KEY_BASE 0x60
+#define KEY_BIT_CLEARING_EDGE_REGISTER 0
+#define KEY_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define KEY_CAPTURE 0
+#define KEY_DATA_WIDTH 2
+#define KEY_DO_TEST_BENCH_WIRING 0
+#define KEY_DRIVEN_SIM_VALUE 0
+#define KEY_EDGE_TYPE "NONE"
+#define KEY_FREQ 50000000
+#define KEY_HAS_IN 0
+#define KEY_HAS_OUT 1
+#define KEY_HAS_TRI 0
+#define KEY_IRQ -1
+#define KEY_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define KEY_IRQ_TYPE "NONE"
+#define KEY_NAME "/dev/key"
+#define KEY_RESET_VALUE 0
+#define KEY_SPAN 16
+#define KEY_TYPE "altera_avalon_pio"
+
+
+/*
  * led configuration
  *
  */
 
 #define ALT_MODULE_CLASS_led altera_avalon_pio
-#define LED_BASE 0x40
+#define LED_BASE 0x70
 #define LED_BIT_CLEARING_EDGE_REGISTER 0
 #define LED_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define LED_CAPTURE 0
@@ -282,7 +309,7 @@
  */
 
 #define ALT_MODULE_CLASS_sdram_pll altpll
-#define SDRAM_PLL_BASE 0x30
+#define SDRAM_PLL_BASE 0x80
 #define SDRAM_PLL_IRQ -1
 #define SDRAM_PLL_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SDRAM_PLL_NAME "/dev/sdram_pll"
@@ -291,18 +318,45 @@
 
 
 /*
+ * sw configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_sw altera_avalon_pio
+#define SW_BASE 0x50
+#define SW_BIT_CLEARING_EDGE_REGISTER 0
+#define SW_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define SW_CAPTURE 0
+#define SW_DATA_WIDTH 8
+#define SW_DO_TEST_BENCH_WIRING 0
+#define SW_DRIVEN_SIM_VALUE 0
+#define SW_EDGE_TYPE "NONE"
+#define SW_FREQ 50000000
+#define SW_HAS_IN 1
+#define SW_HAS_OUT 0
+#define SW_HAS_TRI 0
+#define SW_IRQ -1
+#define SW_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define SW_IRQ_TYPE "NONE"
+#define SW_NAME "/dev/sw"
+#define SW_RESET_VALUE 0
+#define SW_SPAN 16
+#define SW_TYPE "altera_avalon_pio"
+
+
+/*
  * sysid_qsys_0 configuration
  *
  */
 
 #define ALT_MODULE_CLASS_sysid_qsys_0 altera_avalon_sysid_qsys
-#define SYSID_QSYS_0_BASE 0x58
+#define SYSID_QSYS_0_BASE 0x98
 #define SYSID_QSYS_0_ID 0
 #define SYSID_QSYS_0_IRQ -1
 #define SYSID_QSYS_0_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_QSYS_0_NAME "/dev/sysid_qsys_0"
 #define SYSID_QSYS_0_SPAN 8
-#define SYSID_QSYS_0_TIMESTAMP 1636466557
+#define SYSID_QSYS_0_TIMESTAMP 1636479291
 #define SYSID_QSYS_0_TYPE "altera_avalon_sysid_qsys"
 
 #endif /* __SYSTEM_H_ */

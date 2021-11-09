@@ -11,7 +11,7 @@
   </columns>
  </systemtable>
  <library
-   expandedCategories="Library/Basic Functions/Simulation; Debug and Verification,Project,Library/Basic Functions,Library/Basic Functions/Simulation; Debug and Verification/Debug and Performance,Library" />
+   expandedCategories="Library/Interface Protocols/PCI Express,Project,Library/Processors and Peripherals,Library,Library/Interface Protocols/PCI Express/QSYS Example Designs,Library/Processors and Peripherals/Peripherals,Library/Interface Protocols" />
  <window width="2560" height="1390" x="0" y="0" />
  <generation path="_PROJECT_NAME_" />
 </preferences>

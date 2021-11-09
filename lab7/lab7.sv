@@ -8,19 +8,21 @@
   ---------------------------------------------------------------------------*/
 // Top-level module that integrates the Nios II system with the rest of the hardware
 
-module lab7(  	  input	       CLOCK_50, 
-					  input  [3:0]  KEY,
-					  output [7:0]  LEDG,
-					  output [12:0] DRAM_ADDR,
-					  output [1:0]  DRAM_BA,
-					  output        DRAM_CAS_N,
-					  output		    DRAM_CKE,
-					  output		    DRAM_CS_N,
-					  inout  [31:0] DRAM_DQ,
-					  output  [3:0] DRAM_DQM,
-					  output		    DRAM_RAS_N,
-					  output		    DRAM_WE_N,
-					  output		    DRAM_CLK
+module lab7(  	input	      	CLOCK_50, 	//-- 50 MHz clock input
+				input  [3:0]  	KEY,	// [0]-- For Qsys-mapped hardware reset purposes
+									// [2]-- For accumulator initialization (‘Reset’)
+									// [3]-- For accumulator accumulation (‘Accumulate’)
+				output [7:0]  	LEDG,	//-- LED display of the accumulator
+				output [12:0] 	DRAM_ADDR,
+				output [1:0]  	DRAM_BA,
+				output        	DRAM_CAS_N,
+				output			DRAM_CKE,
+				output			DRAM_CS_N,
+				inout  [31:0] 	DRAM_DQ,
+				output  [3:0] 	DRAM_DQM,
+				output			DRAM_RAS_N,
+				output			DRAM_WE_N,
+				output			DRAM_CLK
 				  
 				  );
 				  
