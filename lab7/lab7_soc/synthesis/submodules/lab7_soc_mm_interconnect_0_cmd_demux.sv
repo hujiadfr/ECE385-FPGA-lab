@@ -1,4 +1,4 @@
-// (C) 2001-2018 Intel Corporation. All rights reserved.
+// (C) 2001-2020 Intel Corporation. All rights reserved.
 // Your use of Intel Corporation's design tools, logic functions and other 
 // software and tools, and its AMPP partner logic functions, and any output 
 // files from any of the foregoing (including device programming or simulation 
@@ -11,9 +11,9 @@
 // agreement for further details.
 
 
-// $Id: //acds/rel/18.1std/ip/merlin/altera_merlin_demultiplexer/altera_merlin_demultiplexer.sv.terp#1 $
+// $Id: //acds/rel/20.1std/ip/merlin/altera_merlin_demultiplexer/altera_merlin_demultiplexer.sv.terp#1 $
 // $Revision: #1 $
-// $Date: 2018/07/18 $
+// $Date: 2019/10/06 $
 // $Author: psgswbuild $
 
 // -------------------------------------
@@ -28,9 +28,9 @@
 // ------------------------------------------
 // Generation parameters:
 //   output_name:         lab7_soc_mm_interconnect_0_cmd_demux
-//   ST_DATA_W:           105
-//   ST_CHANNEL_W:        8
-//   NUM_OUTPUTS:         8
+//   ST_DATA_W:           104
+//   ST_CHANNEL_W:        6
+//   NUM_OUTPUTS:         6
 //   VALID_WIDTH:         1
 // ------------------------------------------
 
@@ -46,8 +46,8 @@ module lab7_soc_mm_interconnect_0_cmd_demux
     // Sink
     // -------------------
     input  [1-1      : 0]   sink_valid,
-    input  [105-1    : 0]   sink_data, // ST_DATA_W=105
-    input  [8-1 : 0]   sink_channel, // ST_CHANNEL_W=8
+    input  [104-1    : 0]   sink_data, // ST_DATA_W=104
+    input  [6-1 : 0]   sink_channel, // ST_CHANNEL_W=6
     input                         sink_startofpacket,
     input                         sink_endofpacket,
     output                        sink_ready,
@@ -56,60 +56,46 @@ module lab7_soc_mm_interconnect_0_cmd_demux
     // Sources 
     // -------------------
     output reg                      src0_valid,
-    output reg [105-1    : 0] src0_data, // ST_DATA_W=105
-    output reg [8-1 : 0] src0_channel, // ST_CHANNEL_W=8
+    output reg [104-1    : 0] src0_data, // ST_DATA_W=104
+    output reg [6-1 : 0] src0_channel, // ST_CHANNEL_W=6
     output reg                      src0_startofpacket,
     output reg                      src0_endofpacket,
     input                           src0_ready,
 
     output reg                      src1_valid,
-    output reg [105-1    : 0] src1_data, // ST_DATA_W=105
-    output reg [8-1 : 0] src1_channel, // ST_CHANNEL_W=8
+    output reg [104-1    : 0] src1_data, // ST_DATA_W=104
+    output reg [6-1 : 0] src1_channel, // ST_CHANNEL_W=6
     output reg                      src1_startofpacket,
     output reg                      src1_endofpacket,
     input                           src1_ready,
 
     output reg                      src2_valid,
-    output reg [105-1    : 0] src2_data, // ST_DATA_W=105
-    output reg [8-1 : 0] src2_channel, // ST_CHANNEL_W=8
+    output reg [104-1    : 0] src2_data, // ST_DATA_W=104
+    output reg [6-1 : 0] src2_channel, // ST_CHANNEL_W=6
     output reg                      src2_startofpacket,
     output reg                      src2_endofpacket,
     input                           src2_ready,
 
     output reg                      src3_valid,
-    output reg [105-1    : 0] src3_data, // ST_DATA_W=105
-    output reg [8-1 : 0] src3_channel, // ST_CHANNEL_W=8
+    output reg [104-1    : 0] src3_data, // ST_DATA_W=104
+    output reg [6-1 : 0] src3_channel, // ST_CHANNEL_W=6
     output reg                      src3_startofpacket,
     output reg                      src3_endofpacket,
     input                           src3_ready,
 
     output reg                      src4_valid,
-    output reg [105-1    : 0] src4_data, // ST_DATA_W=105
-    output reg [8-1 : 0] src4_channel, // ST_CHANNEL_W=8
+    output reg [104-1    : 0] src4_data, // ST_DATA_W=104
+    output reg [6-1 : 0] src4_channel, // ST_CHANNEL_W=6
     output reg                      src4_startofpacket,
     output reg                      src4_endofpacket,
     input                           src4_ready,
 
     output reg                      src5_valid,
-    output reg [105-1    : 0] src5_data, // ST_DATA_W=105
-    output reg [8-1 : 0] src5_channel, // ST_CHANNEL_W=8
+    output reg [104-1    : 0] src5_data, // ST_DATA_W=104
+    output reg [6-1 : 0] src5_channel, // ST_CHANNEL_W=6
     output reg                      src5_startofpacket,
     output reg                      src5_endofpacket,
     input                           src5_ready,
-
-    output reg                      src6_valid,
-    output reg [105-1    : 0] src6_data, // ST_DATA_W=105
-    output reg [8-1 : 0] src6_channel, // ST_CHANNEL_W=8
-    output reg                      src6_startofpacket,
-    output reg                      src6_endofpacket,
-    input                           src6_ready,
-
-    output reg                      src7_valid,
-    output reg [105-1    : 0] src7_data, // ST_DATA_W=105
-    output reg [8-1 : 0] src7_channel, // ST_CHANNEL_W=8
-    output reg                      src7_startofpacket,
-    output reg                      src7_endofpacket,
-    input                           src7_ready,
 
 
     // -------------------
@@ -122,7 +108,7 @@ module lab7_soc_mm_interconnect_0_cmd_demux
 
 );
 
-    localparam NUM_OUTPUTS = 8;
+    localparam NUM_OUTPUTS = 6;
     wire [NUM_OUTPUTS - 1 : 0] ready_vector;
 
     // -------------------
@@ -171,20 +157,6 @@ module lab7_soc_mm_interconnect_0_cmd_demux
 
         src5_valid         = sink_channel[5] && sink_valid;
 
-        src6_data          = sink_data;
-        src6_startofpacket = sink_startofpacket;
-        src6_endofpacket   = sink_endofpacket;
-        src6_channel       = sink_channel >> NUM_OUTPUTS;
-
-        src6_valid         = sink_channel[6] && sink_valid;
-
-        src7_data          = sink_data;
-        src7_startofpacket = sink_startofpacket;
-        src7_endofpacket   = sink_endofpacket;
-        src7_channel       = sink_channel >> NUM_OUTPUTS;
-
-        src7_valid         = sink_channel[7] && sink_valid;
-
     end
 
     // -------------------
@@ -196,8 +168,6 @@ module lab7_soc_mm_interconnect_0_cmd_demux
     assign ready_vector[3] = src3_ready;
     assign ready_vector[4] = src4_ready;
     assign ready_vector[5] = src5_ready;
-    assign ready_vector[6] = src6_ready;
-    assign ready_vector[7] = src7_ready;
 
     assign sink_ready = |(sink_channel & ready_vector);
 

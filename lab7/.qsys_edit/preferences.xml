@@ -5,13 +5,8 @@
   <columns>
    <connections preferredWidth="175" />
    <irq preferredWidth="34" />
-   <name preferredWidth="360" />
-   <inputclock preferredWidth="213" />
-   <export preferredWidth="331" />
   </columns>
  </systemtable>
- <library
-   expandedCategories="Library/Interface Protocols/PCI Express,Project,Library/Processors and Peripherals,Library,Library/Interface Protocols/PCI Express/QSYS Example Designs,Library/Processors and Peripherals/Peripherals,Library/Interface Protocols" />
- <window width="2560" height="1390" x="0" y="0" />
- <generation path="_PROJECT_NAME_" />
+ <library expandedCategories="Project,Library" />
+ <window width="1593" height="1036" x="329" y="149" />
 </preferences>

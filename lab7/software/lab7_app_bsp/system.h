@@ -1,10 +1,10 @@
 /*
  * system.h - SOPC Builder system and BSP software package information
  *
- * Machine generated for CPU 'nios2_gen2_0' in SOPC Builder design 'lab7_soc'
- * SOPC Builder design path: ../../lab7_soc.sopcinfo
+ * Machine generated for CPU 'nios2_0' in SOPC Builder design 'lab7_soc'
+ * SOPC Builder design path: C:/Users/jiaru/Desktop/lab7/lab7_soc.sopcinfo
  *
- * Generated: Wed Nov 10 01:38:02 CST 2021
+ * Generated: Wed Nov 10 22:14:39 CST 2021
  */
 
 /*
@@ -62,17 +62,17 @@
 
 #define ALT_CPU_ARCHITECTURE "altera_nios2_gen2"
 #define ALT_CPU_BIG_ENDIAN 0
-#define ALT_CPU_BREAK_ADDR 0x00001020
+#define ALT_CPU_BREAK_ADDR 0x08000820
 #define ALT_CPU_CPU_ARCH_NIOS2_R1
 #define ALT_CPU_CPU_FREQ 50000000u
 #define ALT_CPU_CPU_ID_SIZE 1
 #define ALT_CPU_CPU_ID_VALUE 0x00000000
 #define ALT_CPU_CPU_IMPLEMENTATION "tiny"
-#define ALT_CPU_DATA_ADDR_WIDTH 0x1d
+#define ALT_CPU_DATA_ADDR_WIDTH 0x1c
 #define ALT_CPU_DCACHE_LINE_SIZE 0
 #define ALT_CPU_DCACHE_LINE_SIZE_LOG2 0
 #define ALT_CPU_DCACHE_SIZE 0
-#define ALT_CPU_EXCEPTION_ADDR 0x10000020
+#define ALT_CPU_EXCEPTION_ADDR 0x00000020
 #define ALT_CPU_FLASH_ACCELERATOR_LINES 0
 #define ALT_CPU_FLASH_ACCELERATOR_LINE_SIZE 0
 #define ALT_CPU_FLUSHDA_SUPPORTED
@@ -87,10 +87,10 @@
 #define ALT_CPU_ICACHE_LINE_SIZE 0
 #define ALT_CPU_ICACHE_LINE_SIZE_LOG2 0
 #define ALT_CPU_ICACHE_SIZE 0
-#define ALT_CPU_INST_ADDR_WIDTH 0x1d
-#define ALT_CPU_NAME "nios2_gen2_0"
+#define ALT_CPU_INST_ADDR_WIDTH 0x1c
+#define ALT_CPU_NAME "nios2_0"
 #define ALT_CPU_OCI_VERSION 1
-#define ALT_CPU_RESET_ADDR 0x10000000
+#define ALT_CPU_RESET_ADDR 0x00000000
 
 
 /*
@@ -99,17 +99,17 @@
  */
 
 #define NIOS2_BIG_ENDIAN 0
-#define NIOS2_BREAK_ADDR 0x00001020
+#define NIOS2_BREAK_ADDR 0x08000820
 #define NIOS2_CPU_ARCH_NIOS2_R1
 #define NIOS2_CPU_FREQ 50000000u
 #define NIOS2_CPU_ID_SIZE 1
 #define NIOS2_CPU_ID_VALUE 0x00000000
 #define NIOS2_CPU_IMPLEMENTATION "tiny"
-#define NIOS2_DATA_ADDR_WIDTH 0x1d
+#define NIOS2_DATA_ADDR_WIDTH 0x1c
 #define NIOS2_DCACHE_LINE_SIZE 0
 #define NIOS2_DCACHE_LINE_SIZE_LOG2 0
 #define NIOS2_DCACHE_SIZE 0
-#define NIOS2_EXCEPTION_ADDR 0x10000020
+#define NIOS2_EXCEPTION_ADDR 0x00000020
 #define NIOS2_FLASH_ACCELERATOR_LINES 0
 #define NIOS2_FLASH_ACCELERATOR_LINE_SIZE 0
 #define NIOS2_FLUSHDA_SUPPORTED
@@ -123,9 +123,9 @@
 #define NIOS2_ICACHE_LINE_SIZE 0
 #define NIOS2_ICACHE_LINE_SIZE_LOG2 0
 #define NIOS2_ICACHE_SIZE 0
-#define NIOS2_INST_ADDR_WIDTH 0x1d
+#define NIOS2_INST_ADDR_WIDTH 0x1c
 #define NIOS2_OCI_VERSION 1
-#define NIOS2_RESET_ADDR 0x10000000
+#define NIOS2_RESET_ADDR 0x00000000
 
 
 /*
@@ -139,6 +139,45 @@
 #define __ALTERA_AVALON_SYSID_QSYS
 #define __ALTERA_NIOS2_GEN2
 #define __ALTPLL
+
+
+/*
+ * SDRAM configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_SDRAM altera_avalon_new_sdram_controller
+#define SDRAM_BASE 0x0
+#define SDRAM_CAS_LATENCY 3
+#define SDRAM_CONTENTS_INFO
+#define SDRAM_INIT_NOP_DELAY 0.0
+#define SDRAM_INIT_REFRESH_COMMANDS 2
+#define SDRAM_IRQ -1
+#define SDRAM_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define SDRAM_IS_INITIALIZED 1
+#define SDRAM_NAME "/dev/SDRAM"
+#define SDRAM_POWERUP_DELAY 200.0
+#define SDRAM_REFRESH_PERIOD 7.8125
+#define SDRAM_REGISTER_DATA_IN 1
+#define SDRAM_SDRAM_ADDR_WIDTH 0x19
+#define SDRAM_SDRAM_BANK_WIDTH 2
+#define SDRAM_SDRAM_COL_WIDTH 10
+#define SDRAM_SDRAM_DATA_WIDTH 32
+#define SDRAM_SDRAM_NUM_BANKS 4
+#define SDRAM_SDRAM_NUM_CHIPSELECTS 1
+#define SDRAM_SDRAM_ROW_WIDTH 13
+#define SDRAM_SHARED_DATA 0
+#define SDRAM_SIM_MODEL_BASE 0
+#define SDRAM_SPAN 134217728
+#define SDRAM_STARVATION_INDICATOR 0
+#define SDRAM_TRISTATE_BRIDGE_SLAVE ""
+#define SDRAM_TYPE "altera_avalon_new_sdram_controller"
+#define SDRAM_T_AC 5.5
+#define SDRAM_T_MRD 3
+#define SDRAM_T_RCD 20.0
+#define SDRAM_T_RFC 70.0
+#define SDRAM_T_RP 20.0
+#define SDRAM_T_WR 14.0
 
 
 /*
@@ -182,39 +221,12 @@
 
 
 /*
- * key configuration
- *
- */
-
-#define ALT_MODULE_CLASS_key altera_avalon_pio
-#define KEY_BASE 0x60
-#define KEY_BIT_CLEARING_EDGE_REGISTER 0
-#define KEY_BIT_MODIFYING_OUTPUT_REGISTER 0
-#define KEY_CAPTURE 0
-#define KEY_DATA_WIDTH 2
-#define KEY_DO_TEST_BENCH_WIRING 0
-#define KEY_DRIVEN_SIM_VALUE 0
-#define KEY_EDGE_TYPE "NONE"
-#define KEY_FREQ 50000000
-#define KEY_HAS_IN 0
-#define KEY_HAS_OUT 1
-#define KEY_HAS_TRI 0
-#define KEY_IRQ -1
-#define KEY_IRQ_INTERRUPT_CONTROLLER_ID -1
-#define KEY_IRQ_TYPE "NONE"
-#define KEY_NAME "/dev/key"
-#define KEY_RESET_VALUE 0
-#define KEY_SPAN 16
-#define KEY_TYPE "altera_avalon_pio"
-
-
-/*
  * led configuration
  *
  */
 
 #define ALT_MODULE_CLASS_led altera_avalon_pio
-#define LED_BASE 0x70
+#define LED_BASE 0x8001040
 #define LED_BIT_CLEARING_EDGE_REGISTER 0
 #define LED_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define LED_CAPTURE 0
@@ -243,7 +255,7 @@
 #define ALT_MODULE_CLASS_onchip_memory2_0 altera_avalon_onchip_memory2
 #define ONCHIP_MEMORY2_0_ALLOW_IN_SYSTEM_MEMORY_CONTENT_EDITOR 0
 #define ONCHIP_MEMORY2_0_ALLOW_MRAM_SIM_CONTENTS_ONLY_FILE 0
-#define ONCHIP_MEMORY2_0_BASE 0x0
+#define ONCHIP_MEMORY2_0_BASE 0x8001030
 #define ONCHIP_MEMORY2_0_CONTENTS_INFO ""
 #define ONCHIP_MEMORY2_0_DUAL_PORT 0
 #define ONCHIP_MEMORY2_0_GUI_RAM_BLOCK_TYPE "AUTO"
@@ -265,51 +277,12 @@
 
 
 /*
- * sdram configuration
- *
- */
-
-#define ALT_MODULE_CLASS_sdram altera_avalon_new_sdram_controller
-#define SDRAM_BASE 0x10000000
-#define SDRAM_CAS_LATENCY 3
-#define SDRAM_CONTENTS_INFO
-#define SDRAM_INIT_NOP_DELAY 0.0
-#define SDRAM_INIT_REFRESH_COMMANDS 2
-#define SDRAM_IRQ -1
-#define SDRAM_IRQ_INTERRUPT_CONTROLLER_ID -1
-#define SDRAM_IS_INITIALIZED 1
-#define SDRAM_NAME "/dev/sdram"
-#define SDRAM_POWERUP_DELAY 200.0
-#define SDRAM_REFRESH_PERIOD 7.8125
-#define SDRAM_REGISTER_DATA_IN 1
-#define SDRAM_SDRAM_ADDR_WIDTH 0x1a
-#define SDRAM_SDRAM_BANK_WIDTH 2
-#define SDRAM_SDRAM_COL_WIDTH 10
-#define SDRAM_SDRAM_DATA_WIDTH 16
-#define SDRAM_SDRAM_NUM_BANKS 4
-#define SDRAM_SDRAM_NUM_CHIPSELECTS 2
-#define SDRAM_SDRAM_ROW_WIDTH 13
-#define SDRAM_SHARED_DATA 0
-#define SDRAM_SIM_MODEL_BASE 0
-#define SDRAM_SPAN 134217728
-#define SDRAM_STARVATION_INDICATOR 0
-#define SDRAM_TRISTATE_BRIDGE_SLAVE ""
-#define SDRAM_TYPE "altera_avalon_new_sdram_controller"
-#define SDRAM_T_AC 5.5
-#define SDRAM_T_MRD 3
-#define SDRAM_T_RCD 20.0
-#define SDRAM_T_RFC 70.0
-#define SDRAM_T_RP 20.0
-#define SDRAM_T_WR 14.0
-
-
-/*
  * sdram_pll configuration
  *
  */
 
 #define ALT_MODULE_CLASS_sdram_pll altpll
-#define SDRAM_PLL_BASE 0x80
+#define SDRAM_PLL_BASE 0x8001050
 #define SDRAM_PLL_IRQ -1
 #define SDRAM_PLL_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SDRAM_PLL_NAME "/dev/sdram_pll"
@@ -318,45 +291,18 @@
 
 
 /*
- * sw configuration
- *
- */
-
-#define ALT_MODULE_CLASS_sw altera_avalon_pio
-#define SW_BASE 0x50
-#define SW_BIT_CLEARING_EDGE_REGISTER 0
-#define SW_BIT_MODIFYING_OUTPUT_REGISTER 0
-#define SW_CAPTURE 0
-#define SW_DATA_WIDTH 8
-#define SW_DO_TEST_BENCH_WIRING 0
-#define SW_DRIVEN_SIM_VALUE 0
-#define SW_EDGE_TYPE "NONE"
-#define SW_FREQ 50000000
-#define SW_HAS_IN 1
-#define SW_HAS_OUT 0
-#define SW_HAS_TRI 0
-#define SW_IRQ -1
-#define SW_IRQ_INTERRUPT_CONTROLLER_ID -1
-#define SW_IRQ_TYPE "NONE"
-#define SW_NAME "/dev/sw"
-#define SW_RESET_VALUE 0
-#define SW_SPAN 16
-#define SW_TYPE "altera_avalon_pio"
-
-
-/*
  * sysid_qsys_0 configuration
  *
  */
 
 #define ALT_MODULE_CLASS_sysid_qsys_0 altera_avalon_sysid_qsys
-#define SYSID_QSYS_0_BASE 0x98
+#define SYSID_QSYS_0_BASE 0x8001068
 #define SYSID_QSYS_0_ID 0
 #define SYSID_QSYS_0_IRQ -1
 #define SYSID_QSYS_0_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_QSYS_0_NAME "/dev/sysid_qsys_0"
 #define SYSID_QSYS_0_SPAN 8
-#define SYSID_QSYS_0_TIMESTAMP 1636479291
+#define SYSID_QSYS_0_TIMESTAMP 1636552734
 #define SYSID_QSYS_0_TYPE "altera_avalon_sysid_qsys"
 
 #endif /* __SYSTEM_H_ */

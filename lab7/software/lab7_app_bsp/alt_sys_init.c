@@ -1,10 +1,10 @@
 /*
  * alt_sys_init.c - HAL initialization source
  *
- * Machine generated for CPU 'nios2_gen2_0' in SOPC Builder design 'lab7_soc'
- * SOPC Builder design path: ../../lab7_soc.sopcinfo
+ * Machine generated for CPU 'nios2_0' in SOPC Builder design 'lab7_soc'
+ * SOPC Builder design path: C:/Users/jiaru/Desktop/lab7/lab7_soc.sopcinfo
  *
- * Generated: Wed Nov 10 00:02:47 CST 2021
+ * Generated: Wed Nov 10 22:14:39 CST 2021
  */
 
 /*
@@ -65,7 +65,7 @@
  * Allocate the device storage
  */
 
-ALTERA_NIOS2_GEN2_IRQ_INSTANCE ( NIOS2_GEN2_0, nios2_gen2_0);
+ALTERA_NIOS2_GEN2_IRQ_INSTANCE ( NIOS2_0, nios2_0);
 ALTERA_AVALON_SYSID_QSYS_INSTANCE ( SYSID_QSYS_0, sysid_qsys_0);
 
 /*
@@ -78,7 +78,7 @@ ALTERA_AVALON_SYSID_QSYS_INSTANCE ( SYSID_QSYS_0, sysid_qsys_0);
 
 void alt_irq_init ( const void* base )
 {
-    ALTERA_NIOS2_GEN2_IRQ_INIT ( NIOS2_GEN2_0, nios2_gen2_0);
+    ALTERA_NIOS2_GEN2_IRQ_INIT ( NIOS2_0, nios2_0);
     alt_irq_cpu_enable_interrupts();
 }
 

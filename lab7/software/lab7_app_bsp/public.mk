@@ -77,16 +77,16 @@ ALT_CPPFLAGS += -pipe
 
 # This following VERSION comment indicates the version of the tool used to 
 # generate this makefile. A makefile variable is provided for VERSION as well. 
-# ACDS_VERSION: 18.1
-ACDS_VERSION := 18.1
+# ACDS_VERSION: 20.1
+ACDS_VERSION := 20.1
 
 # This following BUILD_NUMBER comment indicates the build number of the tool 
 # used to generate this makefile. 
-# BUILD_NUMBER: 625
+# BUILD_NUMBER: 720
 
 # Qsys--generated SOPCINFO file. Required for resolving node instance ID's with 
 # design component names. 
-SOPCINFO_FILE := $(ABS_BSP_ROOT_DIR)/../../lab7_soc.sopcinfo
+SOPCINFO_FILE := C:/Users/jiaru/Desktop/lab7/lab7_soc.sopcinfo
 
 # Big-Endian operation. 
 # setting BIG_ENDIAN is false
@@ -113,8 +113,8 @@ BSP_TYPE := hal
 # setting CDX is false
 
 # CPU Name 
-# setting CPU_NAME is nios2_gen2_0
-CPU_NAME = nios2_gen2_0
+# setting CPU_NAME is nios2_0
+CPU_NAME = nios2_0
 ELF_PATCH_FLAG  += --cpu_name $(CPU_NAME)
 
 # Hardware Divider present. 
@@ -152,14 +152,14 @@ SOPC_SYSID_FLAG += --id=0
 ELF_PATCH_FLAG  += --id 0
 
 # The SOPC System ID Base Address 
-# setting SOPC_SYSID_BASE_ADDRESS is 0x98
-SOPC_SYSID_FLAG += --sidp=0x98
-ELF_PATCH_FLAG  += --sidp 0x98
+# setting SOPC_SYSID_BASE_ADDRESS is 0x8001068
+SOPC_SYSID_FLAG += --sidp=0x8001068
+ELF_PATCH_FLAG  += --sidp 0x8001068
 
 # The SOPC Timestamp 
-# setting SOPC_TIMESTAMP is 1636479291
-SOPC_SYSID_FLAG += --timestamp=1636479291
-ELF_PATCH_FLAG  += --timestamp 1636479291
+# setting SOPC_TIMESTAMP is 1636552734
+SOPC_SYSID_FLAG += --timestamp=1636552734
+ELF_PATCH_FLAG  += --timestamp 1636552734
 
 # Build a custom version of newlib with the specified space-separated compiler 
 # flags. The custom newlib build will be placed in the <bsp root>/newlib 

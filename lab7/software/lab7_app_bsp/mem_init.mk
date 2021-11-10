@@ -22,6 +22,32 @@
 #
 #########################################################################
 
+#------------------------------------------------------------------------------
+#                         The adjust-path macro
+#
+# If Make is launched from Windows through
+# Windows Subsystem for Linux (WSL).  The adjust-path macro converts absolute windows 
+# paths into unix style paths (Example: c:/dir -> /c/dir). 
+# The adjust_path_mixed function converts WSL path to Windows path.
+# This will ensure paths are readable by GNU Make.
+#------------------------------------------------------------------------------
+
+UNAME = $(shell uname -r)
+ifeq ($(findstring Microsoft,$(UNAME)),Microsoft)
+	WINDOWS_EXE = .exe
+endif
+
+eq = $(and $(findstring $(1),$(2)),$(findstring $(2),$(1)))
+
+ifdef WINDOWS_EXE 
+	adjust-path = $(if $1,$(shell wslpath "$1"),)
+	adjust-path-mixed = $(if $(call eq,$(shell echo $1 | head -c 5),/mnt/),$(shell echo $1 | sed 's/\/mnt\///g;s/\//:\//1'),$1)
+else # !WINDOWS_EXE
+	adjust-path = $1
+	adjust-path-mixed = $1
+endif
+
+
 ifeq ($(MEM_INIT_FILE),)
 # MEM_INIT_FILE should be set equal to the working relative path to this
 # mem_init.mk makefile fragment
@@ -33,11 +59,11 @@ ELF2DAT := elf2dat
 endif
 
 ifeq ($(ELF2HEX),)
-ELF2HEX := elf2hex
+ELF2HEX := elf2hex$(WINDOWS_EXE)
 endif
 
 ifeq ($(ELF2FLASH),)
-ELF2FLASH := elf2flash
+ELF2FLASH := elf2flash$(WINDOWS_EXE)
 endif
 
 ifeq ($(FLASH2DAT),)
@@ -45,11 +71,11 @@ FLASH2DAT := flash2dat
 endif
 
 ifeq ($(ALT_FILE_CONVERT),)
-ALT_FILE_CONVERT := alt-file-convert
+ALT_FILE_CONVERT := alt-file-convert$(WINDOWS_EXE)
 endif
 
 ifeq ($(NM),)
-NM := nios2-elf-nm
+NM := nios2-elf-nm$(WINDOWS_EXE)
 endif
 
 ifeq ($(MKDIR),)
@@ -87,9 +113,16 @@ MEM_INIT_QIP_FILE ?= $(MEM_INIT_DIR)/meminit.qip
 #-------------------------------------
 
 BOOT_LOADER_PATH ?= $(SOPC_KIT_NIOS2)/components/altera_nios2
-BOOT_LOADER_CFI ?= $(BOOT_LOADER_PATH)/boot_loader_cfi.srec
-BOOT_LOADER_CFI_BE ?= $(BOOT_LOADER_PATH)/boot_loader_cfi_be.srec
+BOOT_LOADER_CFI_LOC ?= $(BOOT_LOADER_PATH)/boot_loader_cfi.srec
+BOOT_LOADER_CFI_BE_LOC ?= $(BOOT_LOADER_PATH)/boot_loader_cfi_be.srec
 
+ifdef WINDOWS_EXE
+	BOOT_LOADER_CFI=$(shell wslpath -w $(BOOT_LOADER_CFI_LOC))
+	BOOT_LOADER_CFI_BE=$(shell wslpath -w $(BOOT_LOADER_CFI_BE_LOC))
+else # !WINDOWS_EXE
+	BOOT_LOADER_CFI=$(BOOT_LOADER_CFI_LOC)
+	BOOT_LOADER_CFI_BE=$(BOOT_LOADER_CFI_BE_LOC)
+endif
 
 #-------------------------------------
 # Default Target
@@ -150,18 +183,18 @@ flash2dat_extra_args = $(mem_pad_flag) $(mem_reloc_input_flag)
 
 # This following VERSION comment indicates the version of the tool used to 
 # generate this makefile. A makefile variable is provided for VERSION as well. 
-# ACDS_VERSION: 18.1
-ACDS_VERSION := 18.1
+# ACDS_VERSION: 20.1
+ACDS_VERSION := 20.1
 
 # This following BUILD_NUMBER comment indicates the build number of the tool 
 # used to generate this makefile. 
-# BUILD_NUMBER: 625
+# BUILD_NUMBER: 720
 
 # Optimize for simulation
 SIM_OPTIMIZE ?= 0
 
 # The CPU reset address as needed by elf2flash
-RESET_ADDRESS ?= 0x10000000
+RESET_ADDRESS ?= 0x00000000
 
 # The specific Nios II ELF file format to use.
 NIOS2_ELF_FORMAT ?= elf32-littlenios2
@@ -170,46 +203,46 @@ NIOS2_ELF_FORMAT ?= elf32-littlenios2
 # Pre-Initialized Memory Descriptions
 #-------------------------------------
 
-# Memory: onchip_memory2_0
-MEM_0 := lab7_soc_onchip_memory2_0
-$(MEM_0)_NAME := onchip_memory2_0
-$(MEM_0)_MEM_INIT_FILE_PARAM_NAME := INIT_FILE
-HEX_FILES += $(MEM_INIT_DIR)/$(MEM_0).hex
-MEM_INIT_INSTALL_FILES += $(MEM_INIT_INSTALL_DIR)/$(MEM_0).hex
+# Memory: SDRAM
+MEM_0 := SDRAM
+$(MEM_0)_NAME := SDRAM
 DAT_FILES += $(HDL_SIM_DIR)/$(MEM_0).dat
 HDL_SIM_INSTALL_FILES += $(HDL_SIM_INSTALL_DIR)/$(MEM_0).dat
 SYM_FILES += $(HDL_SIM_DIR)/$(MEM_0).sym
 HDL_SIM_INSTALL_FILES += $(HDL_SIM_INSTALL_DIR)/$(MEM_0).sym
 $(MEM_0)_START := 0x00000000
-$(MEM_0)_END := 0x0000000f
-$(MEM_0)_SPAN := 0x00000010
-$(MEM_0)_HIERARCHICAL_PATH := onchip_memory2_0
+$(MEM_0)_END := 0x07ffffff
+$(MEM_0)_SPAN := 0x08000000
+$(MEM_0)_HIERARCHICAL_PATH := SDRAM
 $(MEM_0)_WIDTH := 32
 $(MEM_0)_HEX_DATA_WIDTH := 32
 $(MEM_0)_ENDIANNESS := --little-endian-mem
 $(MEM_0)_CREATE_LANES := 0
 
-.PHONY: onchip_memory2_0
-onchip_memory2_0: check_elf_exists $(MEM_INIT_DIR)/$(MEM_0).hex $(HDL_SIM_DIR)/$(MEM_0).dat $(HDL_SIM_DIR)/$(MEM_0).sym
+.PHONY: SDRAM
+SDRAM: check_elf_exists $(HDL_SIM_DIR)/$(MEM_0).dat $(HDL_SIM_DIR)/$(MEM_0).sym
 
-# Memory: sdram
-MEM_1 := sdram
-$(MEM_1)_NAME := sdram
+# Memory: onchip_memory2_0
+MEM_1 := lab7_soc_onchip_memory2_0
+$(MEM_1)_NAME := onchip_memory2_0
+$(MEM_1)_MEM_INIT_FILE_PARAM_NAME := INIT_FILE
+HEX_FILES += $(MEM_INIT_DIR)/$(MEM_1).hex
+MEM_INIT_INSTALL_FILES += $(MEM_INIT_INSTALL_DIR)/$(MEM_1).hex
 DAT_FILES += $(HDL_SIM_DIR)/$(MEM_1).dat
 HDL_SIM_INSTALL_FILES += $(HDL_SIM_INSTALL_DIR)/$(MEM_1).dat
 SYM_FILES += $(HDL_SIM_DIR)/$(MEM_1).sym
 HDL_SIM_INSTALL_FILES += $(HDL_SIM_INSTALL_DIR)/$(MEM_1).sym
-$(MEM_1)_START := 0x10000000
-$(MEM_1)_END := 0x17ffffff
-$(MEM_1)_SPAN := 0x08000000
-$(MEM_1)_HIERARCHICAL_PATH := sdram
-$(MEM_1)_WIDTH := 16
-$(MEM_1)_HEX_DATA_WIDTH := 16
+$(MEM_1)_START := 0x08001030
+$(MEM_1)_END := 0x0800103f
+$(MEM_1)_SPAN := 0x00000010
+$(MEM_1)_HIERARCHICAL_PATH := onchip_memory2_0
+$(MEM_1)_WIDTH := 32
+$(MEM_1)_HEX_DATA_WIDTH := 32
 $(MEM_1)_ENDIANNESS := --little-endian-mem
 $(MEM_1)_CREATE_LANES := 0
 
-.PHONY: sdram
-sdram: check_elf_exists $(HDL_SIM_DIR)/$(MEM_1).dat $(HDL_SIM_DIR)/$(MEM_1).sym
+.PHONY: onchip_memory2_0
+onchip_memory2_0: check_elf_exists $(MEM_INIT_DIR)/$(MEM_1).hex $(HDL_SIM_DIR)/$(MEM_1).dat $(HDL_SIM_DIR)/$(MEM_1).sym
 
 
 #END OF BSP SPECIFIC
@@ -278,25 +311,25 @@ flash: check_elf_exists $(FLASH_FILES)
 #-------------------------------------
 
 .PHONY: check_elf_exists
-check_elf_exists: $(ELF)
+check_elf_exists: $(call adjust-path,$(ELF))
 ifeq ($(ELF),)
 	$(error ELF var not set in mem_init.mk)
 endif
 
-$(filter-out $(FLASH_DAT_FILES),$(DAT_FILES)): %.dat: $(ELF)
+$(filter-out $(FLASH_DAT_FILES),$(DAT_FILES)): %.dat: $(call adjust-path,$(ELF))
 	$(post-process-info)
 	@$(MKDIR) $(@D)
-	$(ELF2DAT) --infile=$< --outfile=$@ \
+	$(ELF2DAT) --infile=$(call adjust-path-mixed,$<) --outfile=$@ \
 		--base=$(mem_start_address) --end=$(mem_end_address) --width=$(mem_width) \
 		$(mem_endianness) --create-lanes=$(mem_create_lanes) $(elf2dat_extra_args)
 
 $(foreach i,0 1 2 3 4 5 6 7,%_lane$(i).dat): %.dat
 	@true
 
-ELF_TO_HEX_CMD_NO_BOOTLOADER = $(ELF2HEX) $< $(mem_start_address) $(mem_end_address) --width=$(mem_hex_width) \
+ELF_TO_HEX_CMD_NO_BOOTLOADER = $(ELF2HEX) $(call adjust-path-mixed,$<) $(mem_start_address) $(mem_end_address) --width=$(mem_hex_width) \
 			$(mem_endianness) --create-lanes=$(mem_create_lanes) $(elf2hex_extra_args) $@
 			
-ELF_TO_HEX_CMD_WITH_BOOTLOADER = $(ALT_FILE_CONVERT) -I $(NIOS2_ELF_FORMAT) -O hex --input=$< --output=$@ \
+ELF_TO_HEX_CMD_WITH_BOOTLOADER = $(ALT_FILE_CONVERT) -I $(NIOS2_ELF_FORMAT) -O hex --input=$(call adjust-path-mixed,$<) --output=$@ \
 			--base=$(mem_start_address) --end=$(mem_end_address) --reset=$(RESET_ADDRESS) \
 			--out-data-width=$(mem_hex_width) $(flash_mem_boot_loader_flag)
 
@@ -305,21 +338,20 @@ ELF_TO_HEX_CMD = $(strip $(if $(flash_mem_boot_loader_flag), \
 	$(ELF_TO_HEX_CMD_NO_BOOTLOADER) \
 	))
 
-$(HEX_FILES): %.hex: $(ELF)
+$(HEX_FILES): %.hex: $(call adjust-path,$(ELF))
 	$(post-process-info)
 	@$(MKDIR) $(@D)
 	$(ELF_TO_HEX_CMD)
 
-$(SYM_FILES): %.sym: $(ELF)
+$(SYM_FILES): %.sym: $(call adjust-path,$(ELF))
 	$(post-process-info)
 	@$(MKDIR) $(@D)
-	$(NM) -n $< > $@
+	$(NM) -n $(call adjust-path-mixed,$<) > $@
 
-$(FLASH_FILES): %.flash: $(ELF)
+$(FLASH_FILES): %.flash: $(call adjust-path,$(ELF))
 	$(post-process-info)
 	@$(MKDIR) $(@D)
-	$(ELF2FLASH) --input=$< --outfile=$@ --sim_optimize=$(SIM_OPTIMIZE) $(mem_endianness) \
-		$(elf2flash_extra_args)
+	$(ELF2FLASH) --input=$(call adjust-path-mixed,$<) --output=$@ --sim_optimize=$(SIM_OPTIMIZE) $(elf2flash_extra_args)
 
 #
 # Function generate_spd_entry
