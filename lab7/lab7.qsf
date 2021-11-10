@@ -1120,4 +1120,5 @@ set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_RO
 set_global_assignment -name QIP_FILE lab7_soc/synthesis/lab7_soc.qip
 set_global_assignment -name SDC_FILE lab7.sdc
 set_global_assignment -name SYSTEMVERILOG_FILE lab7.sv
+set_global_assignment -name SDC_FILE "../../../Downloads/lab7(1).sdc"
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
