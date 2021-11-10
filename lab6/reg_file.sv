@@ -1,3 +1,6 @@
+
+//reg_file
+//It loads data from BUS and output to SR1 or SR2, decided by signal SR1 and SR2
 module reg_file
 (
     input logic Clk,

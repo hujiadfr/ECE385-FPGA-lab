@@ -8,8 +8,7 @@ module SEXT
 );
 	always_comb 
 	begin
-	// use the highest prior bit to decide whether to 
-	// extend data by 1 or by 0
+	//This module use most significant bit to just how to extend specific kind of SEXT. And it will extend SEXT by 1 or 0
 	if (IR[10])
 		SEXT11 = {5'b11111,IR[10:0]};
 	else 
