@@ -55,7 +55,9 @@ timeprecision 1ns;
 	logic CE, UB, LB, OE, WE;
 	logic [19:0] ADDR;
 	wire [15:0] Data;
-	
+		logic [2:0]NZP;
+		logic BEN;
+		logic [15:0]R2,R3;
 	// initialize the toplevel entity
 	lab6_toplevel test(.*);
 	
@@ -86,6 +88,17 @@ timeprecision 1ns;
 		MAR = test.my_slc.d0.MAR_reg.Dout;
 	   MDR = test.my_slc.d0.MDR_reg.Dout;
 	   IR = test.my_slc.d0.IR_reg.Dout;	
+		NZP = test.my_slc.d0.NZP;
+		BEN = test.my_slc.d0.BEN;
+		//		BEN = test.my_slc.d0.BEN;
+//		R0 = test.my_slc.d0.u_Reg_file.Reg[0];
+//		R1 = test.my_slc.d0.u_Reg_file.Reg[1];
+		R2 = test.my_slc.d0.u_Reg_file.Reg[2];
+		R3 = test.my_slc.d0.u_Reg_file.Reg[3];
+//		R4 = test.my_slc.d0.u_Reg_file.Reg[4];
+//		R5 = test.my_slc.d0.u_Reg_file.Reg[5];
+//		R6 = test.my_slc.d0.u_Reg_file.Reg[6];
+//		R7 = test.my_slc.d0.u_Reg_file.Reg[7];
 	end
 	
 	// initialize clock signal 
@@ -100,16 +113,16 @@ timeprecision 1ns;
 		Run = 1;
 		
 	
-//	// Basic I/O Test 1		
-//	#2 Reset = 1;
-//	#2 Run = 0;
-//	   S = 16'h0003;
-//	// change switch values to see if hex display is correct
-//	#100 S = 16'hFFFF;
-//   #100 S = 16'h0000;	
-//	// reset program
-//	#100 Reset = 0;
-//	   Run = 1;
+	// Basic I/O Test 1		
+	#2 Reset = 1;
+	#2 Run = 0;
+	   S = 16'h0003;
+	// change switch values to see if hex display is correct
+	#100 S = 16'hFFFF;
+   #100 S = 16'h0000;	
+	// reset program
+	#100 Reset = 0;
+	   Run = 1;
 	
 	
 	
@@ -168,105 +181,105 @@ timeprecision 1ns;
 //	
 //	
 //	
-	// Multiplication Test
-	#10 Reset = 1;
-	#10 Continue = 1;
-		Run = 0;
-		S = 16'h0031;
-	// x2020 multiplies x0005, and the result should be xA0A0
-	// enter x0005
-	#200 S = 16'h0005;
-	   Continue = 0;
-	#10 Continue = 1;
-	// enter x2020
-	#150 S = 16'h2020;
-	   Continue = 0;
-	#10 Continue = 1;
-	// reset program
-	#1000 Reset = 0;
-	   Run = 1;
-		
-//		
-//		
-	// // Sort Test
-	// #10 Reset = 1;
-	// #10 Continue = 1;
-	// 	S = 16'h005A;
-	// 	Run = 0;
-	// // choose "sort" command
-	// #100 S = 16'h0002;
-	//    Continue = 0;
-	// #10 Continue = 1;
-	// #21000 S = 16'h0003;
-	//    Continue = 0;
-	// // after sort, index 0 should be x0001
-	// #10 Continue = 1;
-	// // index 1 should be x0003
-	// #300 Continue = 0;
-	// #10 Continue = 1;
-	// // index 2 should be x0007
-	// #200 Continue = 0;
-	// #10 Continue = 1;
-	// // index 3 should be x000D
-	// #200 Continue = 0;
-	// #10 Continue = 1;
-	// // index 4 should be x001B
-	// #200 Continue = 0;
-	// #10 Continue = 1;
-	// // index 5 should be x001F
-	// #200 Continue = 0;
-	// #10 Continue = 1;
-	// // index 6 should be x0046
-	// #200 Continue = 0;
-	// #10 Continue = 1;
-	// // index 7 should be x0047
-	// #200 Continue = 0;
-	// #10 Continue = 1;
-	// // index 8 should be x004E
-	// #200 Continue = 0;
-	// #10 Continue = 1;
-	// // index 9 should be x006B
-	// #200 Continue = 0;
-	// #10 Continue = 1;
-	// // index 10 should be x008C
-	// #200 Continue = 0;
-	// #10 Continue = 1;
-	// // index 11 should be x00B8
-	// #200 Continue = 0;
-	// #10 Continue = 1;
-	// // index 12 should be x00DB
-	// #200 Continue = 0;
-	// #10 Continue = 1;
-	// // index 13 should be x00EF
-	// #200 Continue = 0;
-	// #10 Continue = 1;
-	// // index 14 should be x00F8
-	// #200 Continue = 0;
-	// #10 Continue = 1;
-	// // index 15 should be x00FA
-	// #200 Continue = 0;
-	// #10 Continue = 1;
-	// // reset program
-	// #250 Reset = 0;
-	//    Run = 1;
+//	// Multiplication Test
+//	#10 Reset = 1;
+//	#10 Continue = 1;
+//		Run = 0;
+//		S = 16'h0031;
+//	// x2020 multiplies x0005, and the result should be xA0A0
+//	// enter x0005
+//	#200 S = 16'h0005;
+//	   Continue = 0;
+//	#10 Continue = 1;
+//	// enter x2020
+//	#150 S = 16'h2020;
+//	   Continue = 0;
+//	#10 Continue = 1;
+//	// reset program
+//	#1000 Reset = 0;
+//	   Run = 1;
 //		
 //		
 //		
-	// "Act Once" Test
-	#10 Reset = 1;
-	#10 Continue = 1;
-		S = 16'h002A;
-		Run = 0;
-	// Hex should count up by 1 each time, starting from 0
-	#150 Continue = 0;
-	#10 Continue = 1;
-	#100 Continue = 0;
-	#10 Continue = 1;
-	#100 Continue = 0;
-	#10 Continue = 1;
-	// reset program
-	#100 Reset = 0;
-	   Run = 1;
+//	// Sort Test
+//	#10 Reset = 1;
+//	#10 Continue = 1;
+//		S = 16'h005A;
+//		Run = 0;
+//	// choose "sort" command
+//	#100 S = 16'h0002;
+//	   Continue = 0;
+//	#10 Continue = 1;
+//	#21000 S = 16'h0003;
+//	   Continue = 0;
+//	// after sort, index 0 should be x0001
+//	#10 Continue = 1;
+//	// index 1 should be x0003
+//	#300 Continue = 0;
+//	#10 Continue = 1;
+//	// index 2 should be x0007
+//	#200 Continue = 0;
+//	#10 Continue = 1;
+//	// index 3 should be x000D
+//	#200 Continue = 0;
+//	#10 Continue = 1;
+//	// index 4 should be x001B
+//	#200 Continue = 0;
+//	#10 Continue = 1;
+//	// index 5 should be x001F
+//	#200 Continue = 0;
+//	#10 Continue = 1;
+//	// index 6 should be x0046
+//	#200 Continue = 0;
+//	#10 Continue = 1;
+//	// index 7 should be x0047
+//	#200 Continue = 0;
+//	#10 Continue = 1;
+//	// index 8 should be x004E
+//	#200 Continue = 0;
+//	#10 Continue = 1;
+//	// index 9 should be x006B
+//	#200 Continue = 0;
+//	#10 Continue = 1;
+//	// index 10 should be x008C
+//	#200 Continue = 0;
+//	#10 Continue = 1;
+//	// index 11 should be x00B8
+//	#200 Continue = 0;
+//	#10 Continue = 1;
+//	// index 12 should be x00DB
+//	#200 Continue = 0;
+//	#10 Continue = 1;
+//	// index 13 should be x00EF
+//	#200 Continue = 0;
+//	#10 Continue = 1;
+//	// index 14 should be x00F8
+//	#200 Continue = 0;
+//	#10 Continue = 1;
+//	// index 15 should be x00FA
+//	#200 Continue = 0;
+//	#10 Continue = 1;
+//	// reset program
+//	#250 Reset = 0;
+//	   Run = 1;
+//		
+//		
+//		
+//	// "Act Once" Test
+//	#10 Reset = 1;
+//	#10 Continue = 1;
+//		S = 16'h002A;
+//		Run = 0;
+//	// Hex should count up by 1 each time, starting from 0
+//	#150 Continue = 0;
+//	#10 Continue = 1;
+//	#100 Continue = 0;
+//	#10 Continue = 1;
+//	#100 Continue = 0;
+//	#10 Continue = 1;
+//	// reset program
+//	#100 Reset = 0;
+//	   Run = 1;
 
 	end
 	 
