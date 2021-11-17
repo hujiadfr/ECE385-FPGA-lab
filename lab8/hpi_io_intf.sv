@@ -34,7 +34,7 @@ begin
         OTG_WR_N                <= from_sw_w;
         OTG_CS_N                <= from_sw_cs;
         OTG_RST_N               <= from_sw_reset;
-        from_sw_data_in         <= from_sw_data_in;
+        from_sw_data_in         <= OTG_DATA;
     end
 end
 
