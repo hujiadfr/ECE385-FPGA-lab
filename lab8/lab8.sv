@@ -49,6 +49,7 @@ module lab8( input               CLOCK_50,
     logic Reset_h, Clk;
     logic [7:0] keycode;
     logic is_ball;
+    logic[9:0] DrawX, DrawY;
     
     assign Clk = CLOCK_50;
     always_ff @ (posedge Clk) begin
@@ -111,7 +112,7 @@ module lab8( input               CLOCK_50,
     // TODO: Fill in the connections for the rest of the modules 
     VGA_controller vga_controller_instance(
         .Clk(Clk),
-        .Rest(Reset_h),
+        .Reset(Reset_h),
         .VGA_HS,
         .VGA_VS,
         .VGA_CLK,
@@ -125,8 +126,8 @@ module lab8( input               CLOCK_50,
     // ball ball_instance();
     ball ball_instance(
         .Clk(Clk),
-        .Reset(Reset_h)
-        .frame_clk(VGA_VS)
+        .Reset(Reset_h),
+        .frame_clk(VGA_VS),
         .DrawX,
         .DrawY,
         .keycode,
@@ -136,7 +137,7 @@ module lab8( input               CLOCK_50,
     color_mapper color_instance(
         .is_ball,
         .DrawX,
-        .DrawY，
+        .DrawY,
         .VGA_R,
         .VGA_G,
         .VGA_B

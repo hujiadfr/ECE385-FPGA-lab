@@ -1,7 +1,6 @@
 
 module lab8_soc (
 	clk_clk,
-	key_export_export,
 	keycode_export,
 	otg_hpi_address_export,
 	otg_hpi_cs_export,
@@ -23,7 +22,6 @@ module lab8_soc (
 	sdram_wire_we_n);	
 
 	input		clk_clk;
-	input	[1:0]	key_export_export;
 	output	[7:0]	keycode_export;
 	output	[1:0]	otg_hpi_address_export;
 	output		otg_hpi_cs_export;

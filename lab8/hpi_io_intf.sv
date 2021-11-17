@@ -1,4 +1,4 @@
-// Interface between NIOS II and EZ-OTG chip
+	// Interface between NIOS II and EZ-OTG chip
 module hpi_io_intf( input        Clk, Reset,
                     input [1:0]  from_sw_address,
                     output[15:0] from_sw_data_in,
@@ -40,6 +40,6 @@ end
 
 // OTG_DATA should be high Z (tristated) when NIOS is not writing to OTG_DATA inout bus.
 // Look at tristate.sv in lab 6 for an example.
-assign OTG_DATA = from_sw_w ? 16'bzzzzzzzzzzzzzzzz : from_sw_data_out ;
+assign OTG_DATA = from_sw_w ? 16'bzzzzzzzzzzzzzzzz : from_sw_data_out_buffer ;
 
 endmodule 
