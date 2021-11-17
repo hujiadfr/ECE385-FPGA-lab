@@ -18,7 +18,7 @@
 // altera message_level Level1 
 // altera message_off 10034 10035 10036 10037 10230 10240 10030 
 
-module lab8_soc_SDRAM_input_efifo_module (
+module lab8_soc_sdram_input_efifo_module (
                                            // inputs:
                                             clk,
                                             rd,
@@ -156,7 +156,7 @@ endmodule
 // altera message_level Level1 
 // altera message_off 10034 10035 10036 10037 10230 10240 10030 
 
-module lab8_soc_SDRAM (
+module lab8_soc_sdram (
                         // inputs:
                          az_addr,
                          az_be_n,
@@ -283,7 +283,7 @@ wire             zs_we_n;
   assign cs_n = f_select ? f_cs_n : active_cs_n;
   assign csn_decode = cs_n;
   assign {f_rnw, f_addr, f_dqm, f_data} = fifo_read_data;
-  lab8_soc_SDRAM_input_efifo_module the_lab8_soc_SDRAM_input_efifo_module
+  lab8_soc_sdram_input_efifo_module the_lab8_soc_sdram_input_efifo_module
     (
       .almost_empty (almost_empty),
       .almost_full  (almost_full),
