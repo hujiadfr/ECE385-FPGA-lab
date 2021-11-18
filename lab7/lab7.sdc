@@ -139,24 +139,6 @@ set_input_delay -add_delay -max -clock [get_clocks {main_clk_50}]  3.000 [get_po
 set_input_delay -add_delay -min -clock [get_clocks {main_clk_50}]  2.000 [get_ports {KEY[2]}]
 set_input_delay -add_delay -max -clock [get_clocks {main_clk_50}]  3.000 [get_ports {KEY[3]}]
 set_input_delay -add_delay -min -clock [get_clocks {main_clk_50}]  2.000 [get_ports {KEY[3]}]
-
-set_input_delay -add_delay -max -clock [get_clocks {main_clk_50}]  3.000 [get_ports {SW[0]}]
-set_input_delay -add_delay -min -clock [get_clocks {main_clk_50}]  2.000 [get_ports {SW[0]}]
-set_input_delay -add_delay -max -clock [get_clocks {main_clk_50}]  3.000 [get_ports {SW[1]}]
-set_input_delay -add_delay -min -clock [get_clocks {main_clk_50}]  2.000 [get_ports {SW[1]}]
-set_input_delay -add_delay -max -clock [get_clocks {main_clk_50}]  3.000 [get_ports {SW[2]}]
-set_input_delay -add_delay -min -clock [get_clocks {main_clk_50}]  2.000 [get_ports {SW[2]}]
-set_input_delay -add_delay -max -clock [get_clocks {main_clk_50}]  3.000 [get_ports {SW[3]}]
-set_input_delay -add_delay -min -clock [get_clocks {main_clk_50}]  2.000 [get_ports {SW[3]}]
-set_input_delay -add_delay -max -clock [get_clocks {main_clk_50}]  3.000 [get_ports {SW[4]}]
-set_input_delay -add_delay -min -clock [get_clocks {main_clk_50}]  2.000 [get_ports {SW[4]}]
-set_input_delay -add_delay -max -clock [get_clocks {main_clk_50}]  3.000 [get_ports {SW[5]}]
-set_input_delay -add_delay -min -clock [get_clocks {main_clk_50}]  2.000 [get_ports {SW[5]}]
-set_input_delay -add_delay -max -clock [get_clocks {main_clk_50}]  3.000 [get_ports {SW[6]}]
-set_input_delay -add_delay -min -clock [get_clocks {main_clk_50}]  2.000 [get_ports {SW[6]}]
-set_input_delay -add_delay -max -clock [get_clocks {main_clk_50}]  3.000 [get_ports {SW[7]}]
-set_input_delay -add_delay -min -clock [get_clocks {main_clk_50}]  2.000 [get_ports {SW[7]}]
-
 set_input_delay -add_delay -max -clock [get_clocks {main_clk_50}]  3.000 [get_ports {altera_reserved_tck}]
 set_input_delay -add_delay -min -clock [get_clocks {main_clk_50}]  2.000 [get_ports {altera_reserved_tck}]
 set_input_delay -add_delay -max -clock [get_clocks {main_clk_50}]  3.000 [get_ports {altera_reserved_tdi}]
@@ -260,8 +242,7 @@ set_false_path -from [get_keepers {*lab7_soc_nios2_qsys_0:*|lab7_soc_nios2_qsys_
 set_false_path -from [get_keepers {*lab7_soc_nios2_qsys_0:*|lab7_soc_nios2_qsys_0_nios2_oci:the_lab7_soc_nios2_qsys_0_nios2_oci|lab7_soc_nios2_qsys_0_jtag_debug_module_wrapper:the_lab7_soc_nios2_qsys_0_jtag_debug_module_wrapper|lab7_soc_nios2_qsys_0_jtag_debug_module_tck:the_lab7_soc_nios2_qsys_0_jtag_debug_module_tck|*sr*}] -to [get_keepers {*lab7_soc_nios2_qsys_0:*|lab7_soc_nios2_qsys_0_nios2_oci:the_lab7_soc_nios2_qsys_0_nios2_oci|lab7_soc_nios2_qsys_0_jtag_debug_module_wrapper:the_lab7_soc_nios2_qsys_0_jtag_debug_module_wrapper|lab7_soc_nios2_qsys_0_jtag_debug_module_sysclk:the_lab7_soc_nios2_qsys_0_jtag_debug_module_sysclk|*jdo*}]
 set_false_path -from [get_keepers {sld_hub:*|irf_reg*}] -to [get_keepers {*lab7_soc_nios2_qsys_0:*|lab7_soc_nios2_qsys_0_nios2_oci:the_lab7_soc_nios2_qsys_0_nios2_oci|lab7_soc_nios2_qsys_0_jtag_debug_module_wrapper:the_lab7_soc_nios2_qsys_0_jtag_debug_module_wrapper|lab7_soc_nios2_qsys_0_jtag_debug_module_sysclk:the_lab7_soc_nios2_qsys_0_jtag_debug_module_sysclk|ir*}]
 set_false_path -from [get_keepers {sld_hub:*|sld_shadow_jsm:shadow_jsm|state[1]}] -to [get_keepers {*lab7_soc_nios2_qsys_0:*|lab7_soc_nios2_qsys_0_nios2_oci:the_lab7_soc_nios2_qsys_0_nios2_oci|lab7_soc_nios2_qsys_0_nios2_oci_debug:the_lab7_soc_nios2_qsys_0_nios2_oci_debug|monitor_go}]
-set_false_path -from * -to [get_ports *led*]
-set_false_path -from * -to [get_ports *sw*]
+
 
 #**************************************************************
 # Set Multicycle Path

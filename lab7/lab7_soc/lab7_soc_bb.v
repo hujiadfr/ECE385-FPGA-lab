@@ -1,7 +1,6 @@
 
 module lab7_soc (
 	clk_clk,
-	key_export_export,
 	led_wire_export,
 	reset_reset_n,
 	sdram_clk_clk,
@@ -14,10 +13,10 @@ module lab7_soc (
 	sdram_wire_dqm,
 	sdram_wire_ras_n,
 	sdram_wire_we_n,
-	sw_export_export);	
+	sw_export_export,
+	key_export_export);	
 
 	input		clk_clk;
-	input	[1:0]	key_export_export;
 	output	[7:0]	led_wire_export;
 	input		reset_reset_n;
 	output		sdram_clk_clk;
@@ -31,4 +30,5 @@ module lab7_soc (
 	output		sdram_wire_ras_n;
 	output		sdram_wire_we_n;
 	input	[7:0]	sw_export_export;
+	input	[1:0]	key_export_export;
 endmodule
