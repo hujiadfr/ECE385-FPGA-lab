@@ -4,19 +4,19 @@
 
 `timescale 1 ps / 1 ps
 module lab9_soc (
-		output wire [31:0] aes_export_data_export_data, // aes_export_data.export_data
-		input  wire        clk_clk,                     //             clk.clk
-		input  wire        reset_reset_n,               //           reset.reset_n
-		output wire        sdram_clk_clk,               //       sdram_clk.clk
-		output wire [12:0] sdram_wire_addr,             //      sdram_wire.addr
-		output wire [1:0]  sdram_wire_ba,               //                .ba
-		output wire        sdram_wire_cas_n,            //                .cas_n
-		output wire        sdram_wire_cke,              //                .cke
-		output wire        sdram_wire_cs_n,             //                .cs_n
-		inout  wire [31:0] sdram_wire_dq,               //                .dq
-		output wire [3:0]  sdram_wire_dqm,              //                .dqm
-		output wire        sdram_wire_ras_n,            //                .ras_n
-		output wire        sdram_wire_we_n              //                .we_n
+		output wire [31:0] aes_export_export_data, // aes_export.export_data
+		input  wire        clk_clk,                //        clk.clk
+		input  wire        reset_reset_n,          //      reset.reset_n
+		output wire        sdram_clk_clk,          //  sdram_clk.clk
+		output wire [12:0] sdram_wire_addr,        // sdram_wire.addr
+		output wire [1:0]  sdram_wire_ba,          //           .ba
+		output wire        sdram_wire_cas_n,       //           .cas_n
+		output wire        sdram_wire_cke,         //           .cke
+		output wire        sdram_wire_cs_n,        //           .cs_n
+		inout  wire [31:0] sdram_wire_dq,          //           .dq
+		output wire [3:0]  sdram_wire_dqm,         //           .dqm
+		output wire        sdram_wire_ras_n,       //           .ras_n
+		output wire        sdram_wire_we_n         //           .we_n
 	);
 
 	wire         sdram_pll_c0_clk;                                            // sdram_pll:c0 -> [mm_interconnect_0:sdram_pll_c0_clk, rst_controller_002:clk, sdram:clk]
@@ -84,10 +84,10 @@ module lab9_soc (
 	wire         rst_controller_001_reset_out_reset;                          // rst_controller_001:reset_out -> [jtag_uart_0:rst_n, mm_interconnect_0:jtag_uart_0_reset_reset_bridge_in_reset_reset]
 	wire         rst_controller_002_reset_out_reset;                          // rst_controller_002:reset_out -> [mm_interconnect_0:sdram_reset_reset_bridge_in_reset_reset, sdram:reset_n]
 
-	new_component aes (
+	avalon_aes_interface aes (
 		.CLK           (clk_clk),                                    //         CLK.clk
 		.RESET         (rst_controller_reset_out_reset),             //       RESET.reset
-		.EXPORT_DATA   (aes_export_data_export_data),                // Export_Data.export_data
+		.EXPORT_DATA   (aes_export_export_data),                     // Export_Data.export_data
 		.AVL_ADDR      (mm_interconnect_0_aes_aes_slave_address),    //   AES_Slave.address
 		.AVL_BYTE_EN   (mm_interconnect_0_aes_aes_slave_byteenable), //            .byteenable
 		.AVL_CS        (mm_interconnect_0_aes_aes_slave_chipselect), //            .chipselect

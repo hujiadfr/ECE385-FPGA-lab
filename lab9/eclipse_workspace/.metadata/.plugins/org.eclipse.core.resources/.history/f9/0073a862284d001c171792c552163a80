@@ -112,8 +112,10 @@ void MixColumn(unsigned char* state)
 		b[1] = a[0] ^ xtime(a[1]) ^ (xtime(a[2]) ^ a[2]) ^ a[3];
 		b[2] = a[0] ^ a[1] ^ xtime(a[2]) ^ (xtime(a[3]) ^ a[3]);
 		b[3] = (xtime(a[0]) ^ a[0]) ^ a[1] ^ a[2] ^ xtime(a[3]);
-		for (int j = 0; j < 4; j++)
+		for (int j = 0; j < 4; j++){
 			state[4*j+i] = b[j];
+		}
+	}
 }
 /** Shiftrows
  * The rows in the updating State is cyclically shifted by a certain offset. Specifically,row n is left-circularly shifted by n 飥�1 Bytes
@@ -133,34 +135,6 @@ void ShiftRows(unsigned char* state)
 			state[4*row + 3] = temp;
 	}
 }
-/** SubWord
- *  Convert 16 bytes into sbox form.
- *
- *  Input: pointer to state
- *
- */
-unsigned long SubWord(unsigned long word)
-{
-	unsigned char* temp = (unsigned char*)&word;
-	unsigned char out[4];
-	int i = 0;
-	for (;i<4;i++){
-		out[i] = aes_sbox[(int)temp[i]];
-	}
-	return *((unsigned long*)out);
-}
-/** RotWord
- *  rotate the word
- *  Bytes ABCD -> BCDA
- *
- *  Input: address of word
- *  Output: the word after rotation
- */
-unsigned long RotWord(unsigned long* word)
-{
-	return (((*word<<8) & 0xFFFFFFF0)|((*word>>24) & 0x000000FF));
-}
-
 /**KeyExpansion
  * Key Expansion generates a Round Key ( b N Words) at a time based on the previous
 Round Key (use the original Cipher Key to generate the first Round Key), for a total of
@@ -212,12 +186,12 @@ void encrypt(unsigned char * msg_ascii, unsigned char * key_ascii, unsigned int 
 	for (int round = 0; round < Nr; round++)
 	{
 		SubBytes(state);
-		ShiftRows(state);
+		SubByRows(state);
 		MixColumn(state);
 		AddRoundKey(state, w+Nb*round);
 	}
 	SubBytes(state);
-	ShiftRows(state);
+	SubByRows(state);
 	AddRoundKey(state, w+Nb*Nr);
 
 	msg_enc = state;

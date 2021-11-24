@@ -1,6 +1,6 @@
-17:48:45 **** Clean-only build of configuration Nios II for project lab9_bsp ****
-wsl make clean 
-[BSP clean complete]
+21:58:02 **** Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
 
-17:48:45 Build Finished (took 234ms)
+21:58:02 Build Finished (took 194ms)
 
