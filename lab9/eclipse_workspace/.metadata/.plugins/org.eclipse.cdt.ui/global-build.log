@@ -812,3 +812,2704 @@ Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
 make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
 [BSP build complete]
 [lab9 build complete]
+22:03:32 **** Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+22:03:33 **** Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+22:03:55 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+22:05:41 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+22:06:18 **** Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+22:06:20 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+22:06:34 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+22:06:34 **** Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+22:07:11 **** Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+22:07:12 **** Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+22:07:23 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+22:08:59 **** Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+22:11:13 **** Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+22:11:34 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+22:11:35 **** Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+22:12:39 **** Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+22:12:39 **** Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+22:12:43 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+22:22:54 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'MixColumn':
+main.c:106:2: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+  106 |  for (i = 0; i < 4; i++)
+      |  ^~~
+main.c:111:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+  111 |   b[0] = xtime(a[0]) ^ (xtime(a[1]) ^ a[1]) ^ a[2] ^ a[3];
+      |   ^
+main.c: In function 'ShiftRows':
+main.c:128:3: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+  128 |   for (int i =0; i < row; i++)
+      |   ^~~
+main.c:130:4: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+  130 |    state[4*row] = state[4*row + 1];
+      |    ^~~~~
+main.c: In function 'encrypt':
+main.c:225:10: warning: assignment to 'unsigned int *' from incompatible pointer type 'unsigned char *' [-Wincompatible-pointer-types]
+  225 |  msg_enc = state;
+      |          ^
+Info: Linking lab9.elf
+nios2-elf-g++.exe  -T'c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//linker.x' -msys-crt0='c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -Lc:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/   -Wl,-Map=lab9.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o lab9.elf obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert.exe lab9.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x28 --timestamp 1637761290 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name lab9_soc --quartus_project_dir "c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9" --jdi ../..//output_files/lab9.jdi
+Info: (lab9.elf) 114 KBytes program size (code + initialized data).
+Info:            130948 KBytes free for stack + heap.
+Info: Creating lab9.objdump
+nios2-elf-objdump.exe --disassemble --syms --all-header --source lab9.elf >lab9.objdump
+[lab9 build complete]
+22:22:56 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+22:24:05 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+22:24:20 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+22:24:32 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+22:24:33 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+22:25:07 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+22:25:08 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+22:26:34 **** Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+22:29:19 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'MixColumn':
+main.c:106:2: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+  106 |  for (i = 0; i < 4; i++)
+      |  ^~~
+main.c:111:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+  111 |   b[0] = xtime(a[0]) ^ (xtime(a[1]) ^ a[1]) ^ a[2] ^ a[3];
+      |   ^
+main.c: In function 'ShiftRows':
+main.c:128:3: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+  128 |   for (int i =0; i < row; i++)
+      |   ^~~
+main.c:130:4: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+  130 |    state[4*row] = state[4*row + 1];
+      |    ^~~~~
+main.c: In function 'encrypt':
+main.c:225:10: warning: assignment to 'unsigned int *' from incompatible pointer type 'unsigned char *' [-Wincompatible-pointer-types]
+  225 |  msg_enc = state;
+      |          ^
+Info: Linking lab9.elf
+nios2-elf-g++.exe  -T'c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//linker.x' -msys-crt0='c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -Lc:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/   -Wl,-Map=lab9.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o lab9.elf obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert.exe lab9.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x28 --timestamp 1637761290 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name lab9_soc --quartus_project_dir "c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9" --jdi ../..//output_files/lab9.jdi
+Info: (lab9.elf) 114 KBytes program size (code + initialized data).
+Info:            130948 KBytes free for stack + heap.
+Info: Creating lab9.objdump
+nios2-elf-objdump.exe --disassemble --syms --all-header --source lab9.elf >lab9.objdump
+[lab9 build complete]
+22:29:20 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+22:29:37 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+22:29:37 **** Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+22:29:39 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+22:33:54 **** Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'MixColumn':
+main.c:106:2: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+  106 |  for (i = 0; i < 4; i++)
+      |  ^~~
+main.c:111:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+  111 |   b[0] = xtime(a[0]) ^ (xtime(a[1]) ^ a[1]) ^ a[2] ^ a[3];
+      |   ^
+main.c: In function 'ShiftRows':
+main.c:128:3: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+  128 |   for (int i =0; i < row; i++)
+      |   ^~~
+main.c:130:4: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+  130 |    state[4*row] = state[4*row + 1];
+      |    ^~~~~
+main.c: In function 'encrypt':
+main.c:225:10: warning: assignment to 'unsigned int *' from incompatible pointer type 'unsigned char *' [-Wincompatible-pointer-types]
+  225 |  msg_enc = state;
+      |          ^
+main.c: In function 'main':
+main.c:257:14: error: 'daec3055df058e1c39e814ea76f6747e' undeclared (first use in this function)
+  257 |  msg_ascii = daec3055df058e1c39e814ea76f6747e;
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.c:257:14: note: each undeclared identifier is reported only once for each function it appears in
+main.c:258:14: error: invalid digit "9" in octal constant
+  258 |  key_ascii = 000102030405060708090a0b0c0d0e0f;
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [Makefile:724：obj/default/main.o] 错误 1
+22:33:55 **** Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+22:34:13 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'MixColumn':
+main.c:106:2: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+  106 |  for (i = 0; i < 4; i++)
+      |  ^~~
+main.c:111:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+  111 |   b[0] = xtime(a[0]) ^ (xtime(a[1]) ^ a[1]) ^ a[2] ^ a[3];
+      |   ^
+main.c: In function 'ShiftRows':
+main.c:128:3: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+  128 |   for (int i =0; i < row; i++)
+      |   ^~~
+main.c:130:4: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+  130 |    state[4*row] = state[4*row + 1];
+      |    ^~~~~
+main.c: In function 'encrypt':
+main.c:225:10: warning: assignment to 'unsigned int *' from incompatible pointer type 'unsigned char *' [-Wincompatible-pointer-types]
+  225 |  msg_enc = state;
+      |          ^
+main.c: In function 'main':
+main.c:257:12: error: assignment to expression with array type
+  257 |  msg_ascii = "daec3055df058e1c39e814ea76f6747e";
+      |            ^
+main.c:258:12: error: assignment to expression with array type
+  258 |  key_ascii = "000102030405060708090a0b0c0d0e0f";
+      |            ^
+make: *** [Makefile:724：obj/default/main.o] 错误 1
+22:34:14 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+22:34:34 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'MixColumn':
+main.c:106:2: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+  106 |  for (i = 0; i < 4; i++)
+      |  ^~~
+main.c:111:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+  111 |   b[0] = xtime(a[0]) ^ (xtime(a[1]) ^ a[1]) ^ a[2] ^ a[3];
+      |   ^
+main.c: In function 'ShiftRows':
+main.c:128:3: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+  128 |   for (int i =0; i < row; i++)
+      |   ^~~
+main.c:130:4: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+  130 |    state[4*row] = state[4*row + 1];
+      |    ^~~~~
+main.c: In function 'encrypt':
+main.c:225:10: warning: assignment to 'unsigned int *' from incompatible pointer type 'unsigned char *' [-Wincompatible-pointer-types]
+  225 |  msg_enc = state;
+      |          ^
+main.c: In function 'main':
+main.c:257:14: warning: character constant too long for its type
+  257 |  msg_ascii = 'daec3055df058e1c39e814ea76f6747e';
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.c:257:12: error: assignment to expression with array type
+  257 |  msg_ascii = 'daec3055df058e1c39e814ea76f6747e';
+      |            ^
+main.c:258:14: warning: character constant too long for its type
+  258 |  key_ascii = '000102030405060708090a0b0c0d0e0f';
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.c:258:12: error: assignment to expression with array type
+  258 |  key_ascii = '000102030405060708090a0b0c0d0e0f';
+      |            ^
+make: *** [Makefile:724：obj/default/main.o] 错误 1
+22:34:35 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+22:34:55 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'MixColumn':
+main.c:106:2: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+  106 |  for (i = 0; i < 4; i++)
+      |  ^~~
+main.c:111:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+  111 |   b[0] = xtime(a[0]) ^ (xtime(a[1]) ^ a[1]) ^ a[2] ^ a[3];
+      |   ^
+main.c: In function 'ShiftRows':
+main.c:128:3: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+  128 |   for (int i =0; i < row; i++)
+      |   ^~~
+main.c:130:4: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+  130 |    state[4*row] = state[4*row + 1];
+      |    ^~~~~
+main.c: In function 'encrypt':
+main.c:225:10: warning: assignment to 'unsigned int *' from incompatible pointer type 'unsigned char *' [-Wincompatible-pointer-types]
+  225 |  msg_enc = state;
+      |          ^
+main.c: In function 'main':
+main.c:257:14: warning: character constant too long for its type
+  257 |  msg_ascii = 'daec3055df058e1c39e814ea76f6747e';
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.c:257:12: error: assignment to expression with array type
+  257 |  msg_ascii = 'daec3055df058e1c39e814ea76f6747e';
+      |            ^
+main.c:258:14: warning: character constant too long for its type
+  258 |  key_ascii = '000102030405060708090a0b0c0d0e0f';
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.c:258:12: error: assignment to expression with array type
+  258 |  key_ascii = '000102030405060708090a0b0c0d0e0f';
+      |            ^
+make: *** [Makefile:724：obj/default/main.o] 错误 1
+22:34:56 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+22:37:38 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'MixColumn':
+main.c:106:2: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+  106 |  for (i = 0; i < 4; i++)
+      |  ^~~
+main.c:111:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+  111 |   b[0] = xtime(a[0]) ^ (xtime(a[1]) ^ a[1]) ^ a[2] ^ a[3];
+      |   ^
+main.c: In function 'ShiftRows':
+main.c:128:3: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+  128 |   for (int i =0; i < row; i++)
+      |   ^~~
+main.c:130:4: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+  130 |    state[4*row] = state[4*row + 1];
+      |    ^~~~~
+main.c: In function 'encrypt':
+main.c:225:10: warning: assignment to 'unsigned int *' from incompatible pointer type 'unsigned char *' [-Wincompatible-pointer-types]
+  225 |  msg_enc = state;
+      |          ^
+main.c: In function 'main':
+main.c:290:15: warning: character constant too long for its type
+  290 |   msg_ascii = 'daec3055df058e1c39e814ea76f6747e';
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.c:290:13: error: assignment to expression with array type
+  290 |   msg_ascii = 'daec3055df058e1c39e814ea76f6747e';
+      |             ^
+main.c:291:15: warning: character constant too long for its type
+  291 |   key_ascii = '000102030405060708090a0b0c0d0e0f';
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.c:291:13: error: assignment to expression with array type
+  291 |   key_ascii = '000102030405060708090a0b0c0d0e0f';
+      |             ^
+make: *** [Makefile:724：obj/default/main.o] 错误 1
+22:37:39 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+22:39:53 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'MixColumn':
+main.c:106:2: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+  106 |  for (i = 0; i < 4; i++)
+      |  ^~~
+main.c:111:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+  111 |   b[0] = xtime(a[0]) ^ (xtime(a[1]) ^ a[1]) ^ a[2] ^ a[3];
+      |   ^
+main.c: In function 'ShiftRows':
+main.c:128:3: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+  128 |   for (int i =0; i < row; i++)
+      |   ^~~
+main.c:130:4: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+  130 |    state[4*row] = state[4*row + 1];
+      |    ^~~~~
+main.c: In function 'encrypt':
+main.c:225:10: warning: assignment to 'unsigned int *' from incompatible pointer type 'unsigned char *' [-Wincompatible-pointer-types]
+  225 |  msg_enc = state;
+      |          ^
+main.c: In function 'main':
+main.c:290:13: error: expected expression before ']' token
+  290 |   msg_ascii[] = 'daec3055df058e1c39e814ea76f6747e';
+      |             ^
+main.c:290:17: warning: character constant too long for its type
+  290 |   msg_ascii[] = 'daec3055df058e1c39e814ea76f6747e';
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.c:291:13: error: expected expression before ']' token
+  291 |   key_ascii[] = '000102030405060708090a0b0c0d0e0f';
+      |             ^
+main.c:291:17: warning: character constant too long for its type
+  291 |   key_ascii[] = '000102030405060708090a0b0c0d0e0f';
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [Makefile:724：obj/default/main.o] 错误 1
+22:39:53 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+22:39:57 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'MixColumn':
+main.c:106:2: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+  106 |  for (i = 0; i < 4; i++)
+      |  ^~~
+main.c:111:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+  111 |   b[0] = xtime(a[0]) ^ (xtime(a[1]) ^ a[1]) ^ a[2] ^ a[3];
+      |   ^
+main.c: In function 'ShiftRows':
+main.c:128:3: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+  128 |   for (int i =0; i < row; i++)
+      |   ^~~
+main.c:130:4: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+  130 |    state[4*row] = state[4*row + 1];
+      |    ^~~~~
+main.c: In function 'encrypt':
+main.c:225:10: warning: assignment to 'unsigned int *' from incompatible pointer type 'unsigned char *' [-Wincompatible-pointer-types]
+  225 |  msg_enc = state;
+      |          ^
+main.c: In function 'main':
+main.c:290:13: error: expected expression before ']' token
+  290 |   msg_ascii[] = 'daec3055df058e1c39e814ea76f6747e';
+      |             ^
+main.c:290:17: warning: character constant too long for its type
+  290 |   msg_ascii[] = 'daec3055df058e1c39e814ea76f6747e';
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.c:291:13: error: expected expression before ']' token
+  291 |   key_ascii[] = '000102030405060708090a0b0c0d0e0f';
+      |             ^
+main.c:291:17: warning: character constant too long for its type
+  291 |   key_ascii[] = '000102030405060708090a0b0c0d0e0f';
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [Makefile:724：obj/default/main.o] 错误 1
+22:39:57 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+22:40:36 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'MixColumn':
+main.c:106:2: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+  106 |  for (i = 0; i < 4; i++)
+      |  ^~~
+main.c:111:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+  111 |   b[0] = xtime(a[0]) ^ (xtime(a[1]) ^ a[1]) ^ a[2] ^ a[3];
+      |   ^
+main.c: In function 'ShiftRows':
+main.c:128:3: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+  128 |   for (int i =0; i < row; i++)
+      |   ^~~
+main.c:130:4: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+  130 |    state[4*row] = state[4*row + 1];
+      |    ^~~~~
+main.c: In function 'encrypt':
+main.c:225:10: warning: assignment to 'unsigned int *' from incompatible pointer type 'unsigned char *' [-Wincompatible-pointer-types]
+  225 |  msg_enc = state;
+      |          ^
+main.c: In function 'main':
+main.c:253:30: warning: character constant too long for its type
+  253 |  unsigned char msg_ascii[] = 'daec3055df058e1c39e814ea76f6747e';
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.c:253:30: error: invalid initializer
+main.c:254:30: warning: character constant too long for its type
+  254 |  unsigned char key_ascii[] = '000102030405060708090a0b0c0d0e0f';
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.c:254:30: error: invalid initializer
+make: *** [Makefile:724：obj/default/main.o] 错误 1
+22:40:37 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+22:41:01 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'MixColumn':
+main.c:106:2: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+  106 |  for (i = 0; i < 4; i++)
+      |  ^~~
+main.c:111:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+  111 |   b[0] = xtime(a[0]) ^ (xtime(a[1]) ^ a[1]) ^ a[2] ^ a[3];
+      |   ^
+main.c: In function 'ShiftRows':
+main.c:128:3: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+  128 |   for (int i =0; i < row; i++)
+      |   ^~~
+main.c:130:4: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+  130 |    state[4*row] = state[4*row + 1];
+      |    ^~~~~
+main.c: In function 'encrypt':
+main.c:225:10: warning: assignment to 'unsigned int *' from incompatible pointer type 'unsigned char *' [-Wincompatible-pointer-types]
+  225 |  msg_enc = state;
+      |          ^
+Info: Linking lab9.elf
+nios2-elf-g++.exe  -T'c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//linker.x' -msys-crt0='c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -Lc:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/   -Wl,-Map=lab9.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o lab9.elf obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert.exe lab9.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x28 --timestamp 1637761290 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name lab9_soc --quartus_project_dir "c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9" --jdi ../..//output_files/lab9.jdi
+Info: (lab9.elf) 78 KBytes program size (code + initialized data).
+Info:            130985 KBytes free for stack + heap.
+Info: Creating lab9.objdump
+nios2-elf-objdump.exe --disassemble --syms --all-header --source lab9.elf >lab9.objdump
+[lab9 build complete]
+22:41:02 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+22:41:15 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+22:43:02 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+22:43:10 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+22:43:11 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+22:43:12 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+22:44:23 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+22:44:23 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+22:44:27 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+22:45:26 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+22:45:26 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+22:45:45 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+22:53:55 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'MixColumn':
+main.c:106:2: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+  106 |  for (i = 0; i < 4; i++)
+      |  ^~~
+main.c:111:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+  111 |   b[0] = xtime(a[0]) ^ (xtime(a[1]) ^ a[1]) ^ a[2] ^ a[3];
+      |   ^
+main.c: In function 'ShiftRows':
+main.c:128:3: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+  128 |   for (int i =0; i < row; i++)
+      |   ^~~
+main.c:130:4: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+  130 |    state[4*row] = state[4*row + 1];
+      |    ^~~~~
+main.c: In function 'encrypt':
+main.c:227:10: warning: assignment to 'unsigned int *' from incompatible pointer type 'unsigned char *' [-Wincompatible-pointer-types]
+  227 |  msg_enc = state;
+      |          ^
+Info: Linking lab9.elf
+nios2-elf-g++.exe  -T'c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//linker.x' -msys-crt0='c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -Lc:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/   -Wl,-Map=lab9.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o lab9.elf obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert.exe lab9.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x28 --timestamp 1637761290 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name lab9_soc --quartus_project_dir "c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9" --jdi ../..//output_files/lab9.jdi
+Info: (lab9.elf) 78 KBytes program size (code + initialized data).
+Info:            130985 KBytes free for stack + heap.
+Info: Creating lab9.objdump
+nios2-elf-objdump.exe --disassemble --syms --all-header --source lab9.elf >lab9.objdump
+[lab9 build complete]
+22:53:57 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+22:56:59 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+22:57:04 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+22:57:05 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+22:57:07 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+22:57:14 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+22:57:15 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+22:57:46 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+22:57:57 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+22:57:58 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+22:58:06 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+22:58:10 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+22:58:11 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+22:58:13 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+23:12:41 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'MixColumn':
+main.c:106:2: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+  106 |  for (i = 0; i < 4; i++)
+      |  ^~~
+main.c:111:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+  111 |   b[0] = xtime(a[0]) ^ (xtime(a[1]) ^ a[1]) ^ a[2] ^ a[3];
+      |   ^
+main.c: In function 'ShiftRows':
+main.c:128:3: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+  128 |   for (int i =0; i < row; i++)
+      |   ^~~
+main.c:130:4: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+  130 |    state[4*row] = state[4*row + 1];
+      |    ^~~~~
+main.c: In function 'encrypt':
+main.c:225:28: error: expected ')' before ']' token
+  225 |  AddRoundKey(state, w+Nb*Nr]);
+      |                            ^
+      |                            )
+main.c:225:28: error: expected ';' before ']' token
+  225 |  AddRoundKey(state, w+Nb*Nr]);
+      |                            ^
+      |                            ;
+main.c:225:28: error: expected statement before ']' token
+main.c:225:29: error: expected statement before ')' token
+  225 |  AddRoundKey(state, w+Nb*Nr]);
+      |                             ^
+main.c:227:10: warning: assignment to 'unsigned int *' from incompatible pointer type 'unsigned char *' [-Wincompatible-pointer-types]
+  227 |  msg_enc = state;
+      |          ^
+make: *** [Makefile:724：obj/default/main.o] 错误 1
+23:12:51 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'MixColumn':
+main.c:106:2: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+  106 |  for (i = 0; i < 4; i++)
+      |  ^~~
+main.c:111:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+  111 |   b[0] = xtime(a[0]) ^ (xtime(a[1]) ^ a[1]) ^ a[2] ^ a[3];
+      |   ^
+main.c: In function 'ShiftRows':
+main.c:128:3: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+  128 |   for (int i =0; i < row; i++)
+      |   ^~~
+main.c:130:4: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+  130 |    state[4*row] = state[4*row + 1];
+      |    ^~~~~
+main.c: In function 'encrypt':
+main.c:225:28: error: expected ')' before ']' token
+  225 |  AddRoundKey(state, w+Nb*Nr]);
+      |                            ^
+      |                            )
+main.c:225:28: error: expected ';' before ']' token
+  225 |  AddRoundKey(state, w+Nb*Nr]);
+      |                            ^
+      |                            ;
+main.c:225:28: error: expected statement before ']' token
+main.c:225:29: error: expected statement before ')' token
+  225 |  AddRoundKey(state, w+Nb*Nr]);
+      |                             ^
+main.c:227:10: warning: assignment to 'unsigned int *' from incompatible pointer type 'unsigned char *' [-Wincompatible-pointer-types]
+  227 |  msg_enc = state;
+      |          ^
+make: *** [Makefile:724：obj/default/main.o] 错误 1
+23:12:52 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+23:12:56 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'MixColumn':
+main.c:106:2: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+  106 |  for (i = 0; i < 4; i++)
+      |  ^~~
+main.c:111:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+  111 |   b[0] = xtime(a[0]) ^ (xtime(a[1]) ^ a[1]) ^ a[2] ^ a[3];
+      |   ^
+main.c: In function 'ShiftRows':
+main.c:128:3: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+  128 |   for (int i =0; i < row; i++)
+      |   ^~~
+main.c:130:4: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+  130 |    state[4*row] = state[4*row + 1];
+      |    ^~~~~
+main.c: In function 'encrypt':
+main.c:225:28: error: expected ')' before ']' token
+  225 |  AddRoundKey(state, w+Nb*Nr]);
+      |                            ^
+      |                            )
+main.c:225:28: error: expected ';' before ']' token
+  225 |  AddRoundKey(state, w+Nb*Nr]);
+      |                            ^
+      |                            ;
+main.c:225:28: error: expected statement before ']' token
+main.c:225:29: error: expected statement before ')' token
+  225 |  AddRoundKey(state, w+Nb*Nr]);
+      |                             ^
+main.c:227:10: warning: assignment to 'unsigned int *' from incompatible pointer type 'unsigned char *' [-Wincompatible-pointer-types]
+  227 |  msg_enc = state;
+      |          ^
+make: *** [Makefile:724：obj/default/main.o] 错误 1
+23:13:48 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'MixColumn':
+main.c:106:2: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+  106 |  for (i = 0; i < 4; i++)
+      |  ^~~
+main.c:111:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+  111 |   b[0] = xtime(a[0]) ^ (xtime(a[1]) ^ a[1]) ^ a[2] ^ a[3];
+      |   ^
+main.c: In function 'ShiftRows':
+main.c:128:3: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+  128 |   for (int i =0; i < row; i++)
+      |   ^~~
+main.c:130:4: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+  130 |    state[4*row] = state[4*row + 1];
+      |    ^~~~~
+main.c: In function 'encrypt':
+main.c:225:28: error: expected ')' before ']' token
+  225 |  AddRoundKey(state, w+Nb*Nr]);
+      |                            ^
+      |                            )
+main.c:225:28: error: expected ';' before ']' token
+  225 |  AddRoundKey(state, w+Nb*Nr]);
+      |                            ^
+      |                            ;
+main.c:225:28: error: expected statement before ']' token
+main.c:225:29: error: expected statement before ')' token
+  225 |  AddRoundKey(state, w+Nb*Nr]);
+      |                             ^
+main.c:227:10: warning: assignment to 'unsigned int *' from incompatible pointer type 'unsigned char *' [-Wincompatible-pointer-types]
+  227 |  msg_enc = state;
+      |          ^
+make: *** [Makefile:724：obj/default/main.o] 错误 1
+23:13:49 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+23:16:04 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'MixColumn':
+main.c:106:2: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+  106 |  for (i = 0; i < 4; i++)
+      |  ^~~
+main.c:111:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+  111 |   b[0] = xtime(a[0]) ^ (xtime(a[1]) ^ a[1]) ^ a[2] ^ a[3];
+      |   ^
+main.c: In function 'ShiftRows':
+main.c:128:3: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+  128 |   for (int i =0; i < row; i++)
+      |   ^~~
+main.c:130:4: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+  130 |    state[4*row] = state[4*row + 1];
+      |    ^~~~~
+main.c: In function 'encrypt':
+main.c:225:28: error: expected ')' before ']' token
+  225 |  AddRoundKey(state, w+Nb*Nr]);
+      |                            ^
+      |                            )
+main.c:225:28: error: expected ';' before ']' token
+  225 |  AddRoundKey(state, w+Nb*Nr]);
+      |                            ^
+      |                            ;
+main.c:225:28: error: expected statement before ']' token
+main.c:225:29: error: expected statement before ')' token
+  225 |  AddRoundKey(state, w+Nb*Nr]);
+      |                             ^
+main.c:227:10: warning: assignment to 'unsigned int *' from incompatible pointer type 'unsigned char *' [-Wincompatible-pointer-types]
+  227 |  msg_enc = state;
+      |          ^
+make: *** [Makefile:724：obj/default/main.o] 错误 1
+23:16:05 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+23:17:42 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'MixColumn':
+main.c:106:2: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+  106 |  for (i = 0; i < 4; i++)
+      |  ^~~
+main.c:111:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+  111 |   b[0] = xtime(a[0]) ^ (xtime(a[1]) ^ a[1]) ^ a[2] ^ a[3];
+      |   ^
+main.c: In function 'ShiftRows':
+main.c:128:3: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+  128 |   for (int i =0; i < row; i++)
+      |   ^~~
+main.c:130:4: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+  130 |    state[4*row] = state[4*row + 1];
+      |    ^~~~~
+main.c: In function 'encrypt':
+main.c:251:3: warning: implicit declaration of function 'MixColumns'; did you mean 'MixColumn'? [-Wimplicit-function-declaration]
+  251 |   MixColumns(state);
+      |   ^~~~~~~~~~
+      |   MixColumn
+main.c:233:8: warning: unused variable 'j' [-Wunused-variable]
+  233 |  int i,j,round;
+      |        ^
+Info: Linking lab9.elf
+nios2-elf-g++.exe  -T'c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//linker.x' -msys-crt0='c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -Lc:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/   -Wl,-Map=lab9.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o lab9.elf obj/default/main.o -lm -msys-lib=m
+c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/bin/ld.exe: obj/default/main.o: in function `encrypt':
+C:\Users\jiaru\GitHub\ECE385-FPGA-lab\lab9\software\lab9/main.c:251: undefined reference to `MixColumns'
+C:\Users\jiaru\GitHub\ECE385-FPGA-lab\lab9\software\lab9/main.c:251:(.text+0xa60): relocation truncated to fit: R_NIOS2_CALL26 against `MixColumns'
+collect2.exe: error: ld returned 1 exit status
+make: *** [Makefile:1014：lab9.elf] 错误 1
+23:17:43 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+23:18:11 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'MixColumn':
+main.c:106:2: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+  106 |  for (i = 0; i < 4; i++)
+      |  ^~~
+main.c:111:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+  111 |   b[0] = xtime(a[0]) ^ (xtime(a[1]) ^ a[1]) ^ a[2] ^ a[3];
+      |   ^
+main.c: In function 'ShiftRows':
+main.c:128:3: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+  128 |   for (int i =0; i < row; i++)
+      |   ^~~
+main.c:130:4: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+  130 |    state[4*row] = state[4*row + 1];
+      |    ^~~~~
+main.c: In function 'encrypt':
+main.c:233:8: warning: unused variable 'j' [-Wunused-variable]
+  233 |  int i,j,round;
+      |        ^
+Info: Linking lab9.elf
+nios2-elf-g++.exe  -T'c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//linker.x' -msys-crt0='c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -Lc:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/   -Wl,-Map=lab9.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o lab9.elf obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert.exe lab9.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x28 --timestamp 1637761290 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name lab9_soc --quartus_project_dir "c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9" --jdi ../..//output_files/lab9.jdi
+Info: (lab9.elf) 78 KBytes program size (code + initialized data).
+Info:            130984 KBytes free for stack + heap.
+Info: Creating lab9.objdump
+nios2-elf-objdump.exe --disassemble --syms --all-header --source lab9.elf >lab9.objdump
+[lab9 build complete]
+23:18:12 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+23:18:21 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+23:19:07 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'MixColumn':
+main.c:106:2: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+  106 |  for (i = 0; i < 4; i++)
+      |  ^~~
+main.c:111:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+  111 |   b[0] = xtime(a[0]) ^ (xtime(a[1]) ^ a[1]) ^ a[2] ^ a[3];
+      |   ^
+main.c: In function 'ShiftRows':
+main.c:128:3: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+  128 |   for (int i =0; i < row; i++)
+      |   ^~~
+main.c:130:4: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+  130 |    state[4*row] = state[4*row + 1];
+      |    ^~~~~
+main.c: In function 'encrypt':
+main.c:233:8: warning: unused variable 'j' [-Wunused-variable]
+  233 |  int i,j,round;
+      |        ^
+Info: Linking lab9.elf
+nios2-elf-g++.exe  -T'c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//linker.x' -msys-crt0='c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -Lc:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/   -Wl,-Map=lab9.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o lab9.elf obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert.exe lab9.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x28 --timestamp 1637761290 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name lab9_soc --quartus_project_dir "c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9" --jdi ../..//output_files/lab9.jdi
+Info: (lab9.elf) 78 KBytes program size (code + initialized data).
+Info:            130984 KBytes free for stack + heap.
+Info: Creating lab9.objdump
+nios2-elf-objdump.exe --disassemble --syms --all-header --source lab9.elf >lab9.objdump
+[lab9 build complete]
+23:19:08 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+23:19:09 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+23:20:50 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'MixColumn':
+main.c:106:2: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+  106 |  for (i = 0; i < 4; i++)
+      |  ^~~
+main.c:111:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+  111 |   b[0] = xtime(a[0]) ^ (xtime(a[1]) ^ a[1]) ^ a[2] ^ a[3];
+      |   ^
+main.c: In function 'ShiftRows':
+main.c:128:3: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+  128 |   for (int i =0; i < row; i++)
+      |   ^~~
+main.c:130:4: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+  130 |    state[4*row] = state[4*row + 1];
+      |    ^~~~~
+main.c: In function 'encrypt':
+main.c:233:8: warning: unused variable 'j' [-Wunused-variable]
+  233 |  int i,j,round;
+      |        ^
+Info: Linking lab9.elf
+nios2-elf-g++.exe  -T'c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//linker.x' -msys-crt0='c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -Lc:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/   -Wl,-Map=lab9.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o lab9.elf obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert.exe lab9.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x28 --timestamp 1637761290 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name lab9_soc --quartus_project_dir "c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9" --jdi ../..//output_files/lab9.jdi
+Info: (lab9.elf) 78 KBytes program size (code + initialized data).
+Info:            130984 KBytes free for stack + heap.
+Info: Creating lab9.objdump
+nios2-elf-objdump.exe --disassemble --syms --all-header --source lab9.elf >lab9.objdump
+[lab9 build complete]
+23:29:49 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'MixColumn':
+main.c:106:2: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+  106 |  for (i = 0; i < 4; i++)
+      |  ^~~
+main.c:111:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+  111 |   b[0] = xtime(a[0]) ^ (xtime(a[1]) ^ a[1]) ^ a[2] ^ a[3];
+      |   ^
+main.c: In function 'ShiftRows':
+main.c:128:3: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+  128 |   for (int i =0; i < row; i++)
+      |   ^~~
+main.c:130:4: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+  130 |    state[4*row] = state[4*row + 1];
+      |    ^~~~~
+main.c: In function 'encrypt':
+main.c:237:8: warning: unused variable 'j' [-Wunused-variable]
+  237 |  int i,j,round;
+      |        ^
+Info: Linking lab9.elf
+nios2-elf-g++.exe  -T'c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//linker.x' -msys-crt0='c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -Lc:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/   -Wl,-Map=lab9.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o lab9.elf obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert.exe lab9.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x28 --timestamp 1637761290 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name lab9_soc --quartus_project_dir "c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9" --jdi ../..//output_files/lab9.jdi
+Info: (lab9.elf) 78 KBytes program size (code + initialized data).
+Info:            130984 KBytes free for stack + heap.
+Info: Creating lab9.objdump
+nios2-elf-objdump.exe --disassemble --syms --all-header --source lab9.elf >lab9.objdump
+[lab9 build complete]
+23:29:50 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+23:29:57 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+23:33:19 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'MixColumn':
+main.c:106:2: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+  106 |  for (i = 0; i < 4; i++)
+      |  ^~~
+main.c:111:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+  111 |   b[0] = xtime(a[0]) ^ (xtime(a[1]) ^ a[1]) ^ a[2] ^ a[3];
+      |   ^
+main.c: In function 'ShiftRows':
+main.c:128:3: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+  128 |   for (int i =0; i < row; i++)
+      |   ^~~
+main.c:130:4: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+  130 |    state[4*row] = state[4*row + 1];
+      |    ^~~~~
+main.c: In function 'encrypt':
+main.c:237:8: warning: unused variable 'j' [-Wunused-variable]
+  237 |  int i,j,round;
+      |        ^
+Info: Linking lab9.elf
+nios2-elf-g++.exe  -T'c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//linker.x' -msys-crt0='c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -Lc:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/   -Wl,-Map=lab9.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o lab9.elf obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert.exe lab9.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x28 --timestamp 1637761290 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name lab9_soc --quartus_project_dir "c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9" --jdi ../..//output_files/lab9.jdi
+Info: (lab9.elf) 78 KBytes program size (code + initialized data).
+Info:            130984 KBytes free for stack + heap.
+Info: Creating lab9.objdump
+nios2-elf-objdump.exe --disassemble --syms --all-header --source lab9.elf >lab9.objdump
+[lab9 build complete]
+23:33:58 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+23:34:20 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+23:34:57 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+23:35:14 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+23:35:15 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+23:35:20 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+23:43:38 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+23:44:50 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+23:46:07 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+23:47:01 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+23:47:12 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+23:47:25 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+23:48:09 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+23:48:09 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+23:48:13 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+23:48:39 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+23:55:54 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'MixColumn':
+main.c:106:2: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+  106 |  for (i = 0; i < 4; i++)
+      |  ^~~
+main.c:111:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+  111 |   b[0] = xtime(a[0]) ^ (xtime(a[1]) ^ a[1]) ^ a[2] ^ a[3];
+      |   ^
+main.c: In function 'ShiftRows':
+main.c:128:3: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+  128 |   for (int i =0; i < row; i++)
+      |   ^~~
+main.c:130:4: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+  130 |    state[4*row] = state[4*row + 1];
+      |    ^~~~~
+main.c: In function 'encrypt':
+main.c:237:8: warning: unused variable 'j' [-Wunused-variable]
+  237 |  int i,j,round;
+      |        ^
+Info: Linking lab9.elf
+nios2-elf-g++.exe  -T'c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//linker.x' -msys-crt0='c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -Lc:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/   -Wl,-Map=lab9.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o lab9.elf obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert.exe lab9.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x28 --timestamp 1637761290 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name lab9_soc --quartus_project_dir "c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9" --jdi ../..//output_files/lab9.jdi
+Info: (lab9.elf) 78 KBytes program size (code + initialized data).
+Info:            130984 KBytes free for stack + heap.
+Info: Creating lab9.objdump
+nios2-elf-objdump.exe --disassemble --syms --all-header --source lab9.elf >lab9.objdump
+[lab9 build complete]
+23:57:38 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+23:57:38 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+23:57:47 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+23:58:04 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+23:59:05 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'MixColumn':
+main.c:106:2: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+  106 |  for (i = 0; i < 4; i++)
+      |  ^~~
+main.c:111:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+  111 |   b[0] = xtime(a[0]) ^ (xtime(a[1]) ^ a[1]) ^ a[2] ^ a[3];
+      |   ^
+main.c: In function 'ShiftRows':
+main.c:128:3: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+  128 |   for (int i =0; i < row; i++)
+      |   ^~~
+main.c:130:4: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+  130 |    state[4*row] = state[4*row + 1];
+      |    ^~~~~
+main.c: In function 'encrypt':
+main.c:237:8: warning: unused variable 'j' [-Wunused-variable]
+  237 |  int i,j,round;
+      |        ^
+Info: Linking lab9.elf
+nios2-elf-g++.exe  -T'c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//linker.x' -msys-crt0='c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -Lc:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/   -Wl,-Map=lab9.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o lab9.elf obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert.exe lab9.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x28 --timestamp 1637761290 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name lab9_soc --quartus_project_dir "c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9" --jdi ../..//output_files/lab9.jdi
+Info: (lab9.elf) 115 KBytes program size (code + initialized data).
+Info:            130948 KBytes free for stack + heap.
+Info: Creating lab9.objdump
+nios2-elf-objdump.exe --disassemble --syms --all-header --source lab9.elf >lab9.objdump
+[lab9 build complete]
+23:59:26 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+00:04:54 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'MixColumn':
+main.c:106:2: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+  106 |  for (i = 0; i < 4; i++)
+      |  ^~~
+main.c:111:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+  111 |   b[0] = xtime(a[0]) ^ (xtime(a[1]) ^ a[1]) ^ a[2] ^ a[3];
+      |   ^
+main.c: In function 'ShiftRows':
+main.c:128:3: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+  128 |   for (int i =0; i < row; i++)
+      |   ^~~
+main.c:130:4: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+  130 |    state[4*row] = state[4*row + 1];
+      |    ^~~~~
+main.c: In function 'encrypt':
+main.c:204:8: warning: unused variable 'j' [-Wunused-variable]
+  204 |  int i,j,round;
+      |        ^
+main.c: In function 'main':
+main.c:261:15: warning: unused variable 'msg_dec' [-Wunused-variable]
+  261 |  unsigned int msg_dec[4];
+      |               ^~~~~~~
+main.c: At top level:
+main.c:290:2: error: expected identifier or '(' before 'else'
+  290 |  else {
+      |  ^~~~
+main.c:316:2: error: expected identifier or '(' before 'return'
+  316 |  return 0;
+      |  ^~~~~~
+main.c:317:1: error: expected identifier or '(' before '}' token
+  317 | }
+      | ^
+make: *** [Makefile:724：obj/default/main.o] 错误 1
+00:04:55 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+00:04:56 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'MixColumn':
+main.c:106:2: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+  106 |  for (i = 0; i < 4; i++)
+      |  ^~~
+main.c:111:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+  111 |   b[0] = xtime(a[0]) ^ (xtime(a[1]) ^ a[1]) ^ a[2] ^ a[3];
+      |   ^
+main.c: In function 'ShiftRows':
+main.c:128:3: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+  128 |   for (int i =0; i < row; i++)
+      |   ^~~
+main.c:130:4: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+  130 |    state[4*row] = state[4*row + 1];
+      |    ^~~~~
+main.c: In function 'encrypt':
+main.c:204:8: warning: unused variable 'j' [-Wunused-variable]
+  204 |  int i,j,round;
+      |        ^
+main.c: In function 'main':
+main.c:261:15: warning: unused variable 'msg_dec' [-Wunused-variable]
+  261 |  unsigned int msg_dec[4];
+      |               ^~~~~~~
+main.c: At top level:
+main.c:290:2: error: expected identifier or '(' before 'else'
+  290 |  else {
+      |  ^~~~
+main.c:316:2: error: expected identifier or '(' before 'return'
+  316 |  return 0;
+      |  ^~~~~~
+main.c:317:1: error: expected identifier or '(' before '}' token
+  317 | }
+      | ^
+make: *** [Makefile:724：obj/default/main.o] 错误 1
+00:08:34 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'MixColumn':
+main.c:106:2: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+  106 |  for (i = 0; i < 4; i++)
+      |  ^~~
+main.c:111:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+  111 |   b[0] = xtime(a[0]) ^ (xtime(a[1]) ^ a[1]) ^ a[2] ^ a[3];
+      |   ^
+main.c: In function 'ShiftRows':
+main.c:128:3: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+  128 |   for (int i =0; i < row; i++)
+      |   ^~~
+main.c:130:4: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+  130 |    state[4*row] = state[4*row + 1];
+      |    ^~~~~
+main.c: In function 'encrypt':
+main.c:204:8: warning: unused variable 'j' [-Wunused-variable]
+  204 |  int i,j,round;
+      |        ^
+Info: Linking lab9.elf
+nios2-elf-g++.exe  -T'c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//linker.x' -msys-crt0='c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -Lc:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/   -Wl,-Map=lab9.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o lab9.elf obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert.exe lab9.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x28 --timestamp 1637761290 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name lab9_soc --quartus_project_dir "c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9" --jdi ../..//output_files/lab9.jdi
+Info: (lab9.elf) 115 KBytes program size (code + initialized data).
+Info:            130948 KBytes free for stack + heap.
+Info: Creating lab9.objdump
+nios2-elf-objdump.exe --disassemble --syms --all-header --source lab9.elf >lab9.objdump
+[lab9 build complete]
+00:08:35 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+00:08:53 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'MixColumn':
+main.c:106:2: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+  106 |  for (i = 0; i < 4; i++)
+      |  ^~~
+main.c:111:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+  111 |   b[0] = xtime(a[0]) ^ (xtime(a[1]) ^ a[1]) ^ a[2] ^ a[3];
+      |   ^
+main.c: In function 'ShiftRows':
+main.c:128:3: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+  128 |   for (int i =0; i < row; i++)
+      |   ^~~
+main.c:130:4: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+  130 |    state[4*row] = state[4*row + 1];
+      |    ^~~~~
+main.c: In function 'encrypt':
+main.c:204:8: warning: unused variable 'j' [-Wunused-variable]
+  204 |  int i,j,round;
+      |        ^
+Info: Linking lab9.elf
+nios2-elf-g++.exe  -T'c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//linker.x' -msys-crt0='c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -Lc:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/   -Wl,-Map=lab9.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o lab9.elf obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert.exe lab9.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x28 --timestamp 1637761290 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name lab9_soc --quartus_project_dir "c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9" --jdi ../..//output_files/lab9.jdi
+Info: (lab9.elf) 115 KBytes program size (code + initialized data).
+Info:            130948 KBytes free for stack + heap.
+Info: Creating lab9.objdump
+nios2-elf-objdump.exe --disassemble --syms --all-header --source lab9.elf >lab9.objdump
+[lab9 build complete]
+00:12:31 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'encrypt':
+main.c:419:3: warning: implicit declaration of function 'MixColumn'; did you mean 'MixColumns'? [-Wimplicit-function-declaration]
+  419 |   MixColumn(state);
+      |   ^~~~~~~~~
+      |   MixColumns
+main.c:401:8: warning: unused variable 'j' [-Wunused-variable]
+  401 |  int i,j,round;
+      |        ^
+Info: Linking lab9.elf
+nios2-elf-g++.exe  -T'c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//linker.x' -msys-crt0='c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -Lc:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/   -Wl,-Map=lab9.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o lab9.elf obj/default/main.o -lm -msys-lib=m
+c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/bin/ld.exe: obj/default/main.o: in function `encrypt':
+C:\Users\jiaru\GitHub\ECE385-FPGA-lab\lab9\software\lab9/main.c:419: undefined reference to `MixColumn'
+C:\Users\jiaru\GitHub\ECE385-FPGA-lab\lab9\software\lab9/main.c:419:(.text+0xa84): relocation truncated to fit: R_NIOS2_CALL26 against `MixColumn'
+collect2.exe: error: ld returned 1 exit status
+make: *** [Makefile:1014：lab9.elf] 错误 1
+make: *** 正在删除文件“lab9.elf�?
+make: unlink: lab9.elf: 权限不够
+00:12:31 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+00:12:33 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Creating lab9.objdump
+nios2-elf-objdump.exe --disassemble --syms --all-header --source lab9.elf >lab9.objdump
+nios2-elf-objdump.exe: lab9.elf: file format not recognized
+make: *** [Makefile:1024：lab9.objdump] 错误 1
+make: *** 正在删除文件“lab9.objdump�?
+00:13:20 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Creating lab9.objdump
+nios2-elf-objdump.exe --disassemble --syms --all-header --source lab9.elf >lab9.objdump
+nios2-elf-objdump.exe: lab9.elf: file format not recognized
+make: *** [Makefile:1024：lab9.objdump] 错误 1
+make: *** 正在删除文件“lab9.objdump�?
+00:13:21 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+00:13:23 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Creating lab9.objdump
+nios2-elf-objdump.exe --disassemble --syms --all-header --source lab9.elf >lab9.objdump
+nios2-elf-objdump.exe: lab9.elf: file format not recognized
+make: *** [Makefile:1024：lab9.objdump] 错误 1
+make: *** 正在删除文件“lab9.objdump�?
+00:13:29 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Creating lab9.objdump
+nios2-elf-objdump.exe --disassemble --syms --all-header --source lab9.elf >lab9.objdump
+nios2-elf-objdump.exe: lab9.elf: file format not recognized
+make: *** [Makefile:1024：lab9.objdump] 错误 1
+make: *** 正在删除文件“lab9.objdump�?
+00:15:39 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'encrypt':
+main.c:419:3: warning: implicit declaration of function 'MixColumn'; did you mean 'MixColumns'? [-Wimplicit-function-declaration]
+  419 |   MixColumn(state);
+      |   ^~~~~~~~~
+      |   MixColumns
+main.c:401:8: warning: unused variable 'j' [-Wunused-variable]
+  401 |  int i,j,round;
+      |        ^
+Info: Linking lab9.elf
+nios2-elf-g++.exe  -T'c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//linker.x' -msys-crt0='c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -Lc:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/   -Wl,-Map=lab9.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o lab9.elf obj/default/main.o -lm -msys-lib=m
+c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/bin/ld.exe: obj/default/main.o: in function `encrypt':
+C:\Users\jiaru\GitHub\ECE385-FPGA-lab\lab9\software\lab9/main.c:419: undefined reference to `MixColumn'
+C:\Users\jiaru\GitHub\ECE385-FPGA-lab\lab9\software\lab9/main.c:419:(.text+0xa84): relocation truncated to fit: R_NIOS2_CALL26 against `MixColumn'
+collect2.exe: error: ld returned 1 exit status
+make: *** [Makefile:1014：lab9.elf] 错误 1
+make: *** 正在删除文件“lab9.elf�?
+make: unlink: lab9.elf: 权限不够
+00:15:40 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+00:15:50 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Creating lab9.objdump
+nios2-elf-objdump.exe --disassemble --syms --all-header --source lab9.elf >lab9.objdump
+nios2-elf-objdump.exe: lab9.elf: file format not recognized
+make: *** [Makefile:1024：lab9.objdump] 错误 1
+make: *** 正在删除文件“lab9.objdump�?
+00:15:50 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+00:16:37 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Creating lab9.objdump
+nios2-elf-objdump.exe --disassemble --syms --all-header --source lab9.elf >lab9.objdump
+nios2-elf-objdump.exe: lab9.elf: file format not recognized
+make: *** [Makefile:1024：lab9.objdump] 错误 1
+make: *** 正在删除文件“lab9.objdump�?
+00:16:37 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+00:20:38 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'encrypt':
+main.c:401:8: warning: unused variable 'j' [-Wunused-variable]
+  401 |  int i,j,round;
+      |        ^
+Info: Linking lab9.elf
+nios2-elf-g++.exe  -T'c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//linker.x' -msys-crt0='c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -Lc:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/   -Wl,-Map=lab9.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o lab9.elf obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert.exe lab9.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x28 --timestamp 1637761290 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name lab9_soc --quartus_project_dir "c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9" --jdi ../..//output_files/lab9.jdi
+Info: (lab9.elf) 115 KBytes program size (code + initialized data).
+Info:            130948 KBytes free for stack + heap.
+Info: Creating lab9.objdump
+nios2-elf-objdump.exe --disassemble --syms --all-header --source lab9.elf >lab9.objdump
+[lab9 build complete]
+00:20:40 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+00:21:10 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+00:21:11 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+00:21:13 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+00:22:06 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+00:22:07 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+00:22:21 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+00:25:36 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'KeyExpansion':
+main.c:191:11: warning: implicit declaration of function 'SubWord' [-Wimplicit-function-declaration]
+  191 |    temp = SubWord(RotWord(&temp)) ^ Rcon[i/Nk];
+      |           ^~~~~~~
+main.c: In function 'encrypt':
+main.c:391:8: warning: unused variable 'j' [-Wunused-variable]
+  391 |  int i,j,round;
+      |        ^
+Info: Linking lab9.elf
+nios2-elf-g++.exe  -T'c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//linker.x' -msys-crt0='c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -Lc:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/   -Wl,-Map=lab9.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o lab9.elf obj/default/main.o -lm -msys-lib=m
+c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/bin/ld.exe: obj/default/main.o: in function `KeyExpansion':
+C:\Users\jiaru\GitHub\ECE385-FPGA-lab\lab9\software\lab9/main.c:191: undefined reference to `SubWord'
+C:\Users\jiaru\GitHub\ECE385-FPGA-lab\lab9\software\lab9/main.c:191:(.text+0x14c): relocation truncated to fit: R_NIOS2_CALL26 against `SubWord'
+collect2.exe: error: ld returned 1 exit status
+make: *** [Makefile:1014：lab9.elf] 错误 1
+make: *** 正在删除文件“lab9.elf�?
+make: unlink: lab9.elf: 权限不够
+00:25:37 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+00:25:39 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Creating lab9.objdump
+nios2-elf-objdump.exe --disassemble --syms --all-header --source lab9.elf >lab9.objdump
+nios2-elf-objdump.exe: lab9.elf: file format not recognized
+make: *** [Makefile:1024：lab9.objdump] 错误 1
+make: *** 正在删除文件“lab9.objdump�?
+00:26:19 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Creating lab9.objdump
+nios2-elf-objdump.exe --disassemble --syms --all-header --source lab9.elf >lab9.objdump
+nios2-elf-objdump.exe: lab9.elf: file format not recognized
+make: *** [Makefile:1024：lab9.objdump] 错误 1
+make: *** 正在删除文件“lab9.objdump�?
+00:26:19 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+00:26:26 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Creating lab9.objdump
+nios2-elf-objdump.exe --disassemble --syms --all-header --source lab9.elf >lab9.objdump
+nios2-elf-objdump.exe: lab9.elf: file format not recognized
+make: *** [Makefile:1024：lab9.objdump] 错误 1
+make: *** 正在删除文件“lab9.objdump�?
+00:26:45 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Creating lab9.objdump
+nios2-elf-objdump.exe --disassemble --syms --all-header --source lab9.elf >lab9.objdump
+nios2-elf-objdump.exe: lab9.elf: file format not recognized
+make: *** [Makefile:1024：lab9.objdump] 错误 1
+make: *** 正在删除文件“lab9.objdump�?
+00:29:16 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Creating lab9.objdump
+nios2-elf-objdump.exe --disassemble --syms --all-header --source lab9.elf >lab9.objdump
+nios2-elf-objdump.exe: lab9.elf: file format not recognized
+make: *** [Makefile:1024：lab9.objdump] 错误 1
+make: *** 正在删除文件“lab9.objdump�?
+00:29:16 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+00:29:23 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Creating lab9.objdump
+nios2-elf-objdump.exe --disassemble --syms --all-header --source lab9.elf >lab9.objdump
+nios2-elf-objdump.exe: lab9.elf: file format not recognized
+make: *** [Makefile:1024：lab9.objdump] 错误 1
+make: *** 正在删除文件“lab9.objdump�?
+00:29:23 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+00:29:25 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Creating lab9.objdump
+nios2-elf-objdump.exe --disassemble --syms --all-header --source lab9.elf >lab9.objdump
+nios2-elf-objdump.exe: lab9.elf: file format not recognized
+make: *** [Makefile:1024：lab9.objdump] 错误 1
+make: *** 正在删除文件“lab9.objdump�?
+00:30:59 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'KeyExpansion':
+main.c:191:11: warning: implicit declaration of function 'SubWord' [-Wimplicit-function-declaration]
+  191 |    temp = SubWord(RotWord(&temp)) ^ Rcon[i/Nk];
+      |           ^~~~~~~
+main.c: In function 'encrypt':
+main.c:391:8: warning: unused variable 'j' [-Wunused-variable]
+  391 |  int i,j,round;
+      |        ^
+Info: Linking lab9.elf
+nios2-elf-g++.exe  -T'c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//linker.x' -msys-crt0='c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -Lc:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/   -Wl,-Map=lab9.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o lab9.elf obj/default/main.o -lm -msys-lib=m
+c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/bin/ld.exe: obj/default/main.o: in function `KeyExpansion':
+C:\Users\jiaru\GitHub\ECE385-FPGA-lab\lab9\software\lab9/main.c:191: undefined reference to `SubWord'
+C:\Users\jiaru\GitHub\ECE385-FPGA-lab\lab9\software\lab9/main.c:191:(.text+0x14c): relocation truncated to fit: R_NIOS2_CALL26 against `SubWord'
+collect2.exe: error: ld returned 1 exit status
+make: *** [Makefile:1014：lab9.elf] 错误 1
+00:31:00 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+00:31:30 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'encrypt':
+main.c:391:8: warning: unused variable 'j' [-Wunused-variable]
+  391 |  int i,j,round;
+      |        ^
+Info: Linking lab9.elf
+nios2-elf-g++.exe  -T'c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//linker.x' -msys-crt0='c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -Lc:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/   -Wl,-Map=lab9.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o lab9.elf obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert.exe lab9.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x28 --timestamp 1637761290 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name lab9_soc --quartus_project_dir "c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9" --jdi ../..//output_files/lab9.jdi
+Info: (lab9.elf) 115 KBytes program size (code + initialized data).
+Info:            130948 KBytes free for stack + heap.
+Info: Creating lab9.objdump
+nios2-elf-objdump.exe --disassemble --syms --all-header --source lab9.elf >lab9.objdump
+[lab9 build complete]
+00:31:32 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+00:31:41 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+00:33:10 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c:199:5: error: redefinition of 'run_mode'
+  199 | int run_mode = 0;
+      |     ^~~~~~~~
+main.c:20:5: note: previous definition of 'run_mode' was here
+   20 | int run_mode = 0;
+      |     ^~~~~~~~
+main.c:207:6: error: redefinition of 'charToHex'
+  207 | char charToHex(char c)
+      |      ^~~~~~~~~
+main.c:28:6: note: previous definition of 'charToHex' was here
+   28 | char charToHex(char c)
+      |      ^~~~~~~~~
+main.c: In function 'encrypt':
+main.c:329:8: warning: unused variable 'j' [-Wunused-variable]
+  329 |  int i,j,round;
+      |        ^
+make: *** [Makefile:724：obj/default/main.o] 错误 1
+00:33:11 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+00:33:50 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c:199:5: error: redefinition of 'run_mode'
+  199 | int run_mode = 0;
+      |     ^~~~~~~~
+main.c:20:5: note: previous definition of 'run_mode' was here
+   20 | int run_mode = 0;
+      |     ^~~~~~~~
+main.c:207:6: error: redefinition of 'charToHex'
+  207 | char charToHex(char c)
+      |      ^~~~~~~~~
+main.c:28:6: note: previous definition of 'charToHex' was here
+   28 | char charToHex(char c)
+      |      ^~~~~~~~~
+main.c: In function 'encrypt':
+main.c:329:8: warning: unused variable 'j' [-Wunused-variable]
+  329 |  int i,j,round;
+      |        ^
+make: *** [Makefile:724：obj/default/main.o] 错误 1
+00:33:51 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+00:34:14 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c:199:5: error: redefinition of 'run_mode'
+  199 | int run_mode = 0;
+      |     ^~~~~~~~
+main.c:20:5: note: previous definition of 'run_mode' was here
+   20 | int run_mode = 0;
+      |     ^~~~~~~~
+main.c:207:6: error: redefinition of 'charToHex'
+  207 | char charToHex(char c)
+      |      ^~~~~~~~~
+main.c:28:6: note: previous definition of 'charToHex' was here
+   28 | char charToHex(char c)
+      |      ^~~~~~~~~
+main.c: In function 'encrypt':
+main.c:329:8: warning: unused variable 'j' [-Wunused-variable]
+  329 |  int i,j,round;
+      |        ^
+make: *** [Makefile:724：obj/default/main.o] 错误 1
+00:35:32 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c:199:5: error: redefinition of 'run_mode'
+  199 | int run_mode = 0;
+      |     ^~~~~~~~
+main.c:20:5: note: previous definition of 'run_mode' was here
+   20 | int run_mode = 0;
+      |     ^~~~~~~~
+main.c:207:6: error: redefinition of 'charToHex'
+  207 | char charToHex(char c)
+      |      ^~~~~~~~~
+main.c:28:6: note: previous definition of 'charToHex' was here
+   28 | char charToHex(char c)
+      |      ^~~~~~~~~
+main.c: In function 'encrypt':
+main.c:329:8: warning: unused variable 'j' [-Wunused-variable]
+  329 |  int i,j,round;
+      |        ^
+make: *** [Makefile:724：obj/default/main.o] 错误 1
+00:35:33 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+00:36:06 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'encrypt':
+main.c:300:8: warning: unused variable 'j' [-Wunused-variable]
+  300 |  int i,j,round;
+      |        ^
+Info: Linking lab9.elf
+nios2-elf-g++.exe  -T'c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//linker.x' -msys-crt0='c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -Lc:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/   -Wl,-Map=lab9.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o lab9.elf obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert.exe lab9.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x28 --timestamp 1637761290 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name lab9_soc --quartus_project_dir "c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9" --jdi ../..//output_files/lab9.jdi
+Info: (lab9.elf) 115 KBytes program size (code + initialized data).
+Info:            130948 KBytes free for stack + heap.
+Info: Creating lab9.objdump
+nios2-elf-objdump.exe --disassemble --syms --all-header --source lab9.elf >lab9.objdump
+[lab9 build complete]
+00:36:08 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+00:36:19 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+00:38:11 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'encrypt':
+main.c:300:8: warning: unused variable 'j' [-Wunused-variable]
+  300 |  int i,j,round;
+      |        ^
+Info: Linking lab9.elf
+nios2-elf-g++.exe  -T'c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//linker.x' -msys-crt0='c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -Lc:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/   -Wl,-Map=lab9.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o lab9.elf obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert.exe lab9.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x28 --timestamp 1637761290 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name lab9_soc --quartus_project_dir "c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9" --jdi ../..//output_files/lab9.jdi
+Info: (lab9.elf) 115 KBytes program size (code + initialized data).
+Info:            130948 KBytes free for stack + heap.
+Info: Creating lab9.objdump
+nios2-elf-objdump.exe --disassemble --syms --all-header --source lab9.elf >lab9.objdump
+[lab9 build complete]
+00:38:12 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+00:38:14 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+00:40:36 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'encrypt':
+main.c:310:8: warning: unused variable 'j' [-Wunused-variable]
+  310 |  int i,j,round;
+      |        ^
+Info: Linking lab9.elf
+nios2-elf-g++.exe  -T'c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//linker.x' -msys-crt0='c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -Lc:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/   -Wl,-Map=lab9.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o lab9.elf obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert.exe lab9.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x28 --timestamp 1637761290 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name lab9_soc --quartus_project_dir "c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9" --jdi ../..//output_files/lab9.jdi
+Info: (lab9.elf) 115 KBytes program size (code + initialized data).
+Info:            130948 KBytes free for stack + heap.
+Info: Creating lab9.objdump
+nios2-elf-objdump.exe --disassemble --syms --all-header --source lab9.elf >lab9.objdump
+[lab9 build complete]
+00:40:38 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+00:40:44 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+00:43:37 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'encrypt':
+main.c:295:8: warning: unused variable 'j' [-Wunused-variable]
+  295 |  int i,j,round;
+      |        ^
+Info: Linking lab9.elf
+nios2-elf-g++.exe  -T'c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//linker.x' -msys-crt0='c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -Lc:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/   -Wl,-Map=lab9.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o lab9.elf obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert.exe lab9.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x28 --timestamp 1637761290 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name lab9_soc --quartus_project_dir "c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9" --jdi ../..//output_files/lab9.jdi
+Info: (lab9.elf) 115 KBytes program size (code + initialized data).
+Info:            130948 KBytes free for stack + heap.
+Info: Creating lab9.objdump
+nios2-elf-objdump.exe --disassemble --syms --all-header --source lab9.elf >lab9.objdump
+[lab9 build complete]
+00:43:39 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+00:43:44 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+00:44:36 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+00:44:37 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+00:44:49 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+00:46:15 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'MixColumn':
+main.c:108:2: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+  108 |  for (i = 0; i < 4; i++)
+      |  ^~~
+main.c:113:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+  113 |   b[0] = xtime(a[0]) ^ (xtime(a[1]) ^ a[1]) ^ a[2] ^ a[3];
+      |   ^
+main.c: In function 'encrypt':
+main.c:305:3: warning: implicit declaration of function 'MixColumns'; did you mean 'MixColumn'? [-Wimplicit-function-declaration]
+  305 |   MixColumns(state);
+      |   ^~~~~~~~~~
+      |   MixColumn
+main.c:287:8: warning: unused variable 'j' [-Wunused-variable]
+  287 |  int i,j,round;
+      |        ^
+Info: Linking lab9.elf
+nios2-elf-g++.exe  -T'c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//linker.x' -msys-crt0='c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -Lc:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/   -Wl,-Map=lab9.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o lab9.elf obj/default/main.o -lm -msys-lib=m
+c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/bin/ld.exe: obj/default/main.o: in function `encrypt':
+C:\Users\jiaru\GitHub\ECE385-FPGA-lab\lab9\software\lab9/main.c:305: undefined reference to `MixColumns'
+C:\Users\jiaru\GitHub\ECE385-FPGA-lab\lab9\software\lab9/main.c:305:(.text+0xa84): relocation truncated to fit: R_NIOS2_CALL26 against `MixColumns'
+collect2.exe: error: ld returned 1 exit status
+make: *** [Makefile:1014：lab9.elf] 错误 1
+00:46:16 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+00:46:19 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Linking lab9.elf
+nios2-elf-g++.exe  -T'c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//linker.x' -msys-crt0='c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -Lc:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/   -Wl,-Map=lab9.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o lab9.elf obj/default/main.o -lm -msys-lib=m
+c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/bin/ld.exe: obj/default/main.o: in function `encrypt':
+C:\Users\jiaru\GitHub\ECE385-FPGA-lab\lab9\software\lab9/main.c:305: undefined reference to `MixColumns'
+C:\Users\jiaru\GitHub\ECE385-FPGA-lab\lab9\software\lab9/main.c:305:(.text+0xa84): relocation truncated to fit: R_NIOS2_CALL26 against `MixColumns'
+collect2.exe: error: ld returned 1 exit status
+make: *** [Makefile:1014：lab9.elf] 错误 1
+00:46:58 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Linking lab9.elf
+nios2-elf-g++.exe  -T'c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//linker.x' -msys-crt0='c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -Lc:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/   -Wl,-Map=lab9.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o lab9.elf obj/default/main.o -lm -msys-lib=m
+c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/bin/ld.exe: obj/default/main.o: in function `encrypt':
+C:\Users\jiaru\GitHub\ECE385-FPGA-lab\lab9\software\lab9/main.c:305: undefined reference to `MixColumns'
+C:\Users\jiaru\GitHub\ECE385-FPGA-lab\lab9\software\lab9/main.c:305:(.text+0xa84): relocation truncated to fit: R_NIOS2_CALL26 against `MixColumns'
+collect2.exe: error: ld returned 1 exit status
+make: *** [Makefile:1014：lab9.elf] 错误 1
+00:46:59 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+00:47:19 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'MixColumn':
+main.c:108:2: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+  108 |  for (i = 0; i < 4; i++)
+      |  ^~~
+main.c:113:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+  113 |   b[0] = xtime(a[0]) ^ (xtime(a[1]) ^ a[1]) ^ a[2] ^ a[3];
+      |   ^
+main.c: In function 'encrypt':
+main.c:305:3: warning: implicit declaration of function 'MixColumns'; did you mean 'MixColumn'? [-Wimplicit-function-declaration]
+  305 |   MixColumns(state);
+      |   ^~~~~~~~~~
+      |   MixColumn
+main.c:287:8: warning: unused variable 'j' [-Wunused-variable]
+  287 |  int i,j,round;
+      |        ^
+Info: Linking lab9.elf
+nios2-elf-g++.exe  -T'c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//linker.x' -msys-crt0='c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -Lc:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/   -Wl,-Map=lab9.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o lab9.elf obj/default/main.o -lm -msys-lib=m
+c:/intelfpga_lite/20.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/10.1.1/../../../../../H-x86_64-mingw32/nios2-elf/bin/ld.exe: obj/default/main.o: in function `encrypt':
+C:\Users\jiaru\GitHub\ECE385-FPGA-lab\lab9\software\lab9/main.c:305: undefined reference to `MixColumns'
+C:\Users\jiaru\GitHub\ECE385-FPGA-lab\lab9\software\lab9/main.c:305:(.text+0xa84): relocation truncated to fit: R_NIOS2_CALL26 against `MixColumns'
+collect2.exe: error: ld returned 1 exit status
+make: *** [Makefile:1014：lab9.elf] 错误 1
+00:47:20 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+00:48:20 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'MixColumns':
+main.c:108:2: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+  108 |  for (i = 0; i < 4; i++)
+      |  ^~~
+main.c:113:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+  113 |   b[0] = xtime(a[0]) ^ (xtime(a[1]) ^ a[1]) ^ a[2] ^ a[3];
+      |   ^
+main.c: In function 'encrypt':
+main.c:287:8: warning: unused variable 'j' [-Wunused-variable]
+  287 |  int i,j,round;
+      |        ^
+Info: Linking lab9.elf
+nios2-elf-g++.exe  -T'c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//linker.x' -msys-crt0='c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -Lc:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/   -Wl,-Map=lab9.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o lab9.elf obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert.exe lab9.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x28 --timestamp 1637761290 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name lab9_soc --quartus_project_dir "c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9" --jdi ../..//output_files/lab9.jdi
+Info: (lab9.elf) 115 KBytes program size (code + initialized data).
+Info:            130948 KBytes free for stack + heap.
+Info: Creating lab9.objdump
+nios2-elf-objdump.exe --disassemble --syms --all-header --source lab9.elf >lab9.objdump
+[lab9 build complete]
+00:48:22 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+00:48:28 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+00:51:08 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'encrypt':
+main.c:284:8: warning: unused variable 'j' [-Wunused-variable]
+  284 |  int i,j,round;
+      |        ^
+Info: Linking lab9.elf
+nios2-elf-g++.exe  -T'c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//linker.x' -msys-crt0='c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -Lc:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/   -Wl,-Map=lab9.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o lab9.elf obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert.exe lab9.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x28 --timestamp 1637761290 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name lab9_soc --quartus_project_dir "c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9" --jdi ../..//output_files/lab9.jdi
+Info: (lab9.elf) 115 KBytes program size (code + initialized data).
+Info:            130948 KBytes free for stack + heap.
+Info: Creating lab9.objdump
+nios2-elf-objdump.exe --disassemble --syms --all-header --source lab9.elf >lab9.objdump
+[lab9 build complete]
+00:51:10 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+00:51:15 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+00:57:26 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'encrypt':
+main.c:262:8: warning: unused variable 'j' [-Wunused-variable]
+  262 |  int i,j,round;
+      |        ^
+Info: Linking lab9.elf
+nios2-elf-g++.exe  -T'c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//linker.x' -msys-crt0='c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -Lc:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/   -Wl,-Map=lab9.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o lab9.elf obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert.exe lab9.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x28 --timestamp 1637761290 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name lab9_soc --quartus_project_dir "c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9" --jdi ../..//output_files/lab9.jdi
+Info: (lab9.elf) 115 KBytes program size (code + initialized data).
+Info:            130948 KBytes free for stack + heap.
+Info: Creating lab9.objdump
+nios2-elf-objdump.exe --disassemble --syms --all-header --source lab9.elf >lab9.objdump
+[lab9 build complete]
+00:57:28 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+00:57:32 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+00:59:11 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'ShiftRows':
+main.c:136:3: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+  136 |   for (int i =0; i < row; i++)
+      |   ^~~
+main.c:138:4: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+  138 |    state[4*row] = state[4*row + 1];
+      |    ^~~~~
+main.c: In function 'encrypt':
+main.c:262:8: warning: unused variable 'j' [-Wunused-variable]
+  262 |  int i,j,round;
+      |        ^
+Info: Linking lab9.elf
+nios2-elf-g++.exe  -T'c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//linker.x' -msys-crt0='c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -Lc:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/   -Wl,-Map=lab9.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o lab9.elf obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert.exe lab9.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x28 --timestamp 1637761290 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name lab9_soc --quartus_project_dir "c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9" --jdi ../..//output_files/lab9.jdi
+Info: (lab9.elf) 115 KBytes program size (code + initialized data).
+Info:            130948 KBytes free for stack + heap.
+Info: Creating lab9.objdump
+nios2-elf-objdump.exe --disassemble --syms --all-header --source lab9.elf >lab9.objdump
+[lab9 build complete]
+00:59:13 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+00:59:22 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+01:02:00 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'encrypt':
+main.c:254:8: warning: unused variable 'j' [-Wunused-variable]
+  254 |  int i,j,round;
+      |        ^
+Info: Linking lab9.elf
+nios2-elf-g++.exe  -T'c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//linker.x' -msys-crt0='c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -Lc:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/   -Wl,-Map=lab9.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o lab9.elf obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert.exe lab9.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x28 --timestamp 1637761290 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name lab9_soc --quartus_project_dir "c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9" --jdi ../..//output_files/lab9.jdi
+Info: (lab9.elf) 115 KBytes program size (code + initialized data).
+Info:            130948 KBytes free for stack + heap.
+Info: Creating lab9.objdump
+nios2-elf-objdump.exe --disassemble --syms --all-header --source lab9.elf >lab9.objdump
+[lab9 build complete]
+01:02:02 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+01:02:04 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+01:02:05 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+01:03:29 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+01:05:43 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'encrypt':
+main.c:248:8: warning: unused variable 'j' [-Wunused-variable]
+  248 |  int i,j,round;
+      |        ^
+Info: Linking lab9.elf
+nios2-elf-g++.exe  -T'c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//linker.x' -msys-crt0='c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -Lc:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/   -Wl,-Map=lab9.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o lab9.elf obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert.exe lab9.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x28 --timestamp 1637761290 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name lab9_soc --quartus_project_dir "c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9" --jdi ../..//output_files/lab9.jdi
+Info: (lab9.elf) 115 KBytes program size (code + initialized data).
+Info:            130948 KBytes free for stack + heap.
+Info: Creating lab9.objdump
+nios2-elf-objdump.exe --disassemble --syms --all-header --source lab9.elf >lab9.objdump
+[lab9 build complete]
+01:05:45 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+01:05:47 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+01:05:48 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+01:05:51 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+01:05:51 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+01:05:53 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+01:06:24 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Linking lab9.elf
+nios2-elf-g++.exe  -T'c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//linker.x' -msys-crt0='c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -Lc:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/   -Wl,-Map=lab9.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o lab9.elf obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert.exe lab9.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x28 --timestamp 1637761290 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name lab9_soc --quartus_project_dir "c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9" --jdi ../..//output_files/lab9.jdi
+Info: (lab9.elf) 115 KBytes program size (code + initialized data).
+Info:            130948 KBytes free for stack + heap.
+Info: Creating lab9.objdump
+nios2-elf-objdump.exe --disassemble --syms --all-header --source lab9.elf >lab9.objdump
+[lab9 build complete]
+01:06:25 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+01:06:48 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+01:06:49 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+01:06:51 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+01:07:42 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+01:07:43 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+01:08:08 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+01:09:00 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+01:09:01 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+01:09:04 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+01:14:58 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'encrypt':
+main.c:242:8: warning: unused variable 'j' [-Wunused-variable]
+  242 |  int i,j,round;
+      |        ^
+Info: Linking lab9.elf
+nios2-elf-g++.exe  -T'c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//linker.x' -msys-crt0='c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -Lc:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/   -Wl,-Map=lab9.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o lab9.elf obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert.exe lab9.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x28 --timestamp 1637761290 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name lab9_soc --quartus_project_dir "c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9" --jdi ../..//output_files/lab9.jdi
+Info: (lab9.elf) 115 KBytes program size (code + initialized data).
+Info:            130948 KBytes free for stack + heap.
+Info: Creating lab9.objdump
+nios2-elf-objdump.exe --disassemble --syms --all-header --source lab9.elf >lab9.objdump
+[lab9 build complete]
+01:15:00 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+01:15:15 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+01:44:07 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+01:50:56 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+01:57:17 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+01:59:06 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+01:59:27 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+02:20:02 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'encrypt':
+main.c:242:8: warning: unused variable 'j' [-Wunused-variable]
+  242 |  int i,j,round;
+      |        ^
+Info: Linking lab9.elf
+nios2-elf-g++.exe  -T'c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//linker.x' -msys-crt0='c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -Lc:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/   -Wl,-Map=lab9.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o lab9.elf obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert.exe lab9.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x28 --timestamp 1637761290 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name lab9_soc --quartus_project_dir "c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9" --jdi ../..//output_files/lab9.jdi
+Info: (lab9.elf) 115 KBytes program size (code + initialized data).
+Info:            130948 KBytes free for stack + heap.
+Info: Creating lab9.objdump
+nios2-elf-objdump.exe --disassemble --syms --all-header --source lab9.elf >lab9.objdump
+[lab9 build complete]
+02:20:05 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+02:20:16 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+02:20:54 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+02:20:55 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+02:20:57 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+02:21:28 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+02:22:07 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+02:23:51 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'encrypt':
+main.c:242:8: warning: unused variable 'j' [-Wunused-variable]
+  242 |  int i,j,round;
+      |        ^
+Info: Linking lab9.elf
+nios2-elf-g++.exe  -T'c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//linker.x' -msys-crt0='c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -Lc:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/   -Wl,-Map=lab9.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o lab9.elf obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert.exe lab9.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x28 --timestamp 1637761290 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name lab9_soc --quartus_project_dir "c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9" --jdi ../..//output_files/lab9.jdi
+Info: (lab9.elf) 115 KBytes program size (code + initialized data).
+Info:            130948 KBytes free for stack + heap.
+Info: Creating lab9.objdump
+nios2-elf-objdump.exe --disassemble --syms --all-header --source lab9.elf >lab9.objdump
+[lab9 build complete]
+02:25:35 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+02:25:36 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+02:25:42 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+02:28:09 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'encrypt':
+main.c:242:8: warning: unused variable 'j' [-Wunused-variable]
+  242 |  int i,j,round;
+      |        ^
+Info: Linking lab9.elf
+nios2-elf-g++.exe  -T'c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//linker.x' -msys-crt0='c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -Lc:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/   -Wl,-Map=lab9.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o lab9.elf obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert.exe lab9.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x28 --timestamp 1637761290 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name lab9_soc --quartus_project_dir "c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9" --jdi ../..//output_files/lab9.jdi
+Info: (lab9.elf) 115 KBytes program size (code + initialized data).
+Info:            130947 KBytes free for stack + heap.
+Info: Creating lab9.objdump
+nios2-elf-objdump.exe --disassemble --syms --all-header --source lab9.elf >lab9.objdump
+[lab9 build complete]
+02:28:11 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+02:28:15 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+02:29:49 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'encrypt':
+main.c:242:8: warning: unused variable 'j' [-Wunused-variable]
+  242 |  int i,j,round;
+      |        ^
+Info: Linking lab9.elf
+nios2-elf-g++.exe  -T'c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//linker.x' -msys-crt0='c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -Lc:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/   -Wl,-Map=lab9.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o lab9.elf obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert.exe lab9.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x28 --timestamp 1637761290 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name lab9_soc --quartus_project_dir "c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9" --jdi ../..//output_files/lab9.jdi
+Info: (lab9.elf) 115 KBytes program size (code + initialized data).
+Info:            130947 KBytes free for stack + heap.
+Info: Creating lab9.objdump
+nios2-elf-objdump.exe --disassemble --syms --all-header --source lab9.elf >lab9.objdump
+[lab9 build complete]
+02:29:51 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+02:29:53 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+02:30:09 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+02:32:50 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'encrypt':
+main.c:242:8: warning: unused variable 'j' [-Wunused-variable]
+  242 |  int i,j,round;
+      |        ^
+Info: Linking lab9.elf
+nios2-elf-g++.exe  -T'c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//linker.x' -msys-crt0='c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -Lc:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/   -Wl,-Map=lab9.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o lab9.elf obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert.exe lab9.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x28 --timestamp 1637761290 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name lab9_soc --quartus_project_dir "c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9" --jdi ../..//output_files/lab9.jdi
+Info: (lab9.elf) 115 KBytes program size (code + initialized data).
+Info:            130948 KBytes free for stack + heap.
+Info: Creating lab9.objdump
+nios2-elf-objdump.exe --disassemble --syms --all-header --source lab9.elf >lab9.objdump
+[lab9 build complete]
+02:32:51 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+02:32:55 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
+02:36:36 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'encrypt':
+main.c:244:8: warning: unused variable 'j' [-Wunused-variable]
+  244 |  int i,j,round;
+      |        ^
+Info: Linking lab9.elf
+nios2-elf-g++.exe  -T'c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//linker.x' -msys-crt0='c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -Lc:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/   -Wl,-Map=lab9.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o lab9.elf obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert.exe lab9.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x28 --timestamp 1637761290 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name lab9_soc --quartus_project_dir "c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9" --jdi ../..//output_files/lab9.jdi
+Info: (lab9.elf) 115 KBytes program size (code + initialized data).
+Info:            130948 KBytes free for stack + heap.
+Info: Creating lab9.objdump
+nios2-elf-objdump.exe --disassemble --syms --all-header --source lab9.elf >lab9.objdump
+[lab9 build complete]
+02:36:37 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+wsl make all 
+[BSP build complete]
+02:36:47 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]

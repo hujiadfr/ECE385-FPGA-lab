@@ -1,6 +1,6 @@
-21:58:02 **** Build of configuration Nios II for project lab9_bsp ****
+02:36:37 **** Incremental Build of configuration Nios II for project lab9_bsp ****
 wsl make all 
 [BSP build complete]
 
-21:58:02 Build Finished (took 194ms)
+02:36:38 Build Finished (took 197ms)
 
