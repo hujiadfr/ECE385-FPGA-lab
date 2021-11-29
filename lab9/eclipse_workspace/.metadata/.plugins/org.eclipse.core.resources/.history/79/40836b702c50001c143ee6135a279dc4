@@ -273,9 +273,11 @@ void encrypt(unsigned char * msg_ascii, unsigned char * key_ascii, unsigned int 
 		key [i] =keyInit[i]<<24 | keyInit[i+4]<<16 | keyInit[i+8]<<8 | keyInit[i+12];
 	}
 
-	// set the AES_MSG_EN
-	for (i=0; i<4; i++)
-		AES_PTR[i+4] = msg_enc[3-i];
+	// set the AES_KEY and AES_MSG_EN
+	for (i=0; i<16; i++){
+		AES_PTR[i+4] = key[i];
+		//AES_PTR[i+4] = msg_enc[i];
+	}
 
 
 }
@@ -326,10 +328,6 @@ int main()
 			printf("\nEncrpted message is: \n");
 			for(i = 0; i < 4; i++){
 				printf("%08x", msg_enc[i]);
-			}
-			printf("\key is: \n");
-			for(i = 0; i < 4; i++){
-				printf("%08x ", key[i]);
 			}
 			printf("\n");
 //			decrypt(msg_enc, msg_dec, key);
