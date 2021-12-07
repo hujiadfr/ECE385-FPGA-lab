@@ -354,11 +354,11 @@ int main()
 			for(i = 0; i < 4; i++){
 				printf("%08x", msg_enc[i]);
 			}
-			printf("\key is: \n");
-			for(i = 0; i < 4; i++){
-				printf("%08x ", key[i]);
-			}
-			printf("\n");
+//			printf("\key is: \n");
+//			for(i = 0; i < 4; i++){
+//				printf("%08x ", key[i]);
+//			}
+//			printf("\n");
 
 			// Run Decryption
 			decrypt(msg_enc, msg_dec, key);
