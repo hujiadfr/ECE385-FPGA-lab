@@ -14,12 +14,14 @@ University of Illinois ECE Department
 #include "aes.h"
 
 // Pointer to base address of AES module, make sure it matches Qsys
+// ? 可以这么做的原因或许是在avalon_aes_interface.sv 文件开头定义了 logic [15:0][31:0] Reg_unit;
 volatile unsigned int * AES_PTR = (unsigned int *) 0x00000040;
 
 // Execution mode: 0 for testing, 1 for benchmarking
 int run_mode = 0;
 
-/** charToHex
+/*
+ * charToHex
  *  Convert a single character to the 4-bit value it represents.
  *
  *  Input: a character c (e.g. 'A')
@@ -44,7 +46,8 @@ char charToHex(char c)
 	return hex;
 }
 
-/** charsToHex
+/*
+ * charsToHex
  *  Convert two characters to byte value it represents.
  *  Inputs must be 0-9, A-F, or a-f.
  *
@@ -58,7 +61,8 @@ char charsToHex(char c1, char c2)
 	return (hex1 << 4) + hex2;
 }
 
-/** SubBytes
+/*
+ * SubBytes
  * The transformation process for each Byte in the State is pre-calculated and stored into
  * S-box for the encryption process.
  *
@@ -73,34 +77,19 @@ void SubBytes(unsigned char state[4][4])
 		}
 }
 
-
-//
-///** AddRoundKey
-// * An b N -Word Round Key is fetched form the
-// * pre-computed Key Schedule where each Byte is
-// * bitwise XORed with the corresponding Byte from the
-// * updating State
-// *
-// * Input: state,w
-// */
-//void AddRoundKey(unsigned char* state, unsigned long* w)
-//{
-//	for (int row = 0; row < 4; row++)
-//		for (int col = 0; col < 4; col++)
-//			state[row*4+col] = state[row*4+col] ^ ((w[col]>>((3-row)*8)) & 0xFF);
-//}
-//
-//
+/*
+*	bit-wise left shift then a conditional bit-wise
+*	XOR with {1b} if the 8th bit before the shift is 1
+*/
 unsigned char xtime(unsigned char in)
 {
-	// bit-wise left shift then a conditional bit-wise
-	// XOR with {1b} if the 8th bit before the shift is 1
 	if (in & 0x80)
 		return ((in<<1) ^ 0x1b);
 	else
 		return (in<<1);
 }
-/** Mixcolumn
+/*
+ * Mixcolumn
  * Each of the four Words in the updating State undergoes separate invertible linear transformations over 8 GF(2 ) such
  * that the four Bytes of each Word are linearly combined to form a new Word
  *
@@ -127,8 +116,11 @@ void MixColumns(unsigned char state[4][4])
 	}
 }
 
-/** Shiftrows
- * The rows in the updating State is cyclically shifted by a certain offset. Specifically,row n is left-circularly shifted by n 飥�1 Bytes
+/*
+ * Shiftrows
+ * The rows in the updating State is cyclically shifted by a certain offset. 
+ * Specifically, row n is left-circularly shifted by n-1 Bytes.
+ * 
  * input: state
 */
 
@@ -149,20 +141,8 @@ void ShiftRows(unsigned char state[4][4])
 	}
 }
 
-void ShiftLeft (unsigned char* byte, int n)
-{
-	int i;
-	unsigned char temp;
-	for (i=0;i<n;i++){
-		temp = byte[0];
-		byte[0] = byte[1];
-		byte[1] = byte[2];
-		byte[2] = byte[3];
-		byte[3] = temp;
-	}
-}
-
-/** SubWord
+/*
+ *  SubWord
  *  Convert 16 bytes into sbox form.
  *
  *  Input: pointer to state
@@ -178,7 +158,9 @@ unsigned long SubWord(unsigned long word)
 	}
 	return *((unsigned long*)out);
 }
-/** RotWord
+
+/*
+ * RotWord
  *  rotate the word
  *  Bytes ABCD -> BCDA
  *
@@ -189,17 +171,18 @@ unsigned long RotWord(unsigned long* word)
 {
 	return (((*word<<8) & 0xFFFFFFF0)|((*word>>24) & 0x000000FF));
 }
-//
-///**KeyExpansion
-// * Key Expansion generates a Round Key ( b N Words) at a time based on the previous
-//Round Key (use the original Cipher Key to generate the first Round Key), for a total of
-//1 r N 飥� Round Keys, called the Key Schedule.
-// *
-// * input:  	key,
-// *			w,
-// *			Nk
-// */
-void KeyExpansion(unsigned char key[4][4], unsigned long w[44], unsigned int Nk)
+
+/*
+* KeyExpansion
+* Key Expansion generates a Round Key ( N_b Words) at a time based on the previous
+* Round Key (use the original Cipher Key to generate the first Round Key), for a total of
+* N_r + 1 Round Keys, called the Key Schedule.
+*
+* input:  	key,
+*			w,
+*			Nk
+*/
+void KeyExpansion(unsigned char* key, unsigned long* w, unsigned int Nk)
 {
 	unsigned long temp;
 	unsigned int i = 0;
@@ -247,19 +230,28 @@ void AddRoundKey(unsigned char state[4][4], unsigned long* w, int round){
 	}
 }
 
-
-/** SubByte
+/*
+ *  SubByte
  *  Convert one byte into sbox form.
  *
  *  Input: pointer to the byte
- *
  */
 void SubByte(unsigned char* byte)
 {
 	*byte = aes_sbox[(int)*byte];
 }
 
-void encrypt(unsigned char * msg_ascii, unsigned char * key_ascii, unsigned int * msg_enc, unsigned int * key)
+/*
+*	input:
+*	msg_ascii 	//? scanf()存入的是ascii码，在这个函数中我们希望将其转化为Hex. 
+*	key_ascii	//? e.g. ECE2 -> 0xEC,0xE2. 重点是对单个字符，保留ascii码后4位，两个字符转化为2位Hex.
+*
+*	output:
+*	msg_enc		//? 将这两个输出存入对应的register
+*	key			
+*/
+void encrypt(unsigned char * msg_ascii, unsigned char * key_ascii, 
+			 unsigned int * msg_enc, unsigned int * key)
 {
 	// Implement this function
 	AES_PTR[14] = 0;
@@ -299,12 +291,11 @@ void encrypt(unsigned char * msg_ascii, unsigned char * key_ascii, unsigned int 
 	// set the AES_MSG_EN
 	for (i=0; i<4; i++)
 		AES_PTR[i+4] = msg_enc[3-i];
-
-
 }
 
 
-/** decrypt
+/*
+ * decrypt
  *  Perform AES decryption in hardware.
  *
  *  Input:  msg_enc - Pointer to 4x 32-bit int array that contains the encrypted message
@@ -314,11 +305,12 @@ void encrypt(unsigned char * msg_ascii, unsigned char * key_ascii, unsigned int 
 void decrypt(unsigned int * msg_enc, unsigned int * msg_dec, unsigned int * key)
 {
 	// Implement this function
-	int i;
 	AES_PTR[14] = 0;
 	AES_PTR[15] = 0;
+
 	// set the AES_KEY and AES_MSG_EN
-	for (i=0; i<4; i++){
+	//? 值得注意的是这里的赋值顺序，C代码index从小到大，Verilog index从大到小
+	for (int i=0; i<4; i++){
 		AES_PTR[i] = key[3-i];
 		AES_PTR[i+4] = msg_enc[3-i];
 	}
@@ -331,7 +323,7 @@ void decrypt(unsigned int * msg_enc, unsigned int * msg_dec, unsigned int * key)
 	while (AES_PTR[15] == 0)
 
 	// set the AES_MSG_DE
-	for (i=0; i<4; i++){
+	for (int i=0; i<4; i++){
 		msg_dec[3-i] = AES_PTR[i+8];
 	}
 
@@ -340,9 +332,9 @@ void decrypt(unsigned int * msg_enc, unsigned int * msg_dec, unsigned int * key)
 	AES_PTR[15] = 0;
 }
 
-/** main
+/*
+ *  main
  *  Allows the user to enter the message, key, and select execution mode
- *
  */
 int main()
 {
@@ -372,11 +364,11 @@ int main()
 			for(i = 0; i < 4; i++){
 				printf("%08x", msg_enc[i]);
 			}
-//			printf("\key is: \n");
-//			for(i = 0; i < 4; i++){
-//				printf("%08x ", key[i]);
-//			}
-//			printf("\n");
+			// printf("\nkey is: \n");
+			// for(i = 0; i < 4; i++){
+			// 	printf("%08x ", key[i]);
+			// }
+			// printf("\n");
 
 			// Run Decryption
 			decrypt(msg_enc, msg_dec, key);
