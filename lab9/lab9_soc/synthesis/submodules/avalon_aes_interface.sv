@@ -93,14 +93,12 @@ logic [15:0][31:0] Reg_unit;
 			AVL_READDATA = Reg_unit[AVL_ADDR];
 
 	end
-//	
-//	AES aes(.*,
-//			  .AES_START(Reg_unit[14][0]),
-//			  .AES_DONE(Done),
-//			  .AES_KEY(Reg_unit[3:0]),
-//			  .AES_MSG_ENC(Reg_unit[7:4]),
-//			  .AES_MSG_DEC(MSG_DEC));
+	
+	AES aes(.*,
+			  .AES_START(Reg_unit[14][0]),
+			  .AES_DONE(Done),
+			  .AES_KEY(Reg_unit[3:0]),
+			  .AES_MSG_ENC(Reg_unit[7:4]),
+			  .AES_MSG_DEC(MSG_DEC));
 			  
 endmodule
-
-

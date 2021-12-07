@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnsembleReport name="lab9_soc" kind="lab9_soc" version="1.0" fabric="QSYS">
  <!-- Format version 20.1 720 (Future versions may contain additional information.) -->
- <!-- 2021.11.24.21:41:30 -->
+ <!-- 2021.12.07.20:28:45 -->
  <!-- A collection of modules and connections -->
  <parameter name="AUTO_GENERATION_ID">
   <type>java.lang.Integer</type>
-  <value>1637761290</value>
+  <value>1638880125</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>false</visible>
@@ -32,7 +32,7 @@
  </parameter>
  <parameter name="AUTO_DEVICE">
   <type>java.lang.String</type>
-  <value>EP4CE55F29C7</value>
+  <value>EP4CE115F29C7</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>false</visible>
@@ -4305,7 +4305,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="AUTO_DEVICE">
    <type>java.lang.String</type>
-   <value>EP4CE55F29C7</value>
+   <value>EP4CE115F29C7</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -8670,7 +8670,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.TIMESTAMP</name>
-   <value>1637761290</value>
+   <value>1638880125</value>
   </assignment>
   <assignment>
    <name>embeddedsw.dts.compatible</name>
@@ -8690,7 +8690,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.dts.params.timestamp</name>
-   <value>1637761290</value>
+   <value>1638880125</value>
   </assignment>
   <assignment>
    <name>embeddedsw.dts.vendor</name>
@@ -8706,7 +8706,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="timestamp">
    <type>int</type>
-   <value>1637761290</value>
+   <value>1638880125</value>
    <derived>true</derived>
    <enabled>false</enabled>
    <visible>false</visible>
