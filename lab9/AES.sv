@@ -8,7 +8,7 @@ University of Illinois ECE Department
 ************************************************************************/
 
 module AES (
-	input	 logic CLK,
+	input  logic CLK,
 	input  logic RESET,
 	input  logic AES_START,
 	output logic AES_DONE,
