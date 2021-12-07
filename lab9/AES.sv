@@ -89,7 +89,7 @@ module AES (
 	begin
 		if (RESET) begin
 			AES_STATE <= WAIT;
-//			state <= 128'b0;
+			//	state <= 128'b0;
 			Loop_counter <=4'b0;
 		end
 		
@@ -100,10 +100,11 @@ module AES (
 		end
 	end
 	
-	always_comb begin
-			Loop_counter_next = Loop_counter;
-			AES_NEXT_STATE = AES_STATE;
-			unique case (AES_STATE)
+	always_comb 
+	begin
+		Loop_counter_next = Loop_counter;
+		AES_NEXT_STATE = AES_STATE;
+		unique case (AES_STATE)
 			WAIT:begin
 				if (AES_START ==1'b1)begin
 					Loop_counter_next = 4'b0;
@@ -143,7 +144,8 @@ module AES (
 			INV_MIXCOLUMNS4: AES_NEXT_STATE = INV_MIXCOLUMNS_DONE;
 
 			INV_MIXCOLUMNS_DONE:begin
-				if (Loop_counter == 4'd8)begin
+				if (Loop_counter == 4'd8)
+				begin
 					AES_NEXT_STATE = INV_SHIFTROWS_AFTER;
 				end
 				else begin
@@ -155,7 +157,7 @@ module AES (
 			INV_SHIFTROWS_AFTER: AES_NEXT_STATE = INV_SUBBYTES_AFTER;
 			
 			INV_SUBBYTES_AFTER: AES_NEXT_STATE = ADDROUNDKEY_AFTER;
-	
+
 			ADDROUNDKEY_AFTER: AES_NEXT_STATE = DONE;
 			
 			DONE:begin

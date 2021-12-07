@@ -291,6 +291,33 @@ void encrypt(unsigned char * msg_ascii, unsigned char * key_ascii, unsigned int 
 void decrypt(unsigned int * msg_enc, unsigned int * msg_dec, unsigned int * key)
 {
 	// Implement this function
+	int i;
+	AES_PTR[14] = 0;
+	AES_PTR[15] = 0;
+	// set the AES_KEY and AES_MSG_EN
+	for (i=0; i<4; i++){
+		AES_PTR[i] = key[3-i];
+		AES_PTR[i+4] = msg_enc[3-i];
+	}
+
+	// set the AES_START to 1
+	AES_PTR[14] = 1;
+
+	// wait for AES_DONE, this process will be
+	// implemented by hardware in hdl.
+	while (AES_PTR[15] == 0){
+		//	for (i=0;i<16;i++){
+		//		printf("%08x",AES_PTR[i]);
+		//	}
+		//	printf("\n");
+	}
+
+	// set the AES_MSG_DE
+	for (i=0; i<4; i++){
+		msg_dec[3-i] = AES_PTR[i+8];
+	}
+
+	// set the AES_START to 0
 	AES_PTR[14] = 0;
 	AES_PTR[15] = 0;
 }
@@ -332,12 +359,14 @@ int main()
 				printf("%08x ", key[i]);
 			}
 			printf("\n");
-//			decrypt(msg_enc, msg_dec, key);
-//			printf("\nDecrypted message is: \n");
-//			for(i = 0; i < 4; i++){
-//				printf("%08x", msg_dec[i]);
-//			}
-//			printf("\n");
+
+			// Run Decryption
+			decrypt(msg_enc, msg_dec, key);
+			printf("\nDecrypted message is: \n");
+			for(i = 0; i < 4; i++){
+				printf("%08x", msg_dec[i]);
+			}
+			printf("\n");
 		}
 	}
 	else {
@@ -357,6 +386,7 @@ int main()
 		double time_spent = (double)(end - begin) / CLOCKS_PER_SEC;
 		double speed = size_KB / time_spent;
 		printf("Software Encryption Speed: %f KB/s \n", speed);
+
 		// Run Decryption
 		begin = clock();
 		for (i = 0; i < size_KB * 64; i++)
