@@ -126,3 +126,9 @@ lab9/software/lab9/lab9.objdump
 lab9/software/lab9/obj/default/main.o
 lab9/software/lab9_bsp/.settings/language.settings.xml
 lab9/software/lab9_bsp/settings.bsp
+*.o
+*.d
+*.a
+*.log
+*.log
+*.xml
