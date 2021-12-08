@@ -49,7 +49,11 @@ int main(void)
 	static alt_u16 ctl_reg = 0;
 	static alt_u16 no_device = 0;
 	alt_u16 fs_device = 0;
-	int keycode = 0;
+	//!-----------------------Read More Keys-----------------------------------------//
+	int keycode = 0;		// store the key read from address
+	int keycode2 = 0;
+	int keycode3 = 0;
+	//!-------------------------------End--------------------------------------------//
 	alt_u8 toggle = 0;
 	alt_u8 data_size;
 	alt_u8 hot_plug_count;
@@ -513,26 +517,27 @@ int main(void)
 
 		usb_ctl_val = UsbWaitTDListDone();
 
+		//-------------------------------Read More Keys Use More UsbRead() ------------------------//
 		// The first two keycodes are stored in 0x051E. Other keycodes are in subsequent addresses.
 		//! We can add UsbRead() here if we want to get more information about more keys
 		// For example, code below reads 6 keys with 3 UsbRead(), each UsbRead() reads 16-bits = 2 char.
-		/***
-		 * keycode = UsbRead(0x051e);
-		 * keycode2 = UsbRead(0x0520);
-		 * keycode3 = UsbRead(0x0522);
-		 * keycode1_base = keycode & 0xff;
-		 * keycode2_base = keycode >> 8;
-		 * keycode3_base = keycode2 & 0xff;
-		 * keycode4_base = keycode2 >> 8;
-		 * keycode5_base = keycode3 & 0xff;
-		 * keycode6_base = keycode3 >> 8;
-		 */
-		keycode = UsbRead(0x051e);
-		printf("\nfirst two keycode values are %04x\n",keycode);
+	
+		// keycode = UsbRead(0x051e);
+		// *keycode_base = keycode & 0xff; 
+		*keycode = UsbRead(0x051e);
+		*keycode2 = UsbRead(0x0520);
+		*keycode3 = UsbRead(0x0522);
+		*keycode1_base = keycode & 0xff;	// only read 2 of 4 Hex as a keycode
+		*keycode2_base = keycode >> 8;		// for second keycode, shift 8 bit
+		*keycode3_base = keycode2 & 0xff;
+		*keycode4_base = keycode2 >> 8;
+		*keycode5_base = keycode3 & 0xff;
+		*keycode6_base = keycode3 >> 8;
+		
+		// printf("\nfirst two keycode values are %04x\n",keycode);
 		// We only need the first keycode, which is at the lower byte of keycode.
 		// Send the keycode to hardware via PIO.
-		*keycode_base = keycode & 0xff; 
-
+		//!-------------------------------End------------------------//
 		usleep(200);//usleep(5000);
 		usb_ctl_val = UsbRead(ctl_reg);
 
