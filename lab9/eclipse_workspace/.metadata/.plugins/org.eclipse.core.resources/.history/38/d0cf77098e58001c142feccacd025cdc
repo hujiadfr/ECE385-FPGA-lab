@@ -288,8 +288,11 @@ void encrypt(unsigned char * msg_ascii, unsigned char * key_ascii,
 		key [i] = keyInit[0][i]<<24 | keyInit[1][i]<<16 | keyInit[2][i]<<8 | keyInit[3][i];
 	}
 
-
+	// set the AES_MSG_EN
+	for (i=0; i<4; i++)
+		AES_PTR[i+4] = key[3-i];
 }
+
 
 /*
  * decrypt

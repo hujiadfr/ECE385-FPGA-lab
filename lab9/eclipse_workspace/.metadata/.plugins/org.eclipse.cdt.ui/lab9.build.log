@@ -1,6 +1,9 @@
-00:53:14 **** Clean-only build of configuration Nios II for project lab9 ****
-wsl make clean 
-[lab9 clean complete]
+09:29:24 **** Incremental Build of configuration Nios II for project lab9 ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+[BSP build complete]
+[lab9 build complete]
 
-00:53:15 Build Finished (took 578ms)
+09:29:25 Build Finished (took 506ms)
 

@@ -289,7 +289,7 @@ void encrypt(unsigned char * msg_ascii, unsigned char * key_ascii,
 	}
 
 
-}
+
 
 /*
  * decrypt

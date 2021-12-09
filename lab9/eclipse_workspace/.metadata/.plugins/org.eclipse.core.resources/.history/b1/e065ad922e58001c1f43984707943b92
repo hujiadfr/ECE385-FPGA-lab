@@ -182,7 +182,7 @@ unsigned long RotWord(unsigned long* word)
 *			w,
 *			Nk
 */
-void KeyExpansion(unsigned char key[4][4], unsigned long w[44], unsigned int Nk)
+void KeyExpansion(unsigned char* key, unsigned long* w, unsigned int Nk)
 {
 	unsigned long temp;
 	unsigned int i = 0;
@@ -288,8 +288,11 @@ void encrypt(unsigned char * msg_ascii, unsigned char * key_ascii,
 		key [i] = keyInit[0][i]<<24 | keyInit[1][i]<<16 | keyInit[2][i]<<8 | keyInit[3][i];
 	}
 
-
+	// set the AES_MSG_EN
+	for (i=0; i<4; i++)
+		AES_PTR[i+4] = msg_enc[3-i];
 }
+
 
 /*
  * decrypt
@@ -319,10 +322,10 @@ void decrypt(unsigned int * msg_enc, unsigned int * msg_dec, unsigned int * key)
 	// implemented by hardware in hdl.
 	while (AES_PTR[15] == 0)
 
-	msg_dec[3] = AES_PTR[8];
-	msg_dec[2] = AES_PTR[9];
-	msg_dec[1] = AES_PTR[10];
-	msg_dec[0] = AES_PTR[11];
+	// set the AES_MSG_DE
+	for (i=0; i<4; i++){
+		msg_dec[3-i] = AES_PTR[i+8];
+	}
 
 	// set the AES_START to 0
 	AES_PTR[14] = 0;

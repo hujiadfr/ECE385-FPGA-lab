@@ -40,7 +40,7 @@ module avalon_aes_interface (
 	logic [3:0][31:0] MSG_DEC;
 	logic Done;
 
-	assign EXPORT_DATA = {Reg_unit[7][31:16],Reg_unit[4][15:0]};
+	assign EXPORT_DATA = {Reg_unit[3][31:16],Reg_unit[0][15:0]};
 	
 	always_ff @ (posedge CLK)
 	begin

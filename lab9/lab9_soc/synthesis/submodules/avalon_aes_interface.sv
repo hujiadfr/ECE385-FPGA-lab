@@ -7,14 +7,13 @@ For use with ECE 385 Experiment 9
 University of Illinois ECE Department
 
 Register Map:
-
- 0-3 : 4x 32bit AES Key
- 4-7 : 4x 32bit AES Encrypted Message
- 8-11: 4x 32bit AES Decrypted Message
-   12: Not Used
-	13: Not Used
-   14: 32bit Start Register
-   15: 32bit Done Register
+	0-3 : 4x 32bit AES Key
+	4-7 : 4x 32bit AES Encrypted Message
+	8-11: 4x 32bit AES Decrypted Message
+	12	: Not Used
+	13	: Not Used
+	14	: 32bit Start Register
+	15	: 32bit Done Register
 
 ************************************************************************/
 
@@ -37,11 +36,12 @@ module avalon_aes_interface (
 	// Exported Conduit
 	output logic [31:0] EXPORT_DATA		// Exported Conduit Signal to LEDs
 );
-logic [15:0][31:0] Reg_unit;
+	logic [15:0][31:0] Reg_unit;
 	logic [3:0][31:0] MSG_DEC;
 	logic Done;
 
-	assign EXPORT_DATA = {Reg_unit[7][31:16],Reg_unit[4][15:0]};
+	assign EXPORT_DATA = {Reg_unit[3][31:16],Reg_unit[0][15:0]};
+	
 	always_ff @ (posedge CLK)
 	begin
 		if (RESET)				// if reset is active, clear all registers
@@ -68,7 +68,7 @@ logic [15:0][31:0] Reg_unit;
 			begin
 				case (AVL_BYTE_EN)
 					4'b1111: Reg_unit[AVL_ADDR] <= AVL_WRITEDATA;
-					4'b1100:	Reg_unit[AVL_ADDR][31:16] <= AVL_WRITEDATA[31:16];
+					4'b1100: Reg_unit[AVL_ADDR][31:16] <= AVL_WRITEDATA[31:16];
 					4'b0011: Reg_unit[AVL_ADDR][15:0]  <= AVL_WRITEDATA[15:0];
 					4'b1000: Reg_unit[AVL_ADDR][31:24] <= AVL_WRITEDATA[31:24];
 					4'b0100: Reg_unit[AVL_ADDR][23:16] <= AVL_WRITEDATA[23:16];

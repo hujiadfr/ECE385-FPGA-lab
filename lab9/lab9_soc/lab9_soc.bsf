@@ -134,7 +134,7 @@ https://fpgasoftware.intel.com/eula.
 		(text "dqm" (rect 165 283 348 576)(font "Arial" (color 0 0 0)))
 		(text "ras_n" (rect 165 299 360 608)(font "Arial" (color 0 0 0)))
 		(text "we_n" (rect 165 315 354 640)(font "Arial" (color 0 0 0)))
-		(text " lab9_soc " (rect 359 336 778 682)(font "Arial" ))
+		(text " system " (rect 365 336 778 682)(font "Arial" ))
 		(line (pt 160 32)(pt 240 32)(line_width 1))
 		(line (pt 240 32)(pt 240 336)(line_width 1))
 		(line (pt 160 336)(pt 240 336)(line_width 1))
