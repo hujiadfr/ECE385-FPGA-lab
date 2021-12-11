@@ -5,10 +5,12 @@
   <columns>
    <connections preferredWidth="175" />
    <irq preferredWidth="34" />
-   <name preferredWidth="365" />
-   <description preferredWidth="376" />
+   <name preferredWidth="257" />
+   <description preferredWidth="475" />
+   <inputclock preferredWidth="181" />
   </columns>
  </systemtable>
- <library expandedCategories="Project,Library" />
+ <library
+   expandedCategories="Library/University Program/Clock,Library/University Program,Library/Memory Interfaces and Controllers/SDRAM,Project,Library,Library/Memory Interfaces and Controllers/Memory Interfaces with UniPHY,Library/Memory Interfaces and Controllers" />
  <window width="2160" height="1368" x="0" y="0" />
 </preferences>

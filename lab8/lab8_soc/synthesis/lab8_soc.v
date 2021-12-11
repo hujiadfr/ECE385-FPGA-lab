@@ -56,11 +56,6 @@ module lab8_soc (
 	wire   [3:0] mm_interconnect_0_nios2_gen2_0_debug_mem_slave_byteenable;   // mm_interconnect_0:nios2_gen2_0_debug_mem_slave_byteenable -> nios2_gen2_0:debug_mem_slave_byteenable
 	wire         mm_interconnect_0_nios2_gen2_0_debug_mem_slave_write;        // mm_interconnect_0:nios2_gen2_0_debug_mem_slave_write -> nios2_gen2_0:debug_mem_slave_write
 	wire  [31:0] mm_interconnect_0_nios2_gen2_0_debug_mem_slave_writedata;    // mm_interconnect_0:nios2_gen2_0_debug_mem_slave_writedata -> nios2_gen2_0:debug_mem_slave_writedata
-	wire  [31:0] mm_interconnect_0_sdram_pll_pll_slave_readdata;              // sdram_pll:readdata -> mm_interconnect_0:sdram_pll_pll_slave_readdata
-	wire   [1:0] mm_interconnect_0_sdram_pll_pll_slave_address;               // mm_interconnect_0:sdram_pll_pll_slave_address -> sdram_pll:address
-	wire         mm_interconnect_0_sdram_pll_pll_slave_read;                  // mm_interconnect_0:sdram_pll_pll_slave_read -> sdram_pll:read
-	wire         mm_interconnect_0_sdram_pll_pll_slave_write;                 // mm_interconnect_0:sdram_pll_pll_slave_write -> sdram_pll:write
-	wire  [31:0] mm_interconnect_0_sdram_pll_pll_slave_writedata;             // mm_interconnect_0:sdram_pll_pll_slave_writedata -> sdram_pll:writedata
 	wire         mm_interconnect_0_onchip_memory2_0_s1_chipselect;            // mm_interconnect_0:onchip_memory2_0_s1_chipselect -> onchip_memory2_0:chipselect
 	wire  [31:0] mm_interconnect_0_onchip_memory2_0_s1_readdata;              // onchip_memory2_0:readdata -> mm_interconnect_0:onchip_memory2_0_s1_readdata
 	wire   [1:0] mm_interconnect_0_onchip_memory2_0_s1_address;               // mm_interconnect_0:onchip_memory2_0_s1_address -> onchip_memory2_0:address
@@ -112,6 +107,11 @@ module lab8_soc (
 	wire   [1:0] mm_interconnect_0_otg_hpi_reset_s1_address;                  // mm_interconnect_0:otg_hpi_reset_s1_address -> otg_hpi_reset:address
 	wire         mm_interconnect_0_otg_hpi_reset_s1_write;                    // mm_interconnect_0:otg_hpi_reset_s1_write -> otg_hpi_reset:write_n
 	wire  [31:0] mm_interconnect_0_otg_hpi_reset_s1_writedata;                // mm_interconnect_0:otg_hpi_reset_s1_writedata -> otg_hpi_reset:writedata
+	wire  [31:0] mm_interconnect_0_sdram_pll_pll_slave_readdata;              // sdram_pll:readdata -> mm_interconnect_0:sdram_pll_pll_slave_readdata
+	wire   [1:0] mm_interconnect_0_sdram_pll_pll_slave_address;               // mm_interconnect_0:sdram_pll_pll_slave_address -> sdram_pll:address
+	wire         mm_interconnect_0_sdram_pll_pll_slave_read;                  // mm_interconnect_0:sdram_pll_pll_slave_read -> sdram_pll:read
+	wire         mm_interconnect_0_sdram_pll_pll_slave_write;                 // mm_interconnect_0:sdram_pll_pll_slave_write -> sdram_pll:write
+	wire  [31:0] mm_interconnect_0_sdram_pll_pll_slave_writedata;             // mm_interconnect_0:sdram_pll_pll_slave_writedata -> sdram_pll:writedata
 	wire         irq_mapper_receiver0_irq;                                    // jtag_uart_0:av_irq -> irq_mapper:receiver0_irq
 	wire  [31:0] nios2_gen2_0_irq_irq;                                        // irq_mapper:sender_irq -> nios2_gen2_0:irq
 	wire         rst_controller_reset_out_reset;                              // rst_controller:reset_out -> [jtag_uart_0:rst_n, keycode:reset_n, mm_interconnect_0:jtag_uart_0_reset_reset_bridge_in_reset_reset, otg_hpi_address:reset_n, otg_hpi_cs:reset_n, otg_hpi_data:reset_n, otg_hpi_r:reset_n, otg_hpi_reset:reset_n, otg_hpi_w:reset_n]

@@ -39,8 +39,8 @@
 // ------------------------------------------
 // Generation parameters:
 //   output_name:         lab8_soc_mm_interconnect_0_rsp_mux
-//   NUM_INPUTS:          13
-//   ARBITRATION_SHARES:  1 1 1 1 1 1 1 1 1 1 1 1 1
+//   NUM_INPUTS:          12
+//   ARBITRATION_SHARES:  1 1 1 1 1 1 1 1 1 1 1 1
 //   ARBITRATION_SCHEME   "no-arb"
 //   PIPELINE_ARB:        0
 //   PKT_TRANS_LOCK:      69 (arbitration locking enabled)
@@ -137,13 +137,6 @@ module lab8_soc_mm_interconnect_0_rsp_mux
     input                       sink11_endofpacket,
     output                      sink11_ready,
 
-    input                       sink12_valid,
-    input [107-1   : 0]  sink12_data,
-    input [13-1: 0]  sink12_channel,
-    input                       sink12_startofpacket,
-    input                       sink12_endofpacket,
-    output                      sink12_ready,
-
 
     // ----------------------
     // Source
@@ -162,7 +155,7 @@ module lab8_soc_mm_interconnect_0_rsp_mux
     input reset
 );
     localparam PAYLOAD_W        = 107 + 13 + 2;
-    localparam NUM_INPUTS       = 13;
+    localparam NUM_INPUTS       = 12;
     localparam SHARE_COUNTER_W  = 1;
     localparam PIPELINE_ARB     = 0;
     localparam ST_DATA_W        = 107;
@@ -194,7 +187,6 @@ module lab8_soc_mm_interconnect_0_rsp_mux
     wire [PAYLOAD_W - 1 : 0] sink9_payload;
     wire [PAYLOAD_W - 1 : 0] sink10_payload;
     wire [PAYLOAD_W - 1 : 0] sink11_payload;
-    wire [PAYLOAD_W - 1 : 0] sink12_payload;
 
     assign valid[0] = sink0_valid;
     assign valid[1] = sink1_valid;
@@ -208,7 +200,6 @@ module lab8_soc_mm_interconnect_0_rsp_mux
     assign valid[9] = sink9_valid;
     assign valid[10] = sink10_valid;
     assign valid[11] = sink11_valid;
-    assign valid[12] = sink12_valid;
 
 
     // ------------------------------------------
@@ -230,7 +221,6 @@ module lab8_soc_mm_interconnect_0_rsp_mux
       lock[9] = sink9_data[69];
       lock[10] = sink10_data[69];
       lock[11] = sink11_data[69];
-      lock[12] = sink12_data[69];
     end
 
     assign last_cycle = src_valid & src_ready & src_endofpacket & ~(|(lock & grant));
@@ -273,7 +263,6 @@ module lab8_soc_mm_interconnect_0_rsp_mux
     // 9      |      1       |  0
     // 10      |      1       |  0
     // 11      |      1       |  0
-    // 12      |      1       |  0
      wire [SHARE_COUNTER_W - 1 : 0] share_0 = 1'd0;
      wire [SHARE_COUNTER_W - 1 : 0] share_1 = 1'd0;
      wire [SHARE_COUNTER_W - 1 : 0] share_2 = 1'd0;
@@ -286,7 +275,6 @@ module lab8_soc_mm_interconnect_0_rsp_mux
      wire [SHARE_COUNTER_W - 1 : 0] share_9 = 1'd0;
      wire [SHARE_COUNTER_W - 1 : 0] share_10 = 1'd0;
      wire [SHARE_COUNTER_W - 1 : 0] share_11 = 1'd0;
-     wire [SHARE_COUNTER_W - 1 : 0] share_12 = 1'd0;
 
     // ------------------------------------------
     // Choose the share value corresponding to the grant.
@@ -305,8 +293,7 @@ module lab8_soc_mm_interconnect_0_rsp_mux
     share_8 & { SHARE_COUNTER_W {next_grant[8]} } |
     share_9 & { SHARE_COUNTER_W {next_grant[9]} } |
     share_10 & { SHARE_COUNTER_W {next_grant[10]} } |
-    share_11 & { SHARE_COUNTER_W {next_grant[11]} } |
-    share_12 & { SHARE_COUNTER_W {next_grant[12]} };
+    share_11 & { SHARE_COUNTER_W {next_grant[11]} };
     end
 
     // ------------------------------------------
@@ -392,14 +379,11 @@ module lab8_soc_mm_interconnect_0_rsp_mux
 
     wire final_packet_11 = 1'b1;
 
-    wire final_packet_12 = 1'b1;
-
 
     // ------------------------------------------
     // Concatenate all final_packet signals (wire or reg) into a handy vector.
     // ------------------------------------------
     wire [NUM_INPUTS - 1 : 0] final_packet = {
-    final_packet_12,
     final_packet_11,
     final_packet_10,
     final_packet_9,
@@ -507,7 +491,6 @@ module lab8_soc_mm_interconnect_0_rsp_mux
     assign sink9_ready = src_ready && grant[9];
     assign sink10_ready = src_ready && grant[10];
     assign sink11_ready = src_ready && grant[11];
-    assign sink12_ready = src_ready && grant[12];
 
     assign src_valid = |(grant & valid);
 
@@ -524,8 +507,7 @@ module lab8_soc_mm_interconnect_0_rsp_mux
       sink8_payload & {PAYLOAD_W {grant[8]} } |
       sink9_payload & {PAYLOAD_W {grant[9]} } |
       sink10_payload & {PAYLOAD_W {grant[10]} } |
-      sink11_payload & {PAYLOAD_W {grant[11]} } |
-      sink12_payload & {PAYLOAD_W {grant[12]} };
+      sink11_payload & {PAYLOAD_W {grant[11]} };
     end
 
     // ------------------------------------------
@@ -556,8 +538,6 @@ module lab8_soc_mm_interconnect_0_rsp_mux
     sink10_startofpacket,sink10_endofpacket};
     assign sink11_payload = {sink11_channel,sink11_data,
     sink11_startofpacket,sink11_endofpacket};
-    assign sink12_payload = {sink12_channel,sink12_data,
-    sink12_startofpacket,sink12_endofpacket};
 
     assign {src_channel,src_data,src_startofpacket,src_endofpacket} = src_payload;
 endmodule

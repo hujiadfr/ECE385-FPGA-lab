@@ -80,9 +80,9 @@ module top_level(
                             .OTG_CS_N(OTG_CS_N),
                             .OTG_RST_N(OTG_RST_N)
     );
-    logic [7:0] keycode_1, keycode_2, keycode_3, keycode_4, keycode_5, keycode_6;
+    logic [7:0] keycode_0, keycode_1, keycode_2, keycode_3, keycode_4, keycode_5, keycode_6, keycode_7;
      // You need to make sure that the port names here match the ports in Qsys-generated codes.
-     lab8_soc nios_system(
+     final_soc nios_system(
                             .clk_clk(Clk),         
                             .reset_reset_n(1'b1),    // Never reset NIOS
                             .sdram_wire_addr(DRAM_ADDR), 
@@ -96,12 +96,14 @@ module top_level(
                             .sdram_wire_we_n(DRAM_WE_N), 
                             .sdram_clk_clk(DRAM_CLK),
 
+                            .keycode_export_0(keycode_0),                              
                             .keycode_export_1(keycode_1),  
                             .keycode_export_2(keycode_2),
                             .keycode_export_3(keycode_3),
                             .keycode_export_4(keycode_4),  
                             .keycode_export_5(keycode_5),
                             .keycode_export_6(keycode_6),
+                            .keycode_export_7(keycode_7),
 
                             .otg_hpi_address_export(hpi_addr),
                             .otg_hpi_data_in_port(hpi_data_in),
@@ -128,20 +130,23 @@ module top_level(
         .DrawY
     );
     
-    wire [4:0] 	command;
-
+    wire [3:0] 	command_p1, command_p2; //{up, down, left, right}
     keycode u_keycode(
         //ports
         .Clk       		( Clk       		),
         .frame_clk 		( frame_clk 		),
+        .keycode_0 		( keycode_0 		),
         .keycode_1 		( keycode_1 		),
         .keycode_2 		( keycode_2 		),
         .keycode_3 		( keycode_3 		),
         .keycode_4 		( keycode_4 		),
         .keycode_5 		( keycode_5 		),
-        .command   		( command   		)
-    );
+        .keycode_6 		( keycode_6 		),
+        .keycode_7 		( keycode_7 		),
 
+        .command_p1   	( command_p1   		),
+        .command_p2     ( command_p2        )
+    );
 
 
     ball ball_1(
@@ -151,10 +156,9 @@ module top_level(
         .frame_clk 		( VGA_VS     		),
         .DrawX     		( DrawX     		),
         .DrawY     		( DrawY     		),
-        .step_x    		( step_x    		),
-        .step_y    		( step_y    		),
-        .speed     		( speed     		),
-        .direction 		( direction 		),
+        .Ball_X_Step    ( step_x    		),
+        .Ball_Y_Step	( step_y    		),
+        .Direction 		( direction 		),
         .is_ball   		( is_ball   		)
     );
 

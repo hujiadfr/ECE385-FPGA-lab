@@ -1,601 +1,12 @@
-00:53:34 **** Clean-only build of configuration Nios II for project lab9_bsp ****
+17:30:37 **** Clean-only build of configuration Nios II for project final_usb ****
 wsl make clean 
-[BSP clean complete]
-01:25:12 **** Build of configuration Nios II for project lab9 ****
+[final_usb clean complete]
+17:30:44 **** Build of configuration Nios II for project final_usb ****
 wsl make all 
-Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
-make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
-Compiling alt_alarm_start.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_alarm_start.o HAL/src/alt_alarm_start.c
-Compiling alt_busy_sleep.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_busy_sleep.o HAL/src/alt_busy_sleep.c
-Compiling alt_close.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_close.o HAL/src/alt_close.c
-Compiling alt_dcache_flush.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_dcache_flush.o HAL/src/alt_dcache_flush.c
-Compiling alt_dcache_flush_all.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_dcache_flush_all.o HAL/src/alt_dcache_flush_all.c
-Compiling alt_dcache_flush_no_writeback.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_dcache_flush_no_writeback.o HAL/src/alt_dcache_flush_no_writeback.c
-Compiling alt_dev.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_dev.o HAL/src/alt_dev.c
-Compiling alt_dev_llist_insert.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_dev_llist_insert.o HAL/src/alt_dev_llist_insert.c
-Compiling alt_dma_rxchan_open.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_dma_rxchan_open.o HAL/src/alt_dma_rxchan_open.c
-Compiling alt_dma_txchan_open.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_dma_txchan_open.o HAL/src/alt_dma_txchan_open.c
-Compiling alt_do_ctors.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_do_ctors.o HAL/src/alt_do_ctors.c
-Compiling alt_do_dtors.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_do_dtors.o HAL/src/alt_do_dtors.c
-Compiling alt_ecc_fatal_entry.S...
-nios2-elf-gcc.exe -MP -MMD -c   -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global    -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED  -Wa,-gdwarf2  -o obj/HAL/src/alt_ecc_fatal_entry.o HAL/src/alt_ecc_fatal_entry.S
-Compiling alt_ecc_fatal_exception.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_ecc_fatal_exception.o HAL/src/alt_ecc_fatal_exception.c
-Compiling alt_env_lock.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_env_lock.o HAL/src/alt_env_lock.c
-Compiling alt_environ.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_environ.o HAL/src/alt_environ.c
-Compiling alt_errno.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_errno.o HAL/src/alt_errno.c
-Compiling alt_exception_entry.S...
-nios2-elf-gcc.exe -MP -MMD -c   -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global    -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED  -Wa,-gdwarf2  -o obj/HAL/src/alt_exception_entry.o HAL/src/alt_exception_entry.S
-Compiling alt_exception_muldiv.S...
-nios2-elf-gcc.exe -MP -MMD -c   -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global    -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED  -Wa,-gdwarf2  -o obj/HAL/src/alt_exception_muldiv.o HAL/src/alt_exception_muldiv.S
-Compiling alt_exception_trap.S...
-nios2-elf-gcc.exe -MP -MMD -c   -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global    -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED  -Wa,-gdwarf2  -o obj/HAL/src/alt_exception_trap.o HAL/src/alt_exception_trap.S
-Compiling alt_execve.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_execve.o HAL/src/alt_execve.c
-Compiling alt_exit.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_exit.o HAL/src/alt_exit.c
-Compiling alt_fcntl.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_fcntl.o HAL/src/alt_fcntl.c
-Compiling alt_fd_lock.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_fd_lock.o HAL/src/alt_fd_lock.c
-Compiling alt_fd_unlock.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_fd_unlock.o HAL/src/alt_fd_unlock.c
-Compiling alt_find_dev.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_find_dev.o HAL/src/alt_find_dev.c
-Compiling alt_find_file.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_find_file.o HAL/src/alt_find_file.c
-Compiling alt_flash_dev.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_flash_dev.o HAL/src/alt_flash_dev.c
-Compiling alt_fork.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_fork.o HAL/src/alt_fork.c
-Compiling alt_fs_reg.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_fs_reg.o HAL/src/alt_fs_reg.c
-Compiling alt_fstat.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_fstat.o HAL/src/alt_fstat.c
-Compiling alt_get_fd.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_get_fd.o HAL/src/alt_get_fd.c
-Compiling alt_getchar.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_getchar.o HAL/src/alt_getchar.c
-Compiling alt_getpid.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_getpid.o HAL/src/alt_getpid.c
-Compiling alt_gettod.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_gettod.o HAL/src/alt_gettod.c
-Compiling alt_gmon.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_gmon.o HAL/src/alt_gmon.c
-Compiling alt_icache_flush.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_icache_flush.o HAL/src/alt_icache_flush.c
-Compiling alt_icache_flush_all.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_icache_flush_all.o HAL/src/alt_icache_flush_all.c
-Compiling alt_iic.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_iic.o HAL/src/alt_iic.c
-Compiling alt_iic_isr_register.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_iic_isr_register.o HAL/src/alt_iic_isr_register.c
-Compiling alt_instruction_exception_entry.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_instruction_exception_entry.o HAL/src/alt_instruction_exception_entry.c
-Compiling alt_instruction_exception_register.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_instruction_exception_register.o HAL/src/alt_instruction_exception_register.c
-Compiling alt_io_redirect.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_io_redirect.o HAL/src/alt_io_redirect.c
-Compiling alt_ioctl.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_ioctl.o HAL/src/alt_ioctl.c
-Compiling alt_irq_entry.S...
-nios2-elf-gcc.exe -MP -MMD -c   -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global    -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED  -Wa,-gdwarf2  -o obj/HAL/src/alt_irq_entry.o HAL/src/alt_irq_entry.S
-Compiling alt_irq_handler.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_irq_handler.o HAL/src/alt_irq_handler.c
-Compiling alt_irq_register.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_irq_register.o HAL/src/alt_irq_register.c
-Compiling alt_irq_vars.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_irq_vars.o HAL/src/alt_irq_vars.c
-Compiling alt_isatty.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_isatty.o HAL/src/alt_isatty.c
-Compiling alt_kill.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_kill.o HAL/src/alt_kill.c
-Compiling alt_link.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_link.o HAL/src/alt_link.c
-Compiling alt_load.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_load.o HAL/src/alt_load.c
-Compiling alt_log_macro.S...
-nios2-elf-gcc.exe -MP -MMD -c   -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global    -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED  -Wa,-gdwarf2  -o obj/HAL/src/alt_log_macro.o HAL/src/alt_log_macro.S
-Compiling alt_log_printf.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_log_printf.o HAL/src/alt_log_printf.c
-Compiling alt_lseek.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_lseek.o HAL/src/alt_lseek.c
-Compiling alt_main.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_main.o HAL/src/alt_main.c
-Compiling alt_malloc_lock.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_malloc_lock.o HAL/src/alt_malloc_lock.c
-Compiling alt_mcount.S...
-nios2-elf-gcc.exe -MP -MMD -c   -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global    -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED  -Wa,-gdwarf2  -o obj/HAL/src/alt_mcount.o HAL/src/alt_mcount.S
-Compiling alt_open.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_open.o HAL/src/alt_open.c
-Compiling alt_printf.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_printf.o HAL/src/alt_printf.c
-Compiling alt_putchar.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_putchar.o HAL/src/alt_putchar.c
-Compiling alt_putcharbuf.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_putcharbuf.o HAL/src/alt_putcharbuf.c
-Compiling alt_putstr.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_putstr.o HAL/src/alt_putstr.c
-Compiling alt_read.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_read.o HAL/src/alt_read.c
-Compiling alt_release_fd.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_release_fd.o HAL/src/alt_release_fd.c
-Compiling alt_remap_cached.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_remap_cached.o HAL/src/alt_remap_cached.c
-Compiling alt_remap_uncached.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_remap_uncached.o HAL/src/alt_remap_uncached.c
-Compiling alt_rename.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_rename.o HAL/src/alt_rename.c
-Compiling alt_sbrk.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_sbrk.o HAL/src/alt_sbrk.c
-Compiling alt_settod.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_settod.o HAL/src/alt_settod.c
-Compiling alt_software_exception.S...
-nios2-elf-gcc.exe -MP -MMD -c   -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global    -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED  -Wa,-gdwarf2  -o obj/HAL/src/alt_software_exception.o HAL/src/alt_software_exception.S
-Compiling alt_stat.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_stat.o HAL/src/alt_stat.c
-Compiling alt_tick.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_tick.o HAL/src/alt_tick.c
-Compiling alt_times.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_times.o HAL/src/alt_times.c
-Compiling alt_uncached_free.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_uncached_free.o HAL/src/alt_uncached_free.c
-Compiling alt_uncached_malloc.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_uncached_malloc.o HAL/src/alt_uncached_malloc.c
-Compiling alt_unlink.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_unlink.o HAL/src/alt_unlink.c
-Compiling alt_usleep.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_usleep.o HAL/src/alt_usleep.c
-Compiling alt_wait.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_wait.o HAL/src/alt_wait.c
-Compiling alt_write.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_write.o HAL/src/alt_write.c
-Compiling altera_nios2_gen2_irq.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/altera_nios2_gen2_irq.o HAL/src/altera_nios2_gen2_irq.c
-Compiling crt0.S...
-nios2-elf-gcc.exe -MP -MMD -c   -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global    -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED  -Wa,-gdwarf2  -o obj/HAL/src/crt0.o HAL/src/crt0.S
-Compiling alt_sys_init.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/alt_sys_init.o alt_sys_init.c
-Compiling altera_avalon_jtag_uart_fd.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_jtag_uart_fd.o drivers/src/altera_avalon_jtag_uart_fd.c
-Compiling altera_avalon_jtag_uart_init.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_jtag_uart_init.o drivers/src/altera_avalon_jtag_uart_init.c
-Compiling altera_avalon_jtag_uart_ioctl.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_jtag_uart_ioctl.o drivers/src/altera_avalon_jtag_uart_ioctl.c
-Compiling altera_avalon_jtag_uart_read.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_jtag_uart_read.o drivers/src/altera_avalon_jtag_uart_read.c
-Compiling altera_avalon_jtag_uart_write.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_jtag_uart_write.o drivers/src/altera_avalon_jtag_uart_write.c
-Compiling altera_avalon_sysid_qsys.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_sysid_qsys.o drivers/src/altera_avalon_sysid_qsys.c
-Compiling altera_avalon_timer_sc.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_timer_sc.o drivers/src/altera_avalon_timer_sc.c
-Compiling altera_avalon_timer_ts.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_timer_ts.o drivers/src/altera_avalon_timer_ts.c
-Compiling altera_avalon_timer_vars.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_timer_vars.o drivers/src/altera_avalon_timer_vars.c
-Creating libhal_bsp.a...
-rm -f -f libhal_bsp.a
-nios2-elf-ar.exe -src libhal_bsp.a obj/HAL/src/alt_alarm_start.o obj/HAL/src/alt_busy_sleep.o obj/HAL/src/alt_close.o obj/HAL/src/alt_dcache_flush.o obj/HAL/src/alt_dcache_flush_all.o obj/HAL/src/alt_dcache_flush_no_writeback.o obj/HAL/src/alt_dev.o obj/HAL/src/alt_dev_llist_insert.o obj/HAL/src/alt_dma_rxchan_open.o obj/HAL/src/alt_dma_txchan_open.o obj/HAL/src/alt_do_ctors.o obj/HAL/src/alt_do_dtors.o obj/HAL/src/alt_ecc_fatal_entry.o obj/HAL/src/alt_ecc_fatal_exception.o obj/HAL/src/alt_env_lock.o obj/HAL/src/alt_environ.o obj/HAL/src/alt_errno.o obj/HAL/src/alt_exception_entry.o obj/HAL/src/alt_exception_muldiv.o obj/HAL/src/alt_exception_trap.o obj/HAL/src/alt_execve.o obj/HAL/src/alt_exit.o obj/HAL/src/alt_fcntl.o obj/HAL/src/alt_fd_lock.o obj/HAL/src/alt_fd_unlock.o obj/HAL/src/alt_find_dev.o obj/HAL/src/alt_find_file.o obj/HAL/src/alt_flash_dev.o obj/HAL/src/alt_fork.o obj/HAL/src/alt_fs_reg.o obj/HAL/src/alt_fstat.o obj/HAL/src/alt_get_fd.o obj/HAL/src/alt_getchar.o obj/HAL/src/alt_getpid.o obj/HAL/src/alt_gettod.o obj/HAL/src/alt_gmon.o obj/HAL/src/alt_icache_flush.o obj/HAL/src/alt_icache_flush_all.o obj/HAL/src/alt_iic.o obj/HAL/src/alt_iic_isr_register.o obj/HAL/src/alt_instruction_exception_entry.o obj/HAL/src/alt_instruction_exception_register.o obj/HAL/src/alt_io_redirect.o obj/HAL/src/alt_ioctl.o obj/HAL/src/alt_irq_entry.o obj/HAL/src/alt_irq_handler.o obj/HAL/src/alt_irq_register.o obj/HAL/src/alt_irq_vars.o obj/HAL/src/alt_isatty.o obj/HAL/src/alt_kill.o obj/HAL/src/alt_link.o obj/HAL/src/alt_load.o obj/HAL/src/alt_log_macro.o obj/HAL/src/alt_log_printf.o obj/HAL/src/alt_lseek.o obj/HAL/src/alt_main.o obj/HAL/src/alt_malloc_lock.o obj/HAL/src/alt_mcount.o obj/HAL/src/alt_open.o obj/HAL/src/alt_printf.o obj/HAL/src/alt_putchar.o obj/HAL/src/alt_putcharbuf.o obj/HAL/src/alt_putstr.o obj/HAL/src/alt_read.o obj/HAL/src/alt_release_fd.o obj/HAL/src/alt_remap_cached.o obj/HAL/src/alt_remap_uncached.o obj/HAL/src/alt_rename.o obj/HAL/src/alt_sbrk.o obj/HAL/src/alt_settod.o obj/HAL/src/alt_software_exception.o obj/HAL/src/alt_stat.o obj/HAL/src/alt_tick.o obj/HAL/src/alt_times.o obj/HAL/src/alt_uncached_free.o obj/HAL/src/alt_uncached_malloc.o obj/HAL/src/alt_unlink.o obj/HAL/src/alt_usleep.o obj/HAL/src/alt_wait.o obj/HAL/src/alt_write.o obj/HAL/src/altera_nios2_gen2_irq.o obj/HAL/src/crt0.o obj/alt_sys_init.o obj/drivers/src/altera_avalon_jtag_uart_fd.o obj/drivers/src/altera_avalon_jtag_uart_init.o obj/drivers/src/altera_avalon_jtag_uart_ioctl.o obj/drivers/src/altera_avalon_jtag_uart_read.o obj/drivers/src/altera_avalon_jtag_uart_write.o obj/drivers/src/altera_avalon_sysid_qsys.o obj/drivers/src/altera_avalon_timer_sc.o obj/drivers/src/altera_avalon_timer_ts.o obj/drivers/src/altera_avalon_timer_vars.o
-[BSP build complete]
-Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'KeyExpansion':
-main.c:191:33: error: subscripted value is neither array nor pointer nor vector
-  191 |   w[i] = (unsigned long)((key[0][i]<<24) + (key[1][i]<<16) + (key[2][i]<<8) + (key[3][i]));
-      |                                 ^
-main.c:191:51: error: subscripted value is neither array nor pointer nor vector
-  191 |   w[i] = (unsigned long)((key[0][i]<<24) + (key[1][i]<<16) + (key[2][i]<<8) + (key[3][i]));
-      |                                                   ^
-main.c:191:69: error: subscripted value is neither array nor pointer nor vector
-  191 |   w[i] = (unsigned long)((key[0][i]<<24) + (key[1][i]<<16) + (key[2][i]<<8) + (key[3][i]));
-      |                                                                     ^
-main.c:191:86: error: subscripted value is neither array nor pointer nor vector
-  191 |   w[i] = (unsigned long)((key[0][i]<<24) + (key[1][i]<<16) + (key[2][i]<<8) + (key[3][i]));
-      |                                                                                      ^
-main.c: In function 'encrypt':
-main.c:271:15: warning: passing argument 1 of 'KeyExpansion' from incompatible pointer type [-Wincompatible-pointer-types]
-  271 |  KeyExpansion(keyInit,w,4);
-      |               ^~~~~~~
-      |               |
-      |               unsigned char (*)[4]
-main.c:185:34: note: expected 'unsigned char *' but argument is of type 'unsigned char (*)[4]'
-  185 | void KeyExpansion(unsigned char* key, unsigned long* w, unsigned int Nk)
-      |                   ~~~~~~~~~~~~~~~^~~
-main.c:259:8: warning: unused variable 'j' [-Wunused-variable]
-  259 |  int i,j,round;
-      |        ^
-make: *** [Makefile:724：obj/default/main.o] 错误 1
-01:25:18 **** Build of configuration Nios II for project lab9_bsp ****
-wsl make all 
-[BSP build complete]
-01:25:21 **** Incremental Build of configuration Nios II for project lab9 ****
-wsl make all 
-Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
-make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
-[BSP build complete]
-Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'KeyExpansion':
-main.c:191:33: error: subscripted value is neither array nor pointer nor vector
-  191 |   w[i] = (unsigned long)((key[0][i]<<24) + (key[1][i]<<16) + (key[2][i]<<8) + (key[3][i]));
-      |                                 ^
-main.c:191:51: error: subscripted value is neither array nor pointer nor vector
-  191 |   w[i] = (unsigned long)((key[0][i]<<24) + (key[1][i]<<16) + (key[2][i]<<8) + (key[3][i]));
-      |                                                   ^
-main.c:191:69: error: subscripted value is neither array nor pointer nor vector
-  191 |   w[i] = (unsigned long)((key[0][i]<<24) + (key[1][i]<<16) + (key[2][i]<<8) + (key[3][i]));
-      |                                                                     ^
-main.c:191:86: error: subscripted value is neither array nor pointer nor vector
-  191 |   w[i] = (unsigned long)((key[0][i]<<24) + (key[1][i]<<16) + (key[2][i]<<8) + (key[3][i]));
-      |                                                                                      ^
-main.c: In function 'encrypt':
-main.c:271:15: warning: passing argument 1 of 'KeyExpansion' from incompatible pointer type [-Wincompatible-pointer-types]
-  271 |  KeyExpansion(keyInit,w,4);
-      |               ^~~~~~~
-      |               |
-      |               unsigned char (*)[4]
-main.c:185:34: note: expected 'unsigned char *' but argument is of type 'unsigned char (*)[4]'
-  185 | void KeyExpansion(unsigned char* key, unsigned long* w, unsigned int Nk)
-      |                   ~~~~~~~~~~~~~~~^~~
-main.c:259:8: warning: unused variable 'j' [-Wunused-variable]
-  259 |  int i,j,round;
-      |        ^
-make: *** [Makefile:724：obj/default/main.o] 错误 1
-01:25:54 **** Incremental Build of configuration Nios II for project lab9 ****
-wsl make all 
-Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
-make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
-[BSP build complete]
-Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'KeyExpansion':
-main.c:191:33: error: subscripted value is neither array nor pointer nor vector
-  191 |   w[i] = (unsigned long)((key[0][i]<<24) + (key[1][i]<<16) + (key[2][i]<<8) + (key[3][i]));
-      |                                 ^
-main.c:191:51: error: subscripted value is neither array nor pointer nor vector
-  191 |   w[i] = (unsigned long)((key[0][i]<<24) + (key[1][i]<<16) + (key[2][i]<<8) + (key[3][i]));
-      |                                                   ^
-main.c:191:69: error: subscripted value is neither array nor pointer nor vector
-  191 |   w[i] = (unsigned long)((key[0][i]<<24) + (key[1][i]<<16) + (key[2][i]<<8) + (key[3][i]));
-      |                                                                     ^
-main.c:191:86: error: subscripted value is neither array nor pointer nor vector
-  191 |   w[i] = (unsigned long)((key[0][i]<<24) + (key[1][i]<<16) + (key[2][i]<<8) + (key[3][i]));
-      |                                                                                      ^
-main.c: In function 'encrypt':
-main.c:271:15: warning: passing argument 1 of 'KeyExpansion' from incompatible pointer type [-Wincompatible-pointer-types]
-  271 |  KeyExpansion(keyInit,w,4);
-      |               ^~~~~~~
-      |               |
-      |               unsigned char (*)[4]
-main.c:185:34: note: expected 'unsigned char *' but argument is of type 'unsigned char (*)[4]'
-  185 | void KeyExpansion(unsigned char* key, unsigned long* w, unsigned int Nk)
-      |                   ~~~~~~~~~~~~~~~^~~
-main.c:259:8: warning: unused variable 'j' [-Wunused-variable]
-  259 |  int i,j,round;
-      |        ^
-make: *** [Makefile:724：obj/default/main.o] 错误 1
-01:25:55 **** Incremental Build of configuration Nios II for project lab9_bsp ****
-wsl make all 
-[BSP build complete]
-19:45:55 **** Build of configuration Nios II for project lab9 ****
-wsl make all 
-Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
-make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
-Compiling alt_alarm_start.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_alarm_start.o HAL/src/alt_alarm_start.c
-Compiling alt_busy_sleep.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_busy_sleep.o HAL/src/alt_busy_sleep.c
-Compiling alt_close.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_close.o HAL/src/alt_close.c
-Compiling alt_dcache_flush.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_dcache_flush.o HAL/src/alt_dcache_flush.c
-Compiling alt_dcache_flush_all.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_dcache_flush_all.o HAL/src/alt_dcache_flush_all.c
-Compiling alt_dcache_flush_no_writeback.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_dcache_flush_no_writeback.o HAL/src/alt_dcache_flush_no_writeback.c
-Compiling alt_dev.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_dev.o HAL/src/alt_dev.c
-Compiling alt_dma_rxchan_open.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_dma_rxchan_open.o HAL/src/alt_dma_rxchan_open.c
-Compiling alt_dma_txchan_open.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_dma_txchan_open.o HAL/src/alt_dma_txchan_open.c
-Compiling alt_ecc_fatal_exception.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_ecc_fatal_exception.o HAL/src/alt_ecc_fatal_exception.c
-Compiling alt_exception_entry.S...
-nios2-elf-gcc.exe -MP -MMD -c   -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global    -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED  -Wa,-gdwarf2  -o obj/HAL/src/alt_exception_entry.o HAL/src/alt_exception_entry.S
-Compiling alt_exit.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_exit.o HAL/src/alt_exit.c
-Compiling alt_fcntl.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_fcntl.o HAL/src/alt_fcntl.c
-Compiling alt_fd_lock.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_fd_lock.o HAL/src/alt_fd_lock.c
-Compiling alt_fd_unlock.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_fd_unlock.o HAL/src/alt_fd_unlock.c
-Compiling alt_find_dev.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_find_dev.o HAL/src/alt_find_dev.c
-Compiling alt_find_file.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_find_file.o HAL/src/alt_find_file.c
-Compiling alt_flash_dev.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_flash_dev.o HAL/src/alt_flash_dev.c
-Compiling alt_fs_reg.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_fs_reg.o HAL/src/alt_fs_reg.c
-Compiling alt_fstat.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_fstat.o HAL/src/alt_fstat.c
-Compiling alt_get_fd.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_get_fd.o HAL/src/alt_get_fd.c
-Compiling alt_gmon.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_gmon.o HAL/src/alt_gmon.c
-Compiling alt_icache_flush.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_icache_flush.o HAL/src/alt_icache_flush.c
-Compiling alt_icache_flush_all.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_icache_flush_all.o HAL/src/alt_icache_flush_all.c
-Compiling alt_iic.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_iic.o HAL/src/alt_iic.c
-Compiling alt_iic_isr_register.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_iic_isr_register.o HAL/src/alt_iic_isr_register.c
-Compiling alt_instruction_exception_entry.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_instruction_exception_entry.o HAL/src/alt_instruction_exception_entry.c
-Compiling alt_instruction_exception_register.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_instruction_exception_register.o HAL/src/alt_instruction_exception_register.c
-Compiling alt_io_redirect.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_io_redirect.o HAL/src/alt_io_redirect.c
-Compiling alt_ioctl.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_ioctl.o HAL/src/alt_ioctl.c
-Compiling alt_irq_entry.S...
-nios2-elf-gcc.exe -MP -MMD -c   -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global    -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED  -Wa,-gdwarf2  -o obj/HAL/src/alt_irq_entry.o HAL/src/alt_irq_entry.S
-Compiling alt_irq_handler.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_irq_handler.o HAL/src/alt_irq_handler.c
-Compiling alt_irq_register.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_irq_register.o HAL/src/alt_irq_register.c
-Compiling alt_irq_vars.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_irq_vars.o HAL/src/alt_irq_vars.c
-Compiling alt_isatty.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_isatty.o HAL/src/alt_isatty.c
-Compiling alt_lseek.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_lseek.o HAL/src/alt_lseek.c
-Compiling alt_main.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_main.o HAL/src/alt_main.c
-Compiling alt_open.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_open.o HAL/src/alt_open.c
-Compiling alt_read.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_read.o HAL/src/alt_read.c
-Compiling alt_release_fd.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_release_fd.o HAL/src/alt_release_fd.c
-Compiling alt_remap_cached.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_remap_cached.o HAL/src/alt_remap_cached.c
-Compiling alt_remap_uncached.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_remap_uncached.o HAL/src/alt_remap_uncached.c
-Compiling alt_sbrk.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_sbrk.o HAL/src/alt_sbrk.c
-Compiling alt_software_exception.S...
-nios2-elf-gcc.exe -MP -MMD -c   -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global    -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED  -Wa,-gdwarf2  -o obj/HAL/src/alt_software_exception.o HAL/src/alt_software_exception.S
-Compiling alt_tick.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_tick.o HAL/src/alt_tick.c
-Compiling alt_uncached_free.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_uncached_free.o HAL/src/alt_uncached_free.c
-Compiling alt_uncached_malloc.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_uncached_malloc.o HAL/src/alt_uncached_malloc.c
-Compiling alt_write.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_write.o HAL/src/alt_write.c
-Compiling altera_nios2_gen2_irq.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/altera_nios2_gen2_irq.o HAL/src/altera_nios2_gen2_irq.c
-Compiling crt0.S...
-nios2-elf-gcc.exe -MP -MMD -c   -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global    -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED  -Wa,-gdwarf2  -o obj/HAL/src/crt0.o HAL/src/crt0.S
-Compiling alt_sys_init.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/alt_sys_init.o alt_sys_init.c
-Compiling altera_avalon_jtag_uart_fd.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_jtag_uart_fd.o drivers/src/altera_avalon_jtag_uart_fd.c
-Compiling altera_avalon_jtag_uart_init.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_jtag_uart_init.o drivers/src/altera_avalon_jtag_uart_init.c
-Compiling altera_avalon_jtag_uart_ioctl.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_jtag_uart_ioctl.o drivers/src/altera_avalon_jtag_uart_ioctl.c
-Compiling altera_avalon_jtag_uart_read.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_jtag_uart_read.o drivers/src/altera_avalon_jtag_uart_read.c
-Compiling altera_avalon_jtag_uart_write.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_jtag_uart_write.o drivers/src/altera_avalon_jtag_uart_write.c
-Compiling altera_avalon_sysid_qsys.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_sysid_qsys.o drivers/src/altera_avalon_sysid_qsys.c
-Compiling altera_avalon_timer_sc.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_timer_sc.o drivers/src/altera_avalon_timer_sc.c
-Compiling altera_avalon_timer_ts.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_timer_ts.o drivers/src/altera_avalon_timer_ts.c
-Compiling altera_avalon_timer_vars.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_timer_vars.o drivers/src/altera_avalon_timer_vars.c
-Creating libhal_bsp.a...
-rm -f -f libhal_bsp.a
-nios2-elf-ar.exe -src libhal_bsp.a obj/HAL/src/alt_alarm_start.o obj/HAL/src/alt_busy_sleep.o obj/HAL/src/alt_close.o obj/HAL/src/alt_dcache_flush.o obj/HAL/src/alt_dcache_flush_all.o obj/HAL/src/alt_dcache_flush_no_writeback.o obj/HAL/src/alt_dev.o obj/HAL/src/alt_dev_llist_insert.o obj/HAL/src/alt_dma_rxchan_open.o obj/HAL/src/alt_dma_txchan_open.o obj/HAL/src/alt_do_ctors.o obj/HAL/src/alt_do_dtors.o obj/HAL/src/alt_ecc_fatal_entry.o obj/HAL/src/alt_ecc_fatal_exception.o obj/HAL/src/alt_env_lock.o obj/HAL/src/alt_environ.o obj/HAL/src/alt_errno.o obj/HAL/src/alt_exception_entry.o obj/HAL/src/alt_exception_muldiv.o obj/HAL/src/alt_exception_trap.o obj/HAL/src/alt_execve.o obj/HAL/src/alt_exit.o obj/HAL/src/alt_fcntl.o obj/HAL/src/alt_fd_lock.o obj/HAL/src/alt_fd_unlock.o obj/HAL/src/alt_find_dev.o obj/HAL/src/alt_find_file.o obj/HAL/src/alt_flash_dev.o obj/HAL/src/alt_fork.o obj/HAL/src/alt_fs_reg.o obj/HAL/src/alt_fstat.o obj/HAL/src/alt_get_fd.o obj/HAL/src/alt_getchar.o obj/HAL/src/alt_getpid.o obj/HAL/src/alt_gettod.o obj/HAL/src/alt_gmon.o obj/HAL/src/alt_icache_flush.o obj/HAL/src/alt_icache_flush_all.o obj/HAL/src/alt_iic.o obj/HAL/src/alt_iic_isr_register.o obj/HAL/src/alt_instruction_exception_entry.o obj/HAL/src/alt_instruction_exception_register.o obj/HAL/src/alt_io_redirect.o obj/HAL/src/alt_ioctl.o obj/HAL/src/alt_irq_entry.o obj/HAL/src/alt_irq_handler.o obj/HAL/src/alt_irq_register.o obj/HAL/src/alt_irq_vars.o obj/HAL/src/alt_isatty.o obj/HAL/src/alt_kill.o obj/HAL/src/alt_link.o obj/HAL/src/alt_load.o obj/HAL/src/alt_log_macro.o obj/HAL/src/alt_log_printf.o obj/HAL/src/alt_lseek.o obj/HAL/src/alt_main.o obj/HAL/src/alt_malloc_lock.o obj/HAL/src/alt_mcount.o obj/HAL/src/alt_open.o obj/HAL/src/alt_printf.o obj/HAL/src/alt_putchar.o obj/HAL/src/alt_putcharbuf.o obj/HAL/src/alt_putstr.o obj/HAL/src/alt_read.o obj/HAL/src/alt_release_fd.o obj/HAL/src/alt_remap_cached.o obj/HAL/src/alt_remap_uncached.o obj/HAL/src/alt_rename.o obj/HAL/src/alt_sbrk.o obj/HAL/src/alt_settod.o obj/HAL/src/alt_software_exception.o obj/HAL/src/alt_stat.o obj/HAL/src/alt_tick.o obj/HAL/src/alt_times.o obj/HAL/src/alt_uncached_free.o obj/HAL/src/alt_uncached_malloc.o obj/HAL/src/alt_unlink.o obj/HAL/src/alt_usleep.o obj/HAL/src/alt_wait.o obj/HAL/src/alt_write.o obj/HAL/src/altera_nios2_gen2_irq.o obj/HAL/src/crt0.o obj/alt_sys_init.o obj/drivers/src/altera_avalon_jtag_uart_fd.o obj/drivers/src/altera_avalon_jtag_uart_init.o obj/drivers/src/altera_avalon_jtag_uart_ioctl.o obj/drivers/src/altera_avalon_jtag_uart_read.o obj/drivers/src/altera_avalon_jtag_uart_write.o obj/drivers/src/altera_avalon_sysid_qsys.o obj/drivers/src/altera_avalon_timer_sc.o obj/drivers/src/altera_avalon_timer_ts.o obj/drivers/src/altera_avalon_timer_vars.o
-[BSP build complete]
-Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'KeyExpansion':
-main.c:191:33: error: subscripted value is neither array nor pointer nor vector
-  191 |   w[i] = (unsigned long)((key[0][i]<<24) + (key[1][i]<<16) + (key[2][i]<<8) + (key[3][i]));
-      |                                 ^
-main.c:191:51: error: subscripted value is neither array nor pointer nor vector
-  191 |   w[i] = (unsigned long)((key[0][i]<<24) + (key[1][i]<<16) + (key[2][i]<<8) + (key[3][i]));
-      |                                                   ^
-main.c:191:69: error: subscripted value is neither array nor pointer nor vector
-  191 |   w[i] = (unsigned long)((key[0][i]<<24) + (key[1][i]<<16) + (key[2][i]<<8) + (key[3][i]));
-      |                                                                     ^
-main.c:191:86: error: subscripted value is neither array nor pointer nor vector
-  191 |   w[i] = (unsigned long)((key[0][i]<<24) + (key[1][i]<<16) + (key[2][i]<<8) + (key[3][i]));
-      |                                                                                      ^
-main.c: In function 'encrypt':
-main.c:271:15: warning: passing argument 1 of 'KeyExpansion' from incompatible pointer type [-Wincompatible-pointer-types]
-  271 |  KeyExpansion(keyInit,w,4);
-      |               ^~~~~~~
-      |               |
-      |               unsigned char (*)[4]
-main.c:185:34: note: expected 'unsigned char *' but argument is of type 'unsigned char (*)[4]'
-  185 | void KeyExpansion(unsigned char* key, unsigned long* w, unsigned int Nk)
-      |                   ~~~~~~~~~~~~~~~^~~
-main.c:259:8: warning: unused variable 'j' [-Wunused-variable]
-  259 |  int i,j,round;
-      |        ^
-make: *** [Makefile:724：obj/default/main.o] 错误 1
-19:46:01 **** Build of configuration Nios II for project lab9_bsp ****
-wsl make all 
-[BSP build complete]
-19:46:03 **** Incremental Build of configuration Nios II for project lab9 ****
-wsl make all 
-Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
-make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
-[BSP build complete]
-Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'KeyExpansion':
-main.c:191:33: error: subscripted value is neither array nor pointer nor vector
-  191 |   w[i] = (unsigned long)((key[0][i]<<24) + (key[1][i]<<16) + (key[2][i]<<8) + (key[3][i]));
-      |                                 ^
-main.c:191:51: error: subscripted value is neither array nor pointer nor vector
-  191 |   w[i] = (unsigned long)((key[0][i]<<24) + (key[1][i]<<16) + (key[2][i]<<8) + (key[3][i]));
-      |                                                   ^
-main.c:191:69: error: subscripted value is neither array nor pointer nor vector
-  191 |   w[i] = (unsigned long)((key[0][i]<<24) + (key[1][i]<<16) + (key[2][i]<<8) + (key[3][i]));
-      |                                                                     ^
-main.c:191:86: error: subscripted value is neither array nor pointer nor vector
-  191 |   w[i] = (unsigned long)((key[0][i]<<24) + (key[1][i]<<16) + (key[2][i]<<8) + (key[3][i]));
-      |                                                                                      ^
-main.c: In function 'encrypt':
-main.c:271:15: warning: passing argument 1 of 'KeyExpansion' from incompatible pointer type [-Wincompatible-pointer-types]
-  271 |  KeyExpansion(keyInit,w,4);
-      |               ^~~~~~~
-      |               |
-      |               unsigned char (*)[4]
-main.c:185:34: note: expected 'unsigned char *' but argument is of type 'unsigned char (*)[4]'
-  185 | void KeyExpansion(unsigned char* key, unsigned long* w, unsigned int Nk)
-      |                   ~~~~~~~~~~~~~~~^~~
-main.c:259:8: warning: unused variable 'j' [-Wunused-variable]
-  259 |  int i,j,round;
-      |        ^
-make: *** [Makefile:724：obj/default/main.o] 错误 1
-21:46:36 **** Build of configuration Nios II for project lab9 ****
-wsl make all 
-Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
-make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
-[BSP build complete]
-Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'KeyExpansion':
-main.c:191:33: error: subscripted value is neither array nor pointer nor vector
-  191 |   w[i] = (unsigned long)((key[0][i]<<24) + (key[1][i]<<16) + (key[2][i]<<8) + (key[3][i]));
-      |                                 ^
-main.c:191:51: error: subscripted value is neither array nor pointer nor vector
-  191 |   w[i] = (unsigned long)((key[0][i]<<24) + (key[1][i]<<16) + (key[2][i]<<8) + (key[3][i]));
-      |                                                   ^
-main.c:191:69: error: subscripted value is neither array nor pointer nor vector
-  191 |   w[i] = (unsigned long)((key[0][i]<<24) + (key[1][i]<<16) + (key[2][i]<<8) + (key[3][i]));
-      |                                                                     ^
-main.c:191:86: error: subscripted value is neither array nor pointer nor vector
-  191 |   w[i] = (unsigned long)((key[0][i]<<24) + (key[1][i]<<16) + (key[2][i]<<8) + (key[3][i]));
-      |                                                                                      ^
-main.c: In function 'encrypt':
-main.c:271:15: warning: passing argument 1 of 'KeyExpansion' from incompatible pointer type [-Wincompatible-pointer-types]
-  271 |  KeyExpansion(keyInit,w,4);
-      |               ^~~~~~~
-      |               |
-      |               unsigned char (*)[4]
-main.c:185:34: note: expected 'unsigned char *' but argument is of type 'unsigned char (*)[4]'
-  185 | void KeyExpansion(unsigned char* key, unsigned long* w, unsigned int Nk)
-      |                   ~~~~~~~~~~~~~~~^~~
-main.c:259:8: warning: unused variable 'j' [-Wunused-variable]
-  259 |  int i,j,round;
-      |        ^
-make: *** [Makefile:724：obj/default/main.o] 错误 1
-21:46:37 **** Build of configuration Nios II for project lab9_bsp ****
-wsl make all 
-[BSP build complete]
-21:46:52 **** Incremental Build of configuration Nios II for project lab9 ****
-wsl make all 
-Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
-make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
-[BSP build complete]
-Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'KeyExpansion':
-main.c:191:33: error: subscripted value is neither array nor pointer nor vector
-  191 |   w[i] = (unsigned long)((key[0][i]<<24) + (key[1][i]<<16) + (key[2][i]<<8) + (key[3][i]));
-      |                                 ^
-main.c:191:51: error: subscripted value is neither array nor pointer nor vector
-  191 |   w[i] = (unsigned long)((key[0][i]<<24) + (key[1][i]<<16) + (key[2][i]<<8) + (key[3][i]));
-      |                                                   ^
-main.c:191:69: error: subscripted value is neither array nor pointer nor vector
-  191 |   w[i] = (unsigned long)((key[0][i]<<24) + (key[1][i]<<16) + (key[2][i]<<8) + (key[3][i]));
-      |                                                                     ^
-main.c:191:86: error: subscripted value is neither array nor pointer nor vector
-  191 |   w[i] = (unsigned long)((key[0][i]<<24) + (key[1][i]<<16) + (key[2][i]<<8) + (key[3][i]));
-      |                                                                                      ^
-main.c: In function 'encrypt':
-main.c:271:15: warning: passing argument 1 of 'KeyExpansion' from incompatible pointer type [-Wincompatible-pointer-types]
-  271 |  KeyExpansion(keyInit,w,4);
-      |               ^~~~~~~
-      |               |
-      |               unsigned char (*)[4]
-main.c:185:34: note: expected 'unsigned char *' but argument is of type 'unsigned char (*)[4]'
-  185 | void KeyExpansion(unsigned char* key, unsigned long* w, unsigned int Nk)
-      |                   ~~~~~~~~~~~~~~~^~~
-main.c:259:8: warning: unused variable 'j' [-Wunused-variable]
-  259 |  int i,j,round;
-      |        ^
-make: *** [Makefile:724：obj/default/main.o] 错误 1
-21:47:30 **** Incremental Build of configuration Nios II for project lab9 ****
-wsl make all 
-Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
-make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
-[BSP build complete]
-Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'KeyExpansion':
-main.c:191:33: error: subscripted value is neither array nor pointer nor vector
-  191 |   w[i] = (unsigned long)((key[0][i]<<24) + (key[1][i]<<16) + (key[2][i]<<8) + (key[3][i]));
-      |                                 ^
-main.c:191:51: error: subscripted value is neither array nor pointer nor vector
-  191 |   w[i] = (unsigned long)((key[0][i]<<24) + (key[1][i]<<16) + (key[2][i]<<8) + (key[3][i]));
-      |                                                   ^
-main.c:191:69: error: subscripted value is neither array nor pointer nor vector
-  191 |   w[i] = (unsigned long)((key[0][i]<<24) + (key[1][i]<<16) + (key[2][i]<<8) + (key[3][i]));
-      |                                                                     ^
-main.c:191:86: error: subscripted value is neither array nor pointer nor vector
-  191 |   w[i] = (unsigned long)((key[0][i]<<24) + (key[1][i]<<16) + (key[2][i]<<8) + (key[3][i]));
-      |                                                                                      ^
-main.c: In function 'encrypt':
-main.c:271:15: warning: passing argument 1 of 'KeyExpansion' from incompatible pointer type [-Wincompatible-pointer-types]
-  271 |  KeyExpansion(keyInit,w,4);
-      |               ^~~~~~~
-      |               |
-      |               unsigned char (*)[4]
-main.c:185:34: note: expected 'unsigned char *' but argument is of type 'unsigned char (*)[4]'
-  185 | void KeyExpansion(unsigned char* key, unsigned long* w, unsigned int Nk)
-      |                   ~~~~~~~~~~~~~~~^~~
-main.c:259:8: warning: unused variable 'j' [-Wunused-variable]
-  259 |  int i,j,round;
-      |        ^
-make: *** [Makefile:724：obj/default/main.o] 错误 1
-21:47:31 **** Incremental Build of configuration Nios II for project lab9_bsp ****
-wsl make all 
-[BSP build complete]
-21:53:50 **** Incremental Build of configuration Nios II for project lab9 ****
-wsl make all 
-Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
-make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp/
 Makefile not up to date.
-/mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/lab9_soc.sopcinfo has been modified since the BSP was generated.
+/mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/final_soc.sopcinfo has been modified since the BSP was generated.
 
 Generate the BSP to update the Makefile, and then build again.
 
@@ -606,12 +17,12 @@ To generate from Eclipse:
 To generate from the command line:
  nios2-bsp-generate-files --settings=<settings file> --bsp-dir=<target bsp files directory>
 
-make[1]: *** [Makefile:563：public.mk] 错误 1
-make: *** [Makefile:842�?/mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/-recurs-make-lib] 错误 2
-21:53:51 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+make[1]: *** [Makefile:557：public.mk] 错误 1
+make: *** [Makefile:844�?/mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp/-recurs-make-lib] 错误 2
+17:30:45 **** Incremental Build of configuration Nios II for project final_usb_bsp ****
 wsl make all 
 Makefile not up to date.
-/mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/lab9_soc.sopcinfo has been modified since the BSP was generated.
+/mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/final_soc.sopcinfo has been modified since the BSP was generated.
 
 Generate the BSP to update the Makefile, and then build again.
 
@@ -622,11 +33,11 @@ To generate from Eclipse:
 To generate from the command line:
  nios2-bsp-generate-files --settings=<settings file> --bsp-dir=<target bsp files directory>
 
-make: *** [Makefile:563：public.mk] 错误 1
-21:54:42 **** Incremental Build of configuration Nios II for project lab9 ****
+make: *** [Makefile:557：public.mk] 错误 1
+17:31:41 **** Incremental Build of configuration Nios II for project final_usb ****
 wsl make all 
-Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
-make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp/
 Compiling alt_alarm_start.c...
 nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_alarm_start.o HAL/src/alt_alarm_start.c
 Compiling alt_busy_sleep.c...
@@ -741,171 +152,263 @@ Compiling altera_avalon_jtag_uart_write.c...
 nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_jtag_uart_write.o drivers/src/altera_avalon_jtag_uart_write.c
 Compiling altera_avalon_sysid_qsys.c...
 nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_sysid_qsys.o drivers/src/altera_avalon_sysid_qsys.c
-Compiling altera_avalon_timer_sc.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_timer_sc.o drivers/src/altera_avalon_timer_sc.c
-Compiling altera_avalon_timer_ts.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_timer_ts.o drivers/src/altera_avalon_timer_ts.c
-Compiling altera_avalon_timer_vars.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_timer_vars.o drivers/src/altera_avalon_timer_vars.c
 Creating libhal_bsp.a...
 rm -f -f libhal_bsp.a
-nios2-elf-ar.exe -src libhal_bsp.a obj/HAL/src/alt_alarm_start.o obj/HAL/src/alt_busy_sleep.o obj/HAL/src/alt_close.o obj/HAL/src/alt_dcache_flush.o obj/HAL/src/alt_dcache_flush_all.o obj/HAL/src/alt_dcache_flush_no_writeback.o obj/HAL/src/alt_dev.o obj/HAL/src/alt_dev_llist_insert.o obj/HAL/src/alt_dma_rxchan_open.o obj/HAL/src/alt_dma_txchan_open.o obj/HAL/src/alt_do_ctors.o obj/HAL/src/alt_do_dtors.o obj/HAL/src/alt_ecc_fatal_entry.o obj/HAL/src/alt_ecc_fatal_exception.o obj/HAL/src/alt_env_lock.o obj/HAL/src/alt_environ.o obj/HAL/src/alt_errno.o obj/HAL/src/alt_exception_entry.o obj/HAL/src/alt_exception_muldiv.o obj/HAL/src/alt_exception_trap.o obj/HAL/src/alt_execve.o obj/HAL/src/alt_exit.o obj/HAL/src/alt_fcntl.o obj/HAL/src/alt_fd_lock.o obj/HAL/src/alt_fd_unlock.o obj/HAL/src/alt_find_dev.o obj/HAL/src/alt_find_file.o obj/HAL/src/alt_flash_dev.o obj/HAL/src/alt_fork.o obj/HAL/src/alt_fs_reg.o obj/HAL/src/alt_fstat.o obj/HAL/src/alt_get_fd.o obj/HAL/src/alt_getchar.o obj/HAL/src/alt_getpid.o obj/HAL/src/alt_gettod.o obj/HAL/src/alt_gmon.o obj/HAL/src/alt_icache_flush.o obj/HAL/src/alt_icache_flush_all.o obj/HAL/src/alt_iic.o obj/HAL/src/alt_iic_isr_register.o obj/HAL/src/alt_instruction_exception_entry.o obj/HAL/src/alt_instruction_exception_register.o obj/HAL/src/alt_io_redirect.o obj/HAL/src/alt_ioctl.o obj/HAL/src/alt_irq_entry.o obj/HAL/src/alt_irq_handler.o obj/HAL/src/alt_irq_register.o obj/HAL/src/alt_irq_vars.o obj/HAL/src/alt_isatty.o obj/HAL/src/alt_kill.o obj/HAL/src/alt_link.o obj/HAL/src/alt_load.o obj/HAL/src/alt_log_macro.o obj/HAL/src/alt_log_printf.o obj/HAL/src/alt_lseek.o obj/HAL/src/alt_main.o obj/HAL/src/alt_malloc_lock.o obj/HAL/src/alt_mcount.o obj/HAL/src/alt_open.o obj/HAL/src/alt_printf.o obj/HAL/src/alt_putchar.o obj/HAL/src/alt_putcharbuf.o obj/HAL/src/alt_putstr.o obj/HAL/src/alt_read.o obj/HAL/src/alt_release_fd.o obj/HAL/src/alt_remap_cached.o obj/HAL/src/alt_remap_uncached.o obj/HAL/src/alt_rename.o obj/HAL/src/alt_sbrk.o obj/HAL/src/alt_settod.o obj/HAL/src/alt_software_exception.o obj/HAL/src/alt_stat.o obj/HAL/src/alt_tick.o obj/HAL/src/alt_times.o obj/HAL/src/alt_uncached_free.o obj/HAL/src/alt_uncached_malloc.o obj/HAL/src/alt_unlink.o obj/HAL/src/alt_usleep.o obj/HAL/src/alt_wait.o obj/HAL/src/alt_write.o obj/HAL/src/altera_nios2_gen2_irq.o obj/HAL/src/crt0.o obj/alt_sys_init.o obj/drivers/src/altera_avalon_jtag_uart_fd.o obj/drivers/src/altera_avalon_jtag_uart_init.o obj/drivers/src/altera_avalon_jtag_uart_ioctl.o obj/drivers/src/altera_avalon_jtag_uart_read.o obj/drivers/src/altera_avalon_jtag_uart_write.o obj/drivers/src/altera_avalon_sysid_qsys.o obj/drivers/src/altera_avalon_timer_sc.o obj/drivers/src/altera_avalon_timer_ts.o obj/drivers/src/altera_avalon_timer_vars.o
+nios2-elf-ar.exe -src libhal_bsp.a obj/HAL/src/alt_alarm_start.o obj/HAL/src/alt_busy_sleep.o obj/HAL/src/alt_close.o obj/HAL/src/alt_dcache_flush.o obj/HAL/src/alt_dcache_flush_all.o obj/HAL/src/alt_dcache_flush_no_writeback.o obj/HAL/src/alt_dev.o obj/HAL/src/alt_dev_llist_insert.o obj/HAL/src/alt_dma_rxchan_open.o obj/HAL/src/alt_dma_txchan_open.o obj/HAL/src/alt_do_ctors.o obj/HAL/src/alt_do_dtors.o obj/HAL/src/alt_ecc_fatal_entry.o obj/HAL/src/alt_ecc_fatal_exception.o obj/HAL/src/alt_env_lock.o obj/HAL/src/alt_environ.o obj/HAL/src/alt_errno.o obj/HAL/src/alt_exception_entry.o obj/HAL/src/alt_exception_muldiv.o obj/HAL/src/alt_exception_trap.o obj/HAL/src/alt_execve.o obj/HAL/src/alt_exit.o obj/HAL/src/alt_fcntl.o obj/HAL/src/alt_fd_lock.o obj/HAL/src/alt_fd_unlock.o obj/HAL/src/alt_find_dev.o obj/HAL/src/alt_find_file.o obj/HAL/src/alt_flash_dev.o obj/HAL/src/alt_fork.o obj/HAL/src/alt_fs_reg.o obj/HAL/src/alt_fstat.o obj/HAL/src/alt_get_fd.o obj/HAL/src/alt_getchar.o obj/HAL/src/alt_getpid.o obj/HAL/src/alt_gettod.o obj/HAL/src/alt_gmon.o obj/HAL/src/alt_icache_flush.o obj/HAL/src/alt_icache_flush_all.o obj/HAL/src/alt_iic.o obj/HAL/src/alt_iic_isr_register.o obj/HAL/src/alt_instruction_exception_entry.o obj/HAL/src/alt_instruction_exception_register.o obj/HAL/src/alt_io_redirect.o obj/HAL/src/alt_ioctl.o obj/HAL/src/alt_irq_entry.o obj/HAL/src/alt_irq_handler.o obj/HAL/src/alt_irq_register.o obj/HAL/src/alt_irq_vars.o obj/HAL/src/alt_isatty.o obj/HAL/src/alt_kill.o obj/HAL/src/alt_link.o obj/HAL/src/alt_load.o obj/HAL/src/alt_log_macro.o obj/HAL/src/alt_log_printf.o obj/HAL/src/alt_lseek.o obj/HAL/src/alt_main.o obj/HAL/src/alt_malloc_lock.o obj/HAL/src/alt_mcount.o obj/HAL/src/alt_open.o obj/HAL/src/alt_printf.o obj/HAL/src/alt_putchar.o obj/HAL/src/alt_putcharbuf.o obj/HAL/src/alt_putstr.o obj/HAL/src/alt_read.o obj/HAL/src/alt_release_fd.o obj/HAL/src/alt_remap_cached.o obj/HAL/src/alt_remap_uncached.o obj/HAL/src/alt_rename.o obj/HAL/src/alt_sbrk.o obj/HAL/src/alt_settod.o obj/HAL/src/alt_software_exception.o obj/HAL/src/alt_stat.o obj/HAL/src/alt_tick.o obj/HAL/src/alt_times.o obj/HAL/src/alt_uncached_free.o obj/HAL/src/alt_uncached_malloc.o obj/HAL/src/alt_unlink.o obj/HAL/src/alt_usleep.o obj/HAL/src/alt_wait.o obj/HAL/src/alt_write.o obj/HAL/src/altera_nios2_gen2_irq.o obj/HAL/src/crt0.o obj/alt_sys_init.o obj/drivers/src/altera_avalon_jtag_uart_fd.o obj/drivers/src/altera_avalon_jtag_uart_init.o obj/drivers/src/altera_avalon_jtag_uart_ioctl.o obj/drivers/src/altera_avalon_jtag_uart_read.o obj/drivers/src/altera_avalon_jtag_uart_write.o obj/drivers/src/altera_avalon_sysid_qsys.o
+[BSP build complete]
+Info: Compiling io_handler.c to obj/default/io_handler.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/io_handler.o io_handler.c
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'main':
+main.c:527:4: error: 'keycode' undeclared (first use in this function); did you mean 'keycode3'?
+  527 |   *keycode = UsbRead(0x051e);
+      |    ^~~~~~~
+      |    keycode3
+main.c:527:4: note: each undeclared identifier is reported only once for each function it appears in
+main.c:528:3: error: invalid type argument of unary '*' (have 'int')
+  528 |   *keycode2 = UsbRead(0x0520);
+      |   ^~~~~~~~~
+main.c:529:3: error: invalid type argument of unary '*' (have 'int')
+  529 |   *keycode3 = UsbRead(0x0522);
+      |   ^~~~~~~~~
+In file included from main.c:21:
+io_handler.h:19:42: error: 'KEYCODE1_BASE' undeclared (first use in this function); did you mean 'KEYCODE_1_BASE'?
+   19 | #define keycode1_base   (volatile char*) KEYCODE1_BASE
+      |                                          ^~~~~~~~~~~~~
+main.c:530:4: note: in expansion of macro 'keycode1_base'
+  530 |   *keycode1_base = keycode & 0xff; // only read 2 of 4 Hex as a keycode
+      |    ^~~~~~~~~~~~~
+io_handler.h:20:42: error: 'KEYCODE2_BASE' undeclared (first use in this function); did you mean 'KEYCODE_2_BASE'?
+   20 | #define keycode2_base   (volatile char*) KEYCODE2_BASE
+      |                                          ^~~~~~~~~~~~~
+main.c:531:4: note: in expansion of macro 'keycode2_base'
+  531 |   *keycode2_base = keycode >> 8;  // for second keycode, shift 8 bit
+      |    ^~~~~~~~~~~~~
+io_handler.h:21:42: error: 'KEYCODE3_BASE' undeclared (first use in this function); did you mean 'KEYCODE_3_BASE'?
+   21 | #define keycode3_base   (volatile char*) KEYCODE3_BASE
+      |                                          ^~~~~~~~~~~~~
+main.c:532:4: note: in expansion of macro 'keycode3_base'
+  532 |   *keycode3_base = keycode2 & 0xff;
+      |    ^~~~~~~~~~~~~
+io_handler.h:22:42: error: 'KEYCODE4_BASE' undeclared (first use in this function); did you mean 'KEYCODE_4_BASE'?
+   22 | #define keycode4_base   (volatile char*) KEYCODE4_BASE
+      |                                          ^~~~~~~~~~~~~
+main.c:533:4: note: in expansion of macro 'keycode4_base'
+  533 |   *keycode4_base = keycode2 >> 8;
+      |    ^~~~~~~~~~~~~
+io_handler.h:23:42: error: 'KEYCODE5_BASE' undeclared (first use in this function); did you mean 'KEYCODE_5_BASE'?
+   23 | #define keycode5_base   (volatile char*) KEYCODE5_BASE
+      |                                          ^~~~~~~~~~~~~
+main.c:534:4: note: in expansion of macro 'keycode5_base'
+  534 |   *keycode5_base = keycode3 & 0xff;
+      |    ^~~~~~~~~~~~~
+io_handler.h:24:42: error: 'KEYCODE6_BASE' undeclared (first use in this function); did you mean 'KEYCODE_6_BASE'?
+   24 | #define keycode6_base   (volatile char*) KEYCODE6_BASE
+      |                                          ^~~~~~~~~~~~~
+main.c:535:4: note: in expansion of macro 'keycode6_base'
+  535 |   *keycode6_base = keycode3 >> 8;
+      |    ^~~~~~~~~~~~~
+main.c:53:6: warning: unused variable 'keycode1' [-Wunused-variable]
+   53 |  int keycode1 = 0;  // store the key read from address
+      |      ^~~~~~~~
+make: *** [Makefile:726：obj/default/main.o] 错误 1
+17:31:45 **** Incremental Build of configuration Nios II for project final_usb_bsp ****
+wsl make all 
+[BSP build complete]
+17:32:13 **** Incremental Build of configuration Nios II for project final_usb ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp/
 [BSP build complete]
 Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'KeyExpansion':
-main.c:191:33: error: subscripted value is neither array nor pointer nor vector
-  191 |   w[i] = (unsigned long)((key[0][i]<<24) + (key[1][i]<<16) + (key[2][i]<<8) + (key[3][i]));
-      |                                 ^
-main.c:191:51: error: subscripted value is neither array nor pointer nor vector
-  191 |   w[i] = (unsigned long)((key[0][i]<<24) + (key[1][i]<<16) + (key[2][i]<<8) + (key[3][i]));
-      |                                                   ^
-main.c:191:69: error: subscripted value is neither array nor pointer nor vector
-  191 |   w[i] = (unsigned long)((key[0][i]<<24) + (key[1][i]<<16) + (key[2][i]<<8) + (key[3][i]));
-      |                                                                     ^
-main.c:191:86: error: subscripted value is neither array nor pointer nor vector
-  191 |   w[i] = (unsigned long)((key[0][i]<<24) + (key[1][i]<<16) + (key[2][i]<<8) + (key[3][i]));
-      |                                                                                      ^
-main.c: In function 'encrypt':
-main.c:271:15: warning: passing argument 1 of 'KeyExpansion' from incompatible pointer type [-Wincompatible-pointer-types]
-  271 |  KeyExpansion(keyInit,w,4);
-      |               ^~~~~~~
-      |               |
-      |               unsigned char (*)[4]
-main.c:185:34: note: expected 'unsigned char *' but argument is of type 'unsigned char (*)[4]'
-  185 | void KeyExpansion(unsigned char* key, unsigned long* w, unsigned int Nk)
-      |                   ~~~~~~~~~~~~~~~^~~
-main.c:259:8: warning: unused variable 'j' [-Wunused-variable]
-  259 |  int i,j,round;
-      |        ^
-make: *** [Makefile:724：obj/default/main.o] 错误 1
-21:54:47 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'main':
+main.c:527:4: error: 'keycode' undeclared (first use in this function); did you mean 'keycode3'?
+  527 |   *keycode = UsbRead(0x051e);
+      |    ^~~~~~~
+      |    keycode3
+main.c:527:4: note: each undeclared identifier is reported only once for each function it appears in
+main.c:528:3: error: invalid type argument of unary '*' (have 'int')
+  528 |   *keycode2 = UsbRead(0x0520);
+      |   ^~~~~~~~~
+main.c:529:3: error: invalid type argument of unary '*' (have 'int')
+  529 |   *keycode3 = UsbRead(0x0522);
+      |   ^~~~~~~~~
+In file included from main.c:21:
+io_handler.h:19:42: error: 'KEYCODE1_BASE' undeclared (first use in this function); did you mean 'KEYCODE_1_BASE'?
+   19 | #define keycode1_base   (volatile char*) KEYCODE1_BASE
+      |                                          ^~~~~~~~~~~~~
+main.c:530:4: note: in expansion of macro 'keycode1_base'
+  530 |   *keycode1_base = keycode & 0xff; // only read 2 of 4 Hex as a keycode
+      |    ^~~~~~~~~~~~~
+io_handler.h:20:42: error: 'KEYCODE2_BASE' undeclared (first use in this function); did you mean 'KEYCODE_2_BASE'?
+   20 | #define keycode2_base   (volatile char*) KEYCODE2_BASE
+      |                                          ^~~~~~~~~~~~~
+main.c:531:4: note: in expansion of macro 'keycode2_base'
+  531 |   *keycode2_base = keycode >> 8;  // for second keycode, shift 8 bit
+      |    ^~~~~~~~~~~~~
+io_handler.h:21:42: error: 'KEYCODE3_BASE' undeclared (first use in this function); did you mean 'KEYCODE_3_BASE'?
+   21 | #define keycode3_base   (volatile char*) KEYCODE3_BASE
+      |                                          ^~~~~~~~~~~~~
+main.c:532:4: note: in expansion of macro 'keycode3_base'
+  532 |   *keycode3_base = keycode2 & 0xff;
+      |    ^~~~~~~~~~~~~
+io_handler.h:22:42: error: 'KEYCODE4_BASE' undeclared (first use in this function); did you mean 'KEYCODE_4_BASE'?
+   22 | #define keycode4_base   (volatile char*) KEYCODE4_BASE
+      |                                          ^~~~~~~~~~~~~
+main.c:533:4: note: in expansion of macro 'keycode4_base'
+  533 |   *keycode4_base = keycode2 >> 8;
+      |    ^~~~~~~~~~~~~
+io_handler.h:23:42: error: 'KEYCODE5_BASE' undeclared (first use in this function); did you mean 'KEYCODE_5_BASE'?
+   23 | #define keycode5_base   (volatile char*) KEYCODE5_BASE
+      |                                          ^~~~~~~~~~~~~
+main.c:534:4: note: in expansion of macro 'keycode5_base'
+  534 |   *keycode5_base = keycode3 & 0xff;
+      |    ^~~~~~~~~~~~~
+io_handler.h:24:42: error: 'KEYCODE6_BASE' undeclared (first use in this function); did you mean 'KEYCODE_6_BASE'?
+   24 | #define keycode6_base   (volatile char*) KEYCODE6_BASE
+      |                                          ^~~~~~~~~~~~~
+main.c:535:4: note: in expansion of macro 'keycode6_base'
+  535 |   *keycode6_base = keycode3 >> 8;
+      |    ^~~~~~~~~~~~~
+main.c:53:6: warning: unused variable 'keycode1' [-Wunused-variable]
+   53 |  int keycode1 = 0;  // store the key read from address
+      |      ^~~~~~~~
+make: *** [Makefile:726：obj/default/main.o] 错误 1
+17:32:14 **** Incremental Build of configuration Nios II for project final_usb_bsp ****
 wsl make all 
 [BSP build complete]
-21:55:05 **** Incremental Build of configuration Nios II for project lab9 ****
+17:32:45 **** Incremental Build of configuration Nios II for project final_usb ****
 wsl make all 
-Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
-make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
-[BSP build complete]
-Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'KeyExpansion':
-main.c:191:33: error: subscripted value is neither array nor pointer nor vector
-  191 |   w[i] = (unsigned long)((key[0][i]<<24) + (key[1][i]<<16) + (key[2][i]<<8) + (key[3][i]));
-      |                                 ^
-main.c:191:51: error: subscripted value is neither array nor pointer nor vector
-  191 |   w[i] = (unsigned long)((key[0][i]<<24) + (key[1][i]<<16) + (key[2][i]<<8) + (key[3][i]));
-      |                                                   ^
-main.c:191:69: error: subscripted value is neither array nor pointer nor vector
-  191 |   w[i] = (unsigned long)((key[0][i]<<24) + (key[1][i]<<16) + (key[2][i]<<8) + (key[3][i]));
-      |                                                                     ^
-main.c:191:86: error: subscripted value is neither array nor pointer nor vector
-  191 |   w[i] = (unsigned long)((key[0][i]<<24) + (key[1][i]<<16) + (key[2][i]<<8) + (key[3][i]));
-      |                                                                                      ^
-main.c: In function 'encrypt':
-main.c:271:15: warning: passing argument 1 of 'KeyExpansion' from incompatible pointer type [-Wincompatible-pointer-types]
-  271 |  KeyExpansion(keyInit,w,4);
-      |               ^~~~~~~
-      |               |
-      |               unsigned char (*)[4]
-main.c:185:34: note: expected 'unsigned char *' but argument is of type 'unsigned char (*)[4]'
-  185 | void KeyExpansion(unsigned char* key, unsigned long* w, unsigned int Nk)
-      |                   ~~~~~~~~~~~~~~~^~~
-main.c:259:8: warning: unused variable 'j' [-Wunused-variable]
-  259 |  int i,j,round;
-      |        ^
-make: *** [Makefile:724：obj/default/main.o] 错误 1
-21:56:00 **** Incremental Build of configuration Nios II for project lab9 ****
-wsl make all 
-Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
-make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp/
 [BSP build complete]
 Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'encrypt':
-main.c:259:8: warning: unused variable 'j' [-Wunused-variable]
-  259 |  int i,j,round;
-      |        ^
-Info: Linking lab9.elf
-nios2-elf-g++.exe  -T'c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//linker.x' -msys-crt0='c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -Lc:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/   -Wl,-Map=lab9.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o lab9.elf obj/default/main.o -lm -msys-lib=m
-nios2-elf-insert.exe lab9.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x28 --timestamp 1638971321 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name lab9_soc --quartus_project_dir "c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9" --jdi ../..//output_files/lab9.jdi
-Info: (lab9.elf) 115 KBytes program size (code + initialized data).
-Info:            130947 KBytes free for stack + heap.
-Info: Creating lab9.objdump
-nios2-elf-objdump.exe --disassemble --syms --all-header --source lab9.elf >lab9.objdump
-[lab9 build complete]
-21:56:02 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'main':
+main.c:527:4: error: 'keycode' undeclared (first use in this function); did you mean 'keycode3'?
+  527 |   *keycode = UsbRead(0x051e);
+      |    ^~~~~~~
+      |    keycode3
+main.c:527:4: note: each undeclared identifier is reported only once for each function it appears in
+main.c:528:3: error: invalid type argument of unary '*' (have 'int')
+  528 |   *keycode2 = UsbRead(0x0520);
+      |   ^~~~~~~~~
+main.c:529:3: error: invalid type argument of unary '*' (have 'int')
+  529 |   *keycode3 = UsbRead(0x0522);
+      |   ^~~~~~~~~
+In file included from main.c:21:
+io_handler.h:19:42: error: 'KEYCODE1_BASE' undeclared (first use in this function); did you mean 'KEYCODE_1_BASE'?
+   19 | #define keycode1_base   (volatile char*) KEYCODE1_BASE
+      |                                          ^~~~~~~~~~~~~
+main.c:530:4: note: in expansion of macro 'keycode1_base'
+  530 |   *keycode1_base = keycode & 0xff; // only read 2 of 4 Hex as a keycode
+      |    ^~~~~~~~~~~~~
+io_handler.h:20:42: error: 'KEYCODE2_BASE' undeclared (first use in this function); did you mean 'KEYCODE_2_BASE'?
+   20 | #define keycode2_base   (volatile char*) KEYCODE2_BASE
+      |                                          ^~~~~~~~~~~~~
+main.c:531:4: note: in expansion of macro 'keycode2_base'
+  531 |   *keycode2_base = keycode >> 8;  // for second keycode, shift 8 bit
+      |    ^~~~~~~~~~~~~
+io_handler.h:21:42: error: 'KEYCODE3_BASE' undeclared (first use in this function); did you mean 'KEYCODE_3_BASE'?
+   21 | #define keycode3_base   (volatile char*) KEYCODE3_BASE
+      |                                          ^~~~~~~~~~~~~
+main.c:532:4: note: in expansion of macro 'keycode3_base'
+  532 |   *keycode3_base = keycode2 & 0xff;
+      |    ^~~~~~~~~~~~~
+io_handler.h:22:42: error: 'KEYCODE4_BASE' undeclared (first use in this function); did you mean 'KEYCODE_4_BASE'?
+   22 | #define keycode4_base   (volatile char*) KEYCODE4_BASE
+      |                                          ^~~~~~~~~~~~~
+main.c:533:4: note: in expansion of macro 'keycode4_base'
+  533 |   *keycode4_base = keycode2 >> 8;
+      |    ^~~~~~~~~~~~~
+io_handler.h:23:42: error: 'KEYCODE5_BASE' undeclared (first use in this function); did you mean 'KEYCODE_5_BASE'?
+   23 | #define keycode5_base   (volatile char*) KEYCODE5_BASE
+      |                                          ^~~~~~~~~~~~~
+main.c:534:4: note: in expansion of macro 'keycode5_base'
+  534 |   *keycode5_base = keycode3 & 0xff;
+      |    ^~~~~~~~~~~~~
+io_handler.h:24:42: error: 'KEYCODE6_BASE' undeclared (first use in this function); did you mean 'KEYCODE_6_BASE'?
+   24 | #define keycode6_base   (volatile char*) KEYCODE6_BASE
+      |                                          ^~~~~~~~~~~~~
+main.c:535:4: note: in expansion of macro 'keycode6_base'
+  535 |   *keycode6_base = keycode3 >> 8;
+      |    ^~~~~~~~~~~~~
+main.c:53:6: warning: unused variable 'keycode1' [-Wunused-variable]
+   53 |  int keycode1 = 0;  // store the key read from address
+      |      ^~~~~~~~
+make: *** [Makefile:726：obj/default/main.o] 错误 1
+17:32:46 **** Incremental Build of configuration Nios II for project final_usb_bsp ****
 wsl make all 
 [BSP build complete]
-21:56:14 **** Incremental Build of configuration Nios II for project lab9 ****
+17:32:58 **** Incremental Build of configuration Nios II for project final_usb ****
 wsl make all 
-Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
-make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
-[BSP build complete]
-[lab9 build complete]
-21:58:33 **** Incremental Build of configuration Nios II for project lab9 ****
-wsl make all 
-Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
-make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp/
 [BSP build complete]
 Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'encrypt':
-main.c:259:8: warning: unused variable 'j' [-Wunused-variable]
-  259 |  int i,j,round;
-      |        ^
-Info: Linking lab9.elf
-nios2-elf-g++.exe  -T'c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//linker.x' -msys-crt0='c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -Lc:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/   -Wl,-Map=lab9.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o lab9.elf obj/default/main.o -lm -msys-lib=m
-nios2-elf-insert.exe lab9.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x28 --timestamp 1638971321 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name lab9_soc --quartus_project_dir "c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9" --jdi ../..//output_files/lab9.jdi
-Info: (lab9.elf) 115 KBytes program size (code + initialized data).
-Info:            130947 KBytes free for stack + heap.
-Info: Creating lab9.objdump
-nios2-elf-objdump.exe --disassemble --syms --all-header --source lab9.elf >lab9.objdump
-[lab9 build complete]
-21:58:35 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'main':
+main.c:527:4: error: 'keycode' undeclared (first use in this function); did you mean 'keycode3'?
+  527 |   *keycode = UsbRead(0x051e);
+      |    ^~~~~~~
+      |    keycode3
+main.c:527:4: note: each undeclared identifier is reported only once for each function it appears in
+main.c:528:3: error: invalid type argument of unary '*' (have 'int')
+  528 |   *keycode2 = UsbRead(0x0520);
+      |   ^~~~~~~~~
+main.c:529:3: error: invalid type argument of unary '*' (have 'int')
+  529 |   *keycode3 = UsbRead(0x0522);
+      |   ^~~~~~~~~
+In file included from main.c:21:
+io_handler.h:19:42: error: 'KEYCODE1_BASE' undeclared (first use in this function); did you mean 'KEYCODE_1_BASE'?
+   19 | #define keycode1_base   (volatile char*) KEYCODE1_BASE
+      |                                          ^~~~~~~~~~~~~
+main.c:530:4: note: in expansion of macro 'keycode1_base'
+  530 |   *keycode1_base = keycode & 0xff; // only read 2 of 4 Hex as a keycode
+      |    ^~~~~~~~~~~~~
+io_handler.h:20:42: error: 'KEYCODE2_BASE' undeclared (first use in this function); did you mean 'KEYCODE_2_BASE'?
+   20 | #define keycode2_base   (volatile char*) KEYCODE2_BASE
+      |                                          ^~~~~~~~~~~~~
+main.c:531:4: note: in expansion of macro 'keycode2_base'
+  531 |   *keycode2_base = keycode >> 8;  // for second keycode, shift 8 bit
+      |    ^~~~~~~~~~~~~
+io_handler.h:21:42: error: 'KEYCODE3_BASE' undeclared (first use in this function); did you mean 'KEYCODE_3_BASE'?
+   21 | #define keycode3_base   (volatile char*) KEYCODE3_BASE
+      |                                          ^~~~~~~~~~~~~
+main.c:532:4: note: in expansion of macro 'keycode3_base'
+  532 |   *keycode3_base = keycode2 & 0xff;
+      |    ^~~~~~~~~~~~~
+io_handler.h:22:42: error: 'KEYCODE4_BASE' undeclared (first use in this function); did you mean 'KEYCODE_4_BASE'?
+   22 | #define keycode4_base   (volatile char*) KEYCODE4_BASE
+      |                                          ^~~~~~~~~~~~~
+main.c:533:4: note: in expansion of macro 'keycode4_base'
+  533 |   *keycode4_base = keycode2 >> 8;
+      |    ^~~~~~~~~~~~~
+io_handler.h:23:42: error: 'KEYCODE5_BASE' undeclared (first use in this function); did you mean 'KEYCODE_5_BASE'?
+   23 | #define keycode5_base   (volatile char*) KEYCODE5_BASE
+      |                                          ^~~~~~~~~~~~~
+main.c:534:4: note: in expansion of macro 'keycode5_base'
+  534 |   *keycode5_base = keycode3 & 0xff;
+      |    ^~~~~~~~~~~~~
+io_handler.h:24:42: error: 'KEYCODE6_BASE' undeclared (first use in this function); did you mean 'KEYCODE_6_BASE'?
+   24 | #define keycode6_base   (volatile char*) KEYCODE6_BASE
+      |                                          ^~~~~~~~~~~~~
+main.c:535:4: note: in expansion of macro 'keycode6_base'
+  535 |   *keycode6_base = keycode3 >> 8;
+      |    ^~~~~~~~~~~~~
+main.c:53:6: warning: unused variable 'keycode1' [-Wunused-variable]
+   53 |  int keycode1 = 0;  // store the key read from address
+      |      ^~~~~~~~
+make: *** [Makefile:726：obj/default/main.o] 错误 1
+17:32:59 **** Incremental Build of configuration Nios II for project final_usb_bsp ****
 wsl make all 
 [BSP build complete]
-21:58:39 **** Incremental Build of configuration Nios II for project lab9 ****
+17:33:50 **** Incremental Build of configuration Nios II for project final_usb ****
 wsl make all 
-Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
-make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
-[BSP build complete]
-[lab9 build complete]
-21:59:14 **** Incremental Build of configuration Nios II for project lab9 ****
-wsl make all 
-Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
-make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
-[BSP build complete]
-Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'encrypt':
-main.c:259:8: warning: unused variable 'j' [-Wunused-variable]
-  259 |  int i,j,round;
-      |        ^
-Info: Linking lab9.elf
-nios2-elf-g++.exe  -T'c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//linker.x' -msys-crt0='c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -Lc:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/   -Wl,-Map=lab9.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o lab9.elf obj/default/main.o -lm -msys-lib=m
-nios2-elf-insert.exe lab9.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x28 --timestamp 1638971321 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name lab9_soc --quartus_project_dir "c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9" --jdi ../..//output_files/lab9.jdi
-Info: (lab9.elf) 115 KBytes program size (code + initialized data).
-Info:            130947 KBytes free for stack + heap.
-Info: Creating lab9.objdump
-nios2-elf-objdump.exe --disassemble --syms --all-header --source lab9.elf >lab9.objdump
-[lab9 build complete]
-21:59:16 **** Incremental Build of configuration Nios II for project lab9_bsp ****
-wsl make all 
-[BSP build complete]
-21:59:21 **** Incremental Build of configuration Nios II for project lab9 ****
-wsl make all 
-Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
-make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
-[BSP build complete]
-[lab9 build complete]
-23:08:22 **** Clean-only build of configuration Nios II for project ECE385 ****
-wsl make clean 
-[ECE385_src clean complete]
-09:17:54 **** Build of configuration Nios II for project lab9 ****
-wsl make all 
-Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
-make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp/
 Compiling alt_alarm_start.c...
 nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_alarm_start.o HAL/src/alt_alarm_start.c
 Compiling alt_busy_sleep.c...
@@ -1020,168 +523,69 @@ Compiling altera_avalon_jtag_uart_write.c...
 nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_jtag_uart_write.o drivers/src/altera_avalon_jtag_uart_write.c
 Compiling altera_avalon_sysid_qsys.c...
 nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_sysid_qsys.o drivers/src/altera_avalon_sysid_qsys.c
-Compiling altera_avalon_timer_sc.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_timer_sc.o drivers/src/altera_avalon_timer_sc.c
-Compiling altera_avalon_timer_ts.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_timer_ts.o drivers/src/altera_avalon_timer_ts.c
-Compiling altera_avalon_timer_vars.c...
-nios2-elf-gcc.exe -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_timer_vars.o drivers/src/altera_avalon_timer_vars.c
 Creating libhal_bsp.a...
 rm -f -f libhal_bsp.a
-nios2-elf-ar.exe -src libhal_bsp.a obj/HAL/src/alt_alarm_start.o obj/HAL/src/alt_busy_sleep.o obj/HAL/src/alt_close.o obj/HAL/src/alt_dcache_flush.o obj/HAL/src/alt_dcache_flush_all.o obj/HAL/src/alt_dcache_flush_no_writeback.o obj/HAL/src/alt_dev.o obj/HAL/src/alt_dev_llist_insert.o obj/HAL/src/alt_dma_rxchan_open.o obj/HAL/src/alt_dma_txchan_open.o obj/HAL/src/alt_do_ctors.o obj/HAL/src/alt_do_dtors.o obj/HAL/src/alt_ecc_fatal_entry.o obj/HAL/src/alt_ecc_fatal_exception.o obj/HAL/src/alt_env_lock.o obj/HAL/src/alt_environ.o obj/HAL/src/alt_errno.o obj/HAL/src/alt_exception_entry.o obj/HAL/src/alt_exception_muldiv.o obj/HAL/src/alt_exception_trap.o obj/HAL/src/alt_execve.o obj/HAL/src/alt_exit.o obj/HAL/src/alt_fcntl.o obj/HAL/src/alt_fd_lock.o obj/HAL/src/alt_fd_unlock.o obj/HAL/src/alt_find_dev.o obj/HAL/src/alt_find_file.o obj/HAL/src/alt_flash_dev.o obj/HAL/src/alt_fork.o obj/HAL/src/alt_fs_reg.o obj/HAL/src/alt_fstat.o obj/HAL/src/alt_get_fd.o obj/HAL/src/alt_getchar.o obj/HAL/src/alt_getpid.o obj/HAL/src/alt_gettod.o obj/HAL/src/alt_gmon.o obj/HAL/src/alt_icache_flush.o obj/HAL/src/alt_icache_flush_all.o obj/HAL/src/alt_iic.o obj/HAL/src/alt_iic_isr_register.o obj/HAL/src/alt_instruction_exception_entry.o obj/HAL/src/alt_instruction_exception_register.o obj/HAL/src/alt_io_redirect.o obj/HAL/src/alt_ioctl.o obj/HAL/src/alt_irq_entry.o obj/HAL/src/alt_irq_handler.o obj/HAL/src/alt_irq_register.o obj/HAL/src/alt_irq_vars.o obj/HAL/src/alt_isatty.o obj/HAL/src/alt_kill.o obj/HAL/src/alt_link.o obj/HAL/src/alt_load.o obj/HAL/src/alt_log_macro.o obj/HAL/src/alt_log_printf.o obj/HAL/src/alt_lseek.o obj/HAL/src/alt_main.o obj/HAL/src/alt_malloc_lock.o obj/HAL/src/alt_mcount.o obj/HAL/src/alt_open.o obj/HAL/src/alt_printf.o obj/HAL/src/alt_putchar.o obj/HAL/src/alt_putcharbuf.o obj/HAL/src/alt_putstr.o obj/HAL/src/alt_read.o obj/HAL/src/alt_release_fd.o obj/HAL/src/alt_remap_cached.o obj/HAL/src/alt_remap_uncached.o obj/HAL/src/alt_rename.o obj/HAL/src/alt_sbrk.o obj/HAL/src/alt_settod.o obj/HAL/src/alt_software_exception.o obj/HAL/src/alt_stat.o obj/HAL/src/alt_tick.o obj/HAL/src/alt_times.o obj/HAL/src/alt_uncached_free.o obj/HAL/src/alt_uncached_malloc.o obj/HAL/src/alt_unlink.o obj/HAL/src/alt_usleep.o obj/HAL/src/alt_wait.o obj/HAL/src/alt_write.o obj/HAL/src/altera_nios2_gen2_irq.o obj/HAL/src/crt0.o obj/alt_sys_init.o obj/drivers/src/altera_avalon_jtag_uart_fd.o obj/drivers/src/altera_avalon_jtag_uart_init.o obj/drivers/src/altera_avalon_jtag_uart_ioctl.o obj/drivers/src/altera_avalon_jtag_uart_read.o obj/drivers/src/altera_avalon_jtag_uart_write.o obj/drivers/src/altera_avalon_sysid_qsys.o obj/drivers/src/altera_avalon_timer_sc.o obj/drivers/src/altera_avalon_timer_ts.o obj/drivers/src/altera_avalon_timer_vars.o
-[BSP build complete]
-Info: Linking lab9.elf
-nios2-elf-g++.exe  -T'c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//linker.x' -msys-crt0='c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -Lc:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/   -Wl,-Map=lab9.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o lab9.elf obj/default/main.o -lm -msys-lib=m
-nios2-elf-insert.exe lab9.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x28 --timestamp 1639012385 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name lab9_soc --quartus_project_dir "c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9" --jdi ../..//output_files/lab9.jdi
-Info: (lab9.elf) 115 KBytes program size (code + initialized data).
-Info:            130947 KBytes free for stack + heap.
-Info: Creating lab9.objdump
-nios2-elf-objdump.exe --disassemble --syms --all-header --source lab9.elf >lab9.objdump
-[lab9 build complete]
-09:19:04 **** Incremental Build of configuration Nios II for project lab9 ****
-wsl make all 
-Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
-make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+nios2-elf-ar.exe -src libhal_bsp.a obj/HAL/src/alt_alarm_start.o obj/HAL/src/alt_busy_sleep.o obj/HAL/src/alt_close.o obj/HAL/src/alt_dcache_flush.o obj/HAL/src/alt_dcache_flush_all.o obj/HAL/src/alt_dcache_flush_no_writeback.o obj/HAL/src/alt_dev.o obj/HAL/src/alt_dev_llist_insert.o obj/HAL/src/alt_dma_rxchan_open.o obj/HAL/src/alt_dma_txchan_open.o obj/HAL/src/alt_do_ctors.o obj/HAL/src/alt_do_dtors.o obj/HAL/src/alt_ecc_fatal_entry.o obj/HAL/src/alt_ecc_fatal_exception.o obj/HAL/src/alt_env_lock.o obj/HAL/src/alt_environ.o obj/HAL/src/alt_errno.o obj/HAL/src/alt_exception_entry.o obj/HAL/src/alt_exception_muldiv.o obj/HAL/src/alt_exception_trap.o obj/HAL/src/alt_execve.o obj/HAL/src/alt_exit.o obj/HAL/src/alt_fcntl.o obj/HAL/src/alt_fd_lock.o obj/HAL/src/alt_fd_unlock.o obj/HAL/src/alt_find_dev.o obj/HAL/src/alt_find_file.o obj/HAL/src/alt_flash_dev.o obj/HAL/src/alt_fork.o obj/HAL/src/alt_fs_reg.o obj/HAL/src/alt_fstat.o obj/HAL/src/alt_get_fd.o obj/HAL/src/alt_getchar.o obj/HAL/src/alt_getpid.o obj/HAL/src/alt_gettod.o obj/HAL/src/alt_gmon.o obj/HAL/src/alt_icache_flush.o obj/HAL/src/alt_icache_flush_all.o obj/HAL/src/alt_iic.o obj/HAL/src/alt_iic_isr_register.o obj/HAL/src/alt_instruction_exception_entry.o obj/HAL/src/alt_instruction_exception_register.o obj/HAL/src/alt_io_redirect.o obj/HAL/src/alt_ioctl.o obj/HAL/src/alt_irq_entry.o obj/HAL/src/alt_irq_handler.o obj/HAL/src/alt_irq_register.o obj/HAL/src/alt_irq_vars.o obj/HAL/src/alt_isatty.o obj/HAL/src/alt_kill.o obj/HAL/src/alt_link.o obj/HAL/src/alt_load.o obj/HAL/src/alt_log_macro.o obj/HAL/src/alt_log_printf.o obj/HAL/src/alt_lseek.o obj/HAL/src/alt_main.o obj/HAL/src/alt_malloc_lock.o obj/HAL/src/alt_mcount.o obj/HAL/src/alt_open.o obj/HAL/src/alt_printf.o obj/HAL/src/alt_putchar.o obj/HAL/src/alt_putcharbuf.o obj/HAL/src/alt_putstr.o obj/HAL/src/alt_read.o obj/HAL/src/alt_release_fd.o obj/HAL/src/alt_remap_cached.o obj/HAL/src/alt_remap_uncached.o obj/HAL/src/alt_rename.o obj/HAL/src/alt_sbrk.o obj/HAL/src/alt_settod.o obj/HAL/src/alt_software_exception.o obj/HAL/src/alt_stat.o obj/HAL/src/alt_tick.o obj/HAL/src/alt_times.o obj/HAL/src/alt_uncached_free.o obj/HAL/src/alt_uncached_malloc.o obj/HAL/src/alt_unlink.o obj/HAL/src/alt_usleep.o obj/HAL/src/alt_wait.o obj/HAL/src/alt_write.o obj/HAL/src/altera_nios2_gen2_irq.o obj/HAL/src/crt0.o obj/alt_sys_init.o obj/drivers/src/altera_avalon_jtag_uart_fd.o obj/drivers/src/altera_avalon_jtag_uart_init.o obj/drivers/src/altera_avalon_jtag_uart_ioctl.o obj/drivers/src/altera_avalon_jtag_uart_read.o obj/drivers/src/altera_avalon_jtag_uart_write.o obj/drivers/src/altera_avalon_sysid_qsys.o
 [BSP build complete]
 Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'encrypt':
-main.c:259:8: warning: unused variable 'j' [-Wunused-variable]
-  259 |  int i,j,round;
-      |        ^
-Info: Linking lab9.elf
-nios2-elf-g++.exe  -T'c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//linker.x' -msys-crt0='c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -Lc:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/   -Wl,-Map=lab9.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o lab9.elf obj/default/main.o -lm -msys-lib=m
-nios2-elf-insert.exe lab9.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x28 --timestamp 1639012385 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name lab9_soc --quartus_project_dir "c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9" --jdi ../..//output_files/lab9.jdi
-Info: (lab9.elf) 115 KBytes program size (code + initialized data).
-Info:            130947 KBytes free for stack + heap.
-Info: Creating lab9.objdump
-nios2-elf-objdump.exe --disassemble --syms --all-header --source lab9.elf >lab9.objdump
-[lab9 build complete]
-09:19:06 **** Build of configuration Nios II for project lab9_bsp ****
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'main':
+main.c:527:4: error: 'keycode' undeclared (first use in this function); did you mean 'keycode3'?
+  527 |   *keycode = UsbRead(0x051e);
+      |    ^~~~~~~
+      |    keycode3
+main.c:527:4: note: each undeclared identifier is reported only once for each function it appears in
+main.c:528:3: error: invalid type argument of unary '*' (have 'int')
+  528 |   *keycode2 = UsbRead(0x0520);
+      |   ^~~~~~~~~
+main.c:529:3: error: invalid type argument of unary '*' (have 'int')
+  529 |   *keycode3 = UsbRead(0x0522);
+      |   ^~~~~~~~~
+main.c:53:6: warning: unused variable 'keycode1' [-Wunused-variable]
+   53 |  int keycode1 = 0;  // store the key read from address
+      |      ^~~~~~~~
+make: *** [Makefile:726：obj/default/main.o] 错误 1
+17:33:53 **** Incremental Build of configuration Nios II for project final_usb_bsp ****
 wsl make all 
 [BSP build complete]
-09:28:13 **** Incremental Build of configuration Nios II for project lab9 ****
+17:34:50 **** Incremental Build of configuration Nios II for project final_usb ****
 wsl make all 
-Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
-make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
-[BSP build complete]
-Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'encrypt':
-main.c:336:5: warning: 'main' is normally a non-static function [-Wmain]
-  336 | int main()
-      |     ^~~~
-main.c:407:1: error: expected declaration or statement at end of input
-  407 | }
-      | ^
-main.c:259:8: warning: unused variable 'j' [-Wunused-variable]
-  259 |  int i,j,round;
-      |        ^
-At top level:
-main.c:336:5: warning: 'main' defined but not used [-Wunused-function]
-  336 | int main()
-      |     ^~~~
-make: *** [Makefile:724：obj/default/main.o] 错误 1
-09:28:26 **** Incremental Build of configuration Nios II for project lab9 ****
-wsl make all 
-Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
-make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp/
 [BSP build complete]
 Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'encrypt':
-main.c:336:5: warning: 'main' is normally a non-static function [-Wmain]
-  336 | int main()
-      |     ^~~~
-main.c:407:1: error: expected declaration or statement at end of input
-  407 | }
-      | ^
-main.c:259:8: warning: unused variable 'j' [-Wunused-variable]
-  259 |  int i,j,round;
-      |        ^
-At top level:
-main.c:336:5: warning: 'main' defined but not used [-Wunused-function]
-  336 | int main()
-      |     ^~~~
-make: *** [Makefile:724：obj/default/main.o] 错误 1
-09:28:27 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'main':
+main.c:527:3: error: invalid type argument of unary '*' (have 'int')
+  527 |   *keycode1 = UsbRead(0x051e);
+      |   ^~~~~~~~~
+main.c:528:3: error: invalid type argument of unary '*' (have 'int')
+  528 |   *keycode2 = UsbRead(0x0520);
+      |   ^~~~~~~~~
+main.c:529:3: error: invalid type argument of unary '*' (have 'int')
+  529 |   *keycode3 = UsbRead(0x0522);
+      |   ^~~~~~~~~
+make: *** [Makefile:726：obj/default/main.o] 错误 1
+17:34:51 **** Incremental Build of configuration Nios II for project final_usb_bsp ****
 wsl make all 
 [BSP build complete]
-09:28:46 **** Incremental Build of configuration Nios II for project lab9 ****
+17:36:29 **** Incremental Build of configuration Nios II for project final_usb ****
 wsl make all 
-Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
-make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp/
 [BSP build complete]
 Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'encrypt':
-main.c:336:5: warning: 'main' is normally a non-static function [-Wmain]
-  336 | int main()
-      |     ^~~~
-main.c:407:1: error: expected declaration or statement at end of input
-  407 | }
-      | ^
-main.c:259:8: warning: unused variable 'j' [-Wunused-variable]
-  259 |  int i,j,round;
-      |        ^
-At top level:
-main.c:336:5: warning: 'main' defined but not used [-Wunused-function]
-  336 | int main()
-      |     ^~~~
-make: *** [Makefile:724：obj/default/main.o] 错误 1
-09:28:47 **** Incremental Build of configuration Nios II for project lab9_bsp ****
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+Info: Compiling usb.c to obj/default/usb.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/usb.o usb.c
+Info: Linking final_usb.elf
+nios2-elf-g++.exe  -T'c:/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp//linker.x' -msys-crt0='c:/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -Lc:/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp/   -Wl,-Map=final_usb.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o final_usb.elf obj/default/io_handler.o obj/default/main.o obj/default/usb.o -lm -msys-lib=m
+nios2-elf-insert.exe final_usb.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x100010f8 --timestamp 1639215191 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name final_soc --quartus_project_dir "c:/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project"
+Info: (final_usb.elf) 82 KBytes program size (code + initialized data).
+Info:                 130982 KBytes free for stack + heap.
+Info: Creating final_usb.objdump
+nios2-elf-objdump.exe --disassemble --syms --all-header --source final_usb.elf >final_usb.objdump
+[final_usb build complete]
+17:36:31 **** Incremental Build of configuration Nios II for project final_usb_bsp ****
 wsl make all 
 [BSP build complete]
-09:28:48 **** Incremental Build of configuration Nios II for project lab9 ****
-wsl make all 
-Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
-make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
-[BSP build complete]
-Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'encrypt':
-main.c:336:5: warning: 'main' is normally a non-static function [-Wmain]
-  336 | int main()
-      |     ^~~~
-main.c:407:1: error: expected declaration or statement at end of input
-  407 | }
-      | ^
-main.c:259:8: warning: unused variable 'j' [-Wunused-variable]
-  259 |  int i,j,round;
-      |        ^
-At top level:
-main.c:336:5: warning: 'main' defined but not used [-Wunused-function]
-  336 | int main()
-      |     ^~~~
-make: *** [Makefile:724：obj/default/main.o] 错误 1
-09:28:48 **** Incremental Build of configuration Nios II for project lab9_bsp ****
-wsl make all 
-[BSP build complete]
-09:29:11 **** Incremental Build of configuration Nios II for project lab9 ****
-wsl make all 
-Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
-make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
-[BSP build complete]
-Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//HAL/inc -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/ -Ic:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'encrypt':
-main.c:259:8: warning: unused variable 'j' [-Wunused-variable]
-  259 |  int i,j,round;
-      |        ^
-Info: Linking lab9.elf
-nios2-elf-g++.exe  -T'c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//linker.x' -msys-crt0='c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -Lc:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/   -Wl,-Map=lab9.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o lab9.elf obj/default/main.o -lm -msys-lib=m
-nios2-elf-insert.exe lab9.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x28 --timestamp 1639012385 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name lab9_soc --quartus_project_dir "c:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9" --jdi ../..//output_files/lab9.jdi
-Info: (lab9.elf) 115 KBytes program size (code + initialized data).
-Info:            130947 KBytes free for stack + heap.
-Info: Creating lab9.objdump
-nios2-elf-objdump.exe --disassemble --syms --all-header --source lab9.elf >lab9.objdump
-[lab9 build complete]
-09:29:13 **** Incremental Build of configuration Nios II for project lab9_bsp ****
-wsl make all 
-[BSP build complete]
-09:29:24 **** Incremental Build of configuration Nios II for project lab9 ****
-wsl make all 
-Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
-make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/
-[BSP build complete]
-[lab9 build complete]

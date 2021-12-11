@@ -53,6 +53,7 @@ int main(void)
 	int keycode = 0;		// store the key read from address
 	int keycode2 = 0;
 	int keycode3 = 0;
+	int keycode4 = 0;
 	//!-------------------------------End--------------------------------------------//
 	alt_u8 toggle = 0;
 	alt_u8 data_size;
@@ -524,15 +525,20 @@ int main(void)
 	
 		// keycode = UsbRead(0x051e);
 		// *keycode_base = keycode & 0xff; 
-		*keycode = UsbRead(0x051e);
+		*keycode1 = UsbRead(0x051e);
 		*keycode2 = UsbRead(0x0520);
 		*keycode3 = UsbRead(0x0522);
-		*keycode1_base = keycode & 0xff;	// only read 2 of 4 Hex as a keycode
-		*keycode2_base = keycode >> 8;		// for second keycode, shift 8 bit
-		*keycode3_base = keycode2 & 0xff;
-		*keycode4_base = keycode2 >> 8;
-		*keycode5_base = keycode3 & 0xff;
-		*keycode6_base = keycode3 >> 8;
+		*keycode4 = UsbRead(0x0523);
+		*keycode0_base = keycode1 & 0xff;	// only read 2 of 4 Hex as a keycode
+		*keycode1_base = keycode1 >> 8;		// for second keycode, shift 8 bit
+		*keycode2_base = keycode2 & 0xff;
+		*keycode3_base = keycode2 >> 8;
+		*keycode4_base = keycode3 & 0xff;
+		*keycode5_base = keycode3 >> 8;
+		*keycode4_base = keycode3 & 0xff;
+		*keycode5_base = keycode3 >> 8;
+		*keycode6_base = keycode4 & 0xff;
+		*keycode7_base = keycode4 >> 8;
 		
 		// printf("\nfirst two keycode values are %04x\n",keycode);
 		// We only need the first keycode, which is at the lower byte of keycode.

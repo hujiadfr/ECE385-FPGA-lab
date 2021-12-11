@@ -44,7 +44,7 @@
 
 module lab8_soc_mm_interconnect_0_router_001_default_decode
   #(
-     parameter DEFAULT_CHANNEL = 4,
+     parameter DEFAULT_CHANNEL = 3,
                DEFAULT_WR_CHANNEL = -1,
                DEFAULT_RD_CHANNEL = -1,
                DEFAULT_DESTID = 11 
@@ -199,13 +199,13 @@ module lab8_soc_mm_interconnect_0_router_001
 
     // ( 0x0 .. 0x10 )
     if ( {address[RG:PAD0],{PAD0{1'b0}}} == 29'h0   ) begin
-            src_channel = 13'b01000;
+            src_channel = 13'b00100;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 3;
     end
 
     // ( 0x90 .. 0xa0 )
     if ( {address[RG:PAD1],{PAD1{1'b0}}} == 29'h90   ) begin
-            src_channel = 13'b00100;
+            src_channel = 13'b10000;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 10;
     end
 
@@ -223,7 +223,7 @@ module lab8_soc_mm_interconnect_0_router_001
 
     // ( 0x10000000 .. 0x18000000 )
     if ( {address[RG:PAD4],{PAD4{1'b0}}} == 29'h10000000   ) begin
-            src_channel = 13'b10000;
+            src_channel = 13'b01000;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 11;
     end
 

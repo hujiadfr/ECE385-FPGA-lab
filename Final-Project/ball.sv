@@ -19,23 +19,26 @@ module  ball ( input         Clk,                // 50 MHz clock
                              frame_clk,          // The clock indicating a new frame (~60Hz)
                input [9:0]   DrawX, DrawY,       // Current pixel coordinates
 //-------------------------------------------------------------------------
-               input [9:0] step_x, step_y,      // step size per speed, positive 
-               input [9:0] speed,               // speed
-               input [3:0] direction,           // define which quadrant the movement is, oneshot code
+               input [9:0]   Ball_X_Step, Ball_YBall_Y_Step,      // step size
+               input [3:0]   Direction,          // {up, down, left, right}
 //-------------------------------------------------------------------------
                output logic  is_ball             // Whether current pixel belongs to ball or background
               );
-    
+
+//--------------------------------------------------------------------
+    // TODO change this when two ship
     parameter [9:0] Ball_X_Center = 10'd320;  // Center position on the X axis
     parameter [9:0] Ball_Y_Center = 10'd240;  // Center position on the Y axis
+//--------------------------------------------------------------------  
     parameter [9:0] Ball_X_Min = 10'd0;       // Leftmost point on the X axis
     parameter [9:0] Ball_X_Max = 10'd639;     // Rightmost point on the X axis
     parameter [9:0] Ball_Y_Min = 10'd0;       // Topmost point on the Y axis
     parameter [9:0] Ball_Y_Max = 10'd479;     // Bottommost point on the Y axis
     parameter [9:0] Ball_Size = 10'd4;        // Ball size
 //------------------------------------------------------------------------------
-    logic [9:0] Ball_X_Step = step_x*speed;      // Step size on the X axis
-    logic [9:0] Ball_Y_Step = step_y*speed;      // Step size on the Y axis
+    logic [9:0] Ball_X_Step, Ball_Y_Step;
+    // logic [9:0] Ball_X_Step = step_x*speed;      // Step size on the X axis
+    // logic [9:0] Ball_Y_Step = step_y*speed;      // Step size on the Y axis
 //------------------------------------------------------------------------------
 
     logic [9:0] Ball_X_Pos, Ball_X_Motion, Ball_Y_Pos, Ball_Y_Motion;
@@ -81,7 +84,24 @@ module  ball ( input         Clk,                // 50 MHz clock
         if (frame_clk_rising_edge)
         begin
 			//--------------------------------------------------------
-            case(direction)
+            if (Direction[3] && Direction[2]) begin 
+            end
+            else if (Direction [3]) begin // up
+                Ball_Y_Motion_in = Ball_Y_Step;
+            end
+            else begin  // if (Direction [2]) // down
+                Ball_Y_Motion_in = (~(Ball_Y_Step) + 1'b1');
+            end
+
+            if (Direction[1] && Direction[0]) begin 
+            end
+            else if (Direction [0]) begin // right
+                Ball_X_Motion_in = Ball_X_Step;
+            end
+            else begin  // if (Direction [1]) // left
+                Ball_X_Motion_in = (~(Ball_X_Step) + 1'b1');
+            end
+            /* case(direction)
 					// quadrant 1, positive x, negative y
 					4b'0001: begin
 								Ball_X_Motion_in = Ball_X_Step;
@@ -110,7 +130,7 @@ module  ball ( input         Clk,                // 50 MHz clock
 					default:
 						begin
 						end
-				endcase
+				endcase */
 			//--------------------------------------------------------
 
             // Be careful when using comparators with "logic" datatype because compiler treats both sides of the operator as UNSIGNED numbers.
