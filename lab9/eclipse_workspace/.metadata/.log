@@ -8309,3 +8309,216 @@ Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING
 	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
 	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
 	... 9 more
+!SESSION 2021-12-12 21:23:55.698 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_265
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga_lite/20.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga_lite/20.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.egit.ui 2 0 2021-12-12 21:24:05.781
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\jiaru'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2021-12-12 21:24:11.105
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-12 21:25:54.991
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x100010f8]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-12 21:25:57.057
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x100010f8 /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb/final_usb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-12 21:31:09.054
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x100010f8]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-12 21:31:11.071
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x100010f8 /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb/final_usb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-12 21:32:37.821
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x100010f8]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-12 21:32:39.946
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x100010f8 /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb/final_usb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-12 21:40:00.242
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x100010f8]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-12 21:40:02.226
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x100010f8 /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb/final_usb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-12 21:41:57.650
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x100010f8]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-12 21:41:59.701
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x100010f8 /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb/final_usb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-12 21:47:07.131
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x100010f8]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-12 21:47:09.100
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x100010f8 /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb/final_usb.elf]
+!SESSION 2021-12-12 22:02:29.843 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_265
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga_lite/20.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga_lite/20.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.core.resources 2 10035 2021-12-12 22:02:31.372
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.egit.ui 2 0 2021-12-12 22:02:40.818
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\jiaru'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2021-12-12 22:02:44.922
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-12 22:16:13.943
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x100010f8]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-12 22:16:16.007
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x100010f8 /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb/final_usb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-12 22:20:55.915
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x100010f8]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-12 22:20:58.267
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x100010f8 /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb/final_usb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-12 22:33:40.219
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x100010f8]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-12 22:33:42.302
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x100010f8 /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb/final_usb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-12 22:34:07.262
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x100010f8]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-12 22:34:09.454
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x100010f8 /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb/final_usb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-12 22:36:12.510
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x100010f8]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-12 22:36:14.698
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x100010f8 /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb/final_usb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-12 22:38:34.990
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x100010f8]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-12 22:38:37.043
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x100010f8 /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb/final_usb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-12 22:43:01.215
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x100010f8]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-12 22:43:03.635
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x100010f8 /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb/final_usb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-12 22:46:58.903
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x100010f8]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-12 22:47:00.944
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x100010f8 /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb/final_usb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-12 22:48:27.746
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x100010f8]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-12 22:48:30.129
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x100010f8 /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb/final_usb.elf]
+!SESSION 2021-12-12 22:53:17.275 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_265
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga_lite/20.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga_lite/20.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.core.resources 2 10035 2021-12-12 22:53:20.219
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.egit.ui 2 0 2021-12-12 22:53:38.139
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\jiaru'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2021-12-12 22:53:41.263
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-12 22:56:34.111
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x100010f8]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-12 22:56:36.252
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x100010f8 /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb/final_usb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-12 23:24:19.959
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x100010f8]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-12 23:24:22.044
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x100010f8 /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb/final_usb.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-12 23:24:45.649
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x100010f8]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-12-12 23:24:47.699
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x100010f8 /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb/final_usb.elf]

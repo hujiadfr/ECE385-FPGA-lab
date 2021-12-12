@@ -53,7 +53,7 @@ int main(void)
 	int keycode1 = 0;		// store the key read from address
 	int keycode2 = 0;
 	int keycode3 = 0;
-	int keycode4 = 0;
+	int keycode3 = 0;
 	//!-------------------------------End--------------------------------------------//
 	alt_u8 toggle = 0;
 	alt_u8 data_size;
@@ -535,7 +535,7 @@ int main(void)
 		*keycode4_base = keycode2 >> 8;
 		*keycode5_base = keycode3 & 0xff;
 		*keycode6_base = keycode3 >> 8;
-		printf("%x %x %x %x\n",keycode1, keycode2, keycode3, keycode4);
+		printf("%x %x %x\n",keycode1, keycode2, keycode3);
 //		if (! *keycode1_base || ! *keycode2_base || ! *keycode3_base){
 //			printf("%d%d%d ",*keycode1_base,*keycode2_base,*keycode3_base);
 //		}

@@ -16,7 +16,7 @@
 module top_level( 
             input               CLOCK_50,
             input        [3:0]  KEY,          //bit 0 is set up as Reset
-            output logic [6:0]  HEX0, HEX1,
+            output logic [6:0]  HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, HEX6, HEX7, // output to HEX displayer
             // VGA Interface 
             output logic [7:0]  VGA_R,        //VGA Red
                                 VGA_G,        //VGA Green
@@ -48,7 +48,6 @@ module top_level(
                     );
     
     logic Reset_h, Clk;
-    logic is_ball;
     logic[9:0] DrawX, DrawY;
     
     assign Clk = CLOCK_50;
@@ -96,14 +95,14 @@ module top_level(
         .sdram_wire_we_n(DRAM_WE_N), 
         .sdram_clk_clk(DRAM_CLK),
 
-        .keycode_export_0(keycode_0),                              
-        .keycode_export_1(keycode_1),  
-        .keycode_export_2(keycode_2),
-        .keycode_export_3(keycode_3),
-        .keycode_export_4(keycode_4),  
-        .keycode_export_5(keycode_5),
-        .keycode_export_6(keycode_6),
-        .keycode_export_7(keycode_7),
+        .keycode_0_export(keycode_0),                              
+        .keycode_1_export(keycode_1),  
+        .keycode_2_export(keycode_2),
+        .keycode_3_export(keycode_3),
+        .keycode_4_export(keycode_4),  
+        .keycode_5_export(keycode_5),
+        .keycode_6_export(keycode_6),
+        .keycode_7_export(keycode_7),
 
         .otg_hpi_address_export(hpi_addr),
         .otg_hpi_data_in_port(hpi_data_in),
@@ -134,7 +133,6 @@ module top_level(
     keycode u_keycode(
         //ports
         .Clk       		( Clk       		),
-        .frame_clk 		( frame_clk 		),
         .keycode_0 		( keycode_0 		),
         .keycode_1 		( keycode_1 		),
         .keycode_2 		( keycode_2 		),
@@ -153,26 +151,43 @@ module top_level(
     wire [7:0] 	Ship_Angle;
     ship_controller #(
         .Ship_Max_Velocity_Forward 		( 10'd02 		),
-        .Ship_Angle_Default        		( 8'b0   		))
+        .Ship_Angle_Default        		( 8'b00010000   ))
     u_ship_controller(
         //ports
         .Clk         		( Clk         		),
-        .Reset       		( Reset       		),
+        .Reset       		( Reset_h       	),
         .Command     		( command_p1     	),
         .Ship_X_Step 		( Ship_X_Step 		),
         .Ship_Y_Step 		( Ship_Y_Step 		),
         .Ship_Angle  		( Ship_Angle  		)
     );
 
-    ball #(
-        .Ball_X_Center 		( 10'd320 		),
-        .Ball_Y_Center 		( 10'd240 		),
+    wire [9:0] 	Ship_X_Step2;
+    wire       	Ship_Y_Step2;
+    wire [7:0] 	Ship_Angle2;
+    ship_controller #(
+        .Ship_Max_Velocity_Forward 		( 10'd02 		),
+        .Ship_Angle_Default        		( 8'b00000001   ))
+    u_ship_controller2(
+        //ports
+        .Clk         		( Clk         		),
+        .Reset       		( Reset_h       	),
+        .Command     		( command_p2     	),
+        .Ship_X_Step 		( Ship_X_Step2 		),
+        .Ship_Y_Step 		( Ship_Y_Step2 		),
+        .Ship_Angle  		( Ship_Angle2  		)
+    );
+
+    wire is_ball1;
+    Ship #(
+        .Ball_X_Center 		( 10'd480 		),
+        .Ball_Y_Center 		( 10'd360 		),
         .Ball_X_Min    		( 10'd0   		),
         .Ball_X_Max    		( 10'd639 		),
         .Ball_Y_Min    		( 10'd0   		),
         .Ball_Y_Max    		( 10'd479 		),
         .Ball_Size     		( 10'd4   		))
-    u_ball(
+    Ship_1(
         //ports
         .Clk       		( Clk       		),
         .Reset     		( Reset_h     		),
@@ -182,14 +197,37 @@ module top_level(
         .Step_X    		( Ship_X_Step    	),
         .Step_Y    		( Ship_Y_Step    	),
         .Angle     		( Ship_Angle     	),
-        .is_ball   		( is_ball   		)
+        .is_ball   		( is_ball1   		)
+    );
+
+    wire is_ball2;
+    Ship #(
+        .Ball_X_Center 		( 10'd160 		),
+        .Ball_Y_Center 		( 10'd120 		),
+        .Ball_X_Min    		( 10'd0   		),
+        .Ball_X_Max    		( 10'd639 		),
+        .Ball_Y_Min    		( 10'd0   		),
+        .Ball_Y_Max    		( 10'd479 		),
+        .Ball_Size     		( 10'd4   		))
+    Ship_2(
+        //ports
+        .Clk       		( Clk       		),
+        .Reset     		( Reset_h     		),
+        .frame_clk 		( VGA_VS     		),
+        .DrawX     		( DrawX     		),
+        .DrawY     		( DrawY     		),
+        .Step_X    		( Ship_X_Step2    	),
+        .Step_Y    		( Ship_Y_Step2    	),
+        .Angle     		( Ship_Angle2     	),
+        .is_ball   		( is_ball2   		)
     );
 
 
 
     color_mapper u_color_mapper(
         //ports
-        .is_ball 		( is_ball 		),
+        .is_ball1 		( is_ball1 		),
+        .is_ball2 		( is_ball2 		),
         .DrawX   		( DrawX   		),
         .DrawY   		( DrawY   		),
         .VGA_R   		( VGA_R   		),
@@ -199,13 +237,13 @@ module top_level(
 
 
     // Display keycode on hex display
-    HexDriver hex_inst_0 (keycode[3:0], HEX0);
-    HexDriver hex_inst_1 (keycode[7:4], HEX1);
-    
-    /**************************************************************************************
-        ATTENTION! Please answer the following quesiton in your lab report! Points will be allocated for the answers!
-        Hidden Question #1/2:
-        What are the advantages and/or disadvantages of using a USB interface over PS/2 interface to
-             connect to the keyboard? List any two.  Give an answer in your Post-Lab.
-    **************************************************************************************/
+    HexDriver hex_inst_0 (keycode_0[3:0], HEX0);
+    HexDriver hex_inst_1 (keycode_0[7:4], HEX1);
+    HexDriver hex_inst_2 (keycode_1[3:0], HEX2);
+    HexDriver hex_inst_3 (keycode_1[7:4], HEX3);
+    HexDriver hex_inst_4 (keycode_4[3:0], HEX4);
+    HexDriver hex_inst_5 (keycode_5[3:0], HEX5);
+    HexDriver hex_inst_6 (keycode_6[3:0], HEX6);
+    HexDriver hex_inst_7 (keycode_7[3:0], HEX7);
+
 endmodule

@@ -23,17 +23,16 @@ module ship_controller (
 );
     parameter [9:0] Ship_Max_Velocity_Forward = 10'd02;      // Maximun velocity forward
     // parameter [9:0] Ship_Max_Velocity_Backward = 10'd01;  // Maximun velocity backward
-    parameter [7:0] Ship_Angle_Default = 8'b0;               // Default initial ship angle, TODO for different ship
+    parameter [7:0] Ship_Angle_Default = 8'b00000001;               // Default initial ship angle, TODO for different ship
 
-    logic [9:0] Ship_X_Step, Ship_Y_Step; // output step of movenment
-    logic [7:0] Ship_Angle;               // oneshot code for angle, {7/8pi, 3/4pi, 5/8pi, pi, 3/8pi, 1/2pi, 1/4pi, 0}
-    
     logic [9:0] Ship_Velocity;  // Store the current velocity of the ship
     logic [27:0] Count;         // Not always change ship position and movenment information, use this to count the clock number
 
     initial begin
         Ship_Velocity = 10'd0;
         Ship_Angle = Ship_Angle_Default;
+        Ship_X_Step = 10'd0;
+        Ship_Y_Step = 10'd0;
         Count = 28'h0;
     end
 
@@ -58,11 +57,11 @@ module ship_controller (
         begin
             // Ship_Velocity_in = Ship_Velocity;    // defult
             // Ship_Angle_in = Ship_Angle;
-            if (command[3:2] == 2'b10)  // up
+            if (Command[3:2] == 2'b10)  // up
             begin
                 Ship_Velocity_in = 10'd0000000001;
             end
-            else if (command[3:2] == 2'b01)   // down, add angle 180 degree
+            else if (Command[3:2] == 2'b01)   // down, add angle 180 degree
             begin
                 Ship_Velocity_in = 10'd1;
                 case(Ship_Angle)
@@ -70,7 +69,7 @@ module ship_controller (
                     8'b00100000: Ship_Angle_in = 8'b00000010;
                     8'b01000000: Ship_Angle_in = 8'b00000100;
                     8'b10000000: Ship_Angle_in = 8'b00001000;
-                    default: Ship_Angle_in = Ship_Angle << 4     // default Ship_Angle_in
+                    default: Ship_Angle_in = Ship_Angle << 4;     // default Ship_Angle_in
                 endcase
             end
         end
@@ -82,7 +81,7 @@ module ship_controller (
             // Ship_Velocity_in = Ship_Velocity;    // defult
             // Ship_Angle_in = Ship_Angle;
 
-            if (command[3:2] = 2'b10) // up
+            if (Command[3:2] == 2'b10) // up
             begin
                 // default case
                 Ship_Velocity_in = Ship_Velocity + 1'd1;
@@ -93,39 +92,39 @@ module ship_controller (
                     Ship_Velocity_in = Ship_Velocity;
                 end
 
-                if (command[1:0] = 2'b10)  // left, << 1
+                if (Command[1:0] == 2'b10)  // left, << 1
                 begin
                     case(Ship_Angle)
                         8'b10000000: Ship_Angle_in = 8'b00000001;
-                        default: Ship_Angle_in = Ship_Angle << 1     // default Ship_Angle_in
+                        default: Ship_Angle_in = Ship_Angle << 1;     // default Ship_Angle_in
                     endcase
                 end
-                else if (command[1:0] = 2'b01) // right, >> 1
+                else if (Command[1:0] == 2'b01) // right, >> 1
                 begin
                     case(Ship_Angle)
                         8'b00000001: Ship_Angle_in = 8'b10000000;
-                        default: Ship_Angle_in = Ship_Angle >> 1     // default Ship_Angle_in
+                        default: Ship_Angle_in = Ship_Angle >> 1;     // default Ship_Angle_in
                     endcase
                 end
             end
-            else if (command[3:2] = 2'b01) // down
+            else if (Command[3:2] == 2'b01) // down
             begin
                 // default case
                 Ship_Velocity_in = Ship_Velocity + (~(10'd0)+1'd1);
                 // Ship_Angle_in = Ship_Angle;   
 
-                if (command[1:0] = 2'b10)  // left, << 1
+                if (Command[1:0] == 2'b10)  // left, << 1
                 begin
                     case(Ship_Angle)
                         8'b10000000: Ship_Angle_in = 8'b00000001;
-                        default: Ship_Angle_in = Ship_Angle << 1     // default Ship_Angle_in
+                        default: Ship_Angle_in = Ship_Angle << 1;     // default Ship_Angle_in
                     endcase
                 end
-                else if (command[1:0] = 2'b01) // right, >> 1
+                else if (Command[1:0] == 2'b01) // right, >> 1
                 begin
                     case(Ship_Angle)
                         8'b00000001: Ship_Angle_in = 8'b1000000;
-                        default: Ship_Angle_in = Ship_Angle >> 1     // default Ship_Angle_in
+                        default: Ship_Angle_in = Ship_Angle >> 1;     // default Ship_Angle_in
                     endcase
                 end
             end
@@ -134,24 +133,18 @@ module ship_controller (
 
         // Calculate next time Ship_X_Step_in and Ship_Y_Step_in
         // defalut case
-        Ship_X_Step_in = 10'd0;
-        Ship_Y_Step_in = 10'd0;
-        if (Ship_Velocity == 10d'd0)
+        // 运动是向周围的8个点运动
+        Ship_X_Step_in = 10'd1;
+        Ship_Y_Step_in = 10'd1;
+        if (Ship_Velocity == 10'd0)
         begin
             Ship_X_Step_in = 10'd0;
             Ship_Y_Step_in = 10'd0;
         end
-        else if (Ship_Velocity != 10'd0)
-        // 运动是向周围的8个点运动
-        begin
-            Ship_X_Step_in = 10'd1;
-            Ship_Y_Step_in = 10'd1;
-            if((Ship_Angle[3] == 1'b1)||(Ship_Angle[7] == 1'b1))
-                Ship_X_Step_in = 10'd0;
-            else if((Ship_Angle[1] == 1'b1)||(Ship_Angle[5] == 1'b1))
-                Ship_Y_Step_in = 10'd0;
-            endcase
-        end
+        else if((Ship_Angle[3] == 1'b1)||(Ship_Angle[7] == 1'b1))
+            Ship_X_Step_in = 10'd0;
+        else if((Ship_Angle[1] == 1'b1)||(Ship_Angle[5] == 1'b1))
+            Ship_Y_Step_in = 10'd0;
     end
     
     always_ff @ (posedge Clk)   // update velocity abd angle in 4Hz
@@ -173,7 +166,7 @@ module ship_controller (
         end
         else
         begin
-            COunt <= Count + 1;
+            Count <= Count + 1;
         end
     end
 endmodule

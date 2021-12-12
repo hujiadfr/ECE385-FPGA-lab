@@ -14,7 +14,7 @@
 //-------------------------------------------------------------------------
 
 
-module  ball ( input         Clk,                // 50 MHz clock
+module  Ship ( input         Clk,                // 50 MHz clock
                              Reset,              // Active-high reset signal
                              frame_clk,          // The clock indicating a new frame (~60Hz)
                input [9:0]   DrawX, DrawY,       // Current pixel coordinates
@@ -74,7 +74,7 @@ module  ball ( input         Clk,                // 50 MHz clock
         Ball_X_Pos_in = Ball_X_Pos;
         Ball_Y_Pos_in = Ball_Y_Pos;
         Ball_X_Motion_in = Step_X;
-        BALL_Y_Motion_in = Step_Y;
+        Ball_Y_Motion_in = Step_Y;
 
         // Update position only at rising edge of frame clock
         if (frame_clk_rising_edge)
@@ -84,10 +84,10 @@ module  ball ( input         Clk,                // 50 MHz clock
             // e.g. Ball_Y_Pos - Ball_Size <= Ball_Y_Min 
             // If Ball_Y_Pos is 0, then Ball_Y_Pos - Ball_Size will not be -4, 
             // but rather a large positive number.
-            if ((Angle[4]||Angle[5]||Angle[6]) == 1'b1) begin
+            if ((Angle[3]||Angle[4]||Angle[5]) == 1'b1) begin
                 Ball_X_Motion_in = (~(Step_Y) + 1'b1);
             end
-            if ((Angle[6]||Angle[7]||Angle[8]) == 1'b1) begin
+            if ((Angle[5]||Angle[6]||Angle[7]) == 1'b1) begin
                 Ball_Y_Motion_in = (~(Step_Y) + 1'b1);
             end
             // Update the position
@@ -107,8 +107,8 @@ module  ball ( input         Clk,                // 50 MHz clock
                 Ball_X_Motion_in = Step_Y;
 
             // Update the ball's position with its motion
-            Ball_X_Pos_in = Ball_X_Pos + Ball_X_Motion;
-            Ball_Y_Pos_in = Ball_Y_Pos + Ball_Y_Motion;
+            Ball_X_Pos_in = Ball_X_Pos + Ball_X_Motion_in;
+            Ball_Y_Pos_in = Ball_Y_Pos + Ball_Y_Motion_in;
         end
     end
     

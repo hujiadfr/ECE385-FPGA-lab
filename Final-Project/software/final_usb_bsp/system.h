@@ -4,7 +4,7 @@
  * Machine generated for CPU 'nios2_gen2_0' in SOPC Builder design 'final_soc'
  * SOPC Builder design path: C:/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/final_soc.sopcinfo
  *
- * Generated: Sat Dec 11 17:33:47 CST 2021
+ * Generated: Sun Dec 12 22:15:41 CST 2021
  */
 
 /*
@@ -649,7 +649,7 @@
 #define SYSID_QSYS_0_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_QSYS_0_NAME "/dev/sysid_qsys_0"
 #define SYSID_QSYS_0_SPAN 8
-#define SYSID_QSYS_0_TIMESTAMP 1639215191
+#define SYSID_QSYS_0_TIMESTAMP 1639318339
 #define SYSID_QSYS_0_TYPE "altera_avalon_sysid_qsys"
 
 #endif /* __SYSTEM_H_ */

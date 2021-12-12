@@ -14,19 +14,21 @@
 //-------------------------------------------------------------------------
 
 // color_mapper: Decide which color to be output to VGA for each pixel.
-module  color_mapper ( input              is_ball,            // Whether current pixel belongs to ball 
+module  color_mapper ( input              is_ball1, is_ball2,            // Whether current pixel belongs to ball 
                                                               //   or background (computed in ball.sv)
-                       input        [9:0] DrawX, DrawY,       // Current pixel coordinates
+                       input        [9:0] DrawX, DrawY,      // Current pixel coordinates
                        output logic [7:0] VGA_R, VGA_G, VGA_B // VGA RGB output
                      );
     
     logic [7:0] Red, Green, Blue;
-    
+    logic is_ball;
     // Output colors to VGA
     assign VGA_R = Red;
     assign VGA_G = Green;
     assign VGA_B = Blue;
     
+    assign is_ball = is_ball1 || is_ball2;
+
     // Assign color based on is_ball signal
     always_comb
     begin
