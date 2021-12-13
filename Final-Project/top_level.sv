@@ -149,6 +149,7 @@ module top_level(
     wire [9:0] 	Ship_X_Step;
     wire       	Ship_Y_Step;
     wire [7:0] 	Ship_Angle;
+    wire        forward;
     ship_controller #(
         .Ship_Max_Velocity_Forward 		( 10'd02 		),
         .Ship_Angle_Default        		( 8'b00010000   ))
@@ -159,23 +160,8 @@ module top_level(
         .Command     		( command_p1     	),
         .Ship_X_Step 		( Ship_X_Step 		),
         .Ship_Y_Step 		( Ship_Y_Step 		),
-        .Ship_Angle  		( Ship_Angle  		)
-    );
-
-    wire [9:0] 	Ship_X_Step2;
-    wire       	Ship_Y_Step2;
-    wire [7:0] 	Ship_Angle2;
-    ship_controller #(
-        .Ship_Max_Velocity_Forward 		( 10'd02 		),
-        .Ship_Angle_Default        		( 8'b00000001   ))
-    u_ship_controller2(
-        //ports
-        .Clk         		( Clk         		),
-        .Reset       		( Reset_h       	),
-        .Command     		( command_p2     	),
-        .Ship_X_Step 		( Ship_X_Step2 		),
-        .Ship_Y_Step 		( Ship_Y_Step2 		),
-        .Ship_Angle  		( Ship_Angle2  		)
+        .Ship_Angle  		( Ship_Angle  		),
+        .forward            ( forward           )
     );
 
     wire is_ball1;
@@ -198,6 +184,24 @@ module top_level(
         .Step_Y    		( Ship_Y_Step    	),
         .Angle     		( Ship_Angle     	),
         .is_ball   		( is_ball1   		)
+    );
+
+    wire [9:0] 	Ship_X_Step2;
+    wire       	Ship_Y_Step2;
+    wire [7:0] 	Ship_Angle2;
+    wire        forward2;
+    ship_controller #(
+        .Ship_Max_Velocity_Forward 		( 10'd02 		),
+        .Ship_Angle_Default        		( 8'b00000001   ))
+    u_ship_controller2(
+        //ports
+        .Clk         		( Clk         		),
+        .Reset       		( Reset_h       	),
+        .Command     		( command_p2     	),
+        .Ship_X_Step 		( Ship_X_Step2 		),
+        .Ship_Y_Step 		( Ship_Y_Step2 		),
+        .Ship_Angle  		( Ship_Angle2  		),
+        .forward            ( forward2          )
     );
 
     wire is_ball2;
