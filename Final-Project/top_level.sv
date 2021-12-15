@@ -222,12 +222,17 @@ module top_level(
         .is_ball   		( is_ball2   		)
     );
 
+    logic [19:0] read_address;
+    logic [7:0] bg_data, code;
+    bgROM bg(.read_address, .Clk, .data_Out(bg_data));
+
 
 
     color_mapper u_color_mapper(
         //ports
         .is_ball1 		( is_ball1 		),
         .is_ball2 		( is_ball2 		),
+        .code            ( code          ),
         .DrawX   		( DrawX   		),
         .DrawY   		( DrawY   		),
         .VGA_R   		( VGA_R   		),
@@ -242,4 +247,9 @@ module top_level(
     HexDriver hex_inst_2 (Ship_Angle2[3:0], HEX2);
     HexDriver hex_inst_3 (Ship_Angle2[7:4], HEX3);
 
+
+    always_comb
+    begin
+        code = bg_data;
+    end
 endmodule

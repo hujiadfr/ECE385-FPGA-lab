@@ -16,12 +16,15 @@
 // color_mapper: Decide which color to be output to VGA for each pixel.
 module  color_mapper ( input              is_ball1, is_ball2,            // Whether current pixel belongs to ball 
                                                               //   or background (computed in ball.sv)
+                       input        [11:0] code,
                        input        [9:0] DrawX, DrawY,      // Current pixel coordinates
                        output logic [7:0] VGA_R, VGA_G, VGA_B // VGA RGB output
                      );
     
     logic [7:0] Red, Green, Blue;
+    logic [7:0] BRed, BGreen, BBlue;
     logic is_ball;
+    palette p(.code(code), .R(BRed), .G(BGreen), .B(BBlue));
     // Output colors to VGA
     logic [7:0] tRed, tGreen, tBlue;
     assign VGA_R = Red;
@@ -42,10 +45,13 @@ module  color_mapper ( input              is_ball1, is_ball2,            // Whet
         end
         else 
         begin
-            // Background with nice color gradient
-            Red = 8'h3f; 
-            Green = 8'h00;
-            Blue = 8'h7f - {1'b0, DrawX[9:3]};
+            // // Background with nice color gradient
+            // Red = 8'h3f; 
+            // Green = 8'h00;
+            // Blue = 8'h7f - {1'b0, DrawX[9:3]};
+            Red = BRed;
+            Green = BGreen;
+            Blue = BBlue;
         end
         //this is for pic background
         
