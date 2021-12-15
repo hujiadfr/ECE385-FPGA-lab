@@ -4,7 +4,7 @@
  * Machine generated for CPU 'nios2_gen2_0' in SOPC Builder design 'final_soc'
  * SOPC Builder design path: C:/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/final_soc.sopcinfo
  *
- * Generated: Sun Dec 12 22:15:41 CST 2021
+ * Generated: Wed Dec 15 19:52:54 CST 2021
  */
 
 /*
@@ -408,60 +408,6 @@
 
 
 /*
- * keycode_6 configuration
- *
- */
-
-#define ALT_MODULE_CLASS_keycode_6 altera_avalon_pio
-#define KEYCODE_6_BASE 0x10001020
-#define KEYCODE_6_BIT_CLEARING_EDGE_REGISTER 0
-#define KEYCODE_6_BIT_MODIFYING_OUTPUT_REGISTER 0
-#define KEYCODE_6_CAPTURE 0
-#define KEYCODE_6_DATA_WIDTH 8
-#define KEYCODE_6_DO_TEST_BENCH_WIRING 0
-#define KEYCODE_6_DRIVEN_SIM_VALUE 0
-#define KEYCODE_6_EDGE_TYPE "NONE"
-#define KEYCODE_6_FREQ 50000000
-#define KEYCODE_6_HAS_IN 0
-#define KEYCODE_6_HAS_OUT 1
-#define KEYCODE_6_HAS_TRI 0
-#define KEYCODE_6_IRQ -1
-#define KEYCODE_6_IRQ_INTERRUPT_CONTROLLER_ID -1
-#define KEYCODE_6_IRQ_TYPE "NONE"
-#define KEYCODE_6_NAME "/dev/keycode_6"
-#define KEYCODE_6_RESET_VALUE 0
-#define KEYCODE_6_SPAN 16
-#define KEYCODE_6_TYPE "altera_avalon_pio"
-
-
-/*
- * keycode_7 configuration
- *
- */
-
-#define ALT_MODULE_CLASS_keycode_7 altera_avalon_pio
-#define KEYCODE_7_BASE 0x10001010
-#define KEYCODE_7_BIT_CLEARING_EDGE_REGISTER 0
-#define KEYCODE_7_BIT_MODIFYING_OUTPUT_REGISTER 0
-#define KEYCODE_7_CAPTURE 0
-#define KEYCODE_7_DATA_WIDTH 8
-#define KEYCODE_7_DO_TEST_BENCH_WIRING 0
-#define KEYCODE_7_DRIVEN_SIM_VALUE 0
-#define KEYCODE_7_EDGE_TYPE "NONE"
-#define KEYCODE_7_FREQ 50000000
-#define KEYCODE_7_HAS_IN 0
-#define KEYCODE_7_HAS_OUT 1
-#define KEYCODE_7_HAS_TRI 0
-#define KEYCODE_7_IRQ -1
-#define KEYCODE_7_IRQ_INTERRUPT_CONTROLLER_ID -1
-#define KEYCODE_7_IRQ_TYPE "NONE"
-#define KEYCODE_7_NAME "/dev/keycode_7"
-#define KEYCODE_7_RESET_VALUE 0
-#define KEYCODE_7_SPAN 16
-#define KEYCODE_7_TYPE "altera_avalon_pio"
-
-
-/*
  * otg_hpi_address configuration
  *
  */
@@ -649,7 +595,7 @@
 #define SYSID_QSYS_0_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_QSYS_0_NAME "/dev/sysid_qsys_0"
 #define SYSID_QSYS_0_SPAN 8
-#define SYSID_QSYS_0_TIMESTAMP 1639318339
+#define SYSID_QSYS_0_TIMESTAMP 1639569012
 #define SYSID_QSYS_0_TYPE "altera_avalon_sysid_qsys"
 
 #endif /* __SYSTEM_H_ */

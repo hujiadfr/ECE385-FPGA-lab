@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Dec 12, 2021 11:24:10 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1639322650085</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>Dec 15, 2021 10:31:36 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1639578696729</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\Users\jiaru\GitHub\ECE385-FPGA-lab\Final-Project\software\final_usb_bsp</BspGeneratedLocation>
         <BspSettingsFile>C:\Users\jiaru\GitHub\ECE385-FPGA-lab\Final-Project\software\final_usb_bsp\settings.bsp</BspSettingsFile>
         <SopcDesignFile>C:\Users\jiaru\GitHub\ECE385-FPGA-lab\Final-Project\final_soc.sopcinfo</SopcDesignFile>
@@ -907,18 +907,6 @@
         <MemoryMap>
                 <slaveDescriptor>sdram_pll</slaveDescriptor>
                 <addressRange>0x10001000 - 0x1000100F</addressRange>
-                <addressSpan>16</addressSpan>
-                <attributes/>
-        </MemoryMap>
-        <MemoryMap>
-                <slaveDescriptor>keycode_7</slaveDescriptor>
-                <addressRange>0x10001010 - 0x1000101F</addressRange>
-                <addressSpan>16</addressSpan>
-                <attributes/>
-        </MemoryMap>
-        <MemoryMap>
-                <slaveDescriptor>keycode_6</slaveDescriptor>
-                <addressRange>0x10001020 - 0x1000102F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>

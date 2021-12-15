@@ -23,6 +23,7 @@ module  color_mapper ( input              is_ball1, is_ball2,            // Whet
     logic [7:0] Red, Green, Blue;
     logic is_ball;
     // Output colors to VGA
+    logic [7:0] tRed, tGreen, tBlue;
     assign VGA_R = Red;
     assign VGA_G = Green;
     assign VGA_B = Blue;
@@ -46,6 +47,8 @@ module  color_mapper ( input              is_ball1, is_ball2,            // Whet
             Green = 8'h00;
             Blue = 8'h7f - {1'b0, DrawX[9:3]};
         end
+        //this is for pic background
+        
     end 
     
 endmodule

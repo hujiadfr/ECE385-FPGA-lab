@@ -27,7 +27,7 @@ module ship_controller (
     parameter [7:0] Ship_Angle_Default = 8'b00000001;     // Default initial ship angle, TODO for different ship
 
     logic [9:0] Ship_Velocity;  // Store the current velocity of the ship
-    logic [27:0] Count;         // Not always change ship position and movenment information, use this to count the clock number
+    // logic [27:0] Count;         // Not always change ship position and movenment information, use this to count the clock number
 
     initial begin
         Ship_Velocity = 10'd0;
@@ -35,7 +35,7 @@ module ship_controller (
         Ship_X_Step = 10'd0;
         Ship_Y_Step = 10'd0;
         forward = 1'b1;
-        Count = 28'h0;
+        // Count = 28'h0;
     end
 
     // Movenment Mechanism
@@ -58,11 +58,11 @@ module ship_controller (
         Ship_X_Step_in = Ship_Velocity_in;
         Ship_Y_Step_in = Ship_Velocity_in;
 
-        if((Ship_Angle[3] == 1'b1)||(Ship_Angle[7] == 1'b1))
+        if((Ship_Angle[2] == 1'b1)||(Ship_Angle[6] == 1'b1))
         begin
             Ship_X_Step_in = 10'd0;
         end
-        else if((Ship_Angle[1] == 1'b1)||(Ship_Angle[5] == 1'b1))
+        else if((Ship_Angle[0] == 1'b1)||(Ship_Angle[4] == 1'b1))
         begin
             Ship_Y_Step_in = 10'd0;
         end
@@ -154,7 +154,6 @@ module ship_controller (
                 if (Command[3:2] == 2'b10) // up
                 begin
                     Ship_Velocity_in = Ship_Velocity + (~(10'd0)+1'd1);
-                    forward_in = 1'b1;
                 end
                 else if (Command[3:2] == 2'b01) // down
                 begin
@@ -165,7 +164,7 @@ module ship_controller (
                     end
                 end
             end
-        end
+//        end
 	end
     
     always_ff @ (posedge Clk)   // update velocity abd angle in 4Hz
@@ -175,21 +174,21 @@ module ship_controller (
             Ship_Velocity = 10'd0;
             Ship_Angle = Ship_Angle_Default;
             forward = 1'b1;
-            Count = 28'h0;
+            // Count = 28'h0;
         end
         // else if(Count >= 28'hbebc20) // 50*10^6 / 4 = 1/4 of a second wait time before
-        else if(Count >= 28'h17D7840) // 50*10^6 / 2 = 1/2 of a second wait time before
-        begin
-            Count <= 28'h0;
+        // else if(Count >= 28'h17D7840) // 50*10^6 / 2 = 1/2 of a second wait time before
+        // else if(Count >= 28'h840)
+        else
+		  begin
+            // Count <= 28'h0;
             Ship_Velocity <= Ship_Velocity_in;
             Ship_Angle <= Ship_Angle_in;
             Ship_X_Step <= Ship_X_Step_in;
             Ship_Y_Step <= Ship_Y_Step_in;
             forward <= forward_in;
         end
-        else
-        begin
-            Count <= Count + 1;
-        end
+        // else
+        //     Count <= Count + 1;
     end
 endmodule

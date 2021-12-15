@@ -1,6 +1,11 @@
 	final_soc u0 (
 		.clk_clk                (<connected-to-clk_clk>),                //             clk.clk
 		.keycode_0_export       (<connected-to-keycode_0_export>),       //       keycode_0.export
+		.keycode_1_export       (<connected-to-keycode_1_export>),       //       keycode_1.export
+		.keycode_2_export       (<connected-to-keycode_2_export>),       //       keycode_2.export
+		.keycode_3_export       (<connected-to-keycode_3_export>),       //       keycode_3.export
+		.keycode_4_export       (<connected-to-keycode_4_export>),       //       keycode_4.export
+		.keycode_5_export       (<connected-to-keycode_5_export>),       //       keycode_5.export
 		.otg_hpi_address_export (<connected-to-otg_hpi_address_export>), // otg_hpi_address.export
 		.otg_hpi_cs_export      (<connected-to-otg_hpi_cs_export>),      //      otg_hpi_cs.export
 		.otg_hpi_data_in_port   (<connected-to-otg_hpi_data_in_port>),   //    otg_hpi_data.in_port
@@ -18,13 +23,6 @@
 		.sdram_wire_dq          (<connected-to-sdram_wire_dq>),          //                .dq
 		.sdram_wire_dqm         (<connected-to-sdram_wire_dqm>),         //                .dqm
 		.sdram_wire_ras_n       (<connected-to-sdram_wire_ras_n>),       //                .ras_n
-		.sdram_wire_we_n        (<connected-to-sdram_wire_we_n>),        //                .we_n
-		.keycode_1_export       (<connected-to-keycode_1_export>),       //       keycode_1.export
-		.keycode_2_export       (<connected-to-keycode_2_export>),       //       keycode_2.export
-		.keycode_3_export       (<connected-to-keycode_3_export>),       //       keycode_3.export
-		.keycode_4_export       (<connected-to-keycode_4_export>),       //       keycode_4.export
-		.keycode_5_export       (<connected-to-keycode_5_export>),       //       keycode_5.export
-		.keycode_6_export       (<connected-to-keycode_6_export>),       //       keycode_6.export
-		.keycode_7_export       (<connected-to-keycode_7_export>)        //       keycode_7.export
+		.sdram_wire_we_n        (<connected-to-sdram_wire_we_n>)         //                .we_n
 	);
 

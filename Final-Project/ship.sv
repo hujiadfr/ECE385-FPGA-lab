@@ -87,9 +87,9 @@ module  Ship ( input         Clk,                // 50 MHz clock
             // If Ball_Y_Pos is 0, then Ball_Y_Pos - Ball_Size will not be -4, 
             // but rather a large positive number.
             if ((Angle[3]||Angle[4]||Angle[5]) == 1'b1) begin
-                Ball_X_Motion_in = (~(Step_Y) + 1'b1);
+                Ball_X_Motion_in = (~(Step_X) + 1'b1);
             end
-            if ((Angle[6]||Angle[7]||Angle[8]) == 1'b1) begin
+            if ((Angle[1]||Angle[2]||Angle[3]) == 1'b1) begin
                 Ball_Y_Motion_in = (~(Step_Y) + 1'b1);
             end
             // Update the position
@@ -98,101 +98,114 @@ module  Ship ( input         Clk,                // 50 MHz clock
 
             // Boundar for y
             if( Ball_Y_Pos + Ball_Size >= Ball_Y_Max )          // Ball is at the bottom edge, STOP!
-                if ((Angle[2]||Angle[3]||Angle[4]) == 1'b0)
+                if ((Angle[1]||Angle[2]||Angle[3]) == 1'b0)
                 begin
                     Ball_Y_Motion_in = 10'd0;                   // stop moving through the wall
                 end
             else if ( Ball_Y_Pos <= Ball_Y_Min + Ball_Size )    // Ball is at the top edge, STOP!
-                if ((Angle[6]||Angle[7]||Angle[8]) == 1'b0)
+                if ((Angle[5]||Angle[6]||Angle[7]) == 1'b0)
                 begin
                     Ball_Y_Motion_in = 10'd0;                   // stop moving through the wall
                 end                
             // Boundary for x
             if( Ball_X_Pos + Ball_Size >= Ball_X_Max)           // Ball is at the right edge, STOP!
-                if ((Angle[4]||Angle[5]||Angle[6]) == 1'b0)
+                if ((Angle[3]||Angle[4]||Angle[5]) == 1'b0)
                 begin
                     Ball_X_Motion_in = 10'd0;                   // stop moving through the wall
                 end     
             else if (Ball_X_Pos <= Ball_X_Min + Ball_Size)      // Ball is at the left edge, STOP!
-                if ((Angle[1]||Angle[2]||Angle[8]) == 1'b0)
+                if ((Angle[0]||Angle[1]||Angle[7]) == 1'b0)
                 begin
                     Ball_X_Motion_in = 10'd0;                   // stop moving through the wall
                 end
 
             // Update the ball's position with its motion
-            Ball_X_Pos_in = Ball_X_Pos + Ball_X_Motion_in;
-            Ball_Y_Pos_in = Ball_Y_Pos + Ball_Y_Motion_in;
+            Ball_X_Pos_in = Ball_X_Pos + Ball_X_Motion;
+            Ball_Y_Pos_in = Ball_Y_Pos + Ball_Y_Motion;
         end
     end
     
     // Compute whether the pixel corresponds to ball or background
     /* Since the multiplicants are required to be signed, we have to first cast them
        from logic to int (signed by default) before they are multiplied. */
-    int DistX, DistY, Step;
+//    int DistX, DistY, Step;
+//    assign DistX = DrawX - Ball_X_Pos;
+//    assign DistY = DrawY - Ball_Y_Pos;
+//    assign Step = DistX + DistY;
+//    always_comb
+//    begin
+//        is_ball = 1'b0;
+//        case(Angle)
+//            8'b00000001:
+//            begin
+//                if ((Step <= 10'd2) && (DrawX >= Ball_X_Pos)) 
+//                begin
+//                    is_ball = 1'b1;
+//                end
+//            end
+//            8'b00000010:
+//            begin
+//                if ((Step <= 10'd4) && (DistY <= DistX)) 
+//                begin
+//                    is_ball = 1'b1;
+//                end
+//            end
+//            8'b00000100:
+//            begin
+//                if ((Step <= 10'd2) && (DrawY <= Ball_Y_Pos)) 
+//                begin
+//                    is_ball = 1'b1;
+//                end
+//            end
+//            8'b00001000:
+//            begin
+//                if ((Step <= 10'd4) && ((DistX + DistY) <= 0)) 
+//                begin
+//                    is_ball = 1'b1;
+//                end
+//            end
+//            8'b00010000:
+//            begin
+//                if ((Step <= 10'd2) && (DrawX <= Ball_X_Pos)) 
+//                begin
+//                    is_ball = 1'b1;
+//                end
+//            end
+//            8'b00100000:
+//            begin
+//                if ((Step <= 10'd4) && (DistX >= DistY)) 
+//                begin
+//                    is_ball = 1'b1;
+//                end
+//            end
+//            8'b01000000:
+//            begin
+//                if ((Step <= 10'd2) && (DrawY >= Ball_Y_Pos)) 
+//                begin
+//                    is_ball = 1'b1;
+//                end
+//            end
+//            8'b10000000:
+//            begin
+//                if ((Step <= 10'd4) && ((DistX + DistY) >= 0)) 
+//                begin
+//                    is_ball = 1'b1;
+//                end
+//            end
+//            default: is_ball = 1'b0;
+//        endcase
+//    end
+    int DistX, DistY, Size;
     assign DistX = DrawX - Ball_X_Pos;
     assign DistY = DrawY - Ball_Y_Pos;
-    assign Step = DistX + DistY;
-    always_comb
-    begin
-        case(Angle)
-            8'b00000001:
-            begin
-                if ((Step <= 10'd2) && (DrawX >= Ball_X_Pos)) 
-                begin
-                    is_ball = 1'b1;
-                end
-            end
-            8'b00000010:
-            begin
-                if ((Step <= 10'd4) && (DistY <= DistX)) 
-                begin
-                    is_ball = 1'b1;
-                end
-            end
-            8'b00000100:
-            begin
-                if ((Step <= 10'd2) && (DrawY <= Ball_Y_Pos)) 
-                begin
-                    is_ball = 1'b1;
-                end
-            end
-            8'b00001000:
-            begin
-                if ((Step <= 10'd4) && ((DistX + DistY) <= 0)) 
-                begin
-                    is_ball = 1'b1;
-                end
-            end
-            8'b00010000:
-            begin
-                if ((Step <= 10'd2) && (DrawX <= Ball_X_Pos)) 
-                begin
-                    is_ball = 1'b1;
-                end
-            end
-            8'b00100000:
-            begin
-                if ((Step <= 10'd4) && (DistX >= DistY)) 
-                begin
-                    is_ball = 1'b1;
-                end
-            end
-            8'b01000000:
-            begin
-                if ((Step <= 10'd2) && (DrawY >= Ball_Y_Pos)) 
-                begin
-                    is_ball = 1'b1;
-                end
-            end
-            8'b10000000:
-            begin
-                if ((Step <= 10'd4) && ((DistX + DistY) >= 0)) 
-                begin
-                    is_ball = 1'b1;
-                end
-            end
-            default: is_ball = 1'b0;
-        endcase
+    assign Size = Ball_Size;
+    always_comb begin
+        if ( ( DistX*DistX + DistY*DistY) <= (Size*Size) ) 
+            is_ball = 1'b1;
+        else
+            is_ball = 1'b0;
+        /* The ball's (pixelated) circle is generated using the standard circle formula.  Note that while 
+           the single line is quite powerful descriptively, it causes the synthesis tool to use up three
+           of the 12 available multipliers on the chip! */
     end
-    
 endmodule

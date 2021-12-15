@@ -2,6 +2,11 @@
 module final_soc (
 	clk_clk,
 	keycode_0_export,
+	keycode_1_export,
+	keycode_2_export,
+	keycode_3_export,
+	keycode_4_export,
+	keycode_5_export,
 	otg_hpi_address_export,
 	otg_hpi_cs_export,
 	otg_hpi_data_in_port,
@@ -19,17 +24,15 @@ module final_soc (
 	sdram_wire_dq,
 	sdram_wire_dqm,
 	sdram_wire_ras_n,
-	sdram_wire_we_n,
-	keycode_1_export,
-	keycode_2_export,
-	keycode_3_export,
-	keycode_4_export,
-	keycode_5_export,
-	keycode_6_export,
-	keycode_7_export);	
+	sdram_wire_we_n);	
 
 	input		clk_clk;
 	output	[7:0]	keycode_0_export;
+	output	[7:0]	keycode_1_export;
+	output	[7:0]	keycode_2_export;
+	output	[7:0]	keycode_3_export;
+	output	[7:0]	keycode_4_export;
+	output	[7:0]	keycode_5_export;
 	output	[1:0]	otg_hpi_address_export;
 	output		otg_hpi_cs_export;
 	input	[15:0]	otg_hpi_data_in_port;
@@ -48,11 +51,4 @@ module final_soc (
 	output	[3:0]	sdram_wire_dqm;
 	output		sdram_wire_ras_n;
 	output		sdram_wire_we_n;
-	output	[7:0]	keycode_1_export;
-	output	[7:0]	keycode_2_export;
-	output	[7:0]	keycode_3_export;
-	output	[7:0]	keycode_4_export;
-	output	[7:0]	keycode_5_export;
-	output	[7:0]	keycode_6_export;
-	output	[7:0]	keycode_7_export;
 endmodule

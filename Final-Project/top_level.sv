@@ -101,8 +101,6 @@ module top_level(
         .keycode_3_export(keycode_3),
         .keycode_4_export(keycode_4),  
         .keycode_5_export(keycode_5),
-        .keycode_6_export(keycode_6),
-        .keycode_7_export(keycode_7),
 
         .otg_hpi_address_export(hpi_addr),
         .otg_hpi_data_in_port(hpi_data_in),
@@ -139,8 +137,6 @@ module top_level(
         .keycode_3 		( keycode_3 		),
         .keycode_4 		( keycode_4 		),
         .keycode_5 		( keycode_5 		),
-        .keycode_6 		( keycode_6 		),
-        .keycode_7 		( keycode_7 		),
 
         .command_p1   	( command_p1   		),
         .command_p2     ( command_p2        )
@@ -151,7 +147,7 @@ module top_level(
     wire [7:0] 	Ship_Angle;
     wire        forward;
     ship_controller #(
-        .Ship_Max_Velocity_Forward 		( 10'd02 		),
+        .Ship_Max_Velocity_Forward 		( 10'd01 		),
         .Ship_Angle_Default        		( 8'b00010000   ))
     u_ship_controller(
         //ports
@@ -191,7 +187,7 @@ module top_level(
     wire [7:0] 	Ship_Angle2;
     wire        forward2;
     ship_controller #(
-        .Ship_Max_Velocity_Forward 		( 10'd02 		),
+        .Ship_Max_Velocity_Forward 		( 10'd01 		),
         .Ship_Angle_Default        		( 8'b00000001   ))
     u_ship_controller2(
         //ports
@@ -241,13 +237,9 @@ module top_level(
 
 
     // Display keycode on hex display
-    HexDriver hex_inst_0 (keycode_0[3:0], HEX0);
-    HexDriver hex_inst_1 (keycode_0[7:4], HEX1);
-    HexDriver hex_inst_2 (keycode_1[3:0], HEX2);
-    HexDriver hex_inst_3 (keycode_1[7:4], HEX3);
-    HexDriver hex_inst_4 (keycode_4[3:0], HEX4);
-    HexDriver hex_inst_5 (keycode_5[3:0], HEX5);
-    HexDriver hex_inst_6 (keycode_6[3:0], HEX6);
-    HexDriver hex_inst_7 (keycode_7[3:0], HEX7);
+    HexDriver hex_inst_0 (Ship_Angle[3:0], HEX0);
+    HexDriver hex_inst_1 (Ship_Angle[7:4], HEX1);
+    HexDriver hex_inst_2 (Ship_Angle2[3:0], HEX2);
+    HexDriver hex_inst_3 (Ship_Angle2[7:4], HEX3);
 
 endmodule
