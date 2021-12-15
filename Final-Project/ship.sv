@@ -57,13 +57,15 @@ module  Ship ( input         Clk,                // 50 MHz clock
         begin
             Ball_X_Pos <= Ball_X_Center;
             Ball_Y_Pos <= Ball_Y_Center;
-            Ball_X_Motion <= 10'd0;
+            Ball_X_Motion <= Step_X;
             Ball_Y_Motion <= Step_Y;
         end
         else
         begin
             Ball_X_Pos <= Ball_X_Pos_in;
             Ball_Y_Pos <= Ball_Y_Pos_in;
+            Ball_X_Motion_in <= Step_X;
+            Ball_Y_Motion_in <= Step_Y;
             Ball_X_Motion <= Ball_X_Motion_in;
             Ball_Y_Motion <= Ball_Y_Motion_in;
         end
@@ -102,7 +104,7 @@ module  Ship ( input         Clk,                // 50 MHz clock
                 begin
                     Ball_Y_Motion_in = 10'd0;                   // stop moving through the wall
                 end
-            else if ( Ball_Y_Pos <= Ball_Y_Min + Ball_Size )    // Ball is at the top edge, STOP!
+            if ( Ball_Y_Pos <= Ball_Y_Min + Ball_Size )    // Ball is at the top edge, STOP!
                 if ((Angle[5]||Angle[6]||Angle[7]) == 1'b0)
                 begin
                     Ball_Y_Motion_in = 10'd0;                   // stop moving through the wall
@@ -113,15 +115,15 @@ module  Ship ( input         Clk,                // 50 MHz clock
                 begin
                     Ball_X_Motion_in = 10'd0;                   // stop moving through the wall
                 end     
-            else if (Ball_X_Pos <= Ball_X_Min + Ball_Size)      // Ball is at the left edge, STOP!
+            if (Ball_X_Pos <= Ball_X_Min + Ball_Size)      // Ball is at the left edge, STOP!
                 if ((Angle[0]||Angle[1]||Angle[7]) == 1'b0)
                 begin
                     Ball_X_Motion_in = 10'd0;                   // stop moving through the wall
                 end
 
             // Update the ball's position with its motion
-            Ball_X_Pos_in = Ball_X_Pos + Ball_X_Motion;
-            Ball_Y_Pos_in = Ball_Y_Pos + Ball_Y_Motion;
+            Ball_X_Pos_in = Ball_X_Pos + Ball_X_Motion_in;
+            Ball_Y_Pos_in = Ball_Y_Pos + Ball_Y_Motion_in;
         end
     end
     

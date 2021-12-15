@@ -27,7 +27,7 @@ module ship_controller (
     parameter [7:0] Ship_Angle_Default = 8'b00000001;     // Default initial ship angle, TODO for different ship
 
     logic [9:0] Ship_Velocity;  // Store the current velocity of the ship
-    // logic [27:0] Count;         // Not always change ship position and movenment information, use this to count the clock number
+    logic [27:0] Count;         // Not always change ship position and movenment information, use this to count the clock number
 
     initial begin
         Ship_Velocity = 10'd0;
@@ -35,7 +35,7 @@ module ship_controller (
         Ship_X_Step = 10'd0;
         Ship_Y_Step = 10'd0;
         forward = 1'b1;
-        // Count = 28'h0;
+        Count = 28'h0;
     end
 
     // Movenment Mechanism
@@ -123,11 +123,18 @@ module ship_controller (
                     if (Ship_Velocity == Ship_Max_Velocity_Forward)   // Reach Maximun Velocity
                     begin
                         Ship_Velocity_in = Ship_Velocity;
+                        case(Ship_Angle)
+                        8'b00010000: Ship_Angle_in = 8'b00000001;
+                        8'b00100000: Ship_Angle_in = 8'b00000010;
+                        8'b01000000: Ship_Angle_in = 8'b00000100;
+                        8'b10000000: Ship_Angle_in = 8'b00001000;
+                        default: Ship_Angle_in = Ship_Angle << 4;     // default Ship_Angle_in
+                endcase
                     end
                 end
                 else if (Command[3:2] == 2'b01) // down
                 begin
-                    Ship_Velocity_in = Ship_Velocity + (~(10'd0)+1'd1);
+                    Ship_Velocity_in = Ship_Velocity + (~(10'd1)+1'd1);
                 end
             end
 
@@ -153,7 +160,10 @@ module ship_controller (
                 // change velocity
                 if (Command[3:2] == 2'b10) // up
                 begin
-                    Ship_Velocity_in = Ship_Velocity + (~(10'd0)+1'd1);
+                    Ship_Velocity_in = Ship_Velocity + (~(10'd1)+1'd1);
+                    if (Ship_Velocity == 10'd1) begin
+                        forward_in = 1'b1;
+                    end
                 end
                 else if (Command[3:2] == 2'b01) // down
                 begin
@@ -174,21 +184,21 @@ module ship_controller (
             Ship_Velocity = 10'd0;
             Ship_Angle = Ship_Angle_Default;
             forward = 1'b1;
-            // Count = 28'h0;
+            Count = 28'h0;
         end
-        // else if(Count >= 28'hbebc20) // 50*10^6 / 4 = 1/4 of a second wait time before
+        else if(Count >= 28'hbebc20) // 50*10^6 / 4 = 1/4 of a second wait time before
         // else if(Count >= 28'h17D7840) // 50*10^6 / 2 = 1/2 of a second wait time before
         // else if(Count >= 28'h840)
-        else
+        // else
 		  begin
-            // Count <= 28'h0;
+            Count <= 28'h0;
             Ship_Velocity <= Ship_Velocity_in;
             Ship_Angle <= Ship_Angle_in;
             Ship_X_Step <= Ship_X_Step_in;
             Ship_Y_Step <= Ship_Y_Step_in;
             forward <= forward_in;
         end
-        // else
-        //     Count <= Count + 1;
+        else
+            Count <= Count + 1;
     end
 endmodule
