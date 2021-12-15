@@ -1562,3 +1562,108 @@ Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/
 make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp/
 [BSP build complete]
 [final_usb build complete]
+00:35:15 **** Incremental Build of configuration Nios II for project final_usb ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp/
+[BSP build complete]
+[final_usb build complete]
+00:35:16 **** Incremental Build of configuration Nios II for project final_usb_bsp ****
+wsl make all 
+[BSP build complete]
+00:37:52 **** Incremental Build of configuration Nios II for project final_usb ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp/
+[BSP build complete]
+[final_usb build complete]
+00:38:20 **** Incremental Build of configuration Nios II for project final_usb ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp/
+[BSP build complete]
+[final_usb build complete]
+00:39:29 **** Incremental Build of configuration Nios II for project final_usb ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp/
+[BSP build complete]
+[final_usb build complete]
+00:39:30 **** Incremental Build of configuration Nios II for project final_usb_bsp ****
+wsl make all 
+[BSP build complete]
+01:34:03 **** Incremental Build of configuration Nios II for project final_usb ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp/
+[BSP build complete]
+[final_usb build complete]
+01:34:05 **** Incremental Build of configuration Nios II for project final_usb_bsp ****
+wsl make all 
+[BSP build complete]
+01:34:07 **** Incremental Build of configuration Nios II for project final_usb ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp/
+[BSP build complete]
+[final_usb build complete]
+01:45:45 **** Incremental Build of configuration Nios II for project final_usb ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp/
+[BSP build complete]
+[final_usb build complete]
+01:45:46 **** Incremental Build of configuration Nios II for project final_usb_bsp ****
+wsl make all 
+[BSP build complete]
+01:45:50 **** Incremental Build of configuration Nios II for project final_usb ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp/
+[BSP build complete]
+[final_usb build complete]
+02:27:40 **** Incremental Build of configuration Nios II for project final_usb ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp/
+[BSP build complete]
+[final_usb build complete]
+02:27:41 **** Incremental Build of configuration Nios II for project final_usb_bsp ****
+wsl make all 
+[BSP build complete]
+02:27:43 **** Incremental Build of configuration Nios II for project final_usb ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp/
+[BSP build complete]
+[final_usb build complete]
+05:20:54 **** Incremental Build of configuration Nios II for project final_usb ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp/
+[BSP build complete]
+[final_usb build complete]
+05:20:56 **** Incremental Build of configuration Nios II for project final_usb_bsp ****
+wsl make all 
+[BSP build complete]
+05:20:58 **** Incremental Build of configuration Nios II for project final_usb ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp/
+[BSP build complete]
+[final_usb build complete]
+05:29:43 **** Incremental Build of configuration Nios II for project final_usb ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp/
+[BSP build complete]
+[final_usb build complete]
+05:29:45 **** Incremental Build of configuration Nios II for project final_usb_bsp ****
+wsl make all 
+[BSP build complete]
+05:29:48 **** Incremental Build of configuration Nios II for project final_usb ****
+wsl make all 
+Info: Building /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp/
+make --no-print-directory -C /mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp/
+[BSP build complete]
+[final_usb build complete]

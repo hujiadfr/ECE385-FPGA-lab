@@ -1,6 +1,5 @@
 module palette (
                input logic [7:0] code,
-               input logic Clk,
                output logic [7:0] R, G, B
                );
 					
@@ -152,9 +151,9 @@ begin
             end
 				default:
 				begin
-					R = 8'h3f;
+					R = 8'h00;
 					B = 8'h00;
-					G = 8'h7f;
+					G = 8'h00;
 				end
         endcase
 end

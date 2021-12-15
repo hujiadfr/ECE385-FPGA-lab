@@ -34,12 +34,12 @@ for y in range(im.size[1]):
         print(pixel)
         if(pixel[3] < 200):
             outImg.putpixel((x,y), palette_rgb[0])
-            outFile.write("%x\n" %(0))
+            outFile.write("%x\n" %(palette_hex[0]))
             print(i)
         else:
             index = pixel_tree.query(pixel[:3])[1]
             outImg.putpixel((x,y), palette_rgb[index])
-            outFile.write("%x\n" %(index))
+            outFile.write("%s\n" %(palette_hex[index]))
         i += 1
 outFile.close()
 outImg.save("./sprite_converted/" + filename + ".png" )

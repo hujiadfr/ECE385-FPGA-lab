@@ -159,10 +159,10 @@ module  ship_RAM
     logic [3:0] mem [0:9999];
     initial
     begin
-        $readmemh("sprite/Bismarck.txt", mem);
+        $readmemh("sources/bisimai.txt", mem);
     end
 
     always_ff @ (posedge Clk) begin
-        saber_data<= mem[read_address];
+        ball_data<= mem[read_address];
     end
 endmodule

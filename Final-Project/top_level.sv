@@ -161,6 +161,7 @@ module top_level(
     );
 
     wire is_ball1;
+    wire [3:0] ball_data1;
     Ship #(
         .Ball_X_Center 		( 10'd480 		),
         .Ball_Y_Center 		( 10'd360 		),
@@ -168,7 +169,7 @@ module top_level(
         .Ball_X_Max    		( 10'd639 		),
         .Ball_Y_Min    		( 10'd0   		),
         .Ball_Y_Max    		( 10'd479 		),
-        .Ball_Size     		( 10'd4   		))
+        .Ball_Size     		( 10'd50   		))
     Ship_1(
         //ports
         .Clk       		( Clk       		),
@@ -179,7 +180,8 @@ module top_level(
         .Step_X    		( Ship_X_Step    	),
         .Step_Y    		( Ship_Y_Step    	),
         .Angle     		( Ship_Angle     	),
-        .is_ball   		( is_ball1   		)
+        .is_ball   		( is_ball1   		),
+        .ball_data      ( ball_data1        )
     );
 
     wire [9:0] 	Ship_X_Step2;
@@ -201,6 +203,7 @@ module top_level(
     );
 
     wire is_ball2;
+    wire [3:0] ball_data2;
     Ship #(
         .Ball_X_Center 		( 10'd160 		),
         .Ball_Y_Center 		( 10'd120 		),
@@ -208,7 +211,7 @@ module top_level(
         .Ball_X_Max    		( 10'd639 		),
         .Ball_Y_Min    		( 10'd0   		),
         .Ball_Y_Max    		( 10'd479 		),
-        .Ball_Size     		( 10'd4   		))
+        .Ball_Size     		( 10'd50   		))
     Ship_2(
         //ports
         .Clk       		( Clk       		),
@@ -219,20 +222,25 @@ module top_level(
         .Step_X    		( Ship_X_Step2    	),
         .Step_Y    		( Ship_Y_Step2    	),
         .Angle     		( Ship_Angle2     	),
-        .is_ball   		( is_ball2   		)
+        .is_ball   		( is_ball2   		),
+        .ball_data      ( ball_data2        )
     );
 
-    logic [19:0] read_address;
-    logic [7:0] bg_data, code;
-    bgROM bg(.read_address, .Clk, .data_Out(bg_data));
 
-
+    logic [3:0]background_data;
+    background background(.Clk,
+                        .DrawX,
+                        .DrawY,
+                        .background_data, ); 	
 
     color_mapper u_color_mapper(
         //ports
+        .Clk            ( Clk           ),
         .is_ball1 		( is_ball1 		),
         .is_ball2 		( is_ball2 		),
-        .code            ( code          ),
+		.background_data(background_data),
+        .ball_data1     ( ball_data1    ),
+        .ball_data2     ( ball_data2    ),
         .DrawX   		( DrawX   		),
         .DrawY   		( DrawY   		),
         .VGA_R   		( VGA_R   		),
@@ -242,14 +250,7 @@ module top_level(
 
 
     // Display keycode on hex display
-    HexDriver hex_inst_0 (Ship_Angle[3:0], HEX0);
-    HexDriver hex_inst_1 (Ship_Angle[7:4], HEX1);
-    HexDriver hex_inst_2 (Ship_Angle2[3:0], HEX2);
-    HexDriver hex_inst_3 (Ship_Angle2[7:4], HEX3);
+//    HexDriver hex_inst_0 (DrawX[3:0], HEX0);
+//    HexDriver hex_inst_1 (DrawX[7:4], HEX1);
 
-
-    always_comb
-    begin
-        code = bg_data;
-    end
 endmodule
