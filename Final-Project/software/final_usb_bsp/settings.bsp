@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Dec 16, 2021 5:29:39 AM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1639603780039</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>Dec 18, 2021 9:13:00 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1639833180025</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\Users\jiaru\GitHub\ECE385-FPGA-lab\Final-Project\software\final_usb_bsp</BspGeneratedLocation>
         <BspSettingsFile>C:\Users\jiaru\GitHub\ECE385-FPGA-lab\Final-Project\software\final_usb_bsp\settings.bsp</BspSettingsFile>
         <SopcDesignFile>C:\Users\jiaru\GitHub\ECE385-FPGA-lab\Final-Project\final_soc.sopcinfo</SopcDesignFile>
@@ -905,92 +905,98 @@
                 <attributes>memory</attributes>
         </MemoryMap>
         <MemoryMap>
+                <slaveDescriptor>game_core</slaveDescriptor>
+                <addressRange>0x10001000 - 0x100010FF</addressRange>
+                <addressSpan>256</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
                 <slaveDescriptor>sdram_pll</slaveDescriptor>
-                <addressRange>0x10001000 - 0x1000100F</addressRange>
+                <addressRange>0x10001100 - 0x1000110F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>keycode_5</slaveDescriptor>
-                <addressRange>0x10001030 - 0x1000103F</addressRange>
+                <addressRange>0x10001110 - 0x1000111F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>keycode_4</slaveDescriptor>
-                <addressRange>0x10001040 - 0x1000104F</addressRange>
+                <addressRange>0x10001120 - 0x1000112F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>keycode_3</slaveDescriptor>
-                <addressRange>0x10001050 - 0x1000105F</addressRange>
+                <addressRange>0x10001130 - 0x1000113F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>keycode_2</slaveDescriptor>
-                <addressRange>0x10001060 - 0x1000106F</addressRange>
+                <addressRange>0x10001140 - 0x1000114F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>keycode_1</slaveDescriptor>
-                <addressRange>0x10001070 - 0x1000107F</addressRange>
+                <addressRange>0x10001150 - 0x1000115F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>keycode_0</slaveDescriptor>
-                <addressRange>0x10001080 - 0x1000108F</addressRange>
+                <addressRange>0x10001160 - 0x1000116F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>otg_hpi_reset</slaveDescriptor>
-                <addressRange>0x10001090 - 0x1000109F</addressRange>
+                <addressRange>0x10001170 - 0x1000117F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>otg_hpi_cs</slaveDescriptor>
-                <addressRange>0x100010A0 - 0x100010AF</addressRange>
+                <addressRange>0x10001180 - 0x1000118F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>otg_hpi_address</slaveDescriptor>
-                <addressRange>0x100010B0 - 0x100010BF</addressRange>
+                <addressRange>0x10001190 - 0x1000119F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>otg_hpi_data</slaveDescriptor>
-                <addressRange>0x100010C0 - 0x100010CF</addressRange>
+                <addressRange>0x100011A0 - 0x100011AF</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>otg_hpi_r</slaveDescriptor>
-                <addressRange>0x100010D0 - 0x100010DF</addressRange>
+                <addressRange>0x100011B0 - 0x100011BF</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>otg_hpi_w</slaveDescriptor>
-                <addressRange>0x100010E0 - 0x100010EF</addressRange>
+                <addressRange>0x100011C0 - 0x100011CF</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>sysid_qsys_0</slaveDescriptor>
-                <addressRange>0x100010F8 - 0x100010FF</addressRange>
+                <addressRange>0x100011D8 - 0x100011DF</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>jtag_uart_0</slaveDescriptor>
-                <addressRange>0x10001100 - 0x10001107</addressRange>
+                <addressRange>0x100011E0 - 0x100011E7</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes>printable</attributes>
         </MemoryMap>

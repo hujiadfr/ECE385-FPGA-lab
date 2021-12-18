@@ -156,7 +156,7 @@ module  ship_RAM
 );
     // mem has width of 4 bits and a total of 307200 addresses
     //logic [3:0] mem [0:307199];
-    logic [3:0] mem [0:9999];
+    logic [3:0] mem [0:1600];
     initial
     begin
         $readmemh("sources/bisimai.txt", mem);

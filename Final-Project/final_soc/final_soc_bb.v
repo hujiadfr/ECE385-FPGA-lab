@@ -1,6 +1,7 @@
 
 module final_soc (
 	clk_clk,
+	game_readdata,
 	keycode_0_export,
 	keycode_1_export,
 	keycode_2_export,
@@ -27,6 +28,7 @@ module final_soc (
 	sdram_wire_we_n);	
 
 	input		clk_clk;
+	output	[2047:0]	game_readdata;
 	output	[7:0]	keycode_0_export;
 	output	[7:0]	keycode_1_export;
 	output	[7:0]	keycode_2_export;

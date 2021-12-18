@@ -4531,7 +4531,7 @@ void UsbPrintMem()
  8002774:	08002a2c 	andhi	zero,at,168
  8002778:	0800283c 	xorhi	zero,at,160
  800277c:	0800283c 	xorhi	zero,at,160
- 8002780:	08002e00 	call	8002e0 <__alt_mem_SDRAM-0x77ffd20>
+ 8002780:	08002e00 	call	8002e0 <__reset-0x77ffd20>
  8002784:	0800283c 	xorhi	zero,at,160
  8002788:	0800283c 	xorhi	zero,at,160
  800278c:	0800283c 	xorhi	zero,at,160
@@ -12140,7 +12140,7 @@ void UsbPrintMem()
  8009c48:	0800a528 	cmpgeui	zero,at,660
  8009c4c:	0800a518 	cmpnei	zero,at,660
  8009c50:	08009dbc 	xorhi	zero,at,630
- 8009c54:	0800a500 	call	800a50 <__alt_mem_SDRAM-0x77ff5b0>
+ 8009c54:	0800a500 	call	800a50 <__reset-0x77ff5b0>
  8009c58:	0800a4b4 	orhi	zero,at,658
  8009c5c:	08009dbc 	xorhi	zero,at,630
  8009c60:	0800a4a8 	cmpgeui	zero,at,658

@@ -1,5 +1,6 @@
 	final_soc u0 (
 		.clk_clk                (<connected-to-clk_clk>),                //             clk.clk
+		.game_readdata          (<connected-to-game_readdata>),          //            game.readdata
 		.keycode_0_export       (<connected-to-keycode_0_export>),       //       keycode_0.export
 		.keycode_1_export       (<connected-to-keycode_1_export>),       //       keycode_1.export
 		.keycode_2_export       (<connected-to-keycode_2_export>),       //       keycode_2.export

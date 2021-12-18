@@ -4,7 +4,7 @@
  * Machine generated for CPU 'nios2_gen2_0' in SOPC Builder design 'final_soc'
  * SOPC Builder design path: C:/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/final_soc.sopcinfo
  *
- * Generated: Wed Dec 15 19:52:54 CST 2021
+ * Generated: Sat Dec 18 21:13:01 CST 2021
  */
 
 /*
@@ -139,6 +139,7 @@
 #define __ALTERA_AVALON_SYSID_QSYS
 #define __ALTERA_NIOS2_GEN2
 #define __ALTPLL
+#define __GAME_CORE
 
 
 /*
@@ -196,24 +197,38 @@
 #define ALT_NUM_INTERNAL_INTERRUPT_CONTROLLERS 1
 #define ALT_NUM_INTERRUPT_CONTROLLERS 1
 #define ALT_STDERR "/dev/jtag_uart_0"
-#define ALT_STDERR_BASE 0x10001100
+#define ALT_STDERR_BASE 0x100011e0
 #define ALT_STDERR_DEV jtag_uart_0
 #define ALT_STDERR_IS_JTAG_UART
 #define ALT_STDERR_PRESENT
 #define ALT_STDERR_TYPE "altera_avalon_jtag_uart"
 #define ALT_STDIN "/dev/jtag_uart_0"
-#define ALT_STDIN_BASE 0x10001100
+#define ALT_STDIN_BASE 0x100011e0
 #define ALT_STDIN_DEV jtag_uart_0
 #define ALT_STDIN_IS_JTAG_UART
 #define ALT_STDIN_PRESENT
 #define ALT_STDIN_TYPE "altera_avalon_jtag_uart"
 #define ALT_STDOUT "/dev/jtag_uart_0"
-#define ALT_STDOUT_BASE 0x10001100
+#define ALT_STDOUT_BASE 0x100011e0
 #define ALT_STDOUT_DEV jtag_uart_0
 #define ALT_STDOUT_IS_JTAG_UART
 #define ALT_STDOUT_PRESENT
 #define ALT_STDOUT_TYPE "altera_avalon_jtag_uart"
 #define ALT_SYSTEM_NAME "final_soc"
+
+
+/*
+ * game_core configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_game_core game_core
+#define GAME_CORE_BASE 0x10001000
+#define GAME_CORE_IRQ -1
+#define GAME_CORE_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define GAME_CORE_NAME "/dev/game_core"
+#define GAME_CORE_SPAN 256
+#define GAME_CORE_TYPE "game_core"
 
 
 /*
@@ -233,7 +248,7 @@
  */
 
 #define ALT_MODULE_CLASS_jtag_uart_0 altera_avalon_jtag_uart
-#define JTAG_UART_0_BASE 0x10001100
+#define JTAG_UART_0_BASE 0x100011e0
 #define JTAG_UART_0_IRQ 0
 #define JTAG_UART_0_IRQ_INTERRUPT_CONTROLLER_ID 0
 #define JTAG_UART_0_NAME "/dev/jtag_uart_0"
@@ -251,7 +266,7 @@
  */
 
 #define ALT_MODULE_CLASS_keycode_0 altera_avalon_pio
-#define KEYCODE_0_BASE 0x10001080
+#define KEYCODE_0_BASE 0x10001160
 #define KEYCODE_0_BIT_CLEARING_EDGE_REGISTER 0
 #define KEYCODE_0_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define KEYCODE_0_CAPTURE 0
@@ -278,7 +293,7 @@
  */
 
 #define ALT_MODULE_CLASS_keycode_1 altera_avalon_pio
-#define KEYCODE_1_BASE 0x10001070
+#define KEYCODE_1_BASE 0x10001150
 #define KEYCODE_1_BIT_CLEARING_EDGE_REGISTER 0
 #define KEYCODE_1_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define KEYCODE_1_CAPTURE 0
@@ -305,7 +320,7 @@
  */
 
 #define ALT_MODULE_CLASS_keycode_2 altera_avalon_pio
-#define KEYCODE_2_BASE 0x10001060
+#define KEYCODE_2_BASE 0x10001140
 #define KEYCODE_2_BIT_CLEARING_EDGE_REGISTER 0
 #define KEYCODE_2_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define KEYCODE_2_CAPTURE 0
@@ -332,7 +347,7 @@
  */
 
 #define ALT_MODULE_CLASS_keycode_3 altera_avalon_pio
-#define KEYCODE_3_BASE 0x10001050
+#define KEYCODE_3_BASE 0x10001130
 #define KEYCODE_3_BIT_CLEARING_EDGE_REGISTER 0
 #define KEYCODE_3_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define KEYCODE_3_CAPTURE 0
@@ -359,7 +374,7 @@
  */
 
 #define ALT_MODULE_CLASS_keycode_4 altera_avalon_pio
-#define KEYCODE_4_BASE 0x10001040
+#define KEYCODE_4_BASE 0x10001120
 #define KEYCODE_4_BIT_CLEARING_EDGE_REGISTER 0
 #define KEYCODE_4_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define KEYCODE_4_CAPTURE 0
@@ -386,7 +401,7 @@
  */
 
 #define ALT_MODULE_CLASS_keycode_5 altera_avalon_pio
-#define KEYCODE_5_BASE 0x10001030
+#define KEYCODE_5_BASE 0x10001110
 #define KEYCODE_5_BIT_CLEARING_EDGE_REGISTER 0
 #define KEYCODE_5_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define KEYCODE_5_CAPTURE 0
@@ -413,7 +428,7 @@
  */
 
 #define ALT_MODULE_CLASS_otg_hpi_address altera_avalon_pio
-#define OTG_HPI_ADDRESS_BASE 0x100010b0
+#define OTG_HPI_ADDRESS_BASE 0x10001190
 #define OTG_HPI_ADDRESS_BIT_CLEARING_EDGE_REGISTER 0
 #define OTG_HPI_ADDRESS_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define OTG_HPI_ADDRESS_CAPTURE 0
@@ -440,7 +455,7 @@
  */
 
 #define ALT_MODULE_CLASS_otg_hpi_cs altera_avalon_pio
-#define OTG_HPI_CS_BASE 0x100010a0
+#define OTG_HPI_CS_BASE 0x10001180
 #define OTG_HPI_CS_BIT_CLEARING_EDGE_REGISTER 0
 #define OTG_HPI_CS_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define OTG_HPI_CS_CAPTURE 0
@@ -467,7 +482,7 @@
  */
 
 #define ALT_MODULE_CLASS_otg_hpi_data altera_avalon_pio
-#define OTG_HPI_DATA_BASE 0x100010c0
+#define OTG_HPI_DATA_BASE 0x100011a0
 #define OTG_HPI_DATA_BIT_CLEARING_EDGE_REGISTER 0
 #define OTG_HPI_DATA_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define OTG_HPI_DATA_CAPTURE 0
@@ -494,7 +509,7 @@
  */
 
 #define ALT_MODULE_CLASS_otg_hpi_r altera_avalon_pio
-#define OTG_HPI_R_BASE 0x100010d0
+#define OTG_HPI_R_BASE 0x100011b0
 #define OTG_HPI_R_BIT_CLEARING_EDGE_REGISTER 0
 #define OTG_HPI_R_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define OTG_HPI_R_CAPTURE 0
@@ -521,7 +536,7 @@
  */
 
 #define ALT_MODULE_CLASS_otg_hpi_reset altera_avalon_pio
-#define OTG_HPI_RESET_BASE 0x10001090
+#define OTG_HPI_RESET_BASE 0x10001170
 #define OTG_HPI_RESET_BIT_CLEARING_EDGE_REGISTER 0
 #define OTG_HPI_RESET_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define OTG_HPI_RESET_CAPTURE 0
@@ -548,7 +563,7 @@
  */
 
 #define ALT_MODULE_CLASS_otg_hpi_w altera_avalon_pio
-#define OTG_HPI_W_BASE 0x100010e0
+#define OTG_HPI_W_BASE 0x100011c0
 #define OTG_HPI_W_BIT_CLEARING_EDGE_REGISTER 0
 #define OTG_HPI_W_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define OTG_HPI_W_CAPTURE 0
@@ -575,7 +590,7 @@
  */
 
 #define ALT_MODULE_CLASS_sdram_pll altpll
-#define SDRAM_PLL_BASE 0x10001000
+#define SDRAM_PLL_BASE 0x10001100
 #define SDRAM_PLL_IRQ -1
 #define SDRAM_PLL_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SDRAM_PLL_NAME "/dev/sdram_pll"
@@ -589,13 +604,13 @@
  */
 
 #define ALT_MODULE_CLASS_sysid_qsys_0 altera_avalon_sysid_qsys
-#define SYSID_QSYS_0_BASE 0x100010f8
+#define SYSID_QSYS_0_BASE 0x100011d8
 #define SYSID_QSYS_0_ID 0
 #define SYSID_QSYS_0_IRQ -1
 #define SYSID_QSYS_0_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_QSYS_0_NAME "/dev/sysid_qsys_0"
 #define SYSID_QSYS_0_SPAN 8
-#define SYSID_QSYS_0_TIMESTAMP 1639569012
+#define SYSID_QSYS_0_TIMESTAMP 1639832829
 #define SYSID_QSYS_0_TYPE "altera_avalon_sysid_qsys"
 
 #endif /* __SYSTEM_H_ */

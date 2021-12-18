@@ -38,9 +38,9 @@ module  color_mapper (
 	 24'h0AA5E8,24'h04A3E8,24'h3FB9E9,24'h0AA5E8,24'h04A3E8,
 	 24'h3FB9E9,24'h0AA5E8,24'h04A3E8,
 	 24'h3FB9E9};
-	 assign ship_palette = '{24'hFED57C,24'h473C23,24'h2D2515,24'hD39458,
-	 24'hA26C41,24'hA26C41,24'h251B14,24'h302A27,24'h342F30,
-	 24'h2A2627,24'h342F2E,24'h353030,24'h353030,24'h010000,24'h16130E,24'h000000};
+	 assign ship_palette = '{24'hFFF3DC,24'hCCC1D3,24'hAE3F4C,24'h9D834D,24'h020101,
+	 24'h00FF00,24'hF0CCAF,24'hFFFBEB,24'h766C96,24'hE3998A,24'h59667F,
+	 24'h535C74,24'hAB9B9E,24'hDFE5EB,24'h000000,24'hFFFFFF};
     assign background_color = background_palette[background_data];
 	 assign ship1_color = ship_palette[ball_data1];
 	 assign ship2_color = ship_palette[ball_data2];
@@ -55,11 +55,17 @@ module  color_mapper (
     begin
         if (is_ball1 == 1'b1) 
         begin
-            color = ship1_color;
+            if(ship1_color == 24'h00FF00)
+					color = background_color;
+				else
+					color = ship1_color;
         end
         else if (is_ball2 == 1'b1)
         begin
-            color = ship2_color;
+				if(ship2_color == 24'h00FF00)
+					color = background_color;
+				else
+					color = ship2_color;
         end
         else 
         begin

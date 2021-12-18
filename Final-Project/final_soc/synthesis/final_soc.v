@@ -4,31 +4,32 @@
 
 `timescale 1 ps / 1 ps
 module final_soc (
-		input  wire        clk_clk,                //             clk.clk
-		output wire [7:0]  keycode_0_export,       //       keycode_0.export
-		output wire [7:0]  keycode_1_export,       //       keycode_1.export
-		output wire [7:0]  keycode_2_export,       //       keycode_2.export
-		output wire [7:0]  keycode_3_export,       //       keycode_3.export
-		output wire [7:0]  keycode_4_export,       //       keycode_4.export
-		output wire [7:0]  keycode_5_export,       //       keycode_5.export
-		output wire [1:0]  otg_hpi_address_export, // otg_hpi_address.export
-		output wire        otg_hpi_cs_export,      //      otg_hpi_cs.export
-		input  wire [15:0] otg_hpi_data_in_port,   //    otg_hpi_data.in_port
-		output wire [15:0] otg_hpi_data_out_port,  //                .out_port
-		output wire        otg_hpi_r_export,       //       otg_hpi_r.export
-		output wire        otg_hpi_reset_export,   //   otg_hpi_reset.export
-		output wire        otg_hpi_w_export,       //       otg_hpi_w.export
-		input  wire        reset_reset_n,          //           reset.reset_n
-		output wire        sdram_clk_clk,          //       sdram_clk.clk
-		output wire [12:0] sdram_wire_addr,        //      sdram_wire.addr
-		output wire [1:0]  sdram_wire_ba,          //                .ba
-		output wire        sdram_wire_cas_n,       //                .cas_n
-		output wire        sdram_wire_cke,         //                .cke
-		output wire        sdram_wire_cs_n,        //                .cs_n
-		inout  wire [31:0] sdram_wire_dq,          //                .dq
-		output wire [3:0]  sdram_wire_dqm,         //                .dqm
-		output wire        sdram_wire_ras_n,       //                .ras_n
-		output wire        sdram_wire_we_n         //                .we_n
+		input  wire          clk_clk,                //             clk.clk
+		output wire [2047:0] game_readdata,          //            game.readdata
+		output wire [7:0]    keycode_0_export,       //       keycode_0.export
+		output wire [7:0]    keycode_1_export,       //       keycode_1.export
+		output wire [7:0]    keycode_2_export,       //       keycode_2.export
+		output wire [7:0]    keycode_3_export,       //       keycode_3.export
+		output wire [7:0]    keycode_4_export,       //       keycode_4.export
+		output wire [7:0]    keycode_5_export,       //       keycode_5.export
+		output wire [1:0]    otg_hpi_address_export, // otg_hpi_address.export
+		output wire          otg_hpi_cs_export,      //      otg_hpi_cs.export
+		input  wire [15:0]   otg_hpi_data_in_port,   //    otg_hpi_data.in_port
+		output wire [15:0]   otg_hpi_data_out_port,  //                .out_port
+		output wire          otg_hpi_r_export,       //       otg_hpi_r.export
+		output wire          otg_hpi_reset_export,   //   otg_hpi_reset.export
+		output wire          otg_hpi_w_export,       //       otg_hpi_w.export
+		input  wire          reset_reset_n,          //           reset.reset_n
+		output wire          sdram_clk_clk,          //       sdram_clk.clk
+		output wire [12:0]   sdram_wire_addr,        //      sdram_wire.addr
+		output wire [1:0]    sdram_wire_ba,          //                .ba
+		output wire          sdram_wire_cas_n,       //                .cas_n
+		output wire          sdram_wire_cke,         //                .cke
+		output wire          sdram_wire_cs_n,        //                .cs_n
+		inout  wire [31:0]   sdram_wire_dq,          //                .dq
+		output wire [3:0]    sdram_wire_dqm,         //                .dqm
+		output wire          sdram_wire_ras_n,       //                .ras_n
+		output wire          sdram_wire_we_n         //                .we_n
 	);
 
 	wire         sdram_pll_c0_clk;                                            // sdram_pll:c0 -> [SDRAM:clk, mm_interconnect_0:sdram_pll_c0_clk, rst_controller:clk]
@@ -44,6 +45,13 @@ module final_soc (
 	wire         nios2_gen2_0_instruction_master_waitrequest;                 // mm_interconnect_0:nios2_gen2_0_instruction_master_waitrequest -> nios2_gen2_0:i_waitrequest
 	wire  [28:0] nios2_gen2_0_instruction_master_address;                     // nios2_gen2_0:i_address -> mm_interconnect_0:nios2_gen2_0_instruction_master_address
 	wire         nios2_gen2_0_instruction_master_read;                        // nios2_gen2_0:i_read -> mm_interconnect_0:nios2_gen2_0_instruction_master_read
+	wire         mm_interconnect_0_game_core_game_slave_chipselect;           // mm_interconnect_0:game_core_GAME_Slave_chipselect -> game_core:AVL_CS
+	wire  [31:0] mm_interconnect_0_game_core_game_slave_readdata;             // game_core:AVL_READDATA -> mm_interconnect_0:game_core_GAME_Slave_readdata
+	wire   [5:0] mm_interconnect_0_game_core_game_slave_address;              // mm_interconnect_0:game_core_GAME_Slave_address -> game_core:AVL_ADDR
+	wire         mm_interconnect_0_game_core_game_slave_read;                 // mm_interconnect_0:game_core_GAME_Slave_read -> game_core:AVL_READ
+	wire   [3:0] mm_interconnect_0_game_core_game_slave_byteenable;           // mm_interconnect_0:game_core_GAME_Slave_byteenable -> game_core:AVL_BYTE_EN
+	wire         mm_interconnect_0_game_core_game_slave_write;                // mm_interconnect_0:game_core_GAME_Slave_write -> game_core:AVL_WRITE
+	wire  [31:0] mm_interconnect_0_game_core_game_slave_writedata;            // mm_interconnect_0:game_core_GAME_Slave_writedata -> game_core:AVL_WRITEDATA
 	wire         mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_chipselect;  // mm_interconnect_0:jtag_uart_0_avalon_jtag_slave_chipselect -> jtag_uart_0:av_chipselect
 	wire  [31:0] mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_readdata;    // jtag_uart_0:av_readdata -> mm_interconnect_0:jtag_uart_0_avalon_jtag_slave_readdata
 	wire         mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_waitrequest; // jtag_uart_0:av_waitrequest -> mm_interconnect_0:jtag_uart_0_avalon_jtag_slave_waitrequest
@@ -139,7 +147,7 @@ module final_soc (
 	wire  [31:0] nios2_gen2_0_irq_irq;                                        // irq_mapper:sender_irq -> nios2_gen2_0:irq
 	wire         rst_controller_reset_out_reset;                              // rst_controller:reset_out -> [SDRAM:reset_n, mm_interconnect_0:SDRAM_reset_reset_bridge_in_reset_reset]
 	wire         nios2_gen2_0_debug_reset_request_reset;                      // nios2_gen2_0:debug_reset_request -> [rst_controller:reset_in1, rst_controller_001:reset_in1]
-	wire         rst_controller_001_reset_out_reset;                          // rst_controller_001:reset_out -> [irq_mapper:reset, jtag_uart_0:rst_n, keycode_0:reset_n, keycode_1:reset_n, keycode_2:reset_n, keycode_3:reset_n, keycode_4:reset_n, keycode_5:reset_n, mm_interconnect_0:nios2_gen2_0_reset_reset_bridge_in_reset_reset, nios2_gen2_0:reset_n, otg_hpi_address:reset_n, otg_hpi_cs:reset_n, otg_hpi_data:reset_n, otg_hpi_r:reset_n, otg_hpi_reset:reset_n, otg_hpi_w:reset_n, rst_translator:in_reset, sdram_pll:reset, sysid_qsys_0:reset_n]
+	wire         rst_controller_001_reset_out_reset;                          // rst_controller_001:reset_out -> [game_core:RESET, irq_mapper:reset, jtag_uart_0:rst_n, keycode_0:reset_n, keycode_1:reset_n, keycode_2:reset_n, keycode_3:reset_n, keycode_4:reset_n, keycode_5:reset_n, mm_interconnect_0:nios2_gen2_0_reset_reset_bridge_in_reset_reset, nios2_gen2_0:reset_n, otg_hpi_address:reset_n, otg_hpi_cs:reset_n, otg_hpi_data:reset_n, otg_hpi_r:reset_n, otg_hpi_reset:reset_n, otg_hpi_w:reset_n, rst_translator:in_reset, sdram_pll:reset, sysid_qsys_0:reset_n]
 	wire         rst_controller_001_reset_out_reset_req;                      // rst_controller_001:reset_req -> [nios2_gen2_0:reset_req, rst_translator:reset_req_in]
 
 	final_soc_SDRAM sdram (
@@ -163,6 +171,19 @@ module final_soc (
 		.zs_dqm         (sdram_wire_dqm),                           //      .export
 		.zs_ras_n       (sdram_wire_ras_n),                         //      .export
 		.zs_we_n        (sdram_wire_we_n)                           //      .export
+	);
+
+	avalon_game_interface game_core (
+		.CLK           (clk_clk),                                           //         CLK.clk
+		.RESET         (rst_controller_001_reset_out_reset),                //        REST.reset
+		.AVL_ADDR      (mm_interconnect_0_game_core_game_slave_address),    //  GAME_Slave.address
+		.AVL_BYTE_EN   (mm_interconnect_0_game_core_game_slave_byteenable), //            .byteenable
+		.AVL_CS        (mm_interconnect_0_game_core_game_slave_chipselect), //            .chipselect
+		.AVL_READ      (mm_interconnect_0_game_core_game_slave_read),       //            .read
+		.AVL_READDATA  (mm_interconnect_0_game_core_game_slave_readdata),   //            .readdata
+		.AVL_WRITE     (mm_interconnect_0_game_core_game_slave_write),      //            .write
+		.AVL_WRITEDATA (mm_interconnect_0_game_core_game_slave_writedata),  //            .writedata
+		.EXPORT_DATA   (game_readdata)                                      // conduit_end.readdata
 	);
 
 	final_soc_jtag_uart_0 jtag_uart_0 (
@@ -388,6 +409,13 @@ module final_soc (
 		.nios2_gen2_0_instruction_master_waitrequest    (nios2_gen2_0_instruction_master_waitrequest),                 //                                         .waitrequest
 		.nios2_gen2_0_instruction_master_read           (nios2_gen2_0_instruction_master_read),                        //                                         .read
 		.nios2_gen2_0_instruction_master_readdata       (nios2_gen2_0_instruction_master_readdata),                    //                                         .readdata
+		.game_core_GAME_Slave_address                   (mm_interconnect_0_game_core_game_slave_address),              //                     game_core_GAME_Slave.address
+		.game_core_GAME_Slave_write                     (mm_interconnect_0_game_core_game_slave_write),                //                                         .write
+		.game_core_GAME_Slave_read                      (mm_interconnect_0_game_core_game_slave_read),                 //                                         .read
+		.game_core_GAME_Slave_readdata                  (mm_interconnect_0_game_core_game_slave_readdata),             //                                         .readdata
+		.game_core_GAME_Slave_writedata                 (mm_interconnect_0_game_core_game_slave_writedata),            //                                         .writedata
+		.game_core_GAME_Slave_byteenable                (mm_interconnect_0_game_core_game_slave_byteenable),           //                                         .byteenable
+		.game_core_GAME_Slave_chipselect                (mm_interconnect_0_game_core_game_slave_chipselect),           //                                         .chipselect
 		.jtag_uart_0_avalon_jtag_slave_address          (mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_address),     //            jtag_uart_0_avalon_jtag_slave.address
 		.jtag_uart_0_avalon_jtag_slave_write            (mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_write),       //                                         .write
 		.jtag_uart_0_avalon_jtag_slave_read             (mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_read),        //                                         .read
