@@ -1,589 +1,223 @@
-/*---------------------------------------------------------------------------
-  --      main.c                                                    	   --
-  --      Christine Chen                                                   --
-  --      Ref. DE2-115 Demonstrations by Terasic Technologies Inc.         --
-  --      Fall 2014                                                        --
-  --                                                                       --
-  --      For use with ECE 298 Experiment 7                                --
-  --      UIUC ECE Department                                              --
-  ---------------------------------------------------------------------------*/
-
 #include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include <io.h>
-#include <fcntl.h>
-
 #include "system.h"
+#include "time.h"
 #include "alt_types.h"
-#include <unistd.h>  // usleep 
-#include "sys/alt_irq.h"
+#include <unistd.h>  // usleep
 #include "io_handler.h"
+#include "ship_logic.h"
+#include "usb_main.h"
+//#ifdef _WIN32
+//#include <Windows.h>
+//#else
+//#include <unistd.h>
+//#endif
 
-#include "cy7c67200.h"
-#include "usb.h"
-#include "lcp_cmd.h"
-#include "lcp_data.h"
+#define UP_END 0
+#define DOWN_END 479
+#define NOPRESS 0
+#define LEFT_END 0
+#define RIGHT_END 637
+#define MAX_KEY 4 // allow four keys pressed in the same time
 
+// BASE of avalon_bus_interface
+volatile unsigned int *game_file =(unsigned int*) 0x00000100;
 
-//----------------------------------------------------------------------------------------//
-//
-//                                Main function
-//
-//----------------------------------------------------------------------------------------//
-int main(void)
+int win;
+int developer_mode;
+
+enum Key_event
 {
-	IO_init();
+	PRESS_UP = 1, 
+	PRESS_DOWN, 
+	PRESS_LEFT, 
+	PRESS_RIGHT, 
+	PRESS_ATK, 
+	PRESS_SKILL
+}event;
 
-	/*while(1)
-	{
-		IO_write(HPI_MAILBOX,COMM_EXEC_INT);
-		printf("[ERROR]:routine mailbox data is %x\n",IO_read(HPI_MAILBOX));
-		//UsbWrite(0xc008,0x000f);
-		//UsbRead(0xc008);
-		usleep(10*10000);
-	}*/
 
-	alt_u16 intStat;
-	alt_u16 usb_ctl_val;
-	static alt_u16 ctl_reg = 0;
-	static alt_u16 no_device = 0;
-	alt_u16 fs_device = 0;
-	//!-----------------------Read More Keys-----------------------------------------//
-	int keycode1 = 0;		// store the key read from address
-	int keycode2 = 0;
-	int keycode3 = 0;
-	// int keycode4 = 0;
-	//!-------------------------------End--------------------------------------------//
-	alt_u8 toggle = 0;
-	alt_u8 data_size;
-	alt_u8 hot_plug_count;
-	alt_u16 code;
-
-	printf("USB keyboard setup...\n\n");
-
-	//----------------------------------------SIE1 initial---------------------------------------------------//
-	USB_HOT_PLUG:
-	UsbSoftReset();
-
-	// STEP 1a:
-	UsbWrite (HPI_SIE1_MSG_ADR, 0);
-	UsbWrite (HOST1_STAT_REG, 0xFFFF);
-
-	/* Set HUSB_pEOT time */
-	UsbWrite(HUSB_pEOT, 600); // adjust the according to your USB device speed
-
-	usb_ctl_val = SOFEOP1_TO_CPU_EN | RESUME1_TO_HPI_EN;// | SOFEOP1_TO_HPI_EN;
-	UsbWrite(HPI_IRQ_ROUTING_REG, usb_ctl_val);
-
-	intStat = A_CHG_IRQ_EN | SOF_EOP_IRQ_EN ;
-	UsbWrite(HOST1_IRQ_EN_REG, intStat);
-	// STEP 1a end
-
-	// STEP 1b begin
-	UsbWrite(COMM_R0,0x0000);//reset time
-	UsbWrite(COMM_R1,0x0000);  //port number
-	UsbWrite(COMM_R2,0x0000);  //r1
-	UsbWrite(COMM_R3,0x0000);  //r1
-	UsbWrite(COMM_R4,0x0000);  //r1
-	UsbWrite(COMM_R5,0x0000);  //r1
-	UsbWrite(COMM_R6,0x0000);  //r1
-	UsbWrite(COMM_R7,0x0000);  //r1
-	UsbWrite(COMM_R8,0x0000);  //r1
-	UsbWrite(COMM_R9,0x0000);  //r1
-	UsbWrite(COMM_R10,0x0000);  //r1
-	UsbWrite(COMM_R11,0x0000);  //r1
-	UsbWrite(COMM_R12,0x0000);  //r1
-	UsbWrite(COMM_R13,0x0000);  //r1
-	UsbWrite(COMM_INT_NUM,HUSB_SIE1_INIT_INT); //HUSB_SIE1_INIT_INT
-	IO_write(HPI_MAILBOX,COMM_EXEC_INT);
-
-	while (!(IO_read(HPI_STATUS) & 0xFFFF) )  //read sie1 msg register
-	{
+void frame_clock (double frame_time){
+	double time_to_switch = frame_time;
+	clock_t begin = clock();
+	clock_t end = clock();
+	while ((double)(end-begin)/CLOCKS_PER_SEC <time_to_switch){
+		end = clock();
 	}
-	while (IO_read(HPI_MAILBOX) != COMM_ACK)
-	{
-		printf("[ERROR]:routine mailbox data is %x\n",IO_read(HPI_MAILBOX));
-		goto USB_HOT_PLUG;
-	}
-	// STEP 1b end
-
-	printf("STEP 1 Complete");
-	// STEP 2 begin
-	UsbWrite(COMM_INT_NUM,HUSB_RESET_INT); //husb reset
-	UsbWrite(COMM_R0,0x003c);//reset time
-	UsbWrite(COMM_R1,0x0000);  //port number
-	UsbWrite(COMM_R2,0x0000);  //r1
-	UsbWrite(COMM_R3,0x0000);  //r1
-	UsbWrite(COMM_R4,0x0000);  //r1
-	UsbWrite(COMM_R5,0x0000);  //r1
-	UsbWrite(COMM_R6,0x0000);  //r1
-	UsbWrite(COMM_R7,0x0000);  //r1
-	UsbWrite(COMM_R8,0x0000);  //r1
-	UsbWrite(COMM_R9,0x0000);  //r1
-	UsbWrite(COMM_R10,0x0000);  //r1
-	UsbWrite(COMM_R11,0x0000);  //r1
-	UsbWrite(COMM_R12,0x0000);  //r1
-	UsbWrite(COMM_R13,0x0000);  //r1
-
-	IO_write(HPI_MAILBOX,COMM_EXEC_INT);
-
-	while (IO_read(HPI_MAILBOX) != COMM_ACK)
-	{
-		printf("[ERROR]:routine mailbox data is %x\n",IO_read(HPI_MAILBOX));
-		goto USB_HOT_PLUG;
-	}
-	// STEP 2 end
-
-	ctl_reg = USB1_CTL_REG;
-	no_device = (A_DP_STAT | A_DM_STAT);
-	fs_device = A_DP_STAT;
-	usb_ctl_val = UsbRead(ctl_reg);
-
-	if (!(usb_ctl_val & no_device))
-	{
-		for(hot_plug_count = 0 ; hot_plug_count < 5 ; hot_plug_count++)
-		{
-			usleep(5*1000);
-			usb_ctl_val = UsbRead(ctl_reg);
-			if(usb_ctl_val & no_device) break;
-		}
-		if(!(usb_ctl_val & no_device))
-		{
-			printf("\n[INFO]: no device is present in SIE1!\n");
-			printf("[INFO]: please insert a USB keyboard in SIE1!\n");
-			while (!(usb_ctl_val & no_device))
-			{
-				usb_ctl_val = UsbRead(ctl_reg);
-				if(usb_ctl_val & no_device)
-					goto USB_HOT_PLUG;
-
-				usleep(2000);
-			}
-		}
-	}
-	else
-	{
-		/* check for low speed or full speed by reading D+ and D- lines */
-		if (usb_ctl_val & fs_device)
-		{
-			printf("[INFO]: full speed device\n");
-		}
-		else
-		{
-			printf("[INFO]: low speed device\n");
-		}
-	}
-
-
-
-	// STEP 3 begin
-	//------------------------------------------------------set address -----------------------------------------------------------------
-	UsbSetAddress();
-
-	while (!(IO_read(HPI_STATUS) & HPI_STATUS_SIE1msg_FLAG) )  //read sie1 msg register
-	{
-		UsbSetAddress();
-		usleep(10*1000);
-	}
-
-	UsbWaitTDListDone();
-
-	IO_write(HPI_ADDR,0x0506); // i
-	printf("[ENUM PROCESS]:step 3 TD Status Byte is %x\n",IO_read(HPI_DATA));
-
-	IO_write(HPI_ADDR,0x0508); // n
-	usb_ctl_val = IO_read(HPI_DATA);
-	printf("[ENUM PROCESS]:step 3 TD Control Byte is %x\n",usb_ctl_val);
-	while (usb_ctl_val != 0x03) // retries occurred
-	{
-		usb_ctl_val = UsbGetRetryCnt();
-
-		goto USB_HOT_PLUG;
-	}
-
-	printf("------------[ENUM PROCESS]:set address done!---------------\n");
-
-	// STEP 4 begin
-	//-------------------------------get device descriptor-1 -----------------------------------//
-	// TASK: Call the appropriate function for this step.
-	UsbGetDeviceDesc1(); 	// Get Device Descriptor -1
-
-	//usleep(10*1000);
-	while (!(IO_read(HPI_STATUS) & HPI_STATUS_SIE1msg_FLAG) )  //read sie1 msg register
-	{
-		// TASK: Call the appropriate function again if it wasn't processed successfully.
-		UsbGetDeviceDesc1();
-		usleep(10*1000);
-	}
-
-	UsbWaitTDListDone();
-
-	IO_write(HPI_ADDR,0x0506);
-	printf("[ENUM PROCESS]:step 4 TD Status Byte is %x\n",IO_read(HPI_DATA));
-
-	IO_write(HPI_ADDR,0x0508);
-	usb_ctl_val = IO_read(HPI_DATA);
-	printf("[ENUM PROCESS]:step 4 TD Control Byte is %x\n",usb_ctl_val);
-	while (usb_ctl_val != 0x03)
-	{
-		usb_ctl_val = UsbGetRetryCnt();
-	}
-
-	printf("---------------[ENUM PROCESS]:get device descriptor-1 done!-----------------\n");
-
-
-	//--------------------------------get device descriptor-2---------------------------------------------//
-	//get device descriptor
-	// TASK: Call the appropriate function for this step.
-	UsbGetDeviceDesc2(); 	// Get Device Descriptor -2
-
-	//if no message
-	while (!(IO_read(HPI_STATUS) & HPI_STATUS_SIE1msg_FLAG) )  //read sie1 msg register
-	{
-		//resend the get device descriptor
-		//get device descriptor
-		// TASK: Call the appropriate function again if it wasn't processed successfully.
-		UsbGetDeviceDesc2();
-		usleep(10*1000);
-	}
-
-	UsbWaitTDListDone();
-
-	IO_write(HPI_ADDR,0x0506);
-	printf("[ENUM PROCESS]:step 4 TD Status Byte is %x\n",IO_read(HPI_DATA));
-
-	IO_write(HPI_ADDR,0x0508);
-	usb_ctl_val = IO_read(HPI_DATA);
-	printf("[ENUM PROCESS]:step 4 TD Control Byte is %x\n",usb_ctl_val);
-	while (usb_ctl_val != 0x03)
-	{
-		usb_ctl_val = UsbGetRetryCnt();
-	}
-
-	printf("------------[ENUM PROCESS]:get device descriptor-2 done!--------------\n");
-
-
-	// STEP 5 begin
-	//-----------------------------------get configuration descriptor -1 ----------------------------------//
-	// TASK: Call the appropriate function for this step.
-	UsbGetConfigDesc1(); 	// Get Configuration Descriptor -1
-
-	//if no message
-	while (!(IO_read(HPI_STATUS) & HPI_STATUS_SIE1msg_FLAG) )  //read sie1 msg register
-	{
-		//resend the get device descriptor
-		//get device descriptor
-
-		// TASK: Call the appropriate function again if it wasn't processed successfully.
-		UsbGetConfigDesc1();
-		usleep(10*1000);
-	}
-
-	UsbWaitTDListDone();
-
-	IO_write(HPI_ADDR,0x0506);
-	printf("[ENUM PROCESS]:step 5 TD Status Byte is %x\n",IO_read(HPI_DATA));
-
-	IO_write(HPI_ADDR,0x0508);
-	usb_ctl_val = IO_read(HPI_DATA);
-	printf("[ENUM PROCESS]:step 5 TD Control Byte is %x\n",usb_ctl_val);
-	while (usb_ctl_val != 0x03)
-	{
-		usb_ctl_val = UsbGetRetryCnt();
-	}
-	printf("------------[ENUM PROCESS]:get configuration descriptor-1 pass------------\n");
-
-	// STEP 6 begin
-	//-----------------------------------get configuration descriptor-2------------------------------------//
-	//get device descriptor
-	// TASK: Call the appropriate function for this step.
-	UsbGetConfigDesc2(); 	// Get Configuration Descriptor -2
-
-	usleep(100*1000);
-	//if no message
-	while (!(IO_read(HPI_STATUS) & HPI_STATUS_SIE1msg_FLAG) )  //read sie1 msg register
-	{
-		// TASK: Call the appropriate function again if it wasn't processed successfully.
-		UsbGetConfigDesc2();
-		usleep(10*1000);
-	}
-
-	UsbWaitTDListDone();
-
-	IO_write(HPI_ADDR,0x0506);
-	printf("[ENUM PROCESS]:step 6 TD Status Byte is %x\n",IO_read(HPI_DATA));
-
-	IO_write(HPI_ADDR,0x0508);
-	usb_ctl_val = IO_read(HPI_DATA);
-	printf("[ENUM PROCESS]:step 6 TD Control Byte is %x\n",usb_ctl_val);
-	while (usb_ctl_val != 0x03)
-	{
-		usb_ctl_val = UsbGetRetryCnt();
-	}
-
-
-	printf("-----------[ENUM PROCESS]:get configuration descriptor-2 done!------------\n");
-
-
-	// ---------------------------------get device info---------------------------------------------//
-
-	// TASK: Write the address to read from the memory for byte 7 of the interface descriptor to HPI_ADDR.
-	IO_write(HPI_ADDR,0x056c);
-	code = IO_read(HPI_DATA);
-	code = code & 0x003;
-	printf("\ncode = %x\n", code);
-
-	if (code == 0x01)
-	{
-		printf("\n[INFO]:check TD rec data7 \n[INFO]:Keyboard Detected!!!\n\n");
-	}
-	else
-	{
-		printf("\n[INFO]:Keyboard Not Detected!!! \n\n");
-	}
-
-	// TASK: Write the address to read from the memory for the endpoint descriptor to HPI_ADDR.
-
-	IO_write(HPI_ADDR,0x0576);
-	IO_write(HPI_DATA,0x073F);
-	IO_write(HPI_DATA,0x8105);
-	IO_write(HPI_DATA,0x0003);
-	IO_write(HPI_DATA,0x0008);
-	IO_write(HPI_DATA,0xAC0A);
-	UsbWrite(HUSB_SIE1_pCurrentTDPtr,0x0576); //HUSB_SIE1_pCurrentTDPtr
-
-	//data_size = (IO_read(HPI_DATA)>>8)&0x0ff;
-	//data_size = 0x08;//(IO_read(HPI_DATA))&0x0ff;
-	//UsbPrintMem();
-	IO_write(HPI_ADDR,0x057c);
-	data_size = (IO_read(HPI_DATA))&0x0ff;
-	printf("[ENUM PROCESS]:data packet size is %d\n",data_size);
-	// STEP 7 begin
-	//------------------------------------set configuration -----------------------------------------//
-	// TASK: Call the appropriate function for this step.
-	UsbSetConfig();		// Set Configuration
-
-	while (!(IO_read(HPI_STATUS) & HPI_STATUS_SIE1msg_FLAG) )  //read sie1 msg register
-	{
-		// TASK: Call the appropriate function again if it wasn't processed successfully.
-		UsbSetConfig();		// Set Configuration
-		usleep(10*1000);
-	}
-
-	UsbWaitTDListDone();
-
-	IO_write(HPI_ADDR,0x0506);
-	printf("[ENUM PROCESS]:step 7 TD Status Byte is %x\n",IO_read(HPI_DATA));
-
-	IO_write(HPI_ADDR,0x0508);
-	usb_ctl_val = IO_read(HPI_DATA);
-	printf("[ENUM PROCESS]:step 7 TD Control Byte is %x\n",usb_ctl_val);
-	while (usb_ctl_val != 0x03)
-	{
-		usb_ctl_val = UsbGetRetryCnt();
-	}
-
-	printf("------------[ENUM PROCESS]:set configuration done!-------------------\n");
-
-	//----------------------------------------------class request out ------------------------------------------//
-	// TASK: Call the appropriate function for this step.
-	UsbClassRequest();
-
-	while (!(IO_read(HPI_STATUS) & HPI_STATUS_SIE1msg_FLAG) )  //read sie1 msg register
-	{
-		// TASK: Call the appropriate function again if it wasn't processed successfully.
-		UsbClassRequest();
-		usleep(10*1000);
-	}
-
-	UsbWaitTDListDone();
-
-	IO_write(HPI_ADDR,0x0506);
-	printf("[ENUM PROCESS]:step 8 TD Status Byte is %x\n",IO_read(HPI_DATA));
-
-	IO_write(HPI_ADDR,0x0508);
-	usb_ctl_val = IO_read(HPI_DATA);
-	printf("[ENUM PROCESS]:step 8 TD Control Byte is %x\n",usb_ctl_val);
-	while (usb_ctl_val != 0x03)
-	{
-		usb_ctl_val = UsbGetRetryCnt();
-	}
-
-
-	printf("------------[ENUM PROCESS]:class request out done!-------------------\n");
-
-	// STEP 8 begin
-	//----------------------------------get descriptor(class 0x21 = HID) request out --------------------------------//
-	// TASK: Call the appropriate function for this step.
-	UsbGetHidDesc();
-
-	while (!(IO_read(HPI_STATUS) & HPI_STATUS_SIE1msg_FLAG) )  //read sie1 msg register
-	{
-		// TASK: Call the appropriate function again if it wasn't processed successfully.
-		UsbGetHidDesc();
-		usleep(10*1000);
-	}
-
-	UsbWaitTDListDone();
-
-	IO_write(HPI_ADDR,0x0506);
-	printf("[ENUM PROCESS]:step 8 TD Status Byte is %x\n",IO_read(HPI_DATA));
-
-	IO_write(HPI_ADDR,0x0508);
-	usb_ctl_val = IO_read(HPI_DATA);
-	printf("[ENUM PROCESS]:step 8 TD Control Byte is %x\n",usb_ctl_val);
-	while (usb_ctl_val != 0x03)
-	{
-		usb_ctl_val = UsbGetRetryCnt();
-	}
-
-	printf("------------[ENUM PROCESS]:get descriptor (class 0x21) done!-------------------\n");
-
-	// STEP 9 begin
-	//-------------------------------get descriptor (class 0x22 = report)-------------------------------------------//
-	// TASK: Call the appropriate function for this step.
-	UsbGetReportDesc();
-	//if no message
-	while (!(IO_read(HPI_STATUS) & HPI_STATUS_SIE1msg_FLAG) )  //read sie1 msg register
-	{
-		// TASK: Call the appropriate function again if it wasn't processed successfully.
-		UsbGetReportDesc();
-		usleep(10*1000);
-	}
-
-	UsbWaitTDListDone();
-
-	IO_write(HPI_ADDR,0x0506);
-	printf("[ENUM PROCESS]: step 9 TD Status Byte is %x\n",IO_read(HPI_DATA));
-
-	IO_write(HPI_ADDR,0x0508);
-	usb_ctl_val = IO_read(HPI_DATA);
-	printf("[ENUM PROCESS]: step 9 TD Control Byte is %x\n",usb_ctl_val);
-	while (usb_ctl_val != 0x03)
-	{
-		usb_ctl_val = UsbGetRetryCnt();
-	}
-
-	printf("---------------[ENUM PROCESS]:get descriptor (class 0x22) done!----------------\n");
-
-
-
-	//-----------------------------------get keycode value------------------------------------------------//
-	usleep(10000);
-	while(1)
-	{
-		toggle++;
-		IO_write(HPI_ADDR,0x0500); //the start address
-		//data phase IN-1
-		IO_write(HPI_DATA,0x051c); //500
-
-		IO_write(HPI_DATA,0x000f & data_size);//2 data length
-
-		IO_write(HPI_DATA,0x0291);//4 //endpoint 1
-		if(toggle%2)
-		{
-			IO_write(HPI_DATA,0x0001);//6 //data 1
-		}
-		else
-		{
-			IO_write(HPI_DATA,0x0041);//6 //data 1
-		}
-		IO_write(HPI_DATA,0x0013);//8
-		IO_write(HPI_DATA,0x0000);//a
-		UsbWrite(HUSB_SIE1_pCurrentTDPtr,0x0500); //HUSB_SIE1_pCurrentTDPtr
-		
-		while (!(IO_read(HPI_STATUS) & HPI_STATUS_SIE1msg_FLAG) )  //read sie1 msg register
-		{
-			IO_write(HPI_ADDR,0x0500); //the start address
-			//data phase IN-1
-			IO_write(HPI_DATA,0x051c); //500
-
-			IO_write(HPI_DATA,0x000f & data_size);//2 data length
-
-			IO_write(HPI_DATA,0x0291);//4 //endpoint 1
-			if(toggle%2)
-			{
-				IO_write(HPI_DATA,0x0001);//6 //data 1
-			}
-			else
-			{
-				IO_write(HPI_DATA,0x0041);//6 //data 1
-			}
-			IO_write(HPI_DATA,0x0013);//8
-			IO_write(HPI_DATA,0x0000);//
-			UsbWrite(HUSB_SIE1_pCurrentTDPtr,0x0500); //HUSB_SIE1_pCurrentTDPtr
-			usleep(10*1000);
-		}//end while
-
-		usb_ctl_val = UsbWaitTDListDone();
-
-		//-------------------------------Read More Keys Use More UsbRead() ------------------------//
-		// The first two keycodes are stored in 0x051E. Other keycodes are in subsequent addresses.
-		//! We can add UsbRead() here if we want to get more information about more keys
-		// For example, code below reads 6 keys with 3 UsbRead(), each UsbRead() reads 16-bits = 2 char.
-	
-		// keycode = UsbRead(0x051e);
-		// *keycode_base = keycode & 0xff; 
-		keycode1 = UsbRead(0x051e);
-		keycode2 = UsbRead(0x0520);
-		keycode3 = UsbRead(0x0522);
-		// keycode4 = UsbRead(0x0524);
-		*keycode0_base = keycode1 & 0xff;	// only read 2 of 4 Hex as a keycode
-		*keycode1_base = keycode1 >> 8;		// for second keycode, shift 8 bit
-		*keycode2_base = keycode2 & 0xff;
-		*keycode3_base = keycode2 >> 8;
-		*keycode4_base = keycode3 & 0xff;
-		*keycode5_base = keycode3 >> 8;
-		printf("%x %x %x\n",keycode1, keycode2, keycode3);
-//		if (! *keycode1_base || ! *keycode2_base || ! *keycode3_base){
-//			printf("%d%d%d ",*keycode1_base,*keycode2_base,*keycode3_base);
-//		}
-//		if (! *keycode4_base || ! *keycode5_base || ! *keycode6_base){
-//			printf("%d%d%d\n",*keycode4_base,*keycode5_base,*keycode6_base);
-//		}
-
-		// printf("\nfirst two keycode values are %04x\n",keycode);
-		// We only need the first keycode, which is at the lower byte of keycode.
-		// Send the keycode to hardware via PIO.
-		//!-------------------------------End------------------------//
-		usleep(200);//usleep(5000);
-		usb_ctl_val = UsbRead(ctl_reg);
-
-		if(!(usb_ctl_val & no_device))
-		{
-			//USB hot plug routine
-			for(hot_plug_count = 0 ; hot_plug_count < 7 ; hot_plug_count++)
-			{
-				usleep(5*1000);
-				usb_ctl_val = UsbRead(ctl_reg);
-				if(usb_ctl_val & no_device) break;
-			}
-			if(!(usb_ctl_val & no_device))
-			{
-				printf("\n[INFO]: the keyboard has been removed!!! \n");
-				printf("[INFO]: please insert again!!! \n");
-			}
-		}
-
-		while (!(usb_ctl_val & no_device))
-		{
-
-			usb_ctl_val = UsbRead(ctl_reg);
-			usleep(5*1000);
-			usb_ctl_val = UsbRead(ctl_reg);
-			usleep(5*1000);
-			usb_ctl_val = UsbRead(ctl_reg);
-			usleep(5*1000);
-
-			if(usb_ctl_val & no_device)
-				goto USB_HOT_PLUG;
-
-			usleep(200);
-		}
-
-	}//end while
-
-	return 0;
 }
 
+
+/*
+ * WASD or J: Update saber motion accordingly.
+ * or
+ * ENTER: 		game_start = 1;
+ * ESC:	  		game_start = 0, developer_mode = 0;
+ * BACKSPACE: 	game_start = 0, developer_mode = 1;
+ */
+void key_event(int* game_start, saber_t* saber){
+	unsigned long key;
+	int key_array[4];
+	int cur_key;
+	
+	key = get_keycode();
+	key_array[0]= (key>>24) & 0xff;
+	key_array[1]= (key>>16) & 0xff;
+	key_array[2]= (key>>8) & 0xff;
+	key_array[3]= key & 0xff;
+
+	for (int i =0; i< MAX_KEY;i++){
+		cur_key = key_array[i];
+		if (cur_key == KEY_W ){
+			press_w(saber);
+		}
+		else if (cur_key == KEY_S){
+			press_s(saber);
+		}
+		if (cur_key == KEY_A){
+			press_a(saber);
+		}
+		else if (cur_key == KEY_D){
+			press_d(saber);
+		}
+		else if (cur_key == KEY_J){
+			press_j(saber);
+		}
+		else{
+			stop(saber);
+		}
+		// if (cur_key == KEY_K){
+		// 	press_k(saber);
+		// }
+		// if (cur_key == KEY_L){
+		// 	press_l(saber);
+		// }
+
+		if (cur_key == KEY_ENTER){
+			*game_start = 1;
+			return;
+		}
+		else if (cur_key == KEY_ESC){
+			*game_start = 0;
+			developer_mode = 0;
+			return;
+		}
+		else if (cur_key == KEY_ESC){
+			*game_start = 0;
+			return;
+		}
+		else if (cur_key == KEY_BACKSPACE){
+			*game_start = 0;
+			developer_mode = 1;
+			return;
+		}
+		else{
+			return;
+		}
+	}
+}
+/*
+ * 1. update saber state and x,y
+ * 2. update gamefile
+*/
+void game_update(int *game_start,saber_t *saber){
+	// update saber state and x, y
+	update(saber);
+
+	// send the information to the hardware
+	gamefile_update(game_start, saber);
+}
+
+/*
+ * gamefile_update : use characters information to update the game file,
+ * 					which will communicate with the hardware
+ */
+void gamefile_update(int *game_start, saber_t *saber){
+	game_file[0] = saber->exist;
+	game_file[1] = saber->x;
+	game_file[2] = saber->y;
+	game_file[3] = saber->state;
+	game_file[4] = saber->HP > 2;
+
+	// game_file[7] = snowman->exist;
+	// game_file[8] = snowman->x;
+	// game_file[9] = snowman->y;
+	// game_file[10] = snowman->state;
+
+	// game_file[13] = gingerbreadman->exist;
+	// game_file[14] = gingerbreadman->x;
+	// game_file[15] = gingerbreadman->y;
+	// game_file[16] = gingerbreadman->state;
+
+	game_file[19] = *game_start;
+	game_file[20] = *game_start==0;
+	game_file[22] = saber->HP<=0;
+
+	game_file[24] = saber -> HP;
+	game_file[25] = *game_start;
+
+	// game_file[26] = snowman->blood_state<=BLOOD3;
+	// game_file[27] = gingerbreadman->blood_state<=BLOOD3;
+	// game_file[28] = snowman->blood_state;
+	// game_file[29] = gingerbreadman->blood_state;
+	// game_file[30] = snowman->attack_x-20;
+	// game_file[31] = snowman->attack_y;
+	// game_file[32] = gingerbreadman->attack_x;
+	// game_file[33] = gingerbreadman->attack_y;
+
+	// game_file[35] = saber -> Excalibur_state < EXCALIBURNULL;
+	// game_file[36] = (saber->FaceDirection==RIGHT)? saber->x+EXCALIBUR_LENGTH/2+EXCALIBUR_X_BIAS: saber->x-(EXCALIBUR_LENGTH/2+EXCALIBUR_X_BIAS);
+	// game_file[37] = saber-> y+EXCALIBUR_Y_BIAS;
+	// game_file[38] = saber->Excalibur_state;
+	game_file[39] = saber->FaceDirection == LEFT;
+	game_file[41] = win;
+
+	// game_file[43] = saber->Excalibur_remain;
+	game_file[44] = *game_start;
+}
+
+/*
+ * test movement
+ */
+void test_round(int *game_start, saber_t *saber){
+	saber_init(&saber);
+	while(*game_start == 1){
+		// use key code update saber state, vx and vy
+		key_event(&game_start, &saber);
+		game_update(&game_start, &saber);
+	}
+}
+
+int main(){
+	saber_t saber;
+	int game_start = 0;
+	usb_init();		// initialize usb
+	developer_mode = 0;
+
+	GAME_INITIAL:
+	win = 0;
+	while(game_start == 0){
+		key_event(&game_start, &saber);
+		gamefile_update(&game_start, &saber);
+	}
+
+	GAME_START:
+	printf("game start\n");
+	int frame_time = 0.2;
+	while (1){
+		frame_clock(frame_time);
+		// wait until next clock
+		test_round(&game_start, &saber);
+		if (game_start == 0){
+			printf("back to initial\n");
+			goto GAME_INITIAL;
+		}
+
+		//win
+		// win = 1;
+		// while(1){
+		// 	key_event(&game_start, &saber);
+		// 	gamefile_update(&game_start, &saber);
+		// 	if (game_start == 0){goto GAME_INITIAL;}
+		// }
+		// printf("saber vx :%x\n", saber.vx);
+	}
+}
