@@ -1,0 +1,32 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "gnu17",
+            "cppStandard": "gnu++14",
+            "intelliSenseMode": "linux-gcc-x64",
+            "configurationProvider": "ms-vscode.makefile-tools"
+        },
+        {
+            "name": "nios2",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp/**",
+                "/mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp/**/**",
+                "/mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp/**/**/**",
+                "/mnt/c/Users/jiaru/GitHub/ECE385-FPGA-lab/Final-Project/software/final_usb_bsp/**/**/**/**"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "gnu17",
+            "cppStandard": "gnu++14",
+            "intelliSenseMode": "linux-gcc-x64"
+        }
+    ],
+    "version": 4
+}

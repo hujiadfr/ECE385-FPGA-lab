@@ -80,6 +80,7 @@ module top_level(
         .OTG_RST_N(OTG_RST_N)
     );
     logic [7:0] keycode_0, keycode_1, keycode_2, keycode_3, keycode_4, keycode_5, keycode_6, keycode_7;
+    logic [2047:0] game_file;
      // You need to make sure that the port names here match the ports in Qsys-generated codes.
      final_soc nios_system(
         .clk_clk(Clk),         
@@ -94,6 +95,8 @@ module top_level(
         .sdram_wire_ras_n(DRAM_RAS_N),
         .sdram_wire_we_n(DRAM_WE_N), 
         .sdram_clk_clk(DRAM_CLK),
+        
+        .game_readdata(game_file),
 
         .keycode_0_export(keycode_0),                              
         .keycode_1_export(keycode_1),  
@@ -127,49 +130,44 @@ module top_level(
         .DrawY
     );
     
-    wire [3:0] 	command_p1, command_p2; //{up, down, left, right}
-    keycode u_keycode(
-        //ports
-        .Clk       		( Clk       		),
-        .keycode_0 		( keycode_0 		),
-        .keycode_1 		( keycode_1 		),
-        .keycode_2 		( keycode_2 		),
-        .keycode_3 		( keycode_3 		),
-        .keycode_4 		( keycode_4 		),
-        .keycode_5 		( keycode_5 		),
+    // wire [3:0] 	command_p1, command_p2; //{up, down, left, right}
+    // keycode u_keycode(
+    //     //ports
+    //     .Clk       		( Clk       		),
+    //     .keycode_0 		( keycode_0 		),
+    //     .keycode_1 		( keycode_1 		),
+    //     .keycode_2 		( keycode_2 		),
+    //     .keycode_3 		( keycode_3 		),
+    //     .keycode_4 		( keycode_4 		),
+    //     .keycode_5 		( keycode_5 		),
 
-        .command_p1   	( command_p1   		),
-        .command_p2     ( command_p2        )
-    );
+    //     .command_p1   	( command_p1   		),
+    //     .command_p2     ( command_p2        )
+    // );
 
-    wire [9:0] 	Ship_X_Step;
-    wire       	Ship_Y_Step;
-    wire [7:0] 	Ship_Angle;
-    wire        forward;
-    ship_controller #(
-        .Ship_Max_Velocity_Forward 		( 10'd01 		),
-        .Ship_Angle_Default        		( 8'b00010000   ))
-    u_ship_controller(
-        //ports
-        .Clk         		( Clk         		),
-        .Reset       		( Reset_h       	),
-        .Command     		( command_p1     	),
-        .Ship_X_Step 		( Ship_X_Step 		),
-        .Ship_Y_Step 		( Ship_Y_Step 		),
-        .Ship_Angle  		( Ship_Angle  		),
-        .forward            ( forward           )
-    );
-
+    // wire [9:0] 	Ship_X_Step;
+    // wire       	Ship_Y_Step;
+    // wire [7:0] 	Ship_Angle;
+    // wire        forward;
+    // ship_controller #(
+    //     .Ship_Max_Velocity_Forward 		( 10'd01 		),
+    //     .Ship_Angle_Default        		( 8'b00010000   ))
+    // u_ship_controller(
+    //     //ports
+    //     .Clk         		( Clk         		),
+    //     .Reset       		( Reset_h       	),
+    //     .Command     		( command_p1     	),
+    //     .Ship_X_Step 		( Ship_X_Step 		),
+    //     .Ship_Y_Step 		( Ship_Y_Step 		),
+    //     .Ship_Angle  		( Ship_Angle  		),
+    //     .forward            ( forward           )
+    // );
+    assign ship_x = game_file[41:32];
+	assign ship_y = game_file[73:64];
     wire is_ball1;
     wire [3:0] ball_data1;
     Ship #(
-        .Ball_X_Center 		( 10'd480 		),
-        .Ball_Y_Center 		( 10'd360 		),
-        .Ball_X_Min    		( 10'd0   		),
-        .Ball_X_Max    		( 10'd639 		),
-        .Ball_Y_Min    		( 10'd0   		),
-        .Ball_Y_Max    		( 10'd479 		),
-        .Ball_Size     		( 10'd50   		))
+        .RESHAPE_LENGTH     ( 10'd40   		))
     Ship_1(
         //ports
         .Clk       		( Clk       		),
@@ -177,56 +175,14 @@ module top_level(
         .frame_clk 		( VGA_VS     		),
         .DrawX     		( DrawX     		),
         .DrawY     		( DrawY     		),
-        .Step_X    		( Ship_X_Step    	),
-        .Step_Y    		( Ship_Y_Step    	),
-        .Angle     		( Ship_Angle     	),
+        .Ball_X_Pos    	( ship_x  	        ),
+        .Ball_Y_Pos    	( ship_y   	        ),
         .is_ball   		( is_ball1   		),
         .ball_data      ( ball_data1        )
     );
 
-    wire [9:0] 	Ship_X_Step2;
-    wire       	Ship_Y_Step2;
-    wire [7:0] 	Ship_Angle2;
-    wire        forward2;
-    ship_controller #(
-        .Ship_Max_Velocity_Forward 		( 10'd01 		),
-        .Ship_Angle_Default        		( 8'b00000001   ))
-    u_ship_controller2(
-        //ports
-        .Clk         		( Clk         		),
-        .Reset       		( Reset_h       	),
-        .Command     		( command_p2     	),
-        .Ship_X_Step 		( Ship_X_Step2 		),
-        .Ship_Y_Step 		( Ship_Y_Step2 		),
-        .Ship_Angle  		( Ship_Angle2  		),
-        .forward            ( forward2          )
-    );
 
-    wire is_ball2;
-    wire [3:0] ball_data2;
-    Ship #(
-        .Ball_X_Center 		( 10'd160 		),
-        .Ball_Y_Center 		( 10'd120 		),
-        .Ball_X_Min    		( 10'd0   		),
-        .Ball_X_Max    		( 10'd639 		),
-        .Ball_Y_Min    		( 10'd0   		),
-        .Ball_Y_Max    		( 10'd479 		),
-        .Ball_Size     		( 10'd50   		))
-    Ship_2(
-        //ports
-        .Clk       		( Clk       		),
-        .Reset     		( Reset_h     		),
-        .frame_clk 		( VGA_VS     		),
-        .DrawX     		( DrawX     		),
-        .DrawY     		( DrawY     		),
-        .Step_X    		( Ship_X_Step2    	),
-        .Step_Y    		( Ship_Y_Step2    	),
-        .Angle     		( Ship_Angle2     	),
-        .is_ball   		( is_ball2   		),
-        .ball_data      ( ball_data2        )
-    );
-
-
+    
     logic [3:0]background_data;
     background background(.Clk,
                         .DrawX,
@@ -237,10 +193,10 @@ module top_level(
         //ports
         .Clk            ( Clk           ),
         .is_ball1 		( is_ball1 		),
-        .is_ball2 		( is_ball2 		),
+        // .is_ball2 		( is_ball2 		),
 		.background_data(background_data),
         .ball_data1     ( ball_data1    ),
-        .ball_data2     ( ball_data2    ),
+        // .ball_data2     ( ball_data2    ),
         .DrawX   		( DrawX   		),
         .DrawY   		( DrawY   		),
         .VGA_R   		( VGA_R   		),

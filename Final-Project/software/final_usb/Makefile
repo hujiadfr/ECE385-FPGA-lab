@@ -92,6 +92,8 @@ ELF := final_usb.elf
 C_SRCS += io_handler.c
 C_SRCS += main.c
 C_SRCS += usb.c
+C_SRCS += usb_main.c
+C_SRCS += ship_logic.c
 CXX_SRCS :=
 ASM_SRCS :=
 
