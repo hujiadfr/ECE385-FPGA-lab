@@ -2631,15 +2631,9 @@
 						<entry kind="macro" name="__hal__" value=""/>
 					</resource>
 					<resource project-relative-path="main.c">
-						<entry kind="includePath" name="/lab9_bsp/HAL/inc">
-							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-						</entry>
-						<entry kind="includePath" name="/lab9_bsp">
-							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-						</entry>
-						<entry kind="includePath" name="/lab9_bsp/drivers/inc">
-							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-						</entry>
+						<entry kind="includePath" name="C:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/HAL/inc"/>
+						<entry kind="includePath" name="C:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp"/>
+						<entry kind="includePath" name="C:/Users/jiaru/GitHub/ECE385-FPGA-lab/lab9/software/lab9_bsp/drivers/inc"/>
 						<entry kind="macro" name="ALT_NO_INSTRUCTION_EMULATION" value=""/>
 						<entry kind="macro" name="ALT_SINGLE_THREADED" value=""/>
 						<entry kind="macro" name="__hal__" value=""/>

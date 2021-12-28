@@ -16,10 +16,11 @@
 // color_mapper: Decide which color to be output to VGA for each pixel.
 module  color_mapper ( 
                     input logic  Clk,                             //   or background (computed in ball.sv)
-                    input logic  is_ball1,          // Whether current pixel belongs to ball 
+                    input logic  is_ball1,          // Whether current pixel belongs to ball
+						  input logic is_ball2,
                     input logic [3:0] background_data,
                     input logic [3:0] ball_data1,
-                    // input logic [3:0] ball_data2,
+                    input logic [3:0] ball_data2,
                     input logic  [9:0] DrawX, DrawY,      // Current pixel coordinates
                     output logic [7:0] VGA_R, VGA_G, VGA_B // VGA RGB output
                      );
@@ -43,7 +44,8 @@ module  color_mapper (
 	 24'h535C74,24'hAB9B9E,24'hDFE5EB,24'h000000,24'hFFFFFF};
     assign background_color = background_palette[background_data];
 	 assign ship1_color = ship_palette[ball_data1];
-	//  assign ship2_color = ship_palette[ball_data2];
+	 assign ship2_color = ship_palette[ball_data2];
+
     // Output colors to VGA
     
     // assign is_ball = is_ball1 || is_ball2;
@@ -60,13 +62,13 @@ module  color_mapper (
 				else
 					color = ship1_color;
         end
-        // else if (is_ball2 == 1'b1)
-        // begin
-		// 		if(ship2_color == 24'h00FF00)
-		// 			color = background_color;
-		// 		else
-		// 			color = ship2_color;
-        // end
+        else if (is_ball2 == 1'b1)
+        begin
+		 		if(ship2_color == 24'h00FF00)
+		 			color = background_color;
+		 		else
+		 			color = ship2_color;
+         end
         else 
         begin
             color = background_color;

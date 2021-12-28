@@ -12,10 +12,11 @@ University of Illinois ECE Department
 #include <stdio.h>
 #include <time.h>
 #include "aes.h"
+#include "system.h"
 
 // Pointer to base address of AES module, make sure it matches Qsys
 // ? 可以这么做的原因或许是在avalon_aes_interface.sv 文件开头定义了 logic [15:0][31:0] Reg_unit;
-volatile unsigned int * AES_PTR = (unsigned int *) 0x00000040;
+volatile unsigned int * AES_PTR = (unsigned int *) AES_BASE;
 
 // Execution mode: 0 for testing, 1 for benchmarking
 int run_mode = 0;

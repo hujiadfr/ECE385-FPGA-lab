@@ -162,10 +162,17 @@ module top_level(
     //     .Ship_Angle  		( Ship_Angle  		),
     //     .forward            ( forward           )
     // );
+	 logic [9:0]ship_x,ship_y,ship2_x,ship2_y;
     assign ship_x = game_file[41:32];
 	assign ship_y = game_file[73:64];
+	
+	assign ship2_x = game_file[265:256];
+	assign ship2_y = game_file[297:288];
+	
     wire is_ball1;
+	 wire is_ball2;
     wire [3:0] ball_data1;
+	 wire [3:0] ball_data2;
     Ship #(
         .RESHAPE_LENGTH     ( 10'd40   		))
     Ship_1(
@@ -180,7 +187,21 @@ module top_level(
         .is_ball   		( is_ball1   		),
         .ball_data      ( ball_data1        )
     );
-
+	 
+	Ship #(
+        .RESHAPE_LENGTH     ( 10'd40   		))
+    Ship_2(
+        //ports
+        .Clk       		( Clk       		),
+        .Reset     		( Reset_h     		),
+        .frame_clk 		( VGA_VS     		),
+        .DrawX     		( DrawX     		),
+        .DrawY     		( DrawY     		),
+        .Ball_X_Pos    	( ship2_x  	      ),
+        .Ball_Y_Pos    	( ship2_y   	   ),
+        .is_ball   		( is_ball2   		),
+        .ball_data      ( ball_data2        )
+    );
 
     
     logic [3:0]background_data;
@@ -193,10 +214,10 @@ module top_level(
         //ports
         .Clk            ( Clk           ),
         .is_ball1 		( is_ball1 		),
-        // .is_ball2 		( is_ball2 		),
+        .is_ball2 		( is_ball2 		),
 		.background_data(background_data),
         .ball_data1     ( ball_data1    ),
-        // .ball_data2     ( ball_data2    ),
+        .ball_data2     ( ball_data2    ),
         .DrawX   		( DrawX   		),
         .DrawY   		( DrawY   		),
         .VGA_R   		( VGA_R   		),
@@ -208,5 +229,7 @@ module top_level(
     // Display keycode on hex display
 //    HexDriver hex_inst_0 (DrawX[3:0], HEX0);
 //    HexDriver hex_inst_1 (DrawX[7:4], HEX1);
+		HexDriver hex_inst_0 (ship_x[3:0],HEX0);
+		HexDriver hex_inst_1 (ship_x[7:4],HEX1);
 
 endmodule
