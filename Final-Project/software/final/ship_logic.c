@@ -50,17 +50,7 @@ void press_d(ship_t *saber){
 }
 
 // attack
-void press_j(ship_t *saber){
-    if (saber->state == WALK_LEFT1){
-		saber-> state = ATTACK_LEFT1;
-		saber-> state_count = 0;
-		saber-> IsFighting = 1;
-	}else if (saber->state == WALK_RIGHT1){
-		saber-> state = ATTACK_RIGHT1;
-		saber-> state_count = 0;
-		saber-> IsFighting = 1;
-	}
-}
+
 
 // void press_k(saber_t *saber){
 // 	if (saber->Excalibur_remain ==0){
@@ -182,3 +172,26 @@ void update_helper(ship_t *ship, int state_start, int state_end){
 		}
 	}
 }
+
+//检测是否在船体区域内，是返回1 不是返回0
+int detect(ship_t *ship, int x, int y, int dis){
+	int dis_x, dis_y;
+	dis_x = ship->x - x;
+	dis_y = ship->y - y;
+	if (dis_x^2 + dis_y^2 < dis^2)
+		return 1;
+	else
+		return 0;
+}
+
+void detect_ship_attack(ship_t *ship1, ship_t *ship2){
+	int flag = detect(ship1, ship2->x, ship2->y, 40);
+	if(flag){ //撞上了
+		ship1->vx = 0;
+		ship2->vx = 0;
+		ship1->vy = 0;
+		ship2->vy = 0;
+	}
+	return ;
+}
+

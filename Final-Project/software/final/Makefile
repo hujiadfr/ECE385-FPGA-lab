@@ -147,6 +147,7 @@ C_SRCS += main.c
 C_SRCS += ship_logic.c
 C_SRCS += usb.c
 C_SRCS += usb_main.c
+C_SRCS += torpedo.c
 CXX_SRCS :=
 ASM_SRCS :=
 

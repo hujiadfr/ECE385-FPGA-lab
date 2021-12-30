@@ -6,6 +6,7 @@
 #include "io_handler.h"
 #include "ship_logic.h"
 #include "usb_main.h"
+#include "torpedo.h"
 //#ifdef _WIN32
 //#include <Windows.h>
 //#else
@@ -53,7 +54,7 @@ void frame_clock (double frame_time){
  * ESC:	  		game_start = 0, developer_mode = 0;
  * BACKSPACE: 	game_start = 0, developer_mode = 1;
  */
-void key_event(int* game_start, ship_t* ship, ship_t* ship2){
+void key_event(int* game_start, ship_t* ship, ship_t* ship2, torpedo_t *torpedo1, torpedo_t *torpedo2){
 	unsigned long key;
 	int key_array[4];
 	int cur_key, cur_key2;
@@ -79,8 +80,11 @@ void key_event(int* game_start, ship_t* ship, ship_t* ship2){
 		else if (cur_key == KEY_D || cur_key2 == KEY_D ){
 			press_d(ship);
 		}
-		else if (cur_key == KEY_J){
-			press_j(ship);
+		if (cur_key == KEY_J ||cur_key2 == KEY_J){
+			press_j(ship, torpedo1, SHIP2);
+		}
+		else if(cur_key == KEY_M ||cur_key2 == KEY_M){
+			press_j(ship2, torpedo2, SHIP1);
 		}
 		if (cur_key == KEY_UP || cur_key2 == KEY_UP){
 			press_w(ship2);
@@ -94,10 +98,10 @@ void key_event(int* game_start, ship_t* ship, ship_t* ship2){
 		else if (cur_key == KEY_RIGHT || cur_key2 == KEY_RIGHT){
 			press_d(ship2);
 		}
-		else{
-			stop(ship);
-			stop(ship2);
-		}
+//		else{
+//			stop(ship);
+//			stop(ship2);
+//		}
 		// if (cur_key == KEY_K){
 		// 	press_k(ship);
 		// }
@@ -132,19 +136,20 @@ void key_event(int* game_start, ship_t* ship, ship_t* ship2){
  * 1. update saber state and x,y
  * 2. update gamefile
 */
-void game_update(int *game_start,ship_t *ship, ship_t *ship2){
+void game_update(int *game_start,ship_t *ship, ship_t *ship2, torpedo_t *torpedo1, torpedo_t *torpedo2){
 	// update saber state and x, y
 	update(ship, ship2);
-
+	detect_ship_attack(ship,ship2);
+//	update_tor(torpedo1, torpedo2, ship, ship2);
 	// send the information to the hardware
-	gamefile_update(game_start, ship, ship2);
+	gamefile_update(game_start, ship, ship2, torpedo1, torpedo2);
 }
 
 /*
  * gamefile_update : use characters information to update the game file,
  * 					which will communicate with the hardware
  */
-void gamefile_update(int *game_start, ship_t *ship, ship_t *ship2){
+void gamefile_update(int *game_start, ship_t *ship, ship_t *ship2, torpedo_t *torpedo1, torpedo_t *torpedo2){
 	game_file[0] = ship->exist;
 	game_file[1] = ship->x;
 	game_file[2] = ship->y;
@@ -157,10 +162,14 @@ void gamefile_update(int *game_start, ship_t *ship, ship_t *ship2){
 	game_file[10] = ship2->state;
 	game_file[11] = ship2->HP > 2;
 
-	// game_file[13] = gingerbreadman->exist;
-	// game_file[14] = gingerbreadman->x;
-	// game_file[15] = gingerbreadman->y;
-	// game_file[16] = gingerbreadman->state;
+	game_file[12] = torpedo1->x[0];
+	game_file[13] = torpedo1->x[1];
+	game_file[14] = torpedo1->x[2];
+	game_file[15] = torpedo1->x[3];
+	game_file[16] = torpedo1->y[0];
+	game_file[17] = torpedo1->y[1];
+	game_file[18] = torpedo1->y[2];
+	game_file[19] = torpedo1->y[3];
 
 	game_file[19] = *game_start;
 	game_file[20] = *game_start==0;
@@ -170,20 +179,21 @@ void gamefile_update(int *game_start, ship_t *ship, ship_t *ship2){
 	game_file[24] = ship -> HP;
 	game_file[25] = *game_start;
 
-	// game_file[26] = snowman->blood_state<=BLOOD3;
-	// game_file[27] = gingerbreadman->blood_state<=BLOOD3;
-	// game_file[28] = snowman->blood_state;
-	// game_file[29] = gingerbreadman->blood_state;
-	// game_file[30] = snowman->attack_x-20;
-	// game_file[31] = snowman->attack_y;
-	// game_file[32] = gingerbreadman->attack_x;
-	// game_file[33] = gingerbreadman->attack_y;
+	game_file[26] = torpedo2->x[0];
+	game_file[27] = torpedo2->x[1];
+	game_file[28] = torpedo2->x[2];
+	game_file[29] = torpedo2->x[3];
+	game_file[30] = torpedo2->y[0];
+	game_file[31] = torpedo2->y[1];
+	game_file[32] = torpedo2->y[2];
+	game_file[33] = torpedo2->y[3];
 
 	// game_file[35] = saber -> Excalibur_state < EXCALIBURNULL;
 	// game_file[36] = (saber->FaceDirection==RIGHT)? saber->x+EXCALIBUR_LENGTH/2+EXCALIBUR_X_BIAS: saber->x-(EXCALIBUR_LENGTH/2+EXCALIBUR_X_BIAS);
-	// game_file[37] = saber-> y+EXCALIBUR_Y_BIAS;
-	// game_file[38] = saber->Excalibur_state;
+	 game_file[37] = torpedo1->stop;
+	 game_file[38] = torpedo2->stop;
 	game_file[39] = ship->FaceDirection == LEFT;
+	game_file[40] = ship2->FaceDirection == LEFT;
 	game_file[41] = win;
 
 	// game_file[43] = saber->Excalibur_remain;
@@ -193,12 +203,15 @@ void gamefile_update(int *game_start, ship_t *ship, ship_t *ship2){
 /*
  * test movement
  */
-void test_round(int *game_start, ship_t *ship, ship_t *ship2){
+void test_round(int *game_start, ship_t *ship, ship_t *ship2, torpedo_t *torpedo1, torpedo_t *torpedo2){
 	ship_init(ship, ship2);
+	init_tor(torpedo1, SHIP2);
+	init_tor(torpedo2, SHIP1);
 	while(*game_start == 1){
 		// use key code update saber state, vx and vy
-		key_event(game_start, ship, ship2);
-		game_update(game_start, ship, ship2);
+		detect_ship_attack(ship, ship2);
+		key_event(game_start, ship, ship2, torpedo1, torpedo2);
+		game_update(game_start, ship, ship2, torpedo1, torpedo2);
 //		printf("%d\n",game_file[1]);
 	}
 }
@@ -206,6 +219,7 @@ void test_round(int *game_start, ship_t *ship, ship_t *ship2){
 int main(){
 	printf("start");
 	ship_t ship1, ship2;
+	torpedo_t torpedo1, torpedo2;
 	int game_start = 0;
 	usb_init();		// initialize usb
 	developer_mode = 0;
@@ -214,15 +228,15 @@ int main(){
 	while(1){
 		win = 0;
 		while(game_start == 0){
-			key_event(&game_start, &ship1, &ship2);
-			gamefile_update(&game_start, &ship1, &ship2);
+			key_event(&game_start, &ship1, &ship2, &torpedo1, &torpedo2);
+			gamefile_update(&game_start, &ship1, &ship2, &torpedo1, &torpedo2);
 		}
 		printf("game start\n");
 
 		while (1){
 			frame_clock(frame_time);
 			// wait until next clock
-			test_round(&game_start, &ship1, &ship2);
+			test_round(&game_start, &ship1, &ship2, &torpedo1, &torpedo2);
 			if (game_start == 0){
 				printf("back to initial\n");
 				break;

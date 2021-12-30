@@ -13,8 +13,8 @@
 #define INIT_Y 240
 #define INIT_X2 300
 #define INIT_Y2 240
-#define VY_MOST 3
-#define VX_MOST 4
+#define VY_MOST 6
+#define VX_MOST 8
 #define STATE_COUNT_MAX 1
 #define EXCALIBUR_COUNT_MAX 1
 #define RIGHT 0
@@ -87,7 +87,7 @@ enum SHIP1_state
     EXCALIBUR_RIGHT4,
     // POSE_RIGHT1, 
     // POSE_RIGHT2
-} ship_state;
+} ship1_state;
 
 enum Excalibur_state
 {
@@ -106,11 +106,14 @@ void press_w(ship_t *saber);
 void press_s(ship_t *saber);
 void press_a(ship_t *saber);
 void press_d(ship_t *saber);
-void press_j(ship_t *saber);
+
 // void press_k(saber_t *saber);
 // void press_l(saber_t *saber);
 void ship_init(ship_t *ship, ship_t *ship2);
 void update(ship_t *ship, ship_t *ship2);
 void stop(ship_t *saber);
 void update_helper(ship_t*saber, int state_start, int state_end);
+
+int detect(ship_t *ship, int x, int y, int dis);//检测是否在船体区域内，是返回1 不是返回0
+void detect_ship_attack(ship_t *ship1, ship_t *ship2);
 #endif /* SABER_LOGIC_H_ */
