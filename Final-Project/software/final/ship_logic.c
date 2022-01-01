@@ -51,7 +51,6 @@ void press_d(ship_t *saber){
 
 // attack
 
-
 // void press_k(saber_t *saber){
 // 	if (saber->Excalibur_remain ==0){
 // 		return;
@@ -81,9 +80,9 @@ void ship_init(ship_t *ship, ship_t *ship2){
 	ship -> ATK = 3;
 	ship -> state = WALK_RIGHT1;
 	ship -> state_count = 0;
-	ship -> Excalibur_state = EXCALIBURNULL;
-	ship -> Excalibur_damage = 5;
-	ship -> Excalibur_remain = 3;
+	// ship -> Excalibur_state = EXCALIBURNULL;
+	// ship -> Excalibur_damage = 5;
+	// ship -> Excalibur_remain = 3;
 	ship -> IsFighting = 0;
 	ship -> FaceDirection = RIGHT;
 	ship -> injuring =0;
@@ -97,9 +96,9 @@ void ship_init(ship_t *ship, ship_t *ship2){
 	ship2 -> ATK = 3;
 	ship2 -> state = WALK_RIGHT1;
 	ship2 -> state_count = 0;
-	ship2 -> Excalibur_state = EXCALIBURNULL;
-	ship2 -> Excalibur_damage = 5;
-	ship2 -> Excalibur_remain = 3;
+	// ship2 -> Excalibur_state = EXCALIBURNULL;
+	// ship2 -> Excalibur_damage = 5;
+	// ship2 -> Excalibur_remain = 3;
 	ship2 -> IsFighting = 0;
 	ship2 -> FaceDirection = RIGHT;
 	ship2 -> injuring =0;
@@ -134,15 +133,14 @@ void update(ship_t *ship, ship_t *ship2){
 	if (ship2-> y < UP_MOST){ship2-> y = UP_MOST;}
 	if (ship2-> y > DOWN_MOST){ship2-> y = DOWN_MOST;}
 
-	update_helper(ship, ATTACK_LEFT1, ATTACK_LEFT1);
-	update_helper(ship, ATTACK_RIGHT1, ATTACK_RIGHT1);
-	update_helper(ship, EXCALIBUR_LEFT1, EXCALIBUR_LEFT4);
-	update_helper(ship, EXCALIBUR_RIGHT1, EXCALIBUR_RIGHT4);
+	update_helper(ship, ATTACK, ATTACK);
+	// update_helper(ship, EXCALIBUR_LEFT1, EXCALIBUR_LEFT4);
+	// update_helper(ship, EXCALIBUR_RIGHT1, EXCALIBUR_RIGHT4);
 
-	update_helper(ship2, ATTACK_LEFT1, ATTACK_LEFT1);
-	update_helper(ship2, ATTACK_RIGHT1, ATTACK_RIGHT1);
-	update_helper(ship2, EXCALIBUR_LEFT1, EXCALIBUR_LEFT4);
-	update_helper(ship2, EXCALIBUR_RIGHT1, EXCALIBUR_RIGHT4);
+	update_helper(ship2, ATTACK, ATTACK);
+	update_helper(ship2, ATTACK, ATTACK);
+	// update_helper(ship2, EXCALIBUR_LEFT1, EXCALIBUR_LEFT4);
+	// update_helper(ship2, EXCALIBUR_RIGHT1, EXCALIBUR_RIGHT4);
 	// update_helper(saber, GET_HITTED, saber->state);
 
 	// update_helper(saber, POSE_LEFT1, POSE_LEFT2);
@@ -173,7 +171,7 @@ void update_helper(ship_t *ship, int state_start, int state_end){
 	}
 }
 
-//¼ì²âÊÇ·ñÔÚ´¬ÌåÇøÓòÄÚ£¬ÊÇ·µ»Ø1 ²»ÊÇ·µ»Ø0
+//ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ú´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú£ï¿½ï¿½Ç·ï¿½ï¿½ï¿½1 ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½0
 int detect(ship_t *ship, int x, int y, int dis){
 	int dis_x, dis_y;
 	dis_x = ship->x - x;
@@ -186,7 +184,7 @@ int detect(ship_t *ship, int x, int y, int dis){
 
 void detect_ship_attack(ship_t *ship1, ship_t *ship2){
 	int flag = detect(ship1, ship2->x, ship2->y, 40);
-	if(flag){ //×²ÉÏÁË
+	if(flag){ //×²ï¿½ï¿½ï¿½ï¿½
 		ship1->vx = 0;
 		ship2->vx = 0;
 		ship1->vy = 0;

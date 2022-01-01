@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "ios": "c",
+        "iosfwd": "c",
+        "locale": "c",
+        "optional": "c",
+        "string": "c",
+        "utility": "c"
+    }
+}

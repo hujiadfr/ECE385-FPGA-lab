@@ -14,6 +14,7 @@
 
 
 module top_level( 
+            input 		 [18:0] SW,	          // only for test
             input               CLOCK_50,
             input        [3:0]  KEY,          //bit 0 is set up as Reset
             output logic [6:0]  HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, HEX6, HEX7, // output to HEX displayer
@@ -45,6 +46,8 @@ module top_level(
                                 DRAM_WE_N,    //SDRAM Write Enable
                                 DRAM_CS_N,    //SDRAM Chip Select
                                 DRAM_CLK      //SDRAM Clock
+
+
                     );
     
     logic Reset_h, Clk;
@@ -130,13 +133,65 @@ module top_level(
         .DrawY
     );
     
+<<<<<<< HEAD
 
 	 logic [9:0]ship_x,ship_y,ship2_x,ship2_y;
+=======
+    // wire [3:0] 	command_p1, command_p2; //{up, down, left, right}
+    // keycode u_keycode(
+    //     //ports
+    //     .Clk       		( Clk       		),
+    //     .keycode_0 		( keycode_0 		),
+    //     .keycode_1 		( keycode_1 		),
+    //     .keycode_2 		( keycode_2 		),
+    //     .keycode_3 		( keycode_3 		),
+    //     .keycode_4 		( keycode_4 		),
+    //     .keycode_5 		( keycode_5 		),
+
+    //     .command_p1   	( command_p1   		),
+    //     .command_p2     ( command_p2        )
+    // );
+
+    // wire [9:0] 	Ship_X_Step;
+    // wire       	Ship_Y_Step;
+    // wire [7:0] 	Ship_Angle;
+    // wire        forward;
+    // ship_controller #(
+    //     .Ship_Max_Velocity_Forward 		( 10'd01 		),
+    //     .Ship_Angle_Default        		( 8'b00010000   ))
+    // u_ship_controller(
+    //     //ports
+    //     .Clk         		( Clk         		),
+    //     .Reset       		( Reset_h       	),
+    //     .Command     		( command_p1     	),
+    //     .Ship_X_Step 		( Ship_X_Step 		),
+    //     .Ship_Y_Step 		( Ship_Y_Step 		),
+    //     .Ship_Angle  		( Ship_Angle  		),
+    //     .forward            ( forward           )
+    // );
+	logic [9:0]ship_x,ship_y,ship2_x,ship2_y;
+>>>>>>> main
     assign ship_x = game_file[41:32];
 	assign ship_y = game_file[73:64];
 	
 	assign ship2_x = game_file[265:256];
 	assign ship2_y = game_file[297:288];
+
+    logic [5:0] ship_state, ship2_state;
+    assign ship_state = game_file[101:96];
+    assign ship2_state = game_file[325:320];
+
+// for test
+    // assign ship2_state = ship_state;
+    // shipFSM u_shipFSM(
+    //     //ports
+    //     .Clk        		( Clk        		),
+    //     .Reset      		( Reset      		),
+    //     .frame_clk  		( VGA_VS      		),
+    //     .SW         		( SW         		),
+    //     .ship_state 		( ship_state 		)
+    // );
+//
 	
     logic [9:0] torpedo1_0_x, torpedo1_1_x, torpedo1_2_x, torpedo1_3_x, torpedo2_0_x, torpedo2_1_x, torpedo2_2_x, torpedo2_3_x;
     logic [9:0] torpedo1_0_y, torpedo1_1_y, torpedo1_2_y, torpedo1_3_y, torpedo2_0_y, torpedo2_1_y, torpedo2_2_y, torpedo2_3_y;
@@ -166,8 +221,9 @@ module top_level(
     assign torpedo2_3_y = game_file[1065:1056];
     
     wire is_ball1;
-	 wire is_ball2;
+	wire is_ball2;
     wire [3:0] ball_data1;
+<<<<<<< HEAD
 	 wire [3:0] ball_data2;
 
     wire is_tor1_0;
@@ -188,6 +244,9 @@ module top_level(
     wire [3:0] torpedo2_2;
     wire [3:0] torpedo2_3;
 
+=======
+	wire [3:0] ball_data2;
+>>>>>>> main
     Ship #(
         .RESHAPE_LENGTH     ( 10'd40   		))
     Ship_1(
@@ -199,6 +258,7 @@ module top_level(
         .DrawY     		( DrawY     		),
         .Ball_X_Pos    	( ship_x  	        ),
         .Ball_Y_Pos    	( ship_y   	        ),
+        .ship_state     ( ship_state        ),
         .is_ball   		( is_ball1   		),
         .ball_data      ( ball_data1        )
     );
@@ -212,8 +272,9 @@ module top_level(
         .frame_clk 		( VGA_VS     		),
         .DrawX     		( DrawX     		),
         .DrawY     		( DrawY     		),
-        .Ball_X_Pos    	( ship2_x  	      ),
-        .Ball_Y_Pos    	( ship2_y   	   ),
+        .Ball_X_Pos    	( ship2_x  	        ),
+        .Ball_Y_Pos    	( ship2_y   	    ),
+        .ship_state     ( ship2_state       ),
         .is_ball   		( is_ball2   		),
         .ball_data      ( ball_data2        )
     );

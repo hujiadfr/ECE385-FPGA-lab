@@ -53,54 +53,12 @@ typedef struct ship_t{
 enum SHIP1_state
 {
     STOP = 0,
-    GET_HITTED,
-    FIRING,
-    WALK_LEFT1, 
-    // WALK_LEFT2, 
-    // WALK_LEFT3, 
-    // WALK_LEFT4, 
-    // WALK_LEFT5, 
-    // WALK_LEFT6,
-    WALK_RIGHT1, 
-    // WALK_RIGHT2, 
-    // WALK_RIGHT3, 
-    // WALK_RIGHT4, 
-    // WALK_RIGHT5, 
-    // WALK_RIGHT6,    
-    ATTACK_LEFT1, 
-    // ATTACK_LEFT2, 
-    // ATTACK_LEFT3, 
-    // ATTACK_LEFT4,
-    EXCALIBUR_LEFT1, 
-    EXCALIBUR_LEFT2, 
-    EXCALIBUR_LEFT3, 
-    EXCALIBUR_LEFT4,
-    // POSE_LEFT1, 
-    // POSE_LEFT2,
-    ATTACK_RIGHT1, 
-    // ATTACK_RIGHT2, 
-    // ATTACK_RIGHT3, 
-    // ATTACK_RIGHT4,
-    EXCALIBUR_RIGHT1, 
-    EXCALIBUR_RIGHT2, 
-    EXCALIBUR_RIGHT3, 
-    EXCALIBUR_RIGHT4,
-    // POSE_RIGHT1, 
-    // POSE_RIGHT2
-} ship1_state;
-
-enum Excalibur_state
-{
-    EXCALIBUR1 = 0, 
-    EXCALIBUR2, 
-    EXCALIBUR3, 
-    EXCALIBUR4, 
-    EXCALIBUR5, 
-    EXCALIBUR6, 
-    EXCALIBUR7, 
-    EXCALIBUR8,
-    EXCALIBURNULL
-}Excalibur_state;
+    GET_HITTED, // 1
+    WALK_LEFT1, // 2
+    WALK_RIGHT1, //3
+    ATTACK,     // 4
+    DEAD        // 5
+} ship_state;
 
 void press_w(ship_t *saber);
 void press_s(ship_t *saber);
@@ -114,6 +72,6 @@ void update(ship_t *ship, ship_t *ship2);
 void stop(ship_t *saber);
 void update_helper(ship_t*saber, int state_start, int state_end);
 
-int detect(ship_t *ship, int x, int y, int dis);//¼ì²âÊÇ·ñÔÚ´¬ÌåÇøÓòÄÚ£¬ÊÇ·µ»Ø1 ²»ÊÇ·µ»Ø0
+int detect(ship_t *ship, int x, int y, int dis);//ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ú´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú£ï¿½ï¿½Ç·ï¿½ï¿½ï¿½1 ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½0
 void detect_ship_attack(ship_t *ship1, ship_t *ship2);
 #endif /* SABER_LOGIC_H_ */
