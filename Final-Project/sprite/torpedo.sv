@@ -12,9 +12,10 @@ module  torpedo ( input         Clk,                // 50 MHz clock
     //--------------------------------------------------------------------
     parameter [9:0] Ball_X_Center = 10'd320;  // Center position on the X axis
     parameter [9:0] Ball_Y_Center = 10'd240;  // Center position on the Y axis
+	 parameter [9:0] Size = 10'd20;
 //--------------------------------------------------------------------  
 
-    int DistX, DistY, Size;
+    int DistX, DistY;
     assign DistX = DrawX - Ball_X_Pos;
     assign DistY = DrawY - Ball_Y_Pos;
 

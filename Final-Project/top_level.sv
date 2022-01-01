@@ -419,5 +419,8 @@ torpedo7(
 //    HexDriver hex_inst_1 (DrawX[7:4], HEX1);
 		HexDriver hex_inst_0 (ship_x[3:0],HEX0);
 		HexDriver hex_inst_1 (ship_x[7:4],HEX1);
+        HexDriver hex_inst_2 (torpedo1_0_x[3:0], HEX2);
+        HexDriver hex_inst_3 (torpedo1_0_x[7:4], HEX3);
+        HexDriver hex_inst_4 (torpedo1_0_x[9:8], HEX4);
 
 endmodule

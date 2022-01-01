@@ -56,46 +56,86 @@ void frame_clock (double frame_time){
  */
 void key_event(int* game_start, ship_t* ship, ship_t* ship2, torpedo_t *torpedo1, torpedo_t *torpedo2){
 	unsigned long key;
-	int key_array[4];
-	int cur_key, cur_key2;
-	
-	key = get_keycode();
+	unsigned long key2;
+	unsigned long key3;
+
+	int key_array[12];
+	int cur_key, cur_key2, cur_key3, cur_key4, cur_key5, cur_key6;
+	get_keycode(&key, &key2, &key3);
+
+
 	key_array[0]= (key>>24) & 0xff;
 	key_array[1]= (key>>16) & 0xff;
 	key_array[2]= (key>>8) & 0xff;
 	key_array[3]= key & 0xff;
 
-	for (int i =0; i < 2;i++){
+	key_array[4]= (key2>>24) & 0xff;
+	key_array[5]= (key2>>16) & 0xff;
+	key_array[6]= (key2>>8) & 0xff;
+	key_array[7]= key2 & 0xff;
+
+	key_array[8]= (key3>>24) & 0xff;
+	key_array[9]= (key3>>16) & 0xff;
+	key_array[10]= (key3>>8) & 0xff;
+	key_array[11]= key3 & 0xff;
+
+	for (int i = 0; i < 2;i ++){
 		cur_key = key_array[i];
 		cur_key2 = key_array[i+2];
-		if (cur_key == KEY_W || cur_key2 == KEY_W ){
+		cur_key3 = key_array[i+4];
+		cur_key4 = key_array[i+6];
+		cur_key5 = key_array[i+8];
+		cur_key6 = key_array[i+10];
+		if (cur_key == KEY_W || cur_key2 == KEY_W
+			||cur_key3 == KEY_W ||cur_key4 == KEY_W ||
+			cur_key5 == KEY_W || cur_key6 == KEY_W){
 			press_w(ship);
 		}
-		else if (cur_key == KEY_S || cur_key2 == KEY_S ){
+		if (cur_key == KEY_S || cur_key2 == KEY_S ||
+			cur_key3 == KEY_S || cur_key4 == KEY_S ||
+			cur_key5 == KEY_S || cur_key6 == KEY_S){
 			press_s(ship);
 		}
-		if (cur_key == KEY_A || cur_key2 == KEY_A){
+		if (cur_key == KEY_A || cur_key2 == KEY_A ||
+			cur_key3 == KEY_A || cur_key4 == KEY_A ||
+			cur_key5 == KEY_A || cur_key6 == KEY_A){
 			press_a(ship);
 		}
-		else if (cur_key == KEY_D || cur_key2 == KEY_D ){
+		if (cur_key == KEY_D || cur_key2 == KEY_D ||
+			cur_key3 == KEY_D || cur_key4 == KEY_D ||
+			cur_key5 == KEY_D || cur_key6 == KEY_D ){
 			press_d(ship);
 		}
-		if (cur_key == KEY_J ||cur_key2 == KEY_J){
+		if (cur_key == KEY_J ||cur_key2 == KEY_J ||
+			cur_key3 == KEY_J || cur_key4 == KEY_J ||
+			cur_key5 == KEY_J || cur_key6 == KEY_J ){
 			press_j(ship, torpedo1, SHIP2);
+			printf("torpedo1 \n");
 		}
-		else if(cur_key == KEY_M ||cur_key2 == KEY_M){
+		if(cur_key == KEY_M ||cur_key2 == KEY_M ||
+			cur_key3 == KEY_M || cur_key4 == KEY_M ||
+			cur_key5 == KEY_M || cur_key6 == KEY_M){
 			press_j(ship2, torpedo2, SHIP1);
+			printf("torpedo2 \n");
 		}
-		if (cur_key == KEY_UP || cur_key2 == KEY_UP){
+		if (cur_key == KEY_UP || cur_key2 == KEY_UP ||
+			cur_key3 == KEY_UP || cur_key4 == KEY_UP ||
+			cur_key5 == KEY_UP || cur_key5 == KEY_UP){
 			press_w(ship2);
 		}
-		else if (cur_key == KEY_DOWN || cur_key2 == KEY_DOWN){
+		if (cur_key == KEY_DOWN || cur_key2 == KEY_DOWN||
+			cur_key3 == KEY_DOWN || cur_key4 == KEY_DOWN||
+			cur_key5 == KEY_DOWN || cur_key6 == KEY_DOWN){
 			press_s(ship2);
 		}
-		if (cur_key == KEY_LEFT || cur_key2 == KEY_LEFT){
+		if (cur_key == KEY_LEFT || cur_key2 == KEY_LEFT ||
+		    cur_key3 == KEY_LEFT || cur_key4 == KEY_LEFT ||
+		    cur_key5 == KEY_LEFT || cur_key6 == KEY_LEFT){
 			press_a(ship2);
 		}
-		else if (cur_key == KEY_RIGHT || cur_key2 == KEY_RIGHT){
+		if (cur_key == KEY_RIGHT || cur_key2 == KEY_RIGHT ||
+			cur_key3 == KEY_RIGHT || cur_key4 == KEY_RIGHT ||
+			cur_key5 == KEY_RIGHT || cur_key6 == KEY_RIGHT ){
 			press_d(ship2);
 		}
 //		else{
@@ -140,7 +180,7 @@ void game_update(int *game_start,ship_t *ship, ship_t *ship2, torpedo_t *torpedo
 	// update saber state and x, y
 	update(ship, ship2);
 	detect_ship_attack(ship,ship2);
-//	update_tor(torpedo1, torpedo2, ship, ship2);
+	update_tor(torpedo1, torpedo2, ship, ship2);
 	// send the information to the hardware
 	gamefile_update(game_start, ship, ship2, torpedo1, torpedo2);
 }
@@ -209,7 +249,6 @@ void test_round(int *game_start, ship_t *ship, ship_t *ship2, torpedo_t *torpedo
 	init_tor(torpedo2, SHIP1);
 	while(*game_start == 1){
 		// use key code update saber state, vx and vy
-		detect_ship_attack(ship, ship2);
 		key_event(game_start, ship, ship2, torpedo1, torpedo2);
 		game_update(game_start, ship, ship2, torpedo1, torpedo2);
 //		printf("%d\n",game_file[1]);

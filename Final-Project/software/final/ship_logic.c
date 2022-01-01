@@ -176,7 +176,7 @@ int detect(ship_t *ship, int x, int y, int dis){
 	int dis_x, dis_y;
 	dis_x = ship->x - x;
 	dis_y = ship->y - y;
-	if (dis_x^2 + dis_y^2 < dis^2)
+	if (dis_x*dis_x + dis_y*dis_y < dis*dis)
 		return 1;
 	else
 		return 0;
