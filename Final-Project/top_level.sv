@@ -14,6 +14,7 @@
 
 
 module top_level( 
+            input 		 [18:0] SW,	          // only for test
             input               CLOCK_50,
             input        [3:0]  KEY,          //bit 0 is set up as Reset
             output logic [6:0]  HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, HEX6, HEX7, // output to HEX displayer
@@ -45,6 +46,8 @@ module top_level(
                                 DRAM_WE_N,    //SDRAM Write Enable
                                 DRAM_CS_N,    //SDRAM Chip Select
                                 DRAM_CLK      //SDRAM Clock
+
+
                     );
     
     logic Reset_h, Clk;
@@ -162,17 +165,33 @@ module top_level(
     //     .Ship_Angle  		( Ship_Angle  		),
     //     .forward            ( forward           )
     // );
-	 logic [9:0]ship_x,ship_y,ship2_x,ship2_y;
+	logic [9:0]ship_x,ship_y,ship2_x,ship2_y;
     assign ship_x = game_file[41:32];
 	assign ship_y = game_file[73:64];
 	
 	assign ship2_x = game_file[265:256];
 	assign ship2_y = game_file[297:288];
+
+    // assign ship_state = game_file[101:96];
+    // assign ship2_state = game_file[325:320];
+    logic [5:0] ship_state, ship2_state;
+    assign ship2_state = ship_state;
+
+// for test
+    shipFSM u_shipFSM(
+        //ports
+        .Clk        		( Clk        		),
+        .Reset      		( Reset      		),
+        .frame_clk  		( VGA_VS      		),
+        .SW         		( SW         		),
+        .ship_state 		( ship_state 		)
+    );
+//
 	
     wire is_ball1;
-	 wire is_ball2;
+	wire is_ball2;
     wire [3:0] ball_data1;
-	 wire [3:0] ball_data2;
+	wire [3:0] ball_data2;
     Ship #(
         .RESHAPE_LENGTH     ( 10'd40   		))
     Ship_1(
@@ -184,6 +203,7 @@ module top_level(
         .DrawY     		( DrawY     		),
         .Ball_X_Pos    	( ship_x  	        ),
         .Ball_Y_Pos    	( ship_y   	        ),
+        .ship_state     ( ship_state        ),
         .is_ball   		( is_ball1   		),
         .ball_data      ( ball_data1        )
     );
@@ -197,8 +217,9 @@ module top_level(
         .frame_clk 		( VGA_VS     		),
         .DrawX     		( DrawX     		),
         .DrawY     		( DrawY     		),
-        .Ball_X_Pos    	( ship2_x  	      ),
-        .Ball_Y_Pos    	( ship2_y   	   ),
+        .Ball_X_Pos    	( ship2_x  	        ),
+        .Ball_Y_Pos    	( ship2_y   	    ),
+        .ship_state     ( ship2_state       ),
         .is_ball   		( is_ball2   		),
         .ball_data      ( ball_data2        )
     );

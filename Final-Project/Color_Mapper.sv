@@ -64,11 +64,11 @@ module  color_mapper (
         end
         else if (is_ball2 == 1'b1)
         begin
-		 		if(ship2_color == 24'h00FF00)
-		 			color = background_color;
-		 		else
-		 			color = ship2_color;
-         end
+            if(ship2_color == 24'h00FF00)
+                color = background_color;
+            else
+                color = ship2_color;
+        end
         else 
         begin
             color = background_color;
