@@ -29,6 +29,8 @@
 #define ATK_FRAME  4
 #define EXCALIBUR_FRAME 4
 #define POSE_FRAME  2
+#define SHIP_KIND_MAX 2
+
 typedef struct ship_t{
 	int exist;
     int x,y;                // position
@@ -48,6 +50,9 @@ typedef struct ship_t{
     // 改成getHit
     int injuring;		// just be attacked
     int Excalibur_damage;
+
+    int choose_ship;
+    int ship_choose_ready;
 }ship_t;
 
 enum SHIP1_state

@@ -165,6 +165,28 @@ module top_level(
     //     .Ship_Angle  		( Ship_Angle  		),
     //     .forward            ( forward           )
     // );
+//----------------------------------------------------------------
+    // choose ship state control
+    wire [2:0] choose_ship1, choose_ship2;
+	wire ship1_choose_ready, ship2_choose_ready;
+    wire is_choose_state_data;
+    wire [3:0] choose_state_data;
+    choose_state #(
+        .RESHAPE_LENGTH     ( 10'd80   		),
+        .HALF_LENGTH        ( 10'd40        ))
+    u_choose_state(
+        .Clk       		        ( Clk       		),
+        .DrawX     		        ( DrawX     		),
+        .DrawY     		        ( DrawY     		),
+        .choose_ship1           ( choose_ship1      ),
+        .choose_ship2           ( choose_ship2      ),
+        .ship1_choose_ready     ( ship1_choose_ready),
+        .ship2_choose_ready     ( ship2_choose_ready),
+        .is_choose_state_data   ( is_choose_state_data),
+        .choose_state_data      ( choose_state_data   )
+    );
+//----------------------------------------------------------------
+ 
 	logic [9:0]ship_x,ship_y,ship2_x,ship2_y;
     assign ship_x = game_file[41:32];
 	assign ship_y = game_file[73:64];
@@ -208,7 +230,7 @@ module top_level(
         .ball_data      ( ball_data1        )
     );
 	 
-	Ship #(
+	Ship2 #(
         .RESHAPE_LENGTH     ( 10'd40   		))
     Ship_2(
         //ports
@@ -236,9 +258,11 @@ module top_level(
         .Clk            ( Clk           ),
         .is_ball1 		( is_ball1 		),
         .is_ball2 		( is_ball2 		),
+        .is_choose_state_data   		( is_choose_state_data),
 		.background_data(background_data),
         .ball_data1     ( ball_data1    ),
         .ball_data2     ( ball_data2    ),
+        .choose_state_data   		( choose_state_data),
         .DrawX   		( DrawX   		),
         .DrawY   		( DrawY   		),
         .VGA_R   		( VGA_R   		),

@@ -6,6 +6,7 @@
 #include "io_handler.h"
 #include "ship_logic.h"
 #include "usb_main.h"
+#include "choose_ship.c"
 //#ifdef _WIN32
 //#include <Windows.h>
 //#else
@@ -204,15 +205,23 @@ void test_round(int *game_start, ship_t *ship, ship_t *ship2){
 }
 
 int main(){
-	printf("start");
-	ship_t ship1, ship2;
-	int game_start = 0;
+
 	usb_init();		// initialize usb
 	developer_mode = 0;
-	int frame_time;
-	frame_time = 2;
+	int frame_time = 2;
 	while(1){
 		win = 0;
+		printf("start");
+		ship_t ship1, ship2;
+		int player1_ready = 0;
+		int player2_ready = 0;
+		while(!(player1_ready && player2_ready)){
+			choose_ship(&player1_ready, &player2_ready, &ship1, &ship2);
+			ship_choose_update(&player1_ready, &player2_ready, &ship1, &ship2);
+		}
+		printf("choose ship ready\n");
+
+		int game_start = 0;
 		while(game_start == 0){
 			key_event(&game_start, &ship1, &ship2);
 			gamefile_update(&game_start, &ship1, &ship2);

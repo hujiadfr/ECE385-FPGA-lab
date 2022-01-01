@@ -5,6 +5,7 @@
         "locale": "c",
         "optional": "c",
         "string": "c",
-        "utility": "c"
+        "utility": "c",
+        "stdio.h": "c"
     }
 }

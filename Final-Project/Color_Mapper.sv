@@ -15,13 +15,15 @@
 
 // color_mapper: Decide which color to be output to VGA for each pixel.
 module  color_mapper ( 
-                    input logic  Clk,                             //   or background (computed in ball.sv)
-                    input logic  is_ball1,          // Whether current pixel belongs to ball
-						  input logic is_ball2,
+                    input logic Clk,                             //   or background (computed in ball.sv)
+                    input logic is_ball1,          // Whether current pixel belongs to ball
+					input logic is_ball2,
+                    input logic is_choose_state_data,
                     input logic [3:0] background_data,
                     input logic [3:0] ball_data1,
                     input logic [3:0] ball_data2,
-                    input logic  [9:0] DrawX, DrawY,      // Current pixel coordinates
+                    input logic [3:0] choose_state_data,
+                    input logic [9:0] DrawX, DrawY,      // Current pixel coordinates
                     output logic [7:0] VGA_R, VGA_G, VGA_B // VGA RGB output
                      );
     logic [7:0] bg_data, code;
@@ -29,22 +31,24 @@ module  color_mapper (
     parameter [9:0] reshap_len = 10'd320;
     logic is_ball;
 //    logic [23:0] background_palette [0:2];
-	 logic [23:0] background_palette [0:15];
-	 logic [23:0] ship_palette [0:15];
-	 logic [23:0] ship1_color;
-	 logic [23:0] ship2_color;
-	 logic [23:0] background_color;
-	 assign background_palette = '{24'h3FB9E9,24'h0AA5E8,24'h04A3E8,24'h3FB9E9,
-	                            24'h0AA5E8,24'h04A3E8,24'h3FB9E9,
-	 24'h0AA5E8,24'h04A3E8,24'h3FB9E9,24'h0AA5E8,24'h04A3E8,
-	 24'h3FB9E9,24'h0AA5E8,24'h04A3E8,
-	 24'h3FB9E9};
-	 assign ship_palette = '{24'hFFF3DC,24'hCCC1D3,24'hAE3F4C,24'h9D834D,24'h020101,
-	 24'h00FF00,24'hF0CCAF,24'hFFFBEB,24'h766C96,24'hE3998A,24'h59667F,
-	 24'h535C74,24'hAB9B9E,24'hDFE5EB,24'h000000,24'hFFFFFF};
+    logic [23:0] background_palette [0:15];
+    logic [23:0] ship_palette [0:15];
+    logic [23:0] ship1_color;
+    logic [23:0] ship2_color;
+    logic [23:0] background_color;
+    assign background_palette = '{24'h3FB9E9,24'h0AA5E8,24'h04A3E8,24'h3FB9E9,
+                            24'h0AA5E8,24'h04A3E8,24'h3FB9E9,
+    24'h0AA5E8,24'h04A3E8,24'h3FB9E9,24'h0AA5E8,24'h04A3E8,
+    24'h3FB9E9,24'h0AA5E8,24'h04A3E8,
+    24'h3FB9E9};
+    assign ship_palette = '{24'hFFF3DC,24'hCCC1D3,24'hAE3F4C,24'h9D834D,24'h020101,
+    24'h00FF00,24'hF0CCAF,24'hFFFBEB,24'h766C96,24'hE3998A,24'h59667F,
+    24'h535C74,24'hAB9B9E,24'hDFE5EB,24'h000000,24'hFFFFFF};
     assign background_color = background_palette[background_data];
-	 assign ship1_color = ship_palette[ball_data1];
-	 assign ship2_color = ship_palette[ball_data2];
+    assign ship1_color = ship_palette[ball_data1];
+    assign ship2_color = ship_palette[ball_data2];
+
+    assign choose_state_color = ship_palette[choose_state_data];
 
     // Output colors to VGA
     
@@ -55,7 +59,13 @@ module  color_mapper (
     // Assign color based on is_ball signal
     always_comb
     begin
-        if (is_ball1 == 1'b1) 
+        if (is_choose_state_data) begin
+            if(choose_state_color == 24'h00FF00)
+					color = background_color;
+				else
+					color = choose_state_color;
+        end
+        else if (is_ball1 == 1'b1) 
         begin
             if(ship1_color == 24'h00FF00)
 					color = background_color;
