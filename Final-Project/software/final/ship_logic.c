@@ -52,11 +52,11 @@ void press_d(ship_t *saber){
 // attack
 void press_j(ship_t *saber){
     if (saber->state == WALK_LEFT1){
-		saber-> state = ATTACK_LEFT1;
+		saber-> state = ATTACK;
 		saber-> state_count = 0;
 		saber-> IsFighting = 1;
 	}else if (saber->state == WALK_RIGHT1){
-		saber-> state = ATTACK_RIGHT1;
+		saber-> state = ATTACK;
 		saber-> state_count = 0;
 		saber-> IsFighting = 1;
 	}
@@ -91,9 +91,9 @@ void ship_init(ship_t *ship, ship_t *ship2){
 	ship -> ATK = 3;
 	ship -> state = WALK_RIGHT1;
 	ship -> state_count = 0;
-	ship -> Excalibur_state = EXCALIBURNULL;
-	ship -> Excalibur_damage = 5;
-	ship -> Excalibur_remain = 3;
+	// ship -> Excalibur_state = EXCALIBURNULL;
+	// ship -> Excalibur_damage = 5;
+	// ship -> Excalibur_remain = 3;
 	ship -> IsFighting = 0;
 	ship -> FaceDirection = RIGHT;
 	ship -> injuring =0;
@@ -107,9 +107,9 @@ void ship_init(ship_t *ship, ship_t *ship2){
 	ship2 -> ATK = 3;
 	ship2 -> state = WALK_RIGHT1;
 	ship2 -> state_count = 0;
-	ship2 -> Excalibur_state = EXCALIBURNULL;
-	ship2 -> Excalibur_damage = 5;
-	ship2 -> Excalibur_remain = 3;
+	// ship2 -> Excalibur_state = EXCALIBURNULL;
+	// ship2 -> Excalibur_damage = 5;
+	// ship2 -> Excalibur_remain = 3;
 	ship2 -> IsFighting = 0;
 	ship2 -> FaceDirection = RIGHT;
 	ship2 -> injuring =0;
@@ -144,15 +144,14 @@ void update(ship_t *ship, ship_t *ship2){
 	if (ship2-> y < UP_MOST){ship2-> y = UP_MOST;}
 	if (ship2-> y > DOWN_MOST){ship2-> y = DOWN_MOST;}
 
-	update_helper(ship, ATTACK_LEFT1, ATTACK_LEFT1);
-	update_helper(ship, ATTACK_RIGHT1, ATTACK_RIGHT1);
-	update_helper(ship, EXCALIBUR_LEFT1, EXCALIBUR_LEFT4);
-	update_helper(ship, EXCALIBUR_RIGHT1, EXCALIBUR_RIGHT4);
+	update_helper(ship, ATTACK, ATTACK);
+	// update_helper(ship, EXCALIBUR_LEFT1, EXCALIBUR_LEFT4);
+	// update_helper(ship, EXCALIBUR_RIGHT1, EXCALIBUR_RIGHT4);
 
-	update_helper(ship2, ATTACK_LEFT1, ATTACK_LEFT1);
-	update_helper(ship2, ATTACK_RIGHT1, ATTACK_RIGHT1);
-	update_helper(ship2, EXCALIBUR_LEFT1, EXCALIBUR_LEFT4);
-	update_helper(ship2, EXCALIBUR_RIGHT1, EXCALIBUR_RIGHT4);
+	update_helper(ship2, ATTACK, ATTACK);
+	update_helper(ship2, ATTACK, ATTACK);
+	// update_helper(ship2, EXCALIBUR_LEFT1, EXCALIBUR_LEFT4);
+	// update_helper(ship2, EXCALIBUR_RIGHT1, EXCALIBUR_RIGHT4);
 	// update_helper(saber, GET_HITTED, saber->state);
 
 	// update_helper(saber, POSE_LEFT1, POSE_LEFT2);

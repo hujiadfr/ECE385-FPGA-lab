@@ -28,7 +28,7 @@ module shipFSM(input         Clk,                // 50 MHz clock
 		if (frame_clk_rising_edge) begin
 		//------------SWitch test------------//
         	state_in = SW[5:0]; // for debug
-		
+		end
 		//------------Count test------------//
 		// 	count_in = count +1;
 		// 	if (count == 4'd10) begin

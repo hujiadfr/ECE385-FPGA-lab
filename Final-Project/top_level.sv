@@ -172,20 +172,20 @@ module top_level(
 	assign ship2_x = game_file[265:256];
 	assign ship2_y = game_file[297:288];
 
-    // assign ship_state = game_file[101:96];
-    // assign ship2_state = game_file[325:320];
     logic [5:0] ship_state, ship2_state;
-    assign ship2_state = ship_state;
+    assign ship_state = game_file[101:96];
+    assign ship2_state = game_file[325:320];
 
 // for test
-    shipFSM u_shipFSM(
-        //ports
-        .Clk        		( Clk        		),
-        .Reset      		( Reset      		),
-        .frame_clk  		( VGA_VS      		),
-        .SW         		( SW         		),
-        .ship_state 		( ship_state 		)
-    );
+    // assign ship2_state = ship_state;
+    // shipFSM u_shipFSM(
+    //     //ports
+    //     .Clk        		( Clk        		),
+    //     .Reset      		( Reset      		),
+    //     .frame_clk  		( VGA_VS      		),
+    //     .SW         		( SW         		),
+    //     .ship_state 		( ship_state 		)
+    // );
 //
 	
     wire is_ball1;

@@ -66,19 +66,42 @@ module  ship_RAM
     output logic [3:0] ball_data
 );
     // mem has width of 4 bits and a total of 1600 addresses for pixels
-    //logic [3:0] mem [0:307199];
-    logic [3:0] mem [4:0][0:1600];
+    // logic [3:0] mem0 [0:307199];
+    logic [3:0] mem0 [0:1600];
+    logic [3:0] mem1 [0:1600];
+    logic [3:0] mem2 [0:1600];
+    logic [3:0] mem3 [0:1600];
+    logic [3:0] mem4 [0:1600];
+    logic [3:0] mem5 [0:1600];
+
     initial
     begin
-        // $readmemh("sources/bisimai_get_hit.txt", mem[0]);
-        $readmemh("sources/bisimai_attack.txt", mem[1]);
-        $readmemh("sources/bisimai_dead.txt", mem[2]);
-        $readmemh("sources/bisimai_move_left.txt", mem[3]);
-        $readmemh("sources/bisimai_move.txt", mem[4]);
-        $readmemh("sources/bisimai.txt", mem[5]);
+        $readmemh("sources/bisimai.txt", mem0);
+        // $readmemh("sources/bisimai_get_hit.txt", mem1);
+        $readmemh("sources/bisimai_move_left.txt", mem2);
+        $readmemh("sources/bisimai_move.txt", mem3);
+        $readmemh("sources/bisimai_attack.txt", mem4);
+        $readmemh("sources/bisimai_dead.txt", mem5);
     end
 
     always_ff @ (posedge Clk) begin
-        ball_data<= mem[ship_state][read_address];
+        // case(ship_state) // test mode from sw
+        //     6'd000001:   ball_data<= mem0[read_address];
+        //     // 6'b000010:   ball_data<= mem1[read_address];
+        //     6'b000100:   ball_data<= mem2[read_address];
+        //     6'b001000:   ball_data<= mem3[read_address];
+        //     6'b010000:   ball_data<= mem4[read_address];
+        //     6'b100000:   ball_data<= mem5[read_address];
+        //     default:     ball_data<= mem5[read_address];
+        // endcase
+        case(ship_state)
+            6'd0:   ball_data<= mem0[read_address];
+            // 6'd1:   ball_data<= mem1[read_address];
+            6'd2:   ball_data<= mem2[read_address];
+            6'd3:   ball_data<= mem3[read_address];
+            6'd4:   ball_data<= mem4[read_address];
+            6'd5:   ball_data<= mem5[read_address];
+            default:     ball_data<= mem0[read_address];
+        endcase
     end
 endmodule
