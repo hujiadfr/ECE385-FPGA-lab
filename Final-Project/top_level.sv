@@ -133,44 +133,8 @@ module top_level(
         .DrawY
     );
     
-<<<<<<< HEAD
 
 	 logic [9:0]ship_x,ship_y,ship2_x,ship2_y;
-=======
-    // wire [3:0] 	command_p1, command_p2; //{up, down, left, right}
-    // keycode u_keycode(
-    //     //ports
-    //     .Clk       		( Clk       		),
-    //     .keycode_0 		( keycode_0 		),
-    //     .keycode_1 		( keycode_1 		),
-    //     .keycode_2 		( keycode_2 		),
-    //     .keycode_3 		( keycode_3 		),
-    //     .keycode_4 		( keycode_4 		),
-    //     .keycode_5 		( keycode_5 		),
-
-    //     .command_p1   	( command_p1   		),
-    //     .command_p2     ( command_p2        )
-    // );
-
-    // wire [9:0] 	Ship_X_Step;
-    // wire       	Ship_Y_Step;
-    // wire [7:0] 	Ship_Angle;
-    // wire        forward;
-    // ship_controller #(
-    //     .Ship_Max_Velocity_Forward 		( 10'd01 		),
-    //     .Ship_Angle_Default        		( 8'b00010000   ))
-    // u_ship_controller(
-    //     //ports
-    //     .Clk         		( Clk         		),
-    //     .Reset       		( Reset_h       	),
-    //     .Command     		( command_p1     	),
-    //     .Ship_X_Step 		( Ship_X_Step 		),
-    //     .Ship_Y_Step 		( Ship_Y_Step 		),
-    //     .Ship_Angle  		( Ship_Angle  		),
-    //     .forward            ( forward           )
-    // );
-	logic [9:0]ship_x,ship_y,ship2_x,ship2_y;
->>>>>>> main
     assign ship_x = game_file[41:32];
 	assign ship_y = game_file[73:64];
 	
@@ -223,7 +187,6 @@ module top_level(
     wire is_ball1;
 	wire is_ball2;
     wire [3:0] ball_data1;
-<<<<<<< HEAD
 	 wire [3:0] ball_data2;
 
     wire is_tor1_0;
@@ -244,9 +207,6 @@ module top_level(
     wire [3:0] torpedo2_2;
     wire [3:0] torpedo2_3;
 
-=======
-	wire [3:0] ball_data2;
->>>>>>> main
     Ship #(
         .RESHAPE_LENGTH     ( 10'd40   		))
     Ship_1(
@@ -419,8 +379,5 @@ torpedo7(
 //    HexDriver hex_inst_1 (DrawX[7:4], HEX1);
 		HexDriver hex_inst_0 (ship_x[3:0],HEX0);
 		HexDriver hex_inst_1 (ship_x[7:4],HEX1);
-        HexDriver hex_inst_2 (torpedo1_0_x[3:0], HEX2);
-        HexDriver hex_inst_3 (torpedo1_0_x[7:4], HEX3);
-        HexDriver hex_inst_4 (torpedo1_0_x[9:8], HEX4);
 
 endmodule
