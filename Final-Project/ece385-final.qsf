@@ -715,6 +715,9 @@ set_location_assignment PIN_J1 -to OTG_DREQ[0]
 set_location_assignment PIN_C14 -to ENET0_LINK100
 set_location_assignment PIN_D13 -to ENET1_LINK100
 set_location_assignment PIN_A14 -to ENETCLK_25
+set_global_assignment -name SYSTEMVERILOG_FILE sprite/ship_ram3.sv
+set_global_assignment -name SYSTEMVERILOG_FILE sprite/ship_ram2.sv
+set_global_assignment -name SYSTEMVERILOG_FILE sprite/ship_ram.sv
 set_global_assignment -name SYSTEMVERILOG_FILE FSM.sv
 set_global_assignment -name QIP_FILE vga_clk.qip
 set_global_assignment -name QIP_FILE final_soc/synthesis/final_soc.qip
