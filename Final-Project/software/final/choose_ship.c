@@ -1,6 +1,4 @@
-// #include "choose_ship.h"
-#include "ship_logic.h"
-#include "usb_main.h"
+#include "choose_ship.h"
 /*
  * WASD or J: Update saber motion accordingly.
  * or
@@ -23,7 +21,7 @@ void choose_ship(int* player1_ready, int* player2_ready, ship_t* ship, ship_t* s
 		cur_key = key_array[i];
 		cur_key2 = key_array[i+2];
 		
-        if(!player1_ready){
+        if(!*(player1_ready)){
             if (cur_key == KEY_A || cur_key2 == KEY_A){
                 if(ship->choose_ship == 0){
                     ship->choose_ship = SHIP_KIND_MAX;
@@ -41,11 +39,12 @@ void choose_ship(int* player1_ready, int* player2_ready, ship_t* ship, ship_t* s
                 }
             }
             else if (cur_key == KEY_J){
-                player1_ready = 1;
+                *player1_ready = 1;
+                ship->ship_choose_ready = 1;
             }
         }
 
-        if(!player2_ready){
+        if(!(*player2_ready)){
             if (cur_key == KEY_LEFT || cur_key2 == KEY_LEFT){
                 if(ship2->choose_ship == 0){
                     ship2->choose_ship = SHIP_KIND_MAX;
@@ -63,7 +62,8 @@ void choose_ship(int* player1_ready, int* player2_ready, ship_t* ship, ship_t* s
                 }
             }
             else if (cur_key == KEY_SPACE){
-                player2_ready;
+                *player2_ready = 1;
+                ship2->ship_choose_ready = 1;
             }
 		}
 
@@ -71,16 +71,12 @@ void choose_ship(int* player1_ready, int* player2_ready, ship_t* ship, ship_t* s
             return;
         }
 		else if (cur_key == KEY_ESC){
-			player1_ready = 0;
-            player2_ready = 0;
+			*player1_ready = 0;
+            *player2_ready = 0;
+            ship->ship_choose_ready = 0;
+            ship2->ship_choose_ready = 0;
 			return;
 		}
 	}
 }
 
-void ship_choose_update(int* player1_ready, int* player2_ready, ship_t *ship, ship_t *ship2){
-    game_file[60] = ship->choose_ship;
-    game_file[61] = ship2->choose_ship;
-    game_file[62] = ship->ship_choose_ready;
-    game_file[63] = ship2->ship_choose_ready;
-}

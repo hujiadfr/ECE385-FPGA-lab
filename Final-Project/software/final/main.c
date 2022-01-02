@@ -6,7 +6,7 @@
 #include "io_handler.h"
 #include "ship_logic.h"
 #include "usb_main.h"
-#include "choose_ship.c"
+#include "choose_ship.h"
 //#ifdef _WIN32
 //#include <Windows.h>
 //#else
@@ -45,7 +45,6 @@ void frame_clock (double frame_time){
 		end = clock();
 	}
 }
-
 
 /*
  * WASD or J: Update saber motion accordingly.
@@ -129,6 +128,7 @@ void key_event(int* game_start, ship_t* ship, ship_t* ship2){
 		}
 	}
 }
+
 /*
  * 1. update saber state and x,y
  * 2. update gamefile
@@ -139,6 +139,13 @@ void game_update(int *game_start,ship_t *ship, ship_t *ship2){
 
 	// send the information to the hardware
 	gamefile_update(game_start, ship, ship2);
+}
+
+void ship_choose_update(int* player1_ready, int* player2_ready, ship_t *ship, ship_t *ship2){
+    game_file[60] = ship->choose_ship;
+    game_file[61] = ship2->choose_ship;
+    game_file[62] = ship->ship_choose_ready;
+    game_file[63] = ship2->ship_choose_ready;
 }
 
 /*
@@ -205,7 +212,6 @@ void test_round(int *game_start, ship_t *ship, ship_t *ship2){
 }
 
 int main(){
-
 	usb_init();		// initialize usb
 	developer_mode = 0;
 	int frame_time = 2;
@@ -213,13 +219,17 @@ int main(){
 		win = 0;
 		printf("start");
 		ship_t ship1, ship2;
+		ship_init(&ship1, &ship2);
 		int player1_ready = 0;
 		int player2_ready = 0;
 		while(!(player1_ready && player2_ready)){
 			choose_ship(&player1_ready, &player2_ready, &ship1, &ship2);
 			ship_choose_update(&player1_ready, &player2_ready, &ship1, &ship2);
+			printf("%d%d\n",player1_ready, player2_ready);
+			printf("%d%d\n",ship1.choose_ship, ship2.choose_ship);
 		}
 		printf("choose ship ready\n");
+		sleep(100000);
 
 		int game_start = 0;
 		while(game_start == 0){

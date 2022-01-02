@@ -106,10 +106,10 @@ module avalon_saber_interface (
 				Reg_unit[57] <= 32'h0;
 				Reg_unit[58] <= 32'h0;
 				Reg_unit[59] <= 32'h0;
-				Reg_unit[60] <= 32'h0;
-				Reg_unit[61] <= 32'h0;
-				Reg_unit[62] <= 32'h0;
-				Reg_unit[63] <= 32'h0; // ship choose	63*32=2016
+				Reg_unit[60] <= 32'h0; // choose_ship1			1920
+				Reg_unit[61] <= 32'h0; // choose_ship2			1952
+				Reg_unit[62] <= 32'h0; // ship1_choose_ready	62*32=1984
+				Reg_unit[63] <= 32'h0; // ship2_choose_ready	63*32=2016
 			end
 		else if (AVL_WRITE && AVL_CS)
 			// Write

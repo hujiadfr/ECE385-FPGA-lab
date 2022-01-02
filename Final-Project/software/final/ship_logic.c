@@ -97,6 +97,8 @@ void ship_init(ship_t *ship, ship_t *ship2){
 	ship -> IsFighting = 0;
 	ship -> FaceDirection = RIGHT;
 	ship -> injuring =0;
+	ship->choose_ship = 0;
+	ship->ship_choose_ready = 0;
 
 	ship2 -> exist = 1;
 	ship2 -> vx = 0;
@@ -113,6 +115,8 @@ void ship_init(ship_t *ship, ship_t *ship2){
 	ship2 -> IsFighting = 0;
 	ship2 -> FaceDirection = RIGHT;
 	ship2 -> injuring =0;
+	ship2->choose_ship = 0;
+	ship2->ship_choose_ready = 0;
 }
 
 
