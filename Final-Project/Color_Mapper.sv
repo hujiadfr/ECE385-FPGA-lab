@@ -15,7 +15,6 @@
 
 // color_mapper: Decide which color to be output to VGA for each pixel.
 module  color_mapper ( 
-                    input logic is_choose_state_data,
                     input logic  Clk,                             //   or background (computed in ball.sv)
                     input logic  is_ball1,          // Whether current pixel belongs to ball
 					input logic is_ball2,
@@ -28,10 +27,13 @@ module  color_mapper (
                     input logic is_tor2_2,
                     input logic is_tor2_3,
 
+                    input logic is_choose_state_data1,
+                    input logic is_choose_state_data2,
                     input logic [3:0] background_data,
                     input logic [3:0] ball_data1,
                     input logic [3:0] ball_data2,
-                    input logic [3:0] choose_state_data,
+                    input logic [3:0] choose_state_data1,
+                    input logic [3:0] choose_state_data2,
                     input logic [9:0] DrawX, DrawY,      // Current pixel coordinates
                     output logic [7:0] VGA_R, VGA_G, VGA_B // VGA RGB output
                      );
@@ -57,7 +59,8 @@ module  color_mapper (
     assign ship1_color = ship_palette[ball_data1];
     assign ship2_color = ship_palette[ball_data2];
 
-    assign choose_state_color = ship_palette[choose_state_data];
+    assign choose_state_color1 = ship_palette[choose_state_data1];
+    assign choose_state_color2 = ship_palette[choose_state_data2];
 
     // Output colors to VGA
     
@@ -68,11 +71,17 @@ module  color_mapper (
     // Assign color based on is_ball signal
     always_comb
     begin
-        if (is_choose_state_data) begin
-            if(choose_state_color == 24'h00FF00)
+        if (is_choose_state_data1) begin
+            if(choose_state_color1 == 24'h00FF00)
 					color = background_color;
 				else
-					color = choose_state_color;
+					color = choose_state_color1;
+        end
+        else if (is_choose_state_data2) begin
+            if(choose_state_color2 == 24'h00FF00)
+					color = background_color;
+				else
+					color = choose_state_color2;
         end
         else if (is_ball1 == 1'b1) 
         begin

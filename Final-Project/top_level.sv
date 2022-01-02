@@ -163,8 +163,8 @@ module top_level(
     assign choose_ship2 = game_file[1954:1952];
     assign ship1_choose_ready = game_file[1984];
     assign ship2_choose_ready = game_file[2016];
-    wire is_choose_state_data;
-    wire [3:0] choose_state_data;
+    wire is_choose_state_data1, is_choose_state_data2;
+    wire [3:0] choose_state_data1, choose_state_data2;
     choose_state #(
         .RESHAPE_LENGTH     ( 10'd80   		),
         .HALF_LENGTH        ( 10'd40        ))
@@ -176,8 +176,10 @@ module top_level(
         .choose_ship2           ( choose_ship2      ),
         .ship1_choose_ready     ( ship1_choose_ready),
         .ship2_choose_ready     ( ship2_choose_ready),
-        .is_choose_state_data   ( is_choose_state_data),
-        .choose_state_data      ( choose_state_data   )
+        .is_choose_state_data1  ( is_choose_state_data1),
+        .is_choose_state_data2  ( is_choose_state_data2),
+        .choose_state_data1     ( choose_state_data1   ),
+        .choose_state_data2     ( choose_state_data2   )
     );
 //----------------------------------------------------------------
  
@@ -402,7 +404,6 @@ torpedo7(
         .Clk            ( Clk           ),
         .is_ball1 		( is_ball1 		),
         .is_ball2 		( is_ball2 		),
-        .is_choose_state_data   		( is_choose_state_data),
         .is_tor1_0  (is_tor1_0),
         .is_tor1_1  (is_tor1_1),
         .is_tor1_2  (is_tor1_2),
@@ -411,10 +412,13 @@ torpedo7(
         .is_tor2_1  (is_tor2_1),
         .is_tor2_2  (is_tor2_2),
         .is_tor2_3  (is_tor2_3),
+        .is_choose_state_data1  ( is_choose_state_data1),
+        .is_choose_state_data2  ( is_choose_state_data2),
 		.background_data(background_data),
         .ball_data1     ( ball_data1    ),
         .ball_data2     ( ball_data2    ),
-        .choose_state_data   		( choose_state_data),
+        .choose_state_data1  ( choose_state_data1),
+        .choose_state_data2  ( choose_state_data2),
         .DrawX   		( DrawX   		),
         .DrawY   		( DrawY   		),
         .VGA_R   		( VGA_R   		),
