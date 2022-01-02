@@ -76,7 +76,7 @@ void ship_init(ship_t *ship, ship_t *ship2){
 	ship -> vy = 0;
 	ship -> x = INIT_X;
 	ship -> y = INIT_Y;
-	ship -> HP = 3;
+	ship -> HP = 50;
 	ship -> ATK = 3;
 	ship -> state = WALK_RIGHT1;
 	ship -> state_count = 0;
@@ -139,6 +139,7 @@ void update(ship_t *ship, ship_t *ship2){
 
 	update_helper(ship2, ATTACK, ATTACK);
 	update_helper(ship2, ATTACK, ATTACK);
+
 	// update_helper(ship2, EXCALIBUR_LEFT1, EXCALIBUR_LEFT4);
 	// update_helper(ship2, EXCALIBUR_RIGHT1, EXCALIBUR_RIGHT4);
 	// update_helper(saber, GET_HITTED, saber->state);
@@ -157,12 +158,12 @@ void stop(ship_t *ship){
 void update_helper(ship_t *ship, int state_start, int state_end){
 	int final_frame;
 	final_frame = ship->FaceDirection == RIGHT? WALK_RIGHT1:WALK_LEFT1;
-	if (ship->HP == 0){
+	if (ship->HP <= 0){
 		ship->exist = 0;
 	}
 	if (ship->state >= state_start && ship->state<= state_end){
-		ship->vx = 0;
-		ship->vy = 0;
+//		ship->vx = 0;
+//		ship->vy = 0;
 		if (ship->state_count ++ > STATE_COUNT_MAX){
 			ship->state = (ship->state == state_end)? final_frame:ship->state+1;
 			ship->state_count = 0;
@@ -171,7 +172,7 @@ void update_helper(ship_t *ship, int state_start, int state_end){
 	}
 }
 
-//����Ƿ��ڴ��������ڣ��Ƿ���1 ���Ƿ���0
+
 int detect(ship_t *ship, int x, int y, int dis){
 	int dis_x, dis_y;
 	dis_x = ship->x - x;
@@ -184,7 +185,7 @@ int detect(ship_t *ship, int x, int y, int dis){
 
 void detect_ship_attack(ship_t *ship1, ship_t *ship2){
 	int flag = detect(ship1, ship2->x, ship2->y, 40);
-	if(flag){ //ײ����
+	if(flag){
 		ship1->vx = 0;
 		ship2->vx = 0;
 		ship1->vy = 0;

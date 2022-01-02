@@ -30,4 +30,5 @@ void move_tor(torpedo_t *torpedo, ship_t *target);
 void ifstop_tor(torpedo_t *torpedo);
 void init_tor(torpedo_t *torpedo, int target);
 void update_tor(torpedo_t *torpedo1,torpedo_t *torpedo2, ship_t *ship1, ship_t *ship2);
+void press_z(ship_t *target);
 #endif

@@ -528,15 +528,15 @@ void get_keycode(unsigned long* key0, unsigned long* key1, unsigned long* key2){
 	keycode1 = UsbRead(0x051e);
 	keycode2 = UsbRead(0x0520);
 	keycode3 = UsbRead(0x0522);
-	keycode4 = UsbRead(0x0524);
-	keycode5 = UsbRead(0x0526);
-	keycode6 = UsbRead(0x0528);
+//	keycode4 = UsbRead(0x0524);
+//	keycode5 = UsbRead(0x0526);
+//	keycode6 = UsbRead(0x0528);
 
 //	//printf("\nfirst two keycode values are %04x\n",keycode1);
 //	//printf("second two keycode values are %04x\n",keycode2);
 	// We only need the first keycode, which is at the lower byte of keycode.
 	// Send the keycode to hardware via PIO.
-	*keycode_base = keycode1 & 0xff;
+//	*keycode_base = keycode1 & 0xff;
 
 	usleep(200);//usleep(5000);
 	usb_ctl_val = UsbRead(ctl_reg);
@@ -574,8 +574,7 @@ void get_keycode(unsigned long* key0, unsigned long* key1, unsigned long* key2){
 		usleep(200);
 	}
 
-	*key0 = (unsigned long)(keycode1<<24) + (unsigned long)(keycode2<<8);
-	*key1 = (unsigned long)(keycode3<<24) + (unsigned long)(keycode4<<8);
-	*key2 = (unsigned long)(keycode5<<24) + (unsigned long)(keycode6<<8);
+	*key0 = (unsigned long)(keycode1<<16) + (unsigned long)(keycode2<<8);
+	*key1 = (unsigned long)(keycode3<<16);
 }
 

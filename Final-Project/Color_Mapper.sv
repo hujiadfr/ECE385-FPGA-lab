@@ -78,7 +78,7 @@ module  color_mapper (
 		 		else
 		 			color = ship2_color;
          end
-        else if(is_tor1_0 || is_tor1_1 || is_tor1_2 || is_tor1_3 || is_tor2_0 || is_tor2_1 || is_tor2_2 || is_tor2_3)
+        else if(is_tor1_0 == 1'b1 || is_tor1_1 == 1'b1 || is_tor1_2 == 1'b1 || is_tor1_3 == 1'b1 || is_tor2_0 == 1'b1 || is_tor2_1 == 1'b1 || is_tor2_2 == 1'b1 || is_tor2_3 == 1'b1 )
                 color = 24'hFFFBEB;
         else
         begin
