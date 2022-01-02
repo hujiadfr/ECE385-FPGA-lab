@@ -2,9 +2,9 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>2022-1-2 19:33:07</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1641123187743</BspGeneratedUnixTimeStamp>
-        <BspGeneratedLocation>C:\Users\78574\Desktop\ECE385-FPGA-lab\Final-Project\software\final_bsp</BspGeneratedLocation>
+        <BspGeneratedTimeStamp>2022-1-2 22:19:05</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1641133145778</BspGeneratedUnixTimeStamp>
+        <BspGeneratedLocation>C:\Users\jiaru\GitHub\ECE385-FPGA-lab\Final-Project\software\final_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>..\..\final_soc.sopcinfo</SopcDesignFile>
         <JdiFile>default</JdiFile>
@@ -917,86 +917,296 @@
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>keycode_5</slaveDescriptor>
+                <slaveDescriptor>bullet_2_y_2</slaveDescriptor>
                 <addressRange>0x10001110 - 0x1000111F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>keycode_4</slaveDescriptor>
+                <slaveDescriptor>bullet_2_y_4</slaveDescriptor>
                 <addressRange>0x10001120 - 0x1000112F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>keycode_3</slaveDescriptor>
+                <slaveDescriptor>bullet_2_y_3</slaveDescriptor>
                 <addressRange>0x10001130 - 0x1000113F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>keycode_2</slaveDescriptor>
+                <slaveDescriptor>bullet_2_y_9</slaveDescriptor>
                 <addressRange>0x10001140 - 0x1000114F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>keycode_1</slaveDescriptor>
+                <slaveDescriptor>bullet_2_y_8</slaveDescriptor>
                 <addressRange>0x10001150 - 0x1000115F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>keycode_0</slaveDescriptor>
+                <slaveDescriptor>bullet_2_y_7</slaveDescriptor>
                 <addressRange>0x10001160 - 0x1000116F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>otg_hpi_reset</slaveDescriptor>
+                <slaveDescriptor>bullet_2_y_6</slaveDescriptor>
                 <addressRange>0x10001170 - 0x1000117F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>otg_hpi_cs</slaveDescriptor>
+                <slaveDescriptor>bullet_2_y_5</slaveDescriptor>
                 <addressRange>0x10001180 - 0x1000118F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>otg_hpi_address</slaveDescriptor>
+                <slaveDescriptor>bullet_2_y_1</slaveDescriptor>
                 <addressRange>0x10001190 - 0x1000119F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>otg_hpi_data</slaveDescriptor>
+                <slaveDescriptor>bullet_2_y_0</slaveDescriptor>
                 <addressRange>0x100011A0 - 0x100011AF</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>otg_hpi_r</slaveDescriptor>
+                <slaveDescriptor>bullet_2_x_9</slaveDescriptor>
                 <addressRange>0x100011B0 - 0x100011BF</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>otg_hpi_w</slaveDescriptor>
+                <slaveDescriptor>bullet_2_x_8</slaveDescriptor>
                 <addressRange>0x100011C0 - 0x100011CF</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
+                <slaveDescriptor>bullet_2_x_7</slaveDescriptor>
+                <addressRange>0x100011D0 - 0x100011DF</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>bullet_2_x_6</slaveDescriptor>
+                <addressRange>0x100011E0 - 0x100011EF</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>bullet_2_x_5</slaveDescriptor>
+                <addressRange>0x100011F0 - 0x100011FF</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>bullet_2_x_4</slaveDescriptor>
+                <addressRange>0x10001200 - 0x1000120F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>bullet_2_x_3</slaveDescriptor>
+                <addressRange>0x10001210 - 0x1000121F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>bullet_2_x_2</slaveDescriptor>
+                <addressRange>0x10001220 - 0x1000122F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>bullet_2_x_1</slaveDescriptor>
+                <addressRange>0x10001230 - 0x1000123F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>bullet_2_x_0</slaveDescriptor>
+                <addressRange>0x10001240 - 0x1000124F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>bullet_1_y_9</slaveDescriptor>
+                <addressRange>0x10001250 - 0x1000125F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>bullet_1_y_8</slaveDescriptor>
+                <addressRange>0x10001260 - 0x1000126F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>bullet_1_y_7</slaveDescriptor>
+                <addressRange>0x10001270 - 0x1000127F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>bullet_1_y_6</slaveDescriptor>
+                <addressRange>0x10001280 - 0x1000128F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>bullet_1_y_5</slaveDescriptor>
+                <addressRange>0x10001290 - 0x1000129F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>bullet_1_y_4</slaveDescriptor>
+                <addressRange>0x100012A0 - 0x100012AF</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>bullet_1_y_3</slaveDescriptor>
+                <addressRange>0x100012B0 - 0x100012BF</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>bullet_1_y_2</slaveDescriptor>
+                <addressRange>0x100012C0 - 0x100012CF</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>bullet_1_y_1</slaveDescriptor>
+                <addressRange>0x100012D0 - 0x100012DF</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>bullet_1_y_0</slaveDescriptor>
+                <addressRange>0x100012E0 - 0x100012EF</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>bullet_1_x_9</slaveDescriptor>
+                <addressRange>0x100012F0 - 0x100012FF</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>bullet_1_x_8</slaveDescriptor>
+                <addressRange>0x10001300 - 0x1000130F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>bullet_1_x_7</slaveDescriptor>
+                <addressRange>0x10001310 - 0x1000131F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>bullet_1_x_6</slaveDescriptor>
+                <addressRange>0x10001320 - 0x1000132F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>bullet_1_x_5</slaveDescriptor>
+                <addressRange>0x10001330 - 0x1000133F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>bullet_1_x_4</slaveDescriptor>
+                <addressRange>0x10001340 - 0x1000134F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>bullet_1_x_3</slaveDescriptor>
+                <addressRange>0x10001350 - 0x1000135F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>bullet_1_x_2</slaveDescriptor>
+                <addressRange>0x10001360 - 0x1000136F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>bullet_1_x_1</slaveDescriptor>
+                <addressRange>0x10001370 - 0x1000137F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>bullet_1_x_0</slaveDescriptor>
+                <addressRange>0x10001380 - 0x1000138F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>keycode_0</slaveDescriptor>
+                <addressRange>0x10001390 - 0x1000139F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>otg_hpi_reset</slaveDescriptor>
+                <addressRange>0x100013A0 - 0x100013AF</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>otg_hpi_cs</slaveDescriptor>
+                <addressRange>0x100013B0 - 0x100013BF</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>otg_hpi_address</slaveDescriptor>
+                <addressRange>0x100013C0 - 0x100013CF</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>otg_hpi_data</slaveDescriptor>
+                <addressRange>0x100013D0 - 0x100013DF</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>otg_hpi_r</slaveDescriptor>
+                <addressRange>0x100013E0 - 0x100013EF</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>otg_hpi_w</slaveDescriptor>
+                <addressRange>0x100013F0 - 0x100013FF</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
                 <slaveDescriptor>sysid_qsys_0</slaveDescriptor>
-                <addressRange>0x100011D8 - 0x100011DF</addressRange>
+                <addressRange>0x10001408 - 0x1000140F</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>jtag_uart_0</slaveDescriptor>
-                <addressRange>0x100011E0 - 0x100011E7</addressRange>
+                <addressRange>0x10001410 - 0x10001417</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes>printable</attributes>
         </MemoryMap>

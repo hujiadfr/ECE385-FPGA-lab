@@ -8,6 +8,7 @@
 #include "usb_main.h"
 #include "choose_ship.h"
 #include "torpedo.h"
+#include "bullet.h"
 //#ifdef _WIN32
 //#include <Windows.h>
 //#else
@@ -23,6 +24,49 @@
 
 // BASE of avalon_bus_interface
 volatile unsigned int *game_file =(unsigned int*) GAME_CORE_BASE;
+volatile unsigned int *bullet_1_x_0 = (unsigned int*) BULLET_1_X_0_BASE;
+volatile unsigned int *bullet_1_x_1 = (unsigned int*) BULLET_1_X_1_BASE;
+volatile unsigned int *bullet_1_x_2 = (unsigned int*) BULLET_1_X_2_BASE;
+volatile unsigned int *bullet_1_x_3 = (unsigned int*) BULLET_1_X_3_BASE;
+volatile unsigned int *bullet_1_x_4 = (unsigned int*) BULLET_1_X_4_BASE;
+volatile unsigned int *bullet_1_x_5 = (unsigned int*) BULLET_1_X_5_BASE;
+volatile unsigned int *bullet_1_x_6 = (unsigned int*) BULLET_1_X_6_BASE;
+volatile unsigned int *bullet_1_x_7 = (unsigned int*) BULLET_1_X_7_BASE;
+volatile unsigned int *bullet_1_x_8 = (unsigned int*) BULLET_1_X_8_BASE;
+volatile unsigned int *bullet_1_x_9 = (unsigned int*) BULLET_1_X_9_BASE;
+volatile unsigned int *bullet_1_y_0 = (unsigned int*) BULLET_1_Y_0_BASE;
+volatile unsigned int *bullet_1_y_1 = (unsigned int*) BULLET_1_Y_1_BASE;
+volatile unsigned int *bullet_1_y_2 = (unsigned int*) BULLET_1_Y_2_BASE;
+volatile unsigned int *bullet_1_y_3 = (unsigned int*) BULLET_1_Y_3_BASE;
+volatile unsigned int *bullet_1_y_4 = (unsigned int*) BULLET_1_Y_4_BASE;
+volatile unsigned int *bullet_1_y_5 = (unsigned int*) BULLET_1_Y_5_BASE;
+volatile unsigned int *bullet_1_y_6 = (unsigned int*) BULLET_1_Y_6_BASE;
+volatile unsigned int *bullet_1_y_7 = (unsigned int*) BULLET_1_Y_7_BASE;
+volatile unsigned int *bullet_1_y_8 = (unsigned int*) BULLET_1_Y_8_BASE;
+volatile unsigned int *bullet_1_y_9 = (unsigned int*) BULLET_1_Y_9_BASE;
+
+volatile unsigned int *bullet_2_x_0 = (unsigned int*) BULLET_2_X_0_BASE;
+volatile unsigned int *bullet_2_x_1 = (unsigned int*) BULLET_2_X_1_BASE;
+volatile unsigned int *bullet_2_x_2 = (unsigned int*) BULLET_2_X_2_BASE;
+volatile unsigned int *bullet_2_x_3 = (unsigned int*) BULLET_2_X_3_BASE;
+volatile unsigned int *bullet_2_x_4 = (unsigned int*) BULLET_2_X_4_BASE;
+volatile unsigned int *bullet_2_x_5 = (unsigned int*) BULLET_2_X_5_BASE;
+volatile unsigned int *bullet_2_x_6 = (unsigned int*) BULLET_2_X_6_BASE;
+volatile unsigned int *bullet_2_x_7 = (unsigned int*) BULLET_2_X_7_BASE;
+volatile unsigned int *bullet_2_x_8 = (unsigned int*) BULLET_2_X_8_BASE;
+volatile unsigned int *bullet_2_x_9 = (unsigned int*) BULLET_2_X_9_BASE;
+volatile unsigned int *bullet_2_y_0 = (unsigned int*) BULLET_2_Y_0_BASE;
+volatile unsigned int *bullet_2_y_1 = (unsigned int*) BULLET_2_Y_1_BASE;
+volatile unsigned int *bullet_2_y_2 = (unsigned int*) BULLET_2_Y_2_BASE;
+volatile unsigned int *bullet_2_y_3 = (unsigned int*) BULLET_2_Y_3_BASE;
+volatile unsigned int *bullet_2_y_4 = (unsigned int*) BULLET_2_Y_4_BASE;
+volatile unsigned int *bullet_2_y_5 = (unsigned int*) BULLET_2_Y_5_BASE;
+volatile unsigned int *bullet_2_y_6 = (unsigned int*) BULLET_2_Y_6_BASE;
+volatile unsigned int *bullet_2_y_7 = (unsigned int*) BULLET_2_Y_7_BASE;
+volatile unsigned int *bullet_2_y_8 = (unsigned int*) BULLET_2_Y_8_BASE;
+volatile unsigned int *bullet_2_y_9 = (unsigned int*) BULLET_2_Y_9_BASE;
+
+
 
 int win;
 int developer_mode;
@@ -179,9 +223,14 @@ void key_event(int* game_start, ship_t* ship, ship_t* ship2, torpedo_t *torpedo1
  * 1. update saber state and x,y
  * 2. update gamefile
 */
-void game_update(int *game_start,ship_t *ship, ship_t *ship2, torpedo_t *torpedo1, torpedo_t *torpedo2){
+void game_update(int *game_start,ship_t *ship, ship_t *ship2, torpedo_t *torpedo1, torpedo_t *torpedo2,
+		bullet_t *bullet1, bullet_t *bullet2){
 	// update saber state and x, y
 	update(ship, ship2);
+	generate_bullet(ship, SHIP2, bullet1);
+	generate_bullet(ship2, SHIP1, bullet2);
+	update_bullet(bullet1, bullet2, ship, ship2);
+	printf("%d\n", bullet1->stop);
 	detect_ship_attack(ship,ship2);
 	update_tor(torpedo1, torpedo2, ship, ship2);
 	if (ship->HP <= 0)
@@ -189,7 +238,7 @@ void game_update(int *game_start,ship_t *ship, ship_t *ship2, torpedo_t *torpedo
 	if (ship2->HP <=0)
 		ship2->state = DEAD;
 	// send the information to the hardware
-	gamefile_update(game_start, ship, ship2, torpedo1, torpedo2);
+	gamefile_update(game_start, ship, ship2, torpedo1, torpedo2, bullet1, bullet2);
 }
 
 void ship_choose_update(int* player1_ready, int* player2_ready, ship_t *ship, ship_t *ship2){
@@ -203,7 +252,8 @@ void ship_choose_update(int* player1_ready, int* player2_ready, ship_t *ship, sh
  * gamefile_update : use characters information to update the game file,
  * 					which will communicate with the hardware
  */
-void gamefile_update(int *game_start, ship_t *ship, ship_t *ship2, torpedo_t *torpedo1, torpedo_t *torpedo2){
+void gamefile_update(int *game_start, ship_t *ship, ship_t *ship2, torpedo_t *torpedo1, torpedo_t *torpedo2,
+		bullet_t *bullet1, bullet_t *bullet2){
 	game_file[0] = ship->exist;
 	game_file[1] = ship->x;
 	game_file[2] = ship->y;
@@ -252,19 +302,63 @@ void gamefile_update(int *game_start, ship_t *ship, ship_t *ship2, torpedo_t *to
 
 	// game_file[43] = saber->Excalibur_remain;
 	game_file[44] = *game_start;
+
+	game_file[45] = bullet1->stop;
+	game_file[46] = bullet2->stop;
+	*bullet_1_x_0 = bullet1->x[0];
+	*bullet_1_x_1 = bullet1->x[1];
+	*bullet_1_x_2 = bullet1->x[2];
+	*bullet_1_x_3 = bullet1->x[3];
+	*bullet_1_x_4 = bullet1->x[4];
+	*bullet_1_x_5 = bullet1->x[5];
+	*bullet_1_x_6 = bullet1->x[6];
+	*bullet_1_x_7 = bullet1->x[7];
+	*bullet_1_x_8 = bullet1->x[8];
+	*bullet_1_x_9 = bullet1->x[9];
+	*bullet_1_y_0 = bullet1->y[0];
+	*bullet_1_y_1 = bullet1->y[1];
+	*bullet_1_y_2 = bullet1->y[2];
+	*bullet_1_y_3 = bullet1->y[3];
+	*bullet_1_y_4 = bullet1->y[4];
+	*bullet_1_y_5 = bullet1->y[5];
+	*bullet_1_y_6 = bullet1->y[6];
+	*bullet_1_y_7 = bullet1->y[7];
+	*bullet_1_y_8 = bullet1->y[8];
+	*bullet_1_y_9 = bullet1->y[9];
+	*bullet_2_x_0 = bullet2->x[0];
+	*bullet_2_x_1 = bullet2->x[1];
+	*bullet_2_x_2 = bullet2->x[2];
+	*bullet_2_x_3 = bullet2->x[3];
+	*bullet_2_x_4 = bullet2->x[4];
+	*bullet_2_x_5 = bullet2->x[5];
+	*bullet_2_x_6 = bullet2->x[6];
+	*bullet_2_x_7 = bullet2->x[7];
+	*bullet_2_x_8 = bullet2->x[8];
+	*bullet_2_x_9 = bullet2->x[9];
+	*bullet_2_y_0 = bullet2->y[0];
+	*bullet_2_y_1 = bullet2->y[1];
+	*bullet_2_y_2 = bullet2->y[2];
+	*bullet_2_y_3 = bullet2->y[3];
+	*bullet_2_y_4 = bullet2->y[4];
+	*bullet_2_y_5 = bullet2->y[5];
+	*bullet_2_y_6 = bullet2->y[6];
+	*bullet_2_y_7 = bullet2->y[7];
+	*bullet_2_y_8 = bullet2->y[8];
+	*bullet_2_y_9 = bullet2->y[9];
 }
 
 /*
  * test movement
  */
-void test_round(int *game_start, ship_t *ship, ship_t *ship2, torpedo_t *torpedo1, torpedo_t *torpedo2){
+void test_round(int *game_start, ship_t *ship, ship_t *ship2, torpedo_t *torpedo1, torpedo_t *torpedo2, bullet_t *bullet1, bullet_t *bullet2){
 	ship_init(ship, ship2);
 	init_tor(torpedo1, SHIP2);
 	init_tor(torpedo2, SHIP1);
+	init_bullet(bullet1, bullet2);
 	while(*game_start == 1){
 		// use key code update saber state, vx and vy
 		key_event(game_start, ship, ship2, torpedo1, torpedo2);
-		game_update(game_start, ship, ship2, torpedo1, torpedo2);
+		game_update(game_start, ship, ship2, torpedo1, torpedo2, bullet1, bullet2);
 		if(ship->state == DEAD || ship2->state == DEAD)
 		{
 			*game_start = 0;
@@ -276,6 +370,7 @@ void test_round(int *game_start, ship_t *ship, ship_t *ship2, torpedo_t *torpedo
 int main(){
 	printf("start");
 	ship_t ship1, ship2;
+	bullet_t bullet1, bullet2;
 	torpedo_t torpedo1, torpedo2;
 	int game_start = 0;
 	usb_init();		// initialize usb
@@ -296,14 +391,14 @@ int main(){
 		int game_start = 0;
 		while(game_start == 0){
 			key_event(&game_start, &ship1, &ship2, &torpedo1, &torpedo2);
-			gamefile_update(&game_start, &ship1, &ship2, &torpedo1, &torpedo2);
+			gamefile_update(&game_start, &ship1, &ship2, &torpedo1, &torpedo2, &bullet1, &bullet2);
 		}
 		printf("game start\n");
 
 		while (1){
 			frame_clock(frame_time);
 			// wait until next clock
-			test_round(&game_start, &ship1, &ship2, &torpedo1, &torpedo2);
+			test_round(&game_start, &ship1, &ship2, &torpedo1, &torpedo2, &bullet1, &bullet2);
 			if (game_start == 0){
 				printf("back to initial\n");
 				break;

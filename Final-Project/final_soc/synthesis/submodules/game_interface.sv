@@ -37,11 +37,11 @@ module avalon_game_interface (
 				Reg_unit[4]  <= 32'h0;	// saber_figure		  128
 				Reg_unit[5]  <= 32'h0;	// saber_hidden		  160
 				Reg_unit[6]  <= 32'h0;	
-				Reg_unit[7]  <= 32'h0;  // monster1_exist		  224
-				Reg_unit[8]  <= 32'h0;  // monster1_position x 256
-				Reg_unit[9]  <= 32'h0;  // monster1_position y 288
-				Reg_unit[10] <= 32'h0;  // monster1_state		  320
-				Reg_unit[11] <= 32'h0;  // monster1_hidden 	  352
+				Reg_unit[7]  <= 32'h0;  // ship2_exist		  224
+				Reg_unit[8]  <= 32'h0;  // ship2_position x 256
+				Reg_unit[9]  <= 32'h0;  // ship2_position y 288
+				Reg_unit[10] <= 32'h0;  // ship2_state		  320
+				Reg_unit[11] <= 32'h0;  // ship2_figure 	  352
 				Reg_unit[12] <= 32'h0;  
 				Reg_unit[13] <= 32'h0;	// monster2_exist 	  416
 				Reg_unit[14] <= 32'h0;	// monster2_position x 448

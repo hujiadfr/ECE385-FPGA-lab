@@ -149,6 +149,7 @@ C_SRCS += usb.c
 C_SRCS += usb_main.c
 C_SRCS += torpedo.c
 C_SRCS += choose_ship.c
+C_SRCS += bullet.c
 CXX_SRCS :=
 ASM_SRCS :=
 

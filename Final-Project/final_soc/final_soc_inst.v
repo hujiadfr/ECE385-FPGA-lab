@@ -2,11 +2,6 @@
 		.clk_clk                (<connected-to-clk_clk>),                //             clk.clk
 		.game_readdata          (<connected-to-game_readdata>),          //            game.readdata
 		.keycode_0_export       (<connected-to-keycode_0_export>),       //       keycode_0.export
-		.keycode_1_export       (<connected-to-keycode_1_export>),       //       keycode_1.export
-		.keycode_2_export       (<connected-to-keycode_2_export>),       //       keycode_2.export
-		.keycode_3_export       (<connected-to-keycode_3_export>),       //       keycode_3.export
-		.keycode_4_export       (<connected-to-keycode_4_export>),       //       keycode_4.export
-		.keycode_5_export       (<connected-to-keycode_5_export>),       //       keycode_5.export
 		.otg_hpi_address_export (<connected-to-otg_hpi_address_export>), // otg_hpi_address.export
 		.otg_hpi_cs_export      (<connected-to-otg_hpi_cs_export>),      //      otg_hpi_cs.export
 		.otg_hpi_data_in_port   (<connected-to-otg_hpi_data_in_port>),   //    otg_hpi_data.in_port
@@ -24,6 +19,46 @@
 		.sdram_wire_dq          (<connected-to-sdram_wire_dq>),          //                .dq
 		.sdram_wire_dqm         (<connected-to-sdram_wire_dqm>),         //                .dqm
 		.sdram_wire_ras_n       (<connected-to-sdram_wire_ras_n>),       //                .ras_n
-		.sdram_wire_we_n        (<connected-to-sdram_wire_we_n>)         //                .we_n
+		.sdram_wire_we_n        (<connected-to-sdram_wire_we_n>),        //                .we_n
+		.bullet_1_x_0_export    (<connected-to-bullet_1_x_0_export>),    //    bullet_1_x_0.export
+		.bullet_1_x_1_export    (<connected-to-bullet_1_x_1_export>),    //    bullet_1_x_1.export
+		.bullet_1_x_2_export    (<connected-to-bullet_1_x_2_export>),    //    bullet_1_x_2.export
+		.bullet_1_x_3_export    (<connected-to-bullet_1_x_3_export>),    //    bullet_1_x_3.export
+		.bullet_1_x_4_export    (<connected-to-bullet_1_x_4_export>),    //    bullet_1_x_4.export
+		.bullet_1_x_5_export    (<connected-to-bullet_1_x_5_export>),    //    bullet_1_x_5.export
+		.bullet_1_x_6_export    (<connected-to-bullet_1_x_6_export>),    //    bullet_1_x_6.export
+		.bullet_1_x_7_export    (<connected-to-bullet_1_x_7_export>),    //    bullet_1_x_7.export
+		.bullet_1_x_8_export    (<connected-to-bullet_1_x_8_export>),    //    bullet_1_x_8.export
+		.bullet_1_x_9_export    (<connected-to-bullet_1_x_9_export>),    //    bullet_1_x_9.export
+		.bullet_1_y_0_export    (<connected-to-bullet_1_y_0_export>),    //    bullet_1_y_0.export
+		.bullet_1_y_1_export    (<connected-to-bullet_1_y_1_export>),    //    bullet_1_y_1.export
+		.bullet_1_y_2_export    (<connected-to-bullet_1_y_2_export>),    //    bullet_1_y_2.export
+		.bullet_1_y_3_export    (<connected-to-bullet_1_y_3_export>),    //    bullet_1_y_3.export
+		.bullet_1_y_4_export    (<connected-to-bullet_1_y_4_export>),    //    bullet_1_y_4.export
+		.bullet_1_y_5_export    (<connected-to-bullet_1_y_5_export>),    //    bullet_1_y_5.export
+		.bullet_1_y_6_export    (<connected-to-bullet_1_y_6_export>),    //    bullet_1_y_6.export
+		.bullet_1_y_7_export    (<connected-to-bullet_1_y_7_export>),    //    bullet_1_y_7.export
+		.bullet_1_y_8_export    (<connected-to-bullet_1_y_8_export>),    //    bullet_1_y_8.export
+		.bullet_1_y_9_export    (<connected-to-bullet_1_y_9_export>),    //    bullet_1_y_9.export
+		.bullet_2_x_0_export    (<connected-to-bullet_2_x_0_export>),    //    bullet_2_x_0.export
+		.bullet_2_x_1_export    (<connected-to-bullet_2_x_1_export>),    //    bullet_2_x_1.export
+		.bullet_2_x_2_export    (<connected-to-bullet_2_x_2_export>),    //    bullet_2_x_2.export
+		.bullet_2_x_3_export    (<connected-to-bullet_2_x_3_export>),    //    bullet_2_x_3.export
+		.bullet_2_x_4_export    (<connected-to-bullet_2_x_4_export>),    //    bullet_2_x_4.export
+		.bullet_2_x_5_export    (<connected-to-bullet_2_x_5_export>),    //    bullet_2_x_5.export
+		.bullet_2_x_6_export    (<connected-to-bullet_2_x_6_export>),    //    bullet_2_x_6.export
+		.bullet_2_x_7_export    (<connected-to-bullet_2_x_7_export>),    //    bullet_2_x_7.export
+		.bullet_2_x_8_export    (<connected-to-bullet_2_x_8_export>),    //    bullet_2_x_8.export
+		.bullet_2_x_9_export    (<connected-to-bullet_2_x_9_export>),    //    bullet_2_x_9.export
+		.bullet_2_y_0_export    (<connected-to-bullet_2_y_0_export>),    //    bullet_2_y_0.export
+		.bullet_2_y_1_export    (<connected-to-bullet_2_y_1_export>),    //    bullet_2_y_1.export
+		.bullet_2_y_2_export    (<connected-to-bullet_2_y_2_export>),    //    bullet_2_y_2.export
+		.bullet_2_y_3_export    (<connected-to-bullet_2_y_3_export>),    //    bullet_2_y_3.export
+		.bullet_2_y_4_export    (<connected-to-bullet_2_y_4_export>),    //    bullet_2_y_4.export
+		.bullet_2_y_5_export    (<connected-to-bullet_2_y_5_export>),    //    bullet_2_y_5.export
+		.bullet_2_y_6_export    (<connected-to-bullet_2_y_6_export>),    //    bullet_2_y_6.export
+		.bullet_2_y_7_export    (<connected-to-bullet_2_y_7_export>),    //    bullet_2_y_7.export
+		.bullet_2_y_8_export    (<connected-to-bullet_2_y_8_export>),    //    bullet_2_y_8.export
+		.bullet_2_y_9_export    (<connected-to-bullet_2_y_9_export>)     //    bullet_2_y_9.export
 	);
 
