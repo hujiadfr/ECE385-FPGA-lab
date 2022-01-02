@@ -44,8 +44,8 @@
 //   ARBITRATION_SCHEME   "round-robin"
 //   PIPELINE_ARB:        1
 //   PKT_TRANS_LOCK:      69 (arbitration locking enabled)
-//   ST_DATA_W:           109
-//   ST_CHANNEL_W:        18
+//   ST_DATA_W:           111
+//   ST_CHANNEL_W:        53
 // ------------------------------------------
 
 module final_soc_mm_interconnect_0_cmd_mux_002
@@ -54,15 +54,15 @@ module final_soc_mm_interconnect_0_cmd_mux_002
     // Sinks
     // ----------------------
     input                       sink0_valid,
-    input [109-1   : 0]  sink0_data,
-    input [18-1: 0]  sink0_channel,
+    input [111-1   : 0]  sink0_data,
+    input [53-1: 0]  sink0_channel,
     input                       sink0_startofpacket,
     input                       sink0_endofpacket,
     output                      sink0_ready,
 
     input                       sink1_valid,
-    input [109-1   : 0]  sink1_data,
-    input [18-1: 0]  sink1_channel,
+    input [111-1   : 0]  sink1_data,
+    input [53-1: 0]  sink1_channel,
     input                       sink1_startofpacket,
     input                       sink1_endofpacket,
     output                      sink1_ready,
@@ -72,8 +72,8 @@ module final_soc_mm_interconnect_0_cmd_mux_002
     // Source
     // ----------------------
     output                      src_valid,
-    output [109-1    : 0] src_data,
-    output [18-1 : 0] src_channel,
+    output [111-1    : 0] src_data,
+    output [53-1 : 0] src_channel,
     output                      src_startofpacket,
     output                      src_endofpacket,
     input                       src_ready,
@@ -84,12 +84,12 @@ module final_soc_mm_interconnect_0_cmd_mux_002
     input clk,
     input reset
 );
-    localparam PAYLOAD_W        = 109 + 18 + 2;
+    localparam PAYLOAD_W        = 111 + 53 + 2;
     localparam NUM_INPUTS       = 2;
     localparam SHARE_COUNTER_W  = 1;
     localparam PIPELINE_ARB     = 1;
-    localparam ST_DATA_W        = 109;
-    localparam ST_CHANNEL_W     = 18;
+    localparam ST_DATA_W        = 111;
+    localparam ST_CHANNEL_W     = 53;
     localparam PKT_TRANS_LOCK   = 69;
 
     // ------------------------------------------

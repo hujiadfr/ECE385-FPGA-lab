@@ -18,22 +18,22 @@
 // altera message_level Level1 
 // altera message_off 10034 10035 10036 10037 10230 10240 10030 
 
-module final_soc_keycode_0 (
-                             // inputs:
-                              address,
-                              chipselect,
-                              clk,
-                              reset_n,
-                              write_n,
-                              writedata,
+module final_soc_bullet_1_x_0 (
+                                // inputs:
+                                 address,
+                                 chipselect,
+                                 clk,
+                                 reset_n,
+                                 write_n,
+                                 writedata,
 
-                             // outputs:
-                              out_port,
-                              readdata
-                           )
+                                // outputs:
+                                 out_port,
+                                 readdata
+                              )
 ;
 
-  output  [  7: 0] out_port;
+  output  [  9: 0] out_port;
   output  [ 31: 0] readdata;
   input   [  1: 0] address;
   input            chipselect;
@@ -44,19 +44,19 @@ module final_soc_keycode_0 (
 
 
 wire             clk_en;
-reg     [  7: 0] data_out;
-wire    [  7: 0] out_port;
-wire    [  7: 0] read_mux_out;
+reg     [  9: 0] data_out;
+wire    [  9: 0] out_port;
+wire    [  9: 0] read_mux_out;
 wire    [ 31: 0] readdata;
   assign clk_en = 1;
   //s1, which is an e_avalon_slave
-  assign read_mux_out = {8 {(address == 0)}} & data_out;
+  assign read_mux_out = {10 {(address == 0)}} & data_out;
   always @(posedge clk or negedge reset_n)
     begin
       if (reset_n == 0)
           data_out <= 0;
       else if (chipselect && ~write_n && (address == 0))
-          data_out <= writedata[7 : 0];
+          data_out <= writedata[9 : 0];
     end
 
 

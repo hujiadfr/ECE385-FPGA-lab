@@ -26,6 +26,28 @@ module  color_mapper (
                     input logic is_tor2_1,
                     input logic is_tor2_2,
                     input logic is_tor2_3,
+                    
+                    input logic is_bullet_1_0,
+                    input logic is_bullet_1_1,
+                    input logic is_bullet_1_2,
+                    input logic is_bullet_1_3,
+                    input logic is_bullet_1_4,
+                    input logic is_bullet_1_5,
+                    input logic is_bullet_1_6,
+                    input logic is_bullet_1_7,
+                    input logic is_bullet_1_8,
+                    input logic is_bullet_1_9,
+                    input logic is_bullet_2_0,
+                    input logic is_bullet_2_1,
+                    input logic is_bullet_2_2,
+                    input logic is_bullet_2_3,
+                    input logic is_bullet_2_4,
+                    input logic is_bullet_2_5,
+                    input logic is_bullet_2_6,
+                    input logic is_bullet_2_7,
+                    input logic is_bullet_2_8,
+                    input logic is_bullet_2_9,
+
                     input logic [2:0] choose_ship1, choose_ship2,
                     input logic is_choose_state_data1,
                     input logic is_choose_state_data2,
@@ -136,6 +158,10 @@ module  color_mapper (
          end
         else if(is_tor1_0 == 1'b1 || is_tor1_1 == 1'b1 || is_tor1_2 == 1'b1 || is_tor1_3 == 1'b1 || is_tor2_0 == 1'b1 || is_tor2_1 == 1'b1 || is_tor2_2 == 1'b1 || is_tor2_3 == 1'b1 )
                 color = 24'hFFFBEB;
+        else if (is_bullet_1_0 == 1'b1 || is_bullet_1_1 == 1'b1 || is_bullet_1_2 == 1'b1 || is_bullet_1_3 == 1'b1 || is_bullet_1_4 == 1'b1 || is_bullet_1_5 == 1'b1 || is_bullet_1_6 == 1'b1 || is_bullet_1_7 == 1'b1 ||is_bullet_1_8 == 1'b1 || is_bullet_1_9 == 1'b1)
+                 color = 24'hFFFBEB;
+        else if (is_bullet_2_0 == 1'b1 || is_bullet_2_1 == 1'b1 || is_bullet_2_2 == 1'b1 || is_bullet_2_3 == 1'b1 || is_bullet_2_4 == 1'b1 || is_bullet_2_5 == 1'b1 || is_bullet_2_6 == 1'b1 || is_bullet_2_7 == 1'b1 ||is_bullet_2_8 == 1'b1 || is_bullet_2_9 == 1'b1)
+                 color = 24'hFFFBEB;
         else
         begin
             color = background_color;

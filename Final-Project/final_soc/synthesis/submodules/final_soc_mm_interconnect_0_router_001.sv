@@ -49,21 +49,21 @@ module final_soc_mm_interconnect_0_router_001_default_decode
                DEFAULT_RD_CHANNEL = -1,
                DEFAULT_DESTID = 0 
    )
-  (output [95 - 91 : 0] default_destination_id,
-   output [18-1 : 0] default_wr_channel,
-   output [18-1 : 0] default_rd_channel,
-   output [18-1 : 0] default_src_channel
+  (output [97 - 92 : 0] default_destination_id,
+   output [53-1 : 0] default_wr_channel,
+   output [53-1 : 0] default_rd_channel,
+   output [53-1 : 0] default_src_channel
   );
 
   assign default_destination_id = 
-    DEFAULT_DESTID[95 - 91 : 0];
+    DEFAULT_DESTID[97 - 92 : 0];
 
   generate
     if (DEFAULT_CHANNEL == -1) begin : no_default_channel_assignment
       assign default_src_channel = '0;
     end
     else begin : default_channel_assignment
-      assign default_src_channel = 18'b1 << DEFAULT_CHANNEL;
+      assign default_src_channel = 53'b1 << DEFAULT_CHANNEL;
     end
   endgenerate
 
@@ -73,8 +73,8 @@ module final_soc_mm_interconnect_0_router_001_default_decode
       assign default_rd_channel = '0;
     end
     else begin : default_rw_channel_assignment
-      assign default_wr_channel = 18'b1 << DEFAULT_WR_CHANNEL;
-      assign default_rd_channel = 18'b1 << DEFAULT_RD_CHANNEL;
+      assign default_wr_channel = 53'b1 << DEFAULT_WR_CHANNEL;
+      assign default_rd_channel = 53'b1 << DEFAULT_RD_CHANNEL;
     end
   endgenerate
 
@@ -93,7 +93,7 @@ module final_soc_mm_interconnect_0_router_001
     // Command Sink (Input)
     // -------------------
     input                       sink_valid,
-    input  [109-1 : 0]    sink_data,
+    input  [111-1 : 0]    sink_data,
     input                       sink_startofpacket,
     input                       sink_endofpacket,
     output                      sink_ready,
@@ -102,8 +102,8 @@ module final_soc_mm_interconnect_0_router_001
     // Command Source (Output)
     // -------------------
     output                          src_valid,
-    output reg [109-1    : 0] src_data,
-    output reg [18-1 : 0] src_channel,
+    output reg [111-1    : 0] src_data,
+    output reg [53-1 : 0] src_channel,
     output                          src_startofpacket,
     output                          src_endofpacket,
     input                           src_ready
@@ -114,12 +114,12 @@ module final_soc_mm_interconnect_0_router_001
     // -------------------------------------------------------
     localparam PKT_ADDR_H = 64;
     localparam PKT_ADDR_L = 36;
-    localparam PKT_DEST_ID_H = 95;
-    localparam PKT_DEST_ID_L = 91;
-    localparam PKT_PROTECTION_H = 99;
-    localparam PKT_PROTECTION_L = 97;
-    localparam ST_DATA_W = 109;
-    localparam ST_CHANNEL_W = 18;
+    localparam PKT_DEST_ID_H = 97;
+    localparam PKT_DEST_ID_L = 92;
+    localparam PKT_PROTECTION_H = 101;
+    localparam PKT_PROTECTION_L = 99;
+    localparam ST_DATA_W = 111;
+    localparam ST_CHANNEL_W = 53;
     localparam DECODER_TYPE = 0;
 
     localparam PKT_TRANS_WRITE = 67;
@@ -137,13 +137,13 @@ module final_soc_mm_interconnect_0_router_001
     localparam PAD0 = log2ceil(64'h10000000 - 64'h8000000); 
     localparam PAD1 = log2ceil(64'h10001000 - 64'h10000800); 
     localparam PAD2 = log2ceil(64'h10001110 - 64'h10001100); 
-    localparam PAD3 = log2ceil(64'h100011e0 - 64'h100011d8); 
+    localparam PAD3 = log2ceil(64'h10001410 - 64'h10001408); 
     // -------------------------------------------------------
     // Work out which address bits are significant based on the
     // address range of the slaves. If the required width is too
     // large or too small, we use the address field width instead.
     // -------------------------------------------------------
-    localparam ADDR_RANGE = 64'h100011e0;
+    localparam ADDR_RANGE = 64'h10001410;
     localparam RANGE_ADDR_WIDTH = log2ceil(ADDR_RANGE);
     localparam OPTIMIZED_ADDR_H = (RANGE_ADDR_WIDTH > PKT_ADDR_W) ||
                                   (RANGE_ADDR_WIDTH == 0) ?
@@ -167,7 +167,7 @@ module final_soc_mm_interconnect_0_router_001
     assign src_startofpacket = sink_startofpacket;
     assign src_endofpacket   = sink_endofpacket;
     wire [PKT_DEST_ID_W-1:0] default_destid;
-    wire [18-1 : 0] default_src_channel;
+    wire [53-1 : 0] default_src_channel;
 
 
 
@@ -198,26 +198,26 @@ module final_soc_mm_interconnect_0_router_001
 
     // ( 0x8000000 .. 0x10000000 )
     if ( {address[RG:PAD0],{PAD0{1'b0}}} == 29'h8000000   ) begin
-            src_channel = 18'b0100;
+            src_channel = 53'b0100;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 0;
     end
 
     // ( 0x10000800 .. 0x10001000 )
     if ( {address[RG:PAD1],{PAD1{1'b0}}} == 29'h10000800   ) begin
-            src_channel = 18'b0010;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 9;
+            src_channel = 53'b0010;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 44;
     end
 
     // ( 0x10001100 .. 0x10001110 )
     if ( {address[RG:PAD2],{PAD2{1'b0}}} == 29'h10001100   ) begin
-            src_channel = 18'b1000;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 16;
+            src_channel = 53'b1000;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 51;
     end
 
-    // ( 0x100011d8 .. 0x100011e0 )
-    if ( {address[RG:PAD3],{PAD3{1'b0}}} == 29'h100011d8  && read_transaction  ) begin
-            src_channel = 18'b0001;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 17;
+    // ( 0x10001408 .. 0x10001410 )
+    if ( {address[RG:PAD3],{PAD3{1'b0}}} == 29'h10001408  && read_transaction  ) begin
+            src_channel = 53'b0001;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 52;
     end
 
 end

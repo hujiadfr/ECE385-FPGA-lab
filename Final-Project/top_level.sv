@@ -61,7 +61,48 @@ module top_level(
     logic [1:0] hpi_addr;
     logic [15:0] hpi_data_in, hpi_data_out;
     logic hpi_r, hpi_w, hpi_cs, hpi_reset;
-    
+    logic [9:0] bullet_1_x_0;
+    logic [9:0] bullet_1_x_1;
+    logic [9:0] bullet_1_x_2;
+    logic [9:0] bullet_1_x_3;
+    logic [9:0] bullet_1_x_4;
+    logic [9:0] bullet_1_x_5;
+    logic [9:0] bullet_1_x_6;
+    logic [9:0] bullet_1_x_7;
+    logic [9:0] bullet_1_x_8;
+    logic [9:0] bullet_1_x_9;
+    logic [9:0] bullet_1_y_0;
+    logic [9:0] bullet_1_y_1;
+    logic [9:0] bullet_1_y_2;
+    logic [9:0] bullet_1_y_3;
+    logic [9:0] bullet_1_y_4;
+    logic [9:0] bullet_1_y_5;
+    logic [9:0] bullet_1_y_6;
+    logic [9:0] bullet_1_y_7;
+    logic [9:0] bullet_1_y_8;
+    logic [9:0] bullet_1_y_9;
+    logic [9:0] bullet_2_x_0;
+    logic [9:0] bullet_2_x_1;
+    logic [9:0] bullet_2_x_2;
+    logic [9:0] bullet_2_x_3;
+    logic [9:0] bullet_2_x_4;
+    logic [9:0] bullet_2_x_5;
+    logic [9:0] bullet_2_x_6;
+    logic [9:0] bullet_2_x_7;
+    logic [9:0] bullet_2_x_8;
+    logic [9:0] bullet_2_x_9;
+    logic [9:0] bullet_2_y_0;
+    logic [9:0] bullet_2_y_1;
+    logic [9:0] bullet_2_y_2;
+    logic [9:0] bullet_2_y_3;
+    logic [9:0] bullet_2_y_4;
+    logic [9:0] bullet_2_y_5;
+    logic [9:0] bullet_2_y_6;
+    logic [9:0] bullet_2_y_7;
+    logic [9:0] bullet_2_y_8;
+    logic [9:0] bullet_2_y_9;
+    logic [9:0] bullet_1_stop;
+    logic [9:0] bullet_2_stop;
     // Interface between NIOS II and EZ-OTG chip
     hpi_io_intf hpi_io_inst(
         .Clk(Clk),
@@ -82,7 +123,7 @@ module top_level(
         .OTG_CS_N(OTG_CS_N),
         .OTG_RST_N(OTG_RST_N)
     );
-    logic [7:0] keycode_0, keycode_1, keycode_2, keycode_3, keycode_4, keycode_5, keycode_6, keycode_7;
+    logic [7:0] keycode_0;
     logic [2047:0] game_file;
      // You need to make sure that the port names here match the ports in Qsys-generated codes.
      final_soc nios_system(
@@ -102,11 +143,6 @@ module top_level(
         .game_readdata(game_file),
 
         .keycode_0_export(keycode_0),                              
-        .keycode_1_export(keycode_1),  
-        .keycode_2_export(keycode_2),
-        .keycode_3_export(keycode_3),
-        .keycode_4_export(keycode_4),  
-        .keycode_5_export(keycode_5),
 
         .otg_hpi_address_export(hpi_addr),
         .otg_hpi_data_in_port(hpi_data_in),
@@ -114,7 +150,48 @@ module top_level(
         .otg_hpi_cs_export(hpi_cs),
         .otg_hpi_r_export(hpi_r),
         .otg_hpi_w_export(hpi_w),
-        .otg_hpi_reset_export(hpi_reset)
+        .otg_hpi_reset_export(hpi_reset),
+
+        .bullet_1_x_0_export(bullet_1_x_0),
+        .bullet_1_x_1_export(bullet_1_x_1),
+        .bullet_1_x_2_export(bullet_1_x_2),
+        .bullet_1_x_3_export(bullet_1_x_3),
+        .bullet_1_x_4_export(bullet_1_x_4),
+        .bullet_1_x_5_export(bullet_1_x_5),
+        .bullet_1_x_6_export(bullet_1_x_6),
+        .bullet_1_x_7_export(bullet_1_x_7),
+        .bullet_1_x_8_export(bullet_1_x_8),
+        .bullet_1_x_9_export(bullet_1_x_9),
+        .bullet_1_y_0_export(bullet_1_y_0),
+        .bullet_1_y_1_export(bullet_1_y_1),
+        .bullet_1_y_2_export(bullet_1_y_2),
+        .bullet_1_y_3_export(bullet_1_y_3),
+        .bullet_1_y_4_export(bullet_1_y_4),
+        .bullet_1_y_5_export(bullet_1_y_5),
+        .bullet_1_y_6_export(bullet_1_y_6),
+        .bullet_1_y_7_export(bullet_1_y_7),
+        .bullet_1_y_8_export(bullet_1_y_8),
+        .bullet_1_y_9_export(bullet_1_y_9),
+        .bullet_2_x_0_export(bullet_2_x_0),
+        .bullet_2_x_1_export(bullet_2_x_1),
+        .bullet_2_x_2_export(bullet_2_x_2),
+        .bullet_2_x_3_export(bullet_2_x_3),
+        .bullet_2_x_4_export(bullet_2_x_4),
+        .bullet_2_x_5_export(bullet_2_x_5),
+        .bullet_2_x_6_export(bullet_2_x_6),
+        .bullet_2_x_7_export(bullet_2_x_7),
+        .bullet_2_x_8_export(bullet_2_x_8),
+        .bullet_2_x_9_export(bullet_2_x_9),
+        .bullet_2_y_0_export(bullet_2_y_0),
+        .bullet_2_y_1_export(bullet_2_y_1),
+        .bullet_2_y_2_export(bullet_2_y_2),
+        .bullet_2_y_3_export(bullet_2_y_3),
+        .bullet_2_y_4_export(bullet_2_y_4),
+        .bullet_2_y_5_export(bullet_2_y_5),
+        .bullet_2_y_6_export(bullet_2_y_6),
+        .bullet_2_y_7_export(bullet_2_y_7),
+        .bullet_2_y_8_export(bullet_2_y_8),
+        .bullet_2_y_9_export(bullet_2_y_9)
     );
     
     // Use PLL to generate the 25MHZ VGA_CLK.
@@ -304,6 +381,9 @@ module top_level(
     assign torpedo2_1_y = game_file[1001:992];
     assign torpedo2_2_y = game_file[1033:1024];
     assign torpedo2_3_y = game_file[1065:1056];
+    
+    assign bullet_1_stop = game_file[1449:1440];
+    assign bullet_2_stop = game_file[1481:1472];
 
 wire is_tor1_0;
     wire is_tor1_1;
@@ -322,6 +402,28 @@ wire is_tor1_0;
     wire [3:0] torpedo2_1;
     wire [3:0] torpedo2_2;
     wire [3:0] torpedo2_3;
+
+    wire is_bullet_1_0;
+    wire is_bullet_1_1;
+    wire is_bullet_1_2;
+    wire is_bullet_1_3;
+    wire is_bullet_1_4;
+    wire is_bullet_1_5;
+    wire is_bullet_1_6;
+    wire is_bullet_1_7;
+    wire is_bullet_1_8;
+    wire is_bullet_1_9;
+    wire is_bullet_2_0;
+    wire is_bullet_2_1;
+    wire is_bullet_2_2;
+    wire is_bullet_2_3;
+    wire is_bullet_2_4;
+    wire is_bullet_2_5;
+    wire is_bullet_2_6;
+    wire is_bullet_2_7;
+    wire is_bullet_2_8;
+    wire is_bullet_2_9;
+
 
 torpedo 
 torpedo0(
@@ -427,7 +529,251 @@ torpedo7(
         .is_ball   		( is_tor2_3  		),
         .ball_data      ( torpedo2_3        )
 );
-    
+
+bullet
+bullet1_0(
+         .Clk       		( Clk       		),
+        .Reset     		( Reset_h     		),
+        .frame_clk 		( VGA_VS     		),
+        .DrawX     		( DrawX     		),
+        .DrawY     		( DrawY     		),
+        .Ball_X_Pos    	( bullet_1_x_0    ),
+        .Ball_Y_Pos    	( bullet_1_y_0	   ),
+        .torpedo_stop (bullet_1_stop),
+        .is_ball   		( is_bullet_1_0  		),
+);
+bullet
+bullet1_1(
+         .Clk       		( Clk       		),
+        .Reset     		( Reset_h     		),
+        .frame_clk 		( VGA_VS     		),
+        .DrawX     		( DrawX     		),
+        .DrawY     		( DrawY     		),
+        .Ball_X_Pos    	( bullet_1_x_1    ),
+        .Ball_Y_Pos    	( bullet_1_y_1	   ),
+        .torpedo_stop (bullet_1_stop),
+        .is_ball   		( is_bullet_1_1  		),
+);
+bullet
+bullet1_2(
+         .Clk       		( Clk       		),
+        .Reset     		( Reset_h     		),
+        .frame_clk 		( VGA_VS     		),
+        .DrawX     		( DrawX     		),
+        .DrawY     		( DrawY     		),
+        .Ball_X_Pos    	( bullet_1_x_2    ),
+        .Ball_Y_Pos    	( bullet_1_y_2	   ),
+        .torpedo_stop (bullet_1_stop),
+        .is_ball   		( is_bullet_1_2  		),
+);
+bullet
+bullet1_3(
+         .Clk       		( Clk       		),
+        .Reset     		( Reset_h     		),
+        .frame_clk 		( VGA_VS     		),
+        .DrawX     		( DrawX     		),
+        .DrawY     		( DrawY     		),
+        .Ball_X_Pos    	( bullet_1_x_3    ),
+        .Ball_Y_Pos    	( bullet_1_y_3	   ),
+        .torpedo_stop (bullet_1_stop),
+        .is_ball   		( is_bullet_1_3 		),
+);
+bullet
+bullet1_4(
+         .Clk       		( Clk       		),
+        .Reset     		( Reset_h     		),
+        .frame_clk 		( VGA_VS     		),
+        .DrawX     		( DrawX     		),
+        .DrawY     		( DrawY     		),
+        .Ball_X_Pos    	( bullet_1_x_4    ),
+        .Ball_Y_Pos    	( bullet_1_y_4	   ),
+        .torpedo_stop (bullet_1_stop),
+        .is_ball   		( is_bullet_1_4 		),
+);
+bullet
+bullet1_5(
+         .Clk       		( Clk       		),
+        .Reset     		( Reset_h     		),
+        .frame_clk 		( VGA_VS     		),
+        .DrawX     		( DrawX     		),
+        .DrawY     		( DrawY     		),
+        .Ball_X_Pos    	( bullet_1_x_5    ),
+        .Ball_Y_Pos    	( bullet_1_y_5	   ),
+        .torpedo_stop (bullet_1_stop),
+        .is_ball   		( is_bullet_1_5  		),
+);
+bullet
+bullet1_6(
+         .Clk       		( Clk       		),
+        .Reset     		( Reset_h     		),
+        .frame_clk 		( VGA_VS     		),
+        .DrawX     		( DrawX     		),
+        .DrawY     		( DrawY     		),
+        .Ball_X_Pos    	( bullet_1_x_6    ),
+        .Ball_Y_Pos    	( bullet_1_y_6	   ),
+        .torpedo_stop (bullet_1_stop),
+        .is_ball   		( is_bullet_1_6 		),
+);
+
+bullet
+bullet1_7(
+         .Clk       		( Clk       		),
+        .Reset     		( Reset_h     		),
+        .frame_clk 		( VGA_VS     		),
+        .DrawX     		( DrawX     		),
+        .DrawY     		( DrawY     		),
+        .Ball_X_Pos    	( bullet_1_x_7    ),
+        .Ball_Y_Pos    	( bullet_1_y_7	   ),
+        .torpedo_stop (bullet_1_stop),
+        .is_ball   		( is_bullet_1_7 		),
+);
+bullet
+bullet1_8(
+         .Clk       		( Clk       		),
+        .Reset     		( Reset_h     		),
+        .frame_clk 		( VGA_VS     		),
+        .DrawX     		( DrawX     		),
+        .DrawY     		( DrawY     		),
+        .Ball_X_Pos    	( bullet_1_x_8   ),
+        .Ball_Y_Pos    	( bullet_1_y_8	   ),
+        .torpedo_stop (bullet_1_stop),
+        .is_ball   		( is_bullet_1_8 		),
+);
+bullet
+bullet1_9(
+         .Clk       		( Clk       		),
+        .Reset     		( Reset_h     		),
+        .frame_clk 		( VGA_VS     		),
+        .DrawX     		( DrawX     		),
+        .DrawY     		( DrawY     		),
+        .Ball_X_Pos    	( bullet_1_x_9    ),
+        .Ball_Y_Pos    	( bullet_1_y_9	   ),
+        .torpedo_stop (bullet_1_stop),
+        .is_ball   		( is_bullet_1_9  		),
+);
+
+bullet
+bullet2_0(
+         .Clk       		( Clk       		),
+        .Reset     		( Reset_h     		),
+        .frame_clk 		( VGA_VS     		),
+        .DrawX     		( DrawX     		),
+        .DrawY     		( DrawY     		),
+        .Ball_X_Pos    	( bullet_2_x_0    ),
+        .Ball_Y_Pos    	( bullet_2_y_0	   ),
+        .torpedo_stop (bullet_2_stop),
+        .is_ball   		( is_bullet_2_0  		),
+);
+bullet
+bullet2_1(
+         .Clk       		( Clk       		),
+        .Reset     		( Reset_h     		),
+        .frame_clk 		( VGA_VS     		),
+        .DrawX     		( DrawX     		),
+        .DrawY     		( DrawY     		),
+        .Ball_X_Pos    	( bullet_2_x_1    ),
+        .Ball_Y_Pos    	( bullet_2_y_1	   ),
+        .torpedo_stop (bullet_2_stop),
+        .is_ball   		( is_bullet_2_1 		),
+);
+bullet
+bullet2_2(
+         .Clk       		( Clk       		),
+        .Reset     		( Reset_h     		),
+        .frame_clk 		( VGA_VS     		),
+        .DrawX     		( DrawX     		),
+        .DrawY     		( DrawY     		),
+        .Ball_X_Pos    	( bullet_2_x_2    ),
+        .Ball_Y_Pos    	( bullet_2_y_2	   ),
+        .torpedo_stop (bullet_2_stop),
+        .is_ball   		( is_bullet_2_2  		),
+);
+bullet
+bullet2_3(
+         .Clk       		( Clk       		),
+        .Reset     		( Reset_h     		),
+        .frame_clk 		( VGA_VS     		),
+        .DrawX     		( DrawX     		),
+        .DrawY     		( DrawY     		),
+        .Ball_X_Pos    	( bullet_2_x_3    ),
+        .Ball_Y_Pos    	( bullet_2_y_3	   ),
+        .torpedo_stop (bullet_2_stop),
+        .is_ball   		( is_bullet_2_3  		),
+);
+bullet
+bullet2_4(
+         .Clk       		( Clk       		),
+        .Reset     		( Reset_h     		),
+        .frame_clk 		( VGA_VS     		),
+        .DrawX     		( DrawX     		),
+        .DrawY     		( DrawY     		),
+        .Ball_X_Pos    	( bullet_2_x_4    ),
+        .Ball_Y_Pos    	( bullet_2_y_4	   ),
+        .torpedo_stop (bullet_2_stop),
+        .is_ball   		( is_bullet_2_4  		),
+);
+bullet
+bullet2_5(
+         .Clk       		( Clk       		),
+        .Reset     		( Reset_h     		),
+        .frame_clk 		( VGA_VS     		),
+        .DrawX     		( DrawX     		),
+        .DrawY     		( DrawY     		),
+        .Ball_X_Pos    	( bullet_2_x_5    ),
+        .Ball_Y_Pos    	( bullet_2_y_5	   ),
+        .torpedo_stop (bullet_2_stop),
+        .is_ball   		( is_bullet_2_5 		),
+);
+bullet
+bullet2_6(
+         .Clk       		( Clk       		),
+        .Reset     		( Reset_h     		),
+        .frame_clk 		( VGA_VS     		),
+        .DrawX     		( DrawX     		),
+        .DrawY     		( DrawY     		),
+        .Ball_X_Pos    	( bullet_2_x_6    ),
+        .Ball_Y_Pos    	( bullet_2_y_6	   ),
+        .torpedo_stop (bullet_2_stop),
+        .is_ball   		( is_bullet_2_6  		),
+);
+
+bullet
+bullet2_7(
+         .Clk       		( Clk       		),
+        .Reset     		( Reset_h     		),
+        .frame_clk 		( VGA_VS     		),
+        .DrawX     		( DrawX     		),
+        .DrawY     		( DrawY     		),
+        .Ball_X_Pos    	( bullet_2_x_7    ),
+        .Ball_Y_Pos    	( bullet_2_y_7	   ),
+        .torpedo_stop (bullet_2_stop),
+        .is_ball   		( is_bullet_2_7  		),
+);
+bullet
+bullet2_8(
+         .Clk       		( Clk       		),
+        .Reset     		( Reset_h     		),
+        .frame_clk 		( VGA_VS     		),
+        .DrawX     		( DrawX     		),
+        .DrawY     		( DrawY     		),
+        .Ball_X_Pos    	( bullet_2_x_8   ),
+        .Ball_Y_Pos    	( bullet_2_y_8	   ),
+        .torpedo_stop (bullet_2_stop),
+        .is_ball   		( is_bullet_2_8  		),
+);
+bullet
+bullet2_9(
+         .Clk       		( Clk       		),
+        .Reset     		( Reset_h     		),
+        .frame_clk 		( VGA_VS     		),
+        .DrawX     		( DrawX     		),
+        .DrawY     		( DrawY     		),
+        .Ball_X_Pos    	( bullet_2_x_9    ),
+        .Ball_Y_Pos    	( bullet_2_y_9	   ),
+        .torpedo_stop (bullet_2_stop),
+        .is_ball   		( is_bullet_2_9 		),
+);
+
     logic [3:0]background_data;
     background background(.Clk,
                         .DrawX,
@@ -439,14 +785,36 @@ torpedo7(
         .Clk            ( Clk           ),
         .is_ball1 		( is_ball1 		),
         .is_ball2 		( is_ball2 		),
-        .is_tor1_0      (is_tor1_0      ),
-        .is_tor1_1      (is_tor1_1      ),
-        .is_tor1_2      (is_tor1_2      ),
-        .is_tor1_3      (is_tor1_3      ),
-        .is_tor2_0      (is_tor2_0      ),
-        .is_tor2_1      (is_tor2_1      ),
-        .is_tor2_2      (is_tor2_2      ),
-        .is_tor2_3      (is_tor2_3      ),
+        .is_tor1_0  (is_tor1_0),
+        .is_tor1_1  (is_tor1_1),
+        .is_tor1_2  (is_tor1_2),
+        .is_tor1_3  (is_tor1_3),
+        .is_tor2_0  (is_tor2_0),
+        .is_tor2_1  (is_tor2_1),
+        .is_tor2_2  (is_tor2_2),
+        .is_tor2_3  (is_tor2_3),
+
+        .is_bullet_1_0 ,
+        .is_bullet_1_1 ,
+        .is_bullet_1_2 ,
+        .is_bullet_1_3 ,
+        .is_bullet_1_4 ,
+        .is_bullet_1_5 ,
+        .is_bullet_1_6 ,
+        .is_bullet_1_7 ,
+        .is_bullet_1_8 ,
+        .is_bullet_1_9 ,
+        .is_bullet_2_0 ,
+        .is_bullet_2_1 ,
+        .is_bullet_2_2 ,
+        .is_bullet_2_3 ,
+        .is_bullet_2_4 ,
+        .is_bullet_2_5 ,
+        .is_bullet_2_6 ,
+        .is_bullet_2_7 ,
+        .is_bullet_2_8 ,
+        .is_bullet_2_9 ,
+
         .choose_ship1, 
         .choose_ship2,
         .is_choose_state_data1  ( is_choose_state_data1),

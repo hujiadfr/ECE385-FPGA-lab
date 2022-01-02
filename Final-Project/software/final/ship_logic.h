@@ -11,7 +11,7 @@
 #define DOWN_MOST 450
 #define INIT_X 50
 #define INIT_Y 240
-#define INIT_X2 300
+#define INIT_X2 557
 #define INIT_Y2 240
 #define VY_MOST 6
 #define VX_MOST 8

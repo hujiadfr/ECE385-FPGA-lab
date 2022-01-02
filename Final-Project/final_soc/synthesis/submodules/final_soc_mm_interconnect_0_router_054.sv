@@ -42,12 +42,12 @@
 
 `timescale 1 ns / 1 ns
 
-module final_soc_mm_interconnect_0_router_004_default_decode
+module final_soc_mm_interconnect_0_router_054_default_decode
   #(
      parameter DEFAULT_CHANNEL = 0,
                DEFAULT_WR_CHANNEL = -1,
                DEFAULT_RD_CHANNEL = -1,
-               DEFAULT_DESTID = 0 
+               DEFAULT_DESTID = 1 
    )
   (output [97 - 92 : 0] default_destination_id,
    output [53-1 : 0] default_wr_channel,
@@ -81,7 +81,7 @@ module final_soc_mm_interconnect_0_router_004_default_decode
 endmodule
 
 
-module final_soc_mm_interconnect_0_router_004
+module final_soc_mm_interconnect_0_router_054
 (
     // -------------------
     // Clock & Reset
@@ -170,7 +170,7 @@ module final_soc_mm_interconnect_0_router_004
     assign read_transaction  = sink_data[PKT_TRANS_READ];
 
 
-    final_soc_mm_interconnect_0_router_004_default_decode the_default_decode(
+    final_soc_mm_interconnect_0_router_054_default_decode the_default_decode(
       .default_destination_id (),
       .default_wr_channel   (),
       .default_rd_channel   (),
@@ -189,12 +189,8 @@ module final_soc_mm_interconnect_0_router_004
 
 
 
-        if (destid == 0 ) begin
-            src_channel = 53'b01;
-        end
-
         if (destid == 1  && read_transaction) begin
-            src_channel = 53'b10;
+            src_channel = 53'b1;
         end
 
 
