@@ -133,16 +133,6 @@ module top_level(
         .DrawY
     );
     
-    // wire [3:0] 	command_p1, command_p2; //{up, down, left, right}
-    // keycode u_keycode(
-    //     //ports
-    //     .Clk       		( Clk       		),
-    //     .keycode_0 		( keycode_0 		),
-    //     .keycode_1 		( keycode_1 		),
-    //     .keycode_2 		( keycode_2 		),
-    //     .keycode_3 		( keycode_3 		),
-    //     .keycode_4 		( keycode_4 		),
-    //     .keycode_5 		( keycode_5 		),
 
     //     .command_p1   	( command_p1   		),
     //     .command_p2     ( command_p2        )
@@ -214,10 +204,56 @@ module top_level(
     // );
 //
 	
+    logic [9:0] torpedo1_0_x, torpedo1_1_x, torpedo1_2_x, torpedo1_3_x, torpedo2_0_x, torpedo2_1_x, torpedo2_2_x, torpedo2_3_x;
+    logic [9:0] torpedo1_0_y, torpedo1_1_y, torpedo1_2_y, torpedo1_3_y, torpedo2_0_y, torpedo2_1_y, torpedo2_2_y, torpedo2_3_y;
+    logic [9:0] torpedo1_stop, torpedo2_stop;
+
+    assign torpedo1_stop = game_file[1193:1184];
+    assign torpedo2_stop = game_file[1225:1216];
+
+    assign torpedo1_0_x = game_file[393:384];
+    assign torpedo1_1_x = game_file[425:416];
+    assign torpedo1_2_x = game_file[457:448];
+    assign torpedo1_3_x = game_file[489:480];
+
+    assign torpedo1_0_y = game_file[521:512];
+    assign torpedo1_1_y = game_file[553:544];
+    assign torpedo1_2_y = game_file[585:576];
+    assign torpedo1_3_y = game_file[617:608];
+
+    assign torpedo2_0_x = game_file[841:832];
+    assign torpedo2_1_x = game_file[873:864];
+    assign torpedo2_2_x = game_file[905:896];
+    assign torpedo2_3_x = game_file[937:928];
+
+    assign torpedo2_0_y = game_file[969:960];
+    assign torpedo2_1_y = game_file[1001:992];
+    assign torpedo2_2_y = game_file[1033:1024];
+    assign torpedo2_3_y = game_file[1065:1056];
+    
     wire is_ball1;
 	wire is_ball2;
     wire [3:0] ball_data1;
-	wire [3:0] ball_data2;
+	 wire [3:0] ball_data2;
+
+    wire is_tor1_0;
+    wire is_tor1_1;
+    wire is_tor1_2;
+    wire is_tor1_3;
+    wire is_tor2_0;
+    wire is_tor2_1;
+    wire is_tor2_2;
+    wire is_tor2_3;
+    wire [3:0] torpedo1_0;
+    wire [3:0] torpedo1_1;
+    wire [3:0] torpedo1_2;
+    wire [3:0] torpedo1_3;
+
+    wire [3:0] torpedo2_0;
+    wire [3:0] torpedo2_1;
+    wire [3:0] torpedo2_2;
+    wire [3:0] torpedo2_3;
+
     Ship #(
         .RESHAPE_LENGTH     ( 10'd40   		))
     Ship_1(
@@ -250,6 +286,110 @@ module top_level(
         .ball_data      ( ball_data2        )
     );
 
+torpedo 
+torpedo0(
+        .Clk       		( Clk       		),
+        .Reset     		( Reset_h     		),
+        .frame_clk 		( VGA_VS     		),
+        .DrawX     		( DrawX     		),
+        .DrawY     		( DrawY     		),
+        .Ball_X_Pos    	( torpedo1_0_x  	      ),
+        .Ball_Y_Pos    	( torpedo1_0_y  	   ),
+        .torpedo_stop (torpedo1_stop),
+        .is_ball   		( is_tor1_0   		),
+        .ball_data      ( torpedo1_0        )
+);
+torpedo 
+torpedo1(
+        .Clk       		( Clk       		),
+        .Reset     		( Reset_h     		),
+        .frame_clk 		( VGA_VS     		),
+        .DrawX     		( DrawX     		),
+        .DrawY     		( DrawY     		),
+        .Ball_X_Pos    	( torpedo1_1_x    ),
+        .Ball_Y_Pos    	( torpedo1_1_y 	   ),
+        .torpedo_stop (torpedo1_stop),
+        .is_ball   		( is_tor1_1   		),
+        .ball_data      ( torpedo1_1        )
+);
+torpedo
+torpedo2(
+        .Clk       		( Clk       		),
+        .Reset     		( Reset_h     		),
+        .frame_clk 		( VGA_VS     		),
+        .DrawX     		( DrawX     		),
+        .DrawY     		( DrawY     		),
+        .Ball_X_Pos    	( torpedo1_2_x    ),
+        .Ball_Y_Pos    	( torpedo1_2_y	   ),
+        .torpedo_stop (torpedo1_stop),
+        .is_ball   		( is_tor1_2   		),
+        .ball_data      ( torpedo1_2        )
+);
+torpedo 
+torpedo3(
+        .Clk       		( Clk       		),
+        .Reset     		( Reset_h     		),
+        .frame_clk 		( VGA_VS     		),
+        .DrawX     		( DrawX     		),
+        .DrawY     		( DrawY     		),
+        .Ball_X_Pos    	( torpedo1_3_x      ),
+        .Ball_Y_Pos    	( torpedo1_3_y	   ),
+        .torpedo_stop (torpedo1_stop),
+        .is_ball   		( is_tor1_3   		),
+        .ball_data      ( torpedo1_3        )
+);
+torpedo 
+torpedo4(
+        .Clk       		( Clk       		),
+        .Reset     		( Reset_h     		),
+        .frame_clk 		( VGA_VS     		),
+        .DrawX     		( DrawX     		),
+        .DrawY     		( DrawY     		),
+        .Ball_X_Pos    	( torpedo2_0_x	      ),
+        .Ball_Y_Pos    	( torpedo2_0_y	   ),
+        .torpedo_stop (torpedo2_stop),
+        .is_ball   		( is_tor2_0  		),
+        .ball_data      ( torpedo2_0        )
+);
+torpedo 
+torpedo5(
+        .Clk       		( Clk       		),
+        .Reset     		( Reset_h     		),
+        .frame_clk 		( VGA_VS     		),
+        .DrawX     		( DrawX     		),
+        .DrawY     		( DrawY     		),
+        .Ball_X_Pos    	( torpedo2_1_x	      ),
+        .Ball_Y_Pos    	( torpedo2_1_y	   ),
+        .torpedo_stop (torpedo2_stop),
+        .is_ball   		( is_tor2_1  		),
+        .ball_data      ( torpedo2_1        )
+);
+torpedo 
+torpedo6(
+        .Clk       		( Clk       		),
+        .Reset     		( Reset_h     		),
+        .frame_clk 		( VGA_VS     		),
+        .DrawX     		( DrawX     		),
+        .DrawY     		( DrawY     		),
+        .Ball_X_Pos    	( torpedo2_2_x    ),
+        .Ball_Y_Pos    	( torpedo2_2_y	   ),
+        .torpedo_stop (torpedo2_stop),
+        .is_ball   		( is_tor2_2   		),
+        .ball_data      ( torpedo2_2        )
+);
+torpedo 
+torpedo7(
+        .Clk       		( Clk       		),
+        .Reset     		( Reset_h     		),
+        .frame_clk 		( VGA_VS     		),
+        .DrawX     		( DrawX     		),
+        .DrawY     		( DrawY     		),
+        .Ball_X_Pos    	( torpedo2_3_x     ),
+        .Ball_Y_Pos    	( torpedo2_3_y	   ),
+        .torpedo_stop (torpedo2_stop),
+        .is_ball   		( is_tor2_3  		),
+        .ball_data      ( torpedo2_3        )
+);
     
     logic [3:0]background_data;
     background background(.Clk,
@@ -263,6 +403,14 @@ module top_level(
         .is_ball1 		( is_ball1 		),
         .is_ball2 		( is_ball2 		),
         .is_choose_state_data   		( is_choose_state_data),
+        .is_tor1_0  (is_tor1_0),
+        .is_tor1_1  (is_tor1_1),
+        .is_tor1_2  (is_tor1_2),
+        .is_tor1_3  (is_tor1_3),
+        .is_tor2_0  (is_tor2_0),
+        .is_tor2_1  (is_tor2_1),
+        .is_tor2_2  (is_tor2_2),
+        .is_tor2_3  (is_tor2_3),
 		.background_data(background_data),
         .ball_data1     ( ball_data1    ),
         .ball_data2     ( ball_data2    ),

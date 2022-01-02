@@ -9,7 +9,7 @@
 #define USB_MAIN_H_
 
 int usb_init(void);
-unsigned long get_keycode(void);
+void get_keycode(unsigned long* key0, unsigned long* key1, unsigned long* key2);
 
 #define KEY_MOD_LCTRL  0x01
 #define KEY_MOD_LSHIFT 0x02

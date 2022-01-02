@@ -8,13 +8,13 @@
 #define UP_MOST 40
 #define LEFT_MOST 33
 #define RIGHT_MOST 607
-#define DOWN_MOST 400
+#define DOWN_MOST 450
 #define INIT_X 50
 #define INIT_Y 240
 #define INIT_X2 300
 #define INIT_Y2 240
-#define VY_MOST 3
-#define VX_MOST 4
+#define VY_MOST 6
+#define VX_MOST 8
 #define STATE_COUNT_MAX 1
 #define EXCALIBUR_COUNT_MAX 1
 #define RIGHT 0
@@ -37,17 +37,17 @@ typedef struct ship_t{
     int vx,vy;              // velocity
     int HP;
     int ATK;                // 
-    // 改成 MoveDirection
+    // 鏀规垚 MoveDirection
     int FaceDirection; 		// -1 for left and 1 for right
     int state;
     int state_count; 		// frame count for each state
-    // 改成其他武器
+    // 鏀规垚鍏朵粬姝﹀櫒
     int Excalibur_state;	// excalibur animation state
     int Excalibur_count;	// frame clock for excalibur
     int Excalibur_remain;	// the remaining skill times
-    // 改成isFiring
+    // 鏀规垚isFiring
     int IsFighting;
-    // 改成getHit
+    // 鏀规垚getHit
     int injuring;		// just be attacked
     int Excalibur_damage;
 
@@ -69,11 +69,14 @@ void press_w(ship_t *saber);
 void press_s(ship_t *saber);
 void press_a(ship_t *saber);
 void press_d(ship_t *saber);
-void press_j(ship_t *saber);
+
 // void press_k(saber_t *saber);
 // void press_l(saber_t *saber);
 void ship_init(ship_t *ship, ship_t *ship2);
 void update(ship_t *ship, ship_t *ship2);
 void stop(ship_t *saber);
 void update_helper(ship_t*saber, int state_start, int state_end);
+
+int detect(ship_t *ship, int x, int y, int dis);
+void detect_ship_attack(ship_t *ship1, ship_t *ship2);
 #endif /* SABER_LOGIC_H_ */

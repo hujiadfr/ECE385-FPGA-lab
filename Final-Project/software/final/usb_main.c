@@ -38,6 +38,8 @@ static alt_u16 ctl_reg = 0;
 static alt_u16 no_device = 0;
 alt_u16 fs_device = 0;
 int keycode = 0;
+int keycode_2 = 0;
+int keycode_3 = 0;
 alt_u8 toggle = 0;
 alt_u8 data_size;
 alt_u8 hot_plug_count;
@@ -468,10 +470,14 @@ int usb_init(void)
 }
 
 	//-----------------------------------get keycode value------------------------------------------------//
-unsigned long get_keycode(void){
+void get_keycode(unsigned long* key0, unsigned long* key1, unsigned long* key2){
 	unsigned long keycode = 0; // return value: 4 key codes
 	int keycode1 = 0; // first two key codes
 	int keycode2 = 0; // second two key codes
+	int keycode3 = 0;
+	int keycode4 = 0;
+	int keycode5 = 0;
+	int keycode6 = 0;
 	toggle++;
 	IO_write(HPI_ADDR,0x0500); //the start address
 	//data phase IN-1
@@ -521,11 +527,16 @@ unsigned long get_keycode(void){
 	// subsequent addresses.
 	keycode1 = UsbRead(0x051e);
 	keycode2 = UsbRead(0x0520);
+	keycode3 = UsbRead(0x0522);
+//	keycode4 = UsbRead(0x0524);
+//	keycode5 = UsbRead(0x0526);
+//	keycode6 = UsbRead(0x0528);
+
 //	//printf("\nfirst two keycode values are %04x\n",keycode1);
 //	//printf("second two keycode values are %04x\n",keycode2);
 	// We only need the first keycode, which is at the lower byte of keycode.
 	// Send the keycode to hardware via PIO.
-	*keycode_base = keycode1 & 0xff;
+//	*keycode_base = keycode1 & 0xff;
 
 	usleep(200);//usleep(5000);
 	usb_ctl_val = UsbRead(ctl_reg);
@@ -563,7 +574,7 @@ unsigned long get_keycode(void){
 		usleep(200);
 	}
 
-	keycode = (unsigned long)(keycode1<<24) + (unsigned long)(keycode2<<8);
-	return keycode;
+	*key0 = (unsigned long)(keycode1<<16) + (unsigned long)(keycode2<<8);
+	*key1 = (unsigned long)(keycode3<<16);
 }
 

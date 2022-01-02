@@ -147,7 +147,12 @@ C_SRCS += main.c
 C_SRCS += ship_logic.c
 C_SRCS += usb.c
 C_SRCS += usb_main.c
+<<<<<<< HEAD
 C_SRCS += choose_ship.c
+=======
+C_SRCS += torpedo.c
+C_SRCS += bullet.c
+>>>>>>> bug-branch
 CXX_SRCS :=
 ASM_SRCS :=
 
