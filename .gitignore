@@ -132,3 +132,8 @@ lab9/software/lab9_bsp/settings.bsp
 *.log
 *.log
 *.xml
+*.elf
+*.map
+*.map
+*.objdump
+*.bsp

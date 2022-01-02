@@ -86,7 +86,7 @@ void key_event(int* game_start, ship_t* ship, ship_t* ship2, torpedo_t *torpedo1
 		}
 		if (key_array[0] == KEY_A || key_array[1] == KEY_A ||
 			key_array[2] == KEY_A ||key_array[3] == KEY_A ||
-			key_array[4] == KEY_A || key_array[5] == KEY_S){
+			key_array[4] == KEY_A || key_array[5] == KEY_A){
 
 			press_a(ship);
 		}
@@ -291,11 +291,11 @@ int main(){
 		while(!(player1_ready && player2_ready)){
 			choose_ship(&player1_ready, &player2_ready, &ship1, &ship2);
 			ship_choose_update(&player1_ready, &player2_ready, &ship1, &ship2);
-			printf("%d%d\n",player1_ready, player2_ready);
-			printf("%d%d\n",ship1.choose_ship, ship2.choose_ship);
+//			printf("%d%d\n",player1_ready, player2_ready);
+//			printf("%d%d\n",ship1.choose_ship, ship2.choose_ship);
 		}
 		printf("choose ship ready\n");
-		sleep(100000);
+//		sleep(100000);
 
 		int game_start = 0;
 		while(game_start == 0){
