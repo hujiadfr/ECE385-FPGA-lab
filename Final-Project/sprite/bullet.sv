@@ -4,6 +4,7 @@ module  bullet ( input         Clk,                // 50 MHz clock
                input [9:0]   DrawX, DrawY,       // Current pixel coordinates
                input logic [9:0] Ball_X_Pos,
 	           input logic [9:0] Ball_Y_Pos,
+                input logic [9:0] game_start,
                input logic [9:0] torpedo_stop,
                output logic  is_ball,            // Whether current pixel belongs to ball or background
                output [3:0]  ball_data
@@ -24,7 +25,7 @@ module  bullet ( input         Clk,                // 50 MHz clock
             is_ball = 1'b1;
         else
             is_ball = 1'b0;
-        if(torpedo_stop == 10'd1)
+        if(game_start == 10'd0)
             is_ball = 1'b0;
     end
 endmodule

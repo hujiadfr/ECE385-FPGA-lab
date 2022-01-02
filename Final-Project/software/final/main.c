@@ -281,7 +281,7 @@ void gamefile_update(int *game_start, ship_t *ship, ship_t *ship2, torpedo_t *to
 	game_file[22] = ship->HP<=0;
 	game_file[23] = ship2 -> HP;
 	game_file[24] = ship -> HP;
-	game_file[25] = *game_start;
+//	game_file[25] = *game_start;
 
 	game_file[26] = torpedo2->x[0];
 	game_file[27] = torpedo2->x[1];
@@ -394,13 +394,19 @@ int main(){
 			gamefile_update(&game_start, &ship1, &ship2, &torpedo1, &torpedo2, &bullet1, &bullet2);
 		}
 		printf("game start\n");
-
+		int flag = 0;
 		while (1){
 			frame_clock(frame_time);
 			// wait until next clock
 			test_round(&game_start, &ship1, &ship2, &torpedo1, &torpedo2, &bullet1, &bullet2);
-			if (game_start == 0){
-				printf("back to initial\n");
+			while (game_start == 0){
+				flag = 1;
+				key_event(&game_start, &ship1, &ship2, &torpedo1, &torpedo2);
+			}
+			if (flag){
+				int a;
+				a= 0;
+				gamefile_update(&a, &ship1, &ship2, &torpedo1, &torpedo2, &bullet1, &bullet2);
 				break;
 			}
 		}

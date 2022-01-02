@@ -23,7 +23,7 @@ module  Ship ( input        Clk,                // 50 MHz clock
                input logic [5:0] ship_state,
                input logic [2:0] choose_ship,
                input [3:0] data1, data2, data3, data4, data5, data6, data7, data8, data9, data10, data11, data12, data13, data14, data15,
-
+            input logic [9:0] game_start,
                output logic  is_ball,            // Whether current pixel belongs to ball or background
                output [3:0]  ball_data,
                output logic [18:0] read_address
@@ -89,6 +89,9 @@ module  Ship ( input        Clk,                // 50 MHz clock
             end
             default: ball_data = data1;
         endcase
+        if (game_start == 10'd0) begin
+            is_ball = 1'b0;
+        end
     end
 endmodule
 

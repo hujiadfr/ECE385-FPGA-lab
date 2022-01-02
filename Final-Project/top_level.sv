@@ -288,7 +288,8 @@ module top_level(
     wire [3:0] ball_data1;
 	wire [3:0] ball_data2;
     wire [18:0] read_address1, read_address2; 
-
+        logic [9:0] game_start;
+    assign game_start = game_file[1417:1408];
     Ship Ship_1(
         //ports
         .Clk       		( Clk       		),
@@ -303,6 +304,7 @@ module top_level(
         .is_ball   		( is_ball1   		),
         .read_address   ( read_address1     ),
         .ball_data      ( ball_data1        ),
+        .game_start (game_start),
         .data1          ( data1_1           ),
         .data2          ( data1_2           ),
         .data3          ( data1_3           ),
@@ -334,6 +336,7 @@ module top_level(
         .is_ball   		( is_ball2   		),
         .read_address   ( read_address2     ),
         .ball_data      ( ball_data2        ),
+         .game_start (game_start),
         .data1          ( data2_1           ),
         .data2          ( data2_2           ),
         .data3          ( data2_3           ),
@@ -358,6 +361,7 @@ module top_level(
     logic [9:0] torpedo1_0_x, torpedo1_1_x, torpedo1_2_x, torpedo1_3_x, torpedo2_0_x, torpedo2_1_x, torpedo2_2_x, torpedo2_3_x;
     logic [9:0] torpedo1_0_y, torpedo1_1_y, torpedo1_2_y, torpedo1_3_y, torpedo2_0_y, torpedo2_1_y, torpedo2_2_y, torpedo2_3_y;
     logic [9:0] torpedo1_stop, torpedo2_stop;
+
 
     assign torpedo1_stop = game_file[1193:1184];
     assign torpedo2_stop = game_file[1225:1216];
@@ -384,6 +388,7 @@ module top_level(
     
     assign bullet_1_stop = game_file[1449:1440];
     assign bullet_2_stop = game_file[1481:1472];
+
 
 wire is_tor1_0;
     wire is_tor1_1;
@@ -434,6 +439,7 @@ torpedo0(
         .DrawY     		( DrawY     		),
         .Ball_X_Pos    	( torpedo1_0_x  	      ),
         .Ball_Y_Pos    	( torpedo1_0_y  	   ),
+        .game_start   (game_start),
         .torpedo_stop (torpedo1_stop),
         .is_ball   		( is_tor1_0   		),
         .ball_data      ( torpedo1_0        )
@@ -447,6 +453,7 @@ torpedo1(
         .DrawY     		( DrawY     		),
         .Ball_X_Pos    	( torpedo1_1_x    ),
         .Ball_Y_Pos    	( torpedo1_1_y 	   ),
+        .game_start   (game_start),
         .torpedo_stop (torpedo1_stop),
         .is_ball   		( is_tor1_1   		),
         .ball_data      ( torpedo1_1        )
@@ -460,6 +467,7 @@ torpedo2(
         .DrawY     		( DrawY     		),
         .Ball_X_Pos    	( torpedo1_2_x    ),
         .Ball_Y_Pos    	( torpedo1_2_y	   ),
+        .game_start   (game_start),
         .torpedo_stop (torpedo1_stop),
         .is_ball   		( is_tor1_2   		),
         .ball_data      ( torpedo1_2        )
@@ -473,6 +481,7 @@ torpedo3(
         .DrawY     		( DrawY     		),
         .Ball_X_Pos    	( torpedo1_3_x      ),
         .Ball_Y_Pos    	( torpedo1_3_y	   ),
+        .game_start   (game_start),
         .torpedo_stop (torpedo1_stop),
         .is_ball   		( is_tor1_3   		),
         .ball_data      ( torpedo1_3        )
@@ -486,6 +495,7 @@ torpedo4(
         .DrawY     		( DrawY     		),
         .Ball_X_Pos    	( torpedo2_0_x	      ),
         .Ball_Y_Pos    	( torpedo2_0_y	   ),
+        .game_start   (game_start),
         .torpedo_stop (torpedo2_stop),
         .is_ball   		( is_tor2_0  		),
         .ball_data      ( torpedo2_0        )
@@ -499,6 +509,7 @@ torpedo5(
         .DrawY     		( DrawY     		),
         .Ball_X_Pos    	( torpedo2_1_x	      ),
         .Ball_Y_Pos    	( torpedo2_1_y	   ),
+        .game_start   (game_start),
         .torpedo_stop (torpedo2_stop),
         .is_ball   		( is_tor2_1  		),
         .ball_data      ( torpedo2_1        )
@@ -512,6 +523,7 @@ torpedo6(
         .DrawY     		( DrawY     		),
         .Ball_X_Pos    	( torpedo2_2_x    ),
         .Ball_Y_Pos    	( torpedo2_2_y	   ),
+        .game_start   (game_start),
         .torpedo_stop (torpedo2_stop),
         .is_ball   		( is_tor2_2   		),
         .ball_data      ( torpedo2_2        )
@@ -525,6 +537,7 @@ torpedo7(
         .DrawY     		( DrawY     		),
         .Ball_X_Pos    	( torpedo2_3_x     ),
         .Ball_Y_Pos    	( torpedo2_3_y	   ),
+        .game_start   (game_start),
         .torpedo_stop (torpedo2_stop),
         .is_ball   		( is_tor2_3  		),
         .ball_data      ( torpedo2_3        )
@@ -539,6 +552,7 @@ bullet1_0(
         .DrawY     		( DrawY     		),
         .Ball_X_Pos    	( bullet_1_x_0    ),
         .Ball_Y_Pos    	( bullet_1_y_0	   ),
+        .game_start    (game_start),
         .torpedo_stop (bullet_1_stop),
         .is_ball   		( is_bullet_1_0  		),
 );
@@ -551,6 +565,7 @@ bullet1_1(
         .DrawY     		( DrawY     		),
         .Ball_X_Pos    	( bullet_1_x_1    ),
         .Ball_Y_Pos    	( bullet_1_y_1	   ),
+        .game_start    (game_start),
         .torpedo_stop (bullet_1_stop),
         .is_ball   		( is_bullet_1_1  		),
 );
@@ -563,6 +578,7 @@ bullet1_2(
         .DrawY     		( DrawY     		),
         .Ball_X_Pos    	( bullet_1_x_2    ),
         .Ball_Y_Pos    	( bullet_1_y_2	   ),
+        .game_start    (game_start),
         .torpedo_stop (bullet_1_stop),
         .is_ball   		( is_bullet_1_2  		),
 );
@@ -575,6 +591,7 @@ bullet1_3(
         .DrawY     		( DrawY     		),
         .Ball_X_Pos    	( bullet_1_x_3    ),
         .Ball_Y_Pos    	( bullet_1_y_3	   ),
+        .game_start    (game_start),
         .torpedo_stop (bullet_1_stop),
         .is_ball   		( is_bullet_1_3 		),
 );
@@ -587,6 +604,7 @@ bullet1_4(
         .DrawY     		( DrawY     		),
         .Ball_X_Pos    	( bullet_1_x_4    ),
         .Ball_Y_Pos    	( bullet_1_y_4	   ),
+        .game_start    (game_start),
         .torpedo_stop (bullet_1_stop),
         .is_ball   		( is_bullet_1_4 		),
 );
@@ -599,6 +617,7 @@ bullet1_5(
         .DrawY     		( DrawY     		),
         .Ball_X_Pos    	( bullet_1_x_5    ),
         .Ball_Y_Pos    	( bullet_1_y_5	   ),
+        .game_start    (game_start),
         .torpedo_stop (bullet_1_stop),
         .is_ball   		( is_bullet_1_5  		),
 );
@@ -611,6 +630,7 @@ bullet1_6(
         .DrawY     		( DrawY     		),
         .Ball_X_Pos    	( bullet_1_x_6    ),
         .Ball_Y_Pos    	( bullet_1_y_6	   ),
+        .game_start    (game_start),
         .torpedo_stop (bullet_1_stop),
         .is_ball   		( is_bullet_1_6 		),
 );
@@ -624,6 +644,7 @@ bullet1_7(
         .DrawY     		( DrawY     		),
         .Ball_X_Pos    	( bullet_1_x_7    ),
         .Ball_Y_Pos    	( bullet_1_y_7	   ),
+        .game_start    (game_start),
         .torpedo_stop (bullet_1_stop),
         .is_ball   		( is_bullet_1_7 		),
 );
@@ -636,6 +657,7 @@ bullet1_8(
         .DrawY     		( DrawY     		),
         .Ball_X_Pos    	( bullet_1_x_8   ),
         .Ball_Y_Pos    	( bullet_1_y_8	   ),
+        .game_start    (game_start),
         .torpedo_stop (bullet_1_stop),
         .is_ball   		( is_bullet_1_8 		),
 );
@@ -648,6 +670,7 @@ bullet1_9(
         .DrawY     		( DrawY     		),
         .Ball_X_Pos    	( bullet_1_x_9    ),
         .Ball_Y_Pos    	( bullet_1_y_9	   ),
+        .game_start    (game_start),
         .torpedo_stop (bullet_1_stop),
         .is_ball   		( is_bullet_1_9  		),
 );
@@ -661,6 +684,7 @@ bullet2_0(
         .DrawY     		( DrawY     		),
         .Ball_X_Pos    	( bullet_2_x_0    ),
         .Ball_Y_Pos    	( bullet_2_y_0	   ),
+        .game_start    (game_start),
         .torpedo_stop (bullet_2_stop),
         .is_ball   		( is_bullet_2_0  		),
 );
@@ -673,6 +697,7 @@ bullet2_1(
         .DrawY     		( DrawY     		),
         .Ball_X_Pos    	( bullet_2_x_1    ),
         .Ball_Y_Pos    	( bullet_2_y_1	   ),
+        .game_start    (game_start),
         .torpedo_stop (bullet_2_stop),
         .is_ball   		( is_bullet_2_1 		),
 );
@@ -685,6 +710,7 @@ bullet2_2(
         .DrawY     		( DrawY     		),
         .Ball_X_Pos    	( bullet_2_x_2    ),
         .Ball_Y_Pos    	( bullet_2_y_2	   ),
+        .game_start    (game_start),
         .torpedo_stop (bullet_2_stop),
         .is_ball   		( is_bullet_2_2  		),
 );
@@ -697,6 +723,7 @@ bullet2_3(
         .DrawY     		( DrawY     		),
         .Ball_X_Pos    	( bullet_2_x_3    ),
         .Ball_Y_Pos    	( bullet_2_y_3	   ),
+        .game_start    (game_start),
         .torpedo_stop (bullet_2_stop),
         .is_ball   		( is_bullet_2_3  		),
 );
@@ -709,6 +736,7 @@ bullet2_4(
         .DrawY     		( DrawY     		),
         .Ball_X_Pos    	( bullet_2_x_4    ),
         .Ball_Y_Pos    	( bullet_2_y_4	   ),
+        .game_start    (game_start),
         .torpedo_stop (bullet_2_stop),
         .is_ball   		( is_bullet_2_4  		),
 );
@@ -721,6 +749,7 @@ bullet2_5(
         .DrawY     		( DrawY     		),
         .Ball_X_Pos    	( bullet_2_x_5    ),
         .Ball_Y_Pos    	( bullet_2_y_5	   ),
+        .game_start    (game_start),
         .torpedo_stop (bullet_2_stop),
         .is_ball   		( is_bullet_2_5 		),
 );
@@ -733,6 +762,7 @@ bullet2_6(
         .DrawY     		( DrawY     		),
         .Ball_X_Pos    	( bullet_2_x_6    ),
         .Ball_Y_Pos    	( bullet_2_y_6	   ),
+        .game_start    (game_start),
         .torpedo_stop (bullet_2_stop),
         .is_ball   		( is_bullet_2_6  		),
 );
@@ -746,6 +776,7 @@ bullet2_7(
         .DrawY     		( DrawY     		),
         .Ball_X_Pos    	( bullet_2_x_7    ),
         .Ball_Y_Pos    	( bullet_2_y_7	   ),
+        .game_start    (game_start),
         .torpedo_stop (bullet_2_stop),
         .is_ball   		( is_bullet_2_7  		),
 );
@@ -758,6 +789,7 @@ bullet2_8(
         .DrawY     		( DrawY     		),
         .Ball_X_Pos    	( bullet_2_x_8   ),
         .Ball_Y_Pos    	( bullet_2_y_8	   ),
+        .game_start    (game_start),
         .torpedo_stop (bullet_2_stop),
         .is_ball   		( is_bullet_2_8  		),
 );
@@ -770,6 +802,7 @@ bullet2_9(
         .DrawY     		( DrawY     		),
         .Ball_X_Pos    	( bullet_2_x_9    ),
         .Ball_Y_Pos    	( bullet_2_y_9	   ),
+        .game_start    (game_start),
         .torpedo_stop (bullet_2_stop),
         .is_ball   		( is_bullet_2_9 		),
 );
