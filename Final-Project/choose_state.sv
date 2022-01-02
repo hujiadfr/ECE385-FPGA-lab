@@ -39,18 +39,19 @@ module choose_state (
             ) 
             is_player2 = 1'b1;
     end
-ship_choose_RAM u_ship_choose_RAM
-(
-    .Clk,
-    .read_address1, 
-    .read_address2,
-    .choose_ship1, 
-    .choose_ship2,
-    .is_player1, 
-    .is_player2,
-    .choose_state_data1,
-    .choose_state_data2
-);
+
+    ship_choose_RAM u_ship_choose_RAM
+    (
+        .Clk,
+        .read_address1, 
+        .read_address2,
+        .choose_ship1, 
+        .choose_ship2,
+        .is_player1, 
+        .is_player2,
+        .choose_state_data1,
+        .choose_state_data2
+    );
     
 
     always_ff @ (posedge Clk) begin
@@ -82,19 +83,16 @@ module  ship_choose_RAM
     output logic [3:0] choose_state_data1,
                        choose_state_data2
 );
-    parameter RESHAPE_LENGTH = 10'd80;
 
-    logic [3:0] mem0 [0:RESHAPE_LENGTH*RESHAPE_LENGTH];
-    logic [3:0] mem1 [0:RESHAPE_LENGTH*RESHAPE_LENGTH];
-    logic [3:0] mem2 [0:RESHAPE_LENGTH*RESHAPE_LENGTH];
-    // logic [3:0] mem3 [0:RESHAPE_LENGTH*RESHAPE_LENGTH];
-    // logic [3:0] mem4 [0:RESHAPE_LENGTH*RESHAPE_LENGTH];
+    logic [3:0] mem0 [0:6399];
+    logic [3:0] mem1 [0:6399];
+    logic [3:0] mem2 [0:6399];
 
     initial
     begin
-        $readmemh("sources/bisimai.txt",    mem0);
-        $readmemh("sources/linbo.txt",  mem1);
-        $readmemh("sources/qiye.txt",      mem2);
+        $readmemh("sources/bisimai.png.txt",    mem0);
+        $readmemh("sources/linbo.png.txt",      mem1);
+        $readmemh("sources/yingrui.png.txt",    mem2);
         // $readmemh("sources/dujiaoshou.txt", mem3);
         // $readmemh("sources/diye.txt",       mem4);
     end
@@ -109,7 +107,9 @@ module  ship_choose_RAM
                 // 6'd5:   choose_state_data1<= mem5[read_address1];
                 default:   choose_state_data1<= mem0[read_address1];
             endcase
-            case(choose_ship2)
+        end
+    always_ff @ (posedge Clk) begin
+        case(choose_ship2)
                 6'd0:   choose_state_data2<= mem0[read_address2];
                 6'd1:   choose_state_data2<= mem1[read_address2];
                 6'd2:   choose_state_data2<= mem2[read_address2];

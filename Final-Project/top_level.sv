@@ -165,10 +165,7 @@ module top_level(
     assign ship2_choose_ready = game_file[2016];
     wire is_choose_state_data1, is_choose_state_data2;
     wire [3:0] choose_state_data1, choose_state_data2;
-    choose_state #(
-        .RESHAPE_LENGTH     ( 10'd80   		),
-        .HALF_LENGTH        ( 10'd40        ))
-    u_choose_state(
+    choose_state u_choose_state(
         .Clk       		        ( Clk       		),
         .DrawX     		        ( DrawX     		),
         .DrawY     		        ( DrawY     		),
@@ -182,7 +179,7 @@ module top_level(
         .choose_state_data2     ( choose_state_data2   )
     );
 //----------------------------------------------------------------
- 
+
 	logic [9:0]ship_x,ship_y,ship2_x,ship2_y;
     assign ship_x = game_file[41:32];
 	assign ship_y = game_file[73:64];
@@ -206,6 +203,81 @@ module top_level(
     // );
 //
 	
+    logic [3:0] data1_1, data1_2, data1_3, data1_4, data1_5, data1_6, data1_7, data1_8, data1_9, data1_10, data1_11, data1_12, data1_13, data1_14, data1_15;
+    logic [3:0] data2_1, data2_2, data2_3, data2_4, data2_5, data2_6, data2_7, data2_8, data2_9, data2_10, data2_11, data2_12, data2_13, data2_14, data2_15;
+
+    wire is_ball1;
+	wire is_ball2;
+    wire [3:0] ball_data1;
+	wire [3:0] ball_data2;
+    wire [18:0] read_address1, read_address2; 
+
+    Ship Ship_1(
+        //ports
+        .Clk       		( Clk       		),
+        .Reset     		( Reset_h     		),
+        .frame_clk 		( VGA_VS     		),
+        .DrawX     		( DrawX     		),
+        .DrawY     		( DrawY     		),
+        .Ball_X_Pos    	( ship_x  	        ),
+        .Ball_Y_Pos    	( ship_y   	        ),
+        .ship_state     ( ship_state        ),
+        .choose_ship    ( choose_ship1      ),
+        .is_ball   		( is_ball1   		),
+        .read_address   ( read_address1     ),
+        .ball_data      ( ball_data1        ),
+        .data1          ( data1_1           ),
+        .data2          ( data1_2           ),
+        .data3          ( data1_3           ),
+        .data4          ( data1_4           ),
+        .data5          ( data1_5           ),
+        .data6          ( data1_6           ),
+        .data7          ( data1_7           ),
+        .data8          ( data1_8           ),
+        .data9          ( data1_9           ),
+        .data10         ( data1_10          ),
+        .data11         ( data1_11          ),
+        .data12         ( data1_12          ),
+        .data13         ( data1_13          ),
+        .data14         ( data1_14          ),
+        .data15         ( data1_15          ),
+    );
+	
+	Ship Ship_2(
+        //ports
+        .Clk       		( Clk       		),
+        .Reset     		( Reset_h     		),
+        .frame_clk 		( VGA_VS     		),
+        .DrawX     		( DrawX     		),
+        .DrawY     		( DrawY     		),
+        .Ball_X_Pos    	( ship2_x  	        ),
+        .Ball_Y_Pos    	( ship2_y   	    ),
+        .ship_state     ( ship2_state       ),
+        .choose_ship    ( choose_ship2      ),
+        .is_ball   		( is_ball2   		),
+        .read_address   ( read_address2     ),
+        .ball_data      ( ball_data2        ),
+        .data1          ( data2_1           ),
+        .data2          ( data2_2           ),
+        .data3          ( data2_3           ),
+        .data4          ( data2_4           ),
+        .data5          ( data2_5           ),
+        .data6          ( data2_6           ),
+        .data7          ( data2_7           ),
+        .data8          ( data2_8           ),
+        .data9          ( data2_9           ),
+        .data10         ( data2_10          ),
+        .data11         ( data2_11          ),
+        .data12         ( data2_12          ),
+        .data13         ( data2_13          ),
+        .data14         ( data2_14          ),
+        .data15         ( data2_15          ),
+    );
+
+    ship_RAM u_ship_RAM(.*);
+    ship_RAM2 u_ship_RAM2(.*);
+    ship_RAM3 u_ship_RAM3(.*);
+
     logic [9:0] torpedo1_0_x, torpedo1_1_x, torpedo1_2_x, torpedo1_3_x, torpedo2_0_x, torpedo2_1_x, torpedo2_2_x, torpedo2_3_x;
     logic [9:0] torpedo1_0_y, torpedo1_1_y, torpedo1_2_y, torpedo1_3_y, torpedo2_0_y, torpedo2_1_y, torpedo2_2_y, torpedo2_3_y;
     logic [9:0] torpedo1_stop, torpedo2_stop;
@@ -232,13 +304,8 @@ module top_level(
     assign torpedo2_1_y = game_file[1001:992];
     assign torpedo2_2_y = game_file[1033:1024];
     assign torpedo2_3_y = game_file[1065:1056];
-    
-    wire is_ball1;
-	wire is_ball2;
-    wire [3:0] ball_data1;
-	 wire [3:0] ball_data2;
 
-    wire is_tor1_0;
+wire is_tor1_0;
     wire is_tor1_1;
     wire is_tor1_2;
     wire is_tor1_3;
@@ -255,38 +322,6 @@ module top_level(
     wire [3:0] torpedo2_1;
     wire [3:0] torpedo2_2;
     wire [3:0] torpedo2_3;
-
-    Ship #(
-        .RESHAPE_LENGTH     ( 10'd40   		))
-    Ship_1(
-        //ports
-        .Clk       		( Clk       		),
-        .Reset     		( Reset_h     		),
-        .frame_clk 		( VGA_VS     		),
-        .DrawX     		( DrawX     		),
-        .DrawY     		( DrawY     		),
-        .Ball_X_Pos    	( ship_x  	        ),
-        .Ball_Y_Pos    	( ship_y   	        ),
-        .ship_state     ( ship_state        ),
-        .is_ball   		( is_ball1   		),
-        .ball_data      ( ball_data1        )
-    );
-	 
-	Ship2 #(
-        .RESHAPE_LENGTH     ( 10'd40   		))
-    Ship_2(
-        //ports
-        .Clk       		( Clk       		),
-        .Reset     		( Reset_h     		),
-        .frame_clk 		( VGA_VS     		),
-        .DrawX     		( DrawX     		),
-        .DrawY     		( DrawY     		),
-        .Ball_X_Pos    	( ship2_x  	        ),
-        .Ball_Y_Pos    	( ship2_y   	    ),
-        .ship_state     ( ship2_state       ),
-        .is_ball   		( is_ball2   		),
-        .ball_data      ( ball_data2        )
-    );
 
 torpedo 
 torpedo0(
@@ -404,14 +439,16 @@ torpedo7(
         .Clk            ( Clk           ),
         .is_ball1 		( is_ball1 		),
         .is_ball2 		( is_ball2 		),
-        .is_tor1_0  (is_tor1_0),
-        .is_tor1_1  (is_tor1_1),
-        .is_tor1_2  (is_tor1_2),
-        .is_tor1_3  (is_tor1_3),
-        .is_tor2_0  (is_tor2_0),
-        .is_tor2_1  (is_tor2_1),
-        .is_tor2_2  (is_tor2_2),
-        .is_tor2_3  (is_tor2_3),
+        .is_tor1_0      (is_tor1_0      ),
+        .is_tor1_1      (is_tor1_1      ),
+        .is_tor1_2      (is_tor1_2      ),
+        .is_tor1_3      (is_tor1_3      ),
+        .is_tor2_0      (is_tor2_0      ),
+        .is_tor2_1      (is_tor2_1      ),
+        .is_tor2_2      (is_tor2_2      ),
+        .is_tor2_3      (is_tor2_3      ),
+        .choose_ship1, 
+        .choose_ship2,
         .is_choose_state_data1  ( is_choose_state_data1),
         .is_choose_state_data2  ( is_choose_state_data2),
 		.background_data(background_data),

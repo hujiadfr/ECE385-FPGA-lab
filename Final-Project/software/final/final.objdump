@@ -3159,9 +3159,9 @@ void ship_init(ship_t *ship, ship_t *ship2){
  8001708:	e0bffe17 	ldw	r2,-8(fp)
  800170c:	00c03c04 	movi	r3,240
  8001710:	10c00215 	stw	r3,8(r2)
-	ship -> HP = 50;
+	ship -> HP = 5;
  8001714:	e0bffe17 	ldw	r2,-8(fp)
- 8001718:	00c00c84 	movi	r3,50
+ 8001718:	00c00144 	movi	r3,5
  800171c:	10c00515 	stw	r3,20(r2)
 	ship -> ATK = 3;
  8001720:	e0bffe17 	ldw	r2,-8(fp)
@@ -3211,9 +3211,9 @@ void ship_init(ship_t *ship, ship_t *ship2){
  8001790:	e0bfff17 	ldw	r2,-4(fp)
  8001794:	00c03c04 	movi	r3,240
  8001798:	10c00215 	stw	r3,8(r2)
-	ship2 -> HP = 50;
+	ship2 -> HP = 5;
  800179c:	e0bfff17 	ldw	r2,-4(fp)
- 80017a0:	00c00c84 	movi	r3,50
+ 80017a0:	00c00144 	movi	r3,5
  80017a4:	10c00515 	stw	r3,20(r2)
 	ship2 -> ATK = 3;
  80017a8:	e0bfff17 	ldw	r2,-4(fp)
