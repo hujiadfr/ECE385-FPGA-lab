@@ -39,45 +39,45 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING
  10 .debug_abbrev 00009bd7  00000000  00000000  0003f041  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_line   0000c80d  00000000  00000000  00048c18  2**0
+ 11 .debug_line   0000c7f9  00000000  00000000  00048c18  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_frame  00002910  00000000  00000000  00055428  2**2
+ 12 .debug_frame  00002910  00000000  00000000  00055414  2**2
                   CONTENTS, READONLY, DEBUGGING
- 13 .debug_str    000041a5  00000000  00000000  00057d38  2**0
+ 13 .debug_str    000041a5  00000000  00000000  00057d24  2**0
                   CONTENTS, READONLY, DEBUGGING
- 14 .debug_loc    000178cc  00000000  00000000  0005bedd  2**0
+ 14 .debug_loc    000178cc  00000000  00000000  0005bec9  2**0
                   CONTENTS, READONLY, DEBUGGING
- 15 .debug_alt_sim_info 00000040  00000000  00000000  000737ac  2**2
+ 15 .debug_alt_sim_info 00000040  00000000  00000000  00073798  2**2
                   CONTENTS, READONLY, DEBUGGING
- 16 .debug_ranges 000018f0  00000000  00000000  000737f0  2**3
+ 16 .debug_ranges 000018f0  00000000  00000000  000737d8  2**3
                   CONTENTS, READONLY, DEBUGGING
- 17 .thread_model 00000003  00000000  00000000  00078e6a  2**0
+ 17 .thread_model 00000003  00000000  00000000  00078e52  2**0
                   CONTENTS, READONLY
- 18 .cpu          0000000c  00000000  00000000  00078e6d  2**0
+ 18 .cpu          0000000c  00000000  00000000  00078e55  2**0
                   CONTENTS, READONLY
- 19 .qsys         00000001  00000000  00000000  00078e79  2**0
+ 19 .qsys         00000001  00000000  00000000  00078e61  2**0
                   CONTENTS, READONLY
- 20 .simulation_enabled 00000001  00000000  00000000  00078e7a  2**0
+ 20 .simulation_enabled 00000001  00000000  00000000  00078e62  2**0
                   CONTENTS, READONLY
- 21 .sysid_hash   00000004  00000000  00000000  00078e7b  2**0
+ 21 .sysid_hash   00000004  00000000  00000000  00078e63  2**0
                   CONTENTS, READONLY
- 22 .sysid_base   00000004  00000000  00000000  00078e7f  2**0
+ 22 .sysid_base   00000004  00000000  00000000  00078e67  2**0
                   CONTENTS, READONLY
- 23 .sysid_time   00000004  00000000  00000000  00078e83  2**0
+ 23 .sysid_time   00000004  00000000  00000000  00078e6b  2**0
                   CONTENTS, READONLY
- 24 .stderr_dev   0000000b  00000000  00000000  00078e87  2**0
+ 24 .stderr_dev   0000000b  00000000  00000000  00078e6f  2**0
                   CONTENTS, READONLY
- 25 .stdin_dev    0000000b  00000000  00000000  00078e92  2**0
+ 25 .stdin_dev    0000000b  00000000  00000000  00078e7a  2**0
                   CONTENTS, READONLY
- 26 .stdout_dev   0000000b  00000000  00000000  00078e9d  2**0
+ 26 .stdout_dev   0000000b  00000000  00000000  00078e85  2**0
                   CONTENTS, READONLY
- 27 .sopc_system_name 00000009  00000000  00000000  00078ea8  2**0
+ 27 .sopc_system_name 00000009  00000000  00000000  00078e90  2**0
                   CONTENTS, READONLY
- 28 .quartus_project_dir 00000033  00000000  00000000  00078eb1  2**0
+ 28 .quartus_project_dir 00000033  00000000  00000000  00078e99  2**0
                   CONTENTS, READONLY
- 29 .jdi          0000535a  00000000  00000000  00078ee4  2**0
+ 29 .jdi          0000535a  00000000  00000000  00078ecc  2**0
                   CONTENTS, READONLY
- 30 .sopcinfo     001658e1  00000000  00000000  0007e23e  2**0
+ 30 .sopcinfo     001727d8  00000000  00000000  0007e226  2**0
                   CONTENTS, READONLY
 SYMBOL TABLE:
 08000000 l    d  .entry	00000000 .entry
@@ -1042,7 +1042,7 @@ alt_after_alt_main:
  8000268:	003fff06 	br	8000268 <__alt_data_end+0xf8000268>
 
 0800026c <generate_bullet>:
- *  Created on: 2022ï¿½ï¿½1ï¿½ï¿½2ï¿½ï¿½
+ *  Created on: 2022Äê1ÔÂ2ÈÕ
  *      Author: jiaru
  */
 #include "bullet.h"
@@ -4354,9 +4354,9 @@ void ship_init(ship_t *ship, ship_t *ship2){
  8002520:	e0bffe17 	ldw	r2,-8(fp)
  8002524:	00c03c04 	movi	r3,240
  8002528:	10c00215 	stw	r3,8(r2)
-	ship -> HP = 50;
+	ship -> HP = 5;
  800252c:	e0bffe17 	ldw	r2,-8(fp)
- 8002530:	00c00c84 	movi	r3,50
+ 8002530:	00c00144 	movi	r3,5
  8002534:	10c00515 	stw	r3,20(r2)
 	ship -> ATK = 3;
  8002538:	e0bffe17 	ldw	r2,-8(fp)
@@ -4400,15 +4400,15 @@ void ship_init(ship_t *ship, ship_t *ship2){
  8002598:	10000415 	stw	zero,16(r2)
 	ship2 -> x = INIT_X2;
  800259c:	e0bfff17 	ldw	r2,-4(fp)
- 80025a0:	00c04b04 	movi	r3,300
+ 80025a0:	00c08b44 	movi	r3,557
  80025a4:	10c00115 	stw	r3,4(r2)
 	ship2 -> y = INIT_Y2;
  80025a8:	e0bfff17 	ldw	r2,-4(fp)
  80025ac:	00c03c04 	movi	r3,240
  80025b0:	10c00215 	stw	r3,8(r2)
-	ship2 -> HP = 50;
+	ship2 -> HP = 5;
  80025b4:	e0bfff17 	ldw	r2,-4(fp)
- 80025b8:	00c00c84 	movi	r3,50
+ 80025b8:	00c00144 	movi	r3,5
  80025bc:	10c00515 	stw	r3,20(r2)
 	ship2 -> ATK = 3;
  80025c0:	e0bfff17 	ldw	r2,-4(fp)
@@ -4501,13 +4501,13 @@ void update(ship_t *ship, ship_t *ship2){
  80026b4:	e0bffe17 	ldw	r2,-8(fp)
  80026b8:	00c00844 	movi	r3,33
  80026bc:	10c00115 	stw	r3,4(r2)
-	if (ship-> x > RIGHT_MOST){ship-> x = RIGHT_MOST;}
+	if (ship-> x > RIGHT_MOST/2){ship-> x = (int)RIGHT_MOST/2;}
  80026c0:	e0bffe17 	ldw	r2,-8(fp)
  80026c4:	10800117 	ldw	r2,4(r2)
- 80026c8:	10809810 	cmplti	r2,r2,608
+ 80026c8:	10804c10 	cmplti	r2,r2,304
  80026cc:	1000031e 	bne	r2,zero,80026dc <update+0xc0>
  80026d0:	e0bffe17 	ldw	r2,-8(fp)
- 80026d4:	00c097c4 	movi	r3,607
+ 80026d4:	00c04bc4 	movi	r3,303
  80026d8:	10c00115 	stw	r3,4(r2)
 	if (ship-> y < UP_MOST){ship-> y = UP_MOST;}
  80026dc:	e0bffe17 	ldw	r2,-8(fp)
@@ -4526,13 +4526,13 @@ void update(ship_t *ship, ship_t *ship2){
  800270c:	00c07084 	movi	r3,450
  8002710:	10c00215 	stw	r3,8(r2)
 
-	if (ship2-> x < LEFT_MOST){ship2-> x = LEFT_MOST;}
+	if (ship2-> x < LEFT_MOST/2){ship2-> x = (int)LEFT_MOST/2;}
  8002714:	e0bfff17 	ldw	r2,-4(fp)
  8002718:	10800117 	ldw	r2,4(r2)
- 800271c:	10800848 	cmpgei	r2,r2,33
+ 800271c:	10800408 	cmpgei	r2,r2,16
  8002720:	1000031e 	bne	r2,zero,8002730 <update+0x114>
  8002724:	e0bfff17 	ldw	r2,-4(fp)
- 8002728:	00c00844 	movi	r3,33
+ 8002728:	00c00404 	movi	r3,16
  800272c:	10c00115 	stw	r3,4(r2)
 	if (ship2-> x > RIGHT_MOST){ship2-> x = RIGHT_MOST;}
  8002730:	e0bfff17 	ldw	r2,-4(fp)
