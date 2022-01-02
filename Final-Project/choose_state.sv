@@ -39,6 +39,19 @@ module choose_state (
             ) 
             is_player2 = 1'b1;
     end
+ship_choose_RAM u_ship_choose_RAM
+(
+    .Clk,
+    .read_address1, 
+    .read_address2,
+    .choose_ship1, 
+    .choose_ship2,
+    .is_player1, 
+    .is_player2,
+    .choose_state_data1,
+    .choose_state_data2
+);
+    
 
     always_ff @ (posedge Clk) begin
         if(ship1_choose_ready && ship2_choose_ready) begin
@@ -80,14 +93,13 @@ module  ship_choose_RAM
     initial
     begin
         $readmemh("sources/bisimai.txt",    mem0);
-        $readmemh("sources/gelunbiya.txt",  mem1);
-        $readmemh("sources/lafei.txt",      mem2);
+        $readmemh("sources/linbo.txt",  mem1);
+        $readmemh("sources/qiye.txt",      mem2);
         // $readmemh("sources/dujiaoshou.txt", mem3);
         // $readmemh("sources/diye.txt",       mem4);
     end
 
     always_ff @ (posedge Clk) begin
-        if (is_player1) begin
             case(choose_ship1)
                 6'd0:   choose_state_data1<= mem0[read_address1];
                 6'd1:   choose_state_data1<= mem1[read_address1];
@@ -97,8 +109,6 @@ module  ship_choose_RAM
                 // 6'd5:   choose_state_data1<= mem5[read_address1];
                 default:   choose_state_data1<= mem0[read_address1];
             endcase
-        end
-        else if (is_player2) begin
             case(choose_ship2)
                 6'd0:   choose_state_data2<= mem0[read_address2];
                 6'd1:   choose_state_data2<= mem1[read_address2];
@@ -109,8 +119,4 @@ module  ship_choose_RAM
                 default:   choose_state_data2<= mem0[read_address2];
             endcase
         end
-        else
-            choose_state_data1<= mem0[0];    // background
-            choose_state_data2<= mem0[0];    // background
-    end
 endmodule

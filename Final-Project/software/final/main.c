@@ -284,18 +284,14 @@ int main(){
 	while(1){
 		win = 0;
 		printf("start");
-		ship_t ship1, ship2;
 		ship_init(&ship1, &ship2);
 		int player1_ready = 0;
 		int player2_ready = 0;
 		while(!(player1_ready && player2_ready)){
 			choose_ship(&player1_ready, &player2_ready, &ship1, &ship2);
 			ship_choose_update(&player1_ready, &player2_ready, &ship1, &ship2);
-//			printf("%d%d\n",player1_ready, player2_ready);
-//			printf("%d%d\n",ship1.choose_ship, ship2.choose_ship);
 		}
 		printf("choose ship ready\n");
-//		sleep(100000);
 
 		int game_start = 0;
 		while(game_start == 0){

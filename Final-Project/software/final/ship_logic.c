@@ -94,7 +94,7 @@ void ship_init(ship_t *ship, ship_t *ship2){
 	ship2 -> vy = 0;
 	ship2 -> x = INIT_X2;
 	ship2 -> y = INIT_Y2;
-	ship2 -> HP = 3;
+	ship2 -> HP = 50;
 	ship2 -> ATK = 3;
 	ship2 -> state = WALK_RIGHT1;
 	ship2 -> state_count = 0;

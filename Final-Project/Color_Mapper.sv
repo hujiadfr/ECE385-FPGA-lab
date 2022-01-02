@@ -47,6 +47,9 @@ module  color_mapper (
     logic [23:0] ship1_color;
     logic [23:0] ship2_color;
     logic [23:0] background_color;
+    logic [23:0] choose_state_color1;
+    logic [23:0] choose_state_color2;
+
     assign background_palette = '{24'h3FB9E9,24'h0AA5E8,24'h04A3E8,24'h3FB9E9,
                             24'h0AA5E8,24'h04A3E8,24'h3FB9E9,
     24'h0AA5E8,24'h04A3E8,24'h3FB9E9,24'h0AA5E8,24'h04A3E8,
@@ -71,31 +74,31 @@ module  color_mapper (
     // Assign color based on is_ball signal
     always_comb
     begin
-        if (is_choose_state_data1) begin
-            if(choose_state_color1 == 24'h00FF00)
-					color = background_color;
-				else
-					color = choose_state_color1;
+        if (is_choose_state_data1 == 1'b1) begin
+            // if(choose_state_color1 == 24'h00FF00)
+			// 		color = background_color;
+            // else
+                color = choose_state_color1;
         end
-        else if (is_choose_state_data2) begin
-            if(choose_state_color2 == 24'h00FF00)
-					color = background_color;
-				else
-					color = choose_state_color2;
+        else if (is_choose_state_data2 == 1'b1) begin
+            // if(choose_state_color2 == 24'h00FF00)
+			// 		color = background_color;
+            // else
+                color = choose_state_color2;
         end
         else if (is_ball1 == 1'b1) 
         begin
             if(ship1_color == 24'h00FF00)
 					color = background_color;
-				else
-					color = ship1_color;
+            else
+                color = ship1_color;
         end
         else if (is_ball2 == 1'b1)
         begin
-		 		if(ship2_color == 24'h00FF00)
-		 			color = background_color;
-		 		else
-		 			color = ship2_color;
+            if(ship2_color == 24'h00FF00)
+                color = background_color;
+            else
+                color = ship2_color;
          end
         else if(is_tor1_0 == 1'b1 || is_tor1_1 == 1'b1 || is_tor1_2 == 1'b1 || is_tor1_3 == 1'b1 || is_tor2_0 == 1'b1 || is_tor2_1 == 1'b1 || is_tor2_2 == 1'b1 || is_tor2_3 == 1'b1 )
                 color = 24'hFFFBEB;

@@ -159,7 +159,7 @@ module top_level(
     // choose ship state control
     wire [2:0] choose_ship1, choose_ship2;
 	wire ship1_choose_ready, ship2_choose_ready;
-    assign choose_ship1 = game_file[1904:1902];
+    assign choose_ship1 = game_file[1922:1920];
     assign choose_ship2 = game_file[1954:1952];
     assign ship1_choose_ready = game_file[1984];
     assign ship2_choose_ready = game_file[2016];
