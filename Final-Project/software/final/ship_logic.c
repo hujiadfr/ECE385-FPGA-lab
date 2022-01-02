@@ -128,11 +128,11 @@ void update(ship_t *ship, ship_t *ship2){
 
 	// boundary check
 	if (ship-> x < LEFT_MOST){ship-> x = LEFT_MOST;}
-	if (ship-> x > RIGHT_MOST){ship-> x = RIGHT_MOST;}
+	if (ship-> x > RIGHT_MOST/2){ship-> x = (int)RIGHT_MOST/2;}
 	if (ship-> y < UP_MOST){ship-> y = UP_MOST;}
 	if (ship-> y > DOWN_MOST){ship-> y = DOWN_MOST;}
 
-	if (ship2-> x < LEFT_MOST){ship2-> x = LEFT_MOST;}
+	if (ship2-> x < LEFT_MOST/2){ship2-> x = (int)LEFT_MOST/2;}
 	if (ship2-> x > RIGHT_MOST){ship2-> x = RIGHT_MOST;}
 	if (ship2-> y < UP_MOST){ship2-> y = UP_MOST;}
 	if (ship2-> y > DOWN_MOST){ship2-> y = DOWN_MOST;}
