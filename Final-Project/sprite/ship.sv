@@ -37,7 +37,7 @@ module  Ship ( input        Clk,                // 50 MHz clock
 //--------------------------------------------------------------------  
 
     // logic [18:0] read_address;
-    assign read_address = (DrawX-Ball_X_Pos) + RESHAPE_LENGTH/2 + (DrawY-Ball_Y_Pos+RESHAPE_LENGTH/2)*RESHAPE_LENGTH;
+    assign read_address = (DrawX-Ball_X_Pos) + HALF_LENGTH + (DrawY-Ball_Y_Pos+HALF_LENGTH-1)*RESHAPE_LENGTH;
 
     // ship_RAM ship_RAM(.*);
 

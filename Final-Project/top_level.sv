@@ -390,7 +390,7 @@ module top_level(
     assign bullet_2_stop = game_file[1481:1472];
 
 
-wire is_tor1_0;
+    wire is_tor1_0;
     wire is_tor1_1;
     wire is_tor1_2;
     wire is_tor1_3;
@@ -398,6 +398,7 @@ wire is_tor1_0;
     wire is_tor2_1;
     wire is_tor2_2;
     wire is_tor2_3;
+    
     wire [3:0] torpedo1_0;
     wire [3:0] torpedo1_1;
     wire [3:0] torpedo1_2;
@@ -407,6 +408,158 @@ wire is_tor1_0;
     wire [3:0] torpedo2_1;
     wire [3:0] torpedo2_2;
     wire [3:0] torpedo2_3;
+
+    wire [18:0] torpedo_address1_0;
+    wire [18:0] torpedo_address1_1;
+    wire [18:0] torpedo_address1_2;
+    wire [18:0] torpedo_address1_3;
+
+    wire [18:0] torpedo_address2_0;
+    wire [18:0] torpedo_address2_1;
+    wire [18:0] torpedo_address2_2;
+    wire [18:0] torpedo_address2_3;
+torpedo 
+torpedo0(
+        .Clk       		( Clk       		),
+        .Reset     		( Reset_h     		),
+        .frame_clk 		( VGA_VS     		),
+        .DrawX     		( DrawX     		),
+        .DrawY     		( DrawY     		),
+        .Ball_X_Pos    	( torpedo1_0_x  	      ),
+        .Ball_Y_Pos    	( torpedo1_0_y  	   ),
+        .game_start   (game_start),
+        .torpedo_stop (torpedo1_stop),
+        .is_ball   		( is_tor1_0   		),
+        .read_address   ( torpedo_address1_0)
+);
+torpedo 
+torpedo1(
+        .Clk       		( Clk       		),
+        .Reset     		( Reset_h     		),
+        .frame_clk 		( VGA_VS     		),
+        .DrawX     		( DrawX     		),
+        .DrawY     		( DrawY     		),
+        .Ball_X_Pos    	( torpedo1_1_x    ),
+        .Ball_Y_Pos    	( torpedo1_1_y 	   ),
+        .game_start   (game_start),
+        .torpedo_stop (torpedo1_stop),
+        .is_ball   		( is_tor1_1   		),
+        .read_address   ( torpedo_address1_1)
+);
+torpedo
+torpedo2(
+        .Clk       		( Clk       		),
+        .Reset     		( Reset_h     		),
+        .frame_clk 		( VGA_VS     		),
+        .DrawX     		( DrawX     		),
+        .DrawY     		( DrawY     		),
+        .Ball_X_Pos    	( torpedo1_2_x    ),
+        .Ball_Y_Pos    	( torpedo1_2_y	   ),
+        .game_start   (game_start),
+        .torpedo_stop (torpedo1_stop),
+        .is_ball   		( is_tor1_2   		),
+        .read_address   ( torpedo_address1_2)
+
+);
+torpedo 
+torpedo3(
+        .Clk       		( Clk       		),
+        .Reset     		( Reset_h     		),
+        .frame_clk 		( VGA_VS     		),
+        .DrawX     		( DrawX     		),
+        .DrawY     		( DrawY     		),
+        .Ball_X_Pos    	( torpedo1_3_x      ),
+        .Ball_Y_Pos    	( torpedo1_3_y	   ),
+        .game_start   (game_start),
+        .torpedo_stop (torpedo1_stop),
+        .is_ball   		( is_tor1_3   		),
+        .read_address   ( torpedo_address1_3)
+
+);
+
+torpedo_RAM torpedo_RAM(
+    .Clk ( Clk ),
+    .read_address0 ( torpedo_address1_0),
+    .read_address1 ( torpedo_address1_1),
+    .read_address2 ( torpedo_address1_2),
+    .read_address3 ( torpedo_address1_3),
+    .data0 (torpedo1_0),
+    .data1 (torpedo1_1),
+    .data2 (torpedo1_2),
+    .data3 (torpedo1_3)
+);
+
+torpedo 
+torpedo4(
+        .Clk       		( Clk       		),
+        .Reset     		( Reset_h     		),
+        .frame_clk 		( VGA_VS     		),
+        .DrawX     		( DrawX     		),
+        .DrawY     		( DrawY     		),
+        .Ball_X_Pos    	( torpedo2_0_x	      ),
+        .Ball_Y_Pos    	( torpedo2_0_y	   ),
+        .game_start   (game_start),
+        .torpedo_stop (torpedo2_stop),
+        .is_ball   		( is_tor2_0  		),
+        .read_address   ( torpedo_address2_0)
+
+);
+torpedo 
+torpedo5(
+        .Clk       		( Clk       		),
+        .Reset     		( Reset_h     		),
+        .frame_clk 		( VGA_VS     		),
+        .DrawX     		( DrawX     		),
+        .DrawY     		( DrawY     		),
+        .Ball_X_Pos    	( torpedo2_1_x	      ),
+        .Ball_Y_Pos    	( torpedo2_1_y	   ),
+        .game_start   (game_start),
+        .torpedo_stop (torpedo2_stop),
+        .is_ball   		( is_tor2_1  		),
+        .read_address   ( torpedo_address2_1)
+
+);
+torpedo 
+torpedo6(
+        .Clk       		( Clk       		),
+        .Reset     		( Reset_h     		),
+        .frame_clk 		( VGA_VS     		),
+        .DrawX     		( DrawX     		),
+        .DrawY     		( DrawY     		),
+        .Ball_X_Pos    	( torpedo2_2_x    ),
+        .Ball_Y_Pos    	( torpedo2_2_y	   ),
+        .game_start   (game_start),
+        .torpedo_stop (torpedo2_stop),
+        .is_ball   		( is_tor2_2   		),
+        .read_address   ( torpedo_address2_2)
+
+);
+torpedo 
+torpedo7(
+        .Clk       		( Clk       		),
+        .Reset     		( Reset_h     		),
+        .frame_clk 		( VGA_VS     		),
+        .DrawX     		( DrawX     		),
+        .DrawY     		( DrawY     		),
+        .Ball_X_Pos    	( torpedo2_3_x     ),
+        .Ball_Y_Pos    	( torpedo2_3_y	   ),
+        .game_start   (game_start),
+        .torpedo_stop (torpedo2_stop),
+        .is_ball   		( is_tor2_3  		),
+        .read_address   ( torpedo_address2_3)
+);
+
+    torpedo_left_RAM torpedo_left_RAM(
+    .Clk ( Clk ),
+    .read_address0 ( torpedo_address2_0),
+    .read_address1 ( torpedo_address2_1),
+    .read_address2 ( torpedo_address2_2),
+    .read_address3 ( torpedo_address2_3),
+    .data0 (torpedo2_0),
+    .data1 (torpedo2_1),
+    .data2 (torpedo2_2),
+    .data3 (torpedo2_3)
+);
 
     wire is_bullet_1_0;
     wire is_bullet_1_1;
@@ -428,120 +581,47 @@ wire is_tor1_0;
     wire is_bullet_2_7;
     wire is_bullet_2_8;
     wire is_bullet_2_9;
+    wire [3:0] bullet_data1_0;
+    wire [3:0] bullet_data1_1;
+    wire [3:0] bullet_data1_2;
+    wire [3:0] bullet_data1_3;
+    wire [3:0] bullet_data1_4;
+    wire [3:0] bullet_data1_5;
+    wire [3:0] bullet_data1_6;
+    wire [3:0] bullet_data1_7;
+    wire [3:0] bullet_data1_8;
+    wire [3:0] bullet_data1_9;
+    wire [3:0] bullet_data2_0;
+    wire [3:0] bullet_data2_1;
+    wire [3:0] bullet_data2_2;
+    wire [3:0] bullet_data2_3;
+    wire [3:0] bullet_data2_4;
+    wire [3:0] bullet_data2_5;
+    wire [3:0] bullet_data2_6;
+    wire [3:0] bullet_data2_7;
+    wire [3:0] bullet_data2_8;
+    wire [3:0] bullet_data2_9;
 
-
-torpedo 
-torpedo0(
-        .Clk       		( Clk       		),
-        .Reset     		( Reset_h     		),
-        .frame_clk 		( VGA_VS     		),
-        .DrawX     		( DrawX     		),
-        .DrawY     		( DrawY     		),
-        .Ball_X_Pos    	( torpedo1_0_x  	      ),
-        .Ball_Y_Pos    	( torpedo1_0_y  	   ),
-        .game_start   (game_start),
-        .torpedo_stop (torpedo1_stop),
-        .is_ball   		( is_tor1_0   		),
-        .ball_data      ( torpedo1_0        )
-);
-torpedo 
-torpedo1(
-        .Clk       		( Clk       		),
-        .Reset     		( Reset_h     		),
-        .frame_clk 		( VGA_VS     		),
-        .DrawX     		( DrawX     		),
-        .DrawY     		( DrawY     		),
-        .Ball_X_Pos    	( torpedo1_1_x    ),
-        .Ball_Y_Pos    	( torpedo1_1_y 	   ),
-        .game_start   (game_start),
-        .torpedo_stop (torpedo1_stop),
-        .is_ball   		( is_tor1_1   		),
-        .ball_data      ( torpedo1_1        )
-);
-torpedo
-torpedo2(
-        .Clk       		( Clk       		),
-        .Reset     		( Reset_h     		),
-        .frame_clk 		( VGA_VS     		),
-        .DrawX     		( DrawX     		),
-        .DrawY     		( DrawY     		),
-        .Ball_X_Pos    	( torpedo1_2_x    ),
-        .Ball_Y_Pos    	( torpedo1_2_y	   ),
-        .game_start   (game_start),
-        .torpedo_stop (torpedo1_stop),
-        .is_ball   		( is_tor1_2   		),
-        .ball_data      ( torpedo1_2        )
-);
-torpedo 
-torpedo3(
-        .Clk       		( Clk       		),
-        .Reset     		( Reset_h     		),
-        .frame_clk 		( VGA_VS     		),
-        .DrawX     		( DrawX     		),
-        .DrawY     		( DrawY     		),
-        .Ball_X_Pos    	( torpedo1_3_x      ),
-        .Ball_Y_Pos    	( torpedo1_3_y	   ),
-        .game_start   (game_start),
-        .torpedo_stop (torpedo1_stop),
-        .is_ball   		( is_tor1_3   		),
-        .ball_data      ( torpedo1_3        )
-);
-torpedo 
-torpedo4(
-        .Clk       		( Clk       		),
-        .Reset     		( Reset_h     		),
-        .frame_clk 		( VGA_VS     		),
-        .DrawX     		( DrawX     		),
-        .DrawY     		( DrawY     		),
-        .Ball_X_Pos    	( torpedo2_0_x	      ),
-        .Ball_Y_Pos    	( torpedo2_0_y	   ),
-        .game_start   (game_start),
-        .torpedo_stop (torpedo2_stop),
-        .is_ball   		( is_tor2_0  		),
-        .ball_data      ( torpedo2_0        )
-);
-torpedo 
-torpedo5(
-        .Clk       		( Clk       		),
-        .Reset     		( Reset_h     		),
-        .frame_clk 		( VGA_VS     		),
-        .DrawX     		( DrawX     		),
-        .DrawY     		( DrawY     		),
-        .Ball_X_Pos    	( torpedo2_1_x	      ),
-        .Ball_Y_Pos    	( torpedo2_1_y	   ),
-        .game_start   (game_start),
-        .torpedo_stop (torpedo2_stop),
-        .is_ball   		( is_tor2_1  		),
-        .ball_data      ( torpedo2_1        )
-);
-torpedo 
-torpedo6(
-        .Clk       		( Clk       		),
-        .Reset     		( Reset_h     		),
-        .frame_clk 		( VGA_VS     		),
-        .DrawX     		( DrawX     		),
-        .DrawY     		( DrawY     		),
-        .Ball_X_Pos    	( torpedo2_2_x    ),
-        .Ball_Y_Pos    	( torpedo2_2_y	   ),
-        .game_start   (game_start),
-        .torpedo_stop (torpedo2_stop),
-        .is_ball   		( is_tor2_2   		),
-        .ball_data      ( torpedo2_2        )
-);
-torpedo 
-torpedo7(
-        .Clk       		( Clk       		),
-        .Reset     		( Reset_h     		),
-        .frame_clk 		( VGA_VS     		),
-        .DrawX     		( DrawX     		),
-        .DrawY     		( DrawY     		),
-        .Ball_X_Pos    	( torpedo2_3_x     ),
-        .Ball_Y_Pos    	( torpedo2_3_y	   ),
-        .game_start   (game_start),
-        .torpedo_stop (torpedo2_stop),
-        .is_ball   		( is_tor2_3  		),
-        .ball_data      ( torpedo2_3        )
-);
+    wire [18:0 ]bullet_address1_0;
+    wire [18:0 ]bullet_address1_1;
+    wire [18:0 ]bullet_address1_2;
+    wire [18:0 ]bullet_address1_3;
+    wire [18:0 ]bullet_address1_4;
+    wire [18:0 ]bullet_address1_5;
+    wire [18:0 ]bullet_address1_6;
+    wire [18:0 ]bullet_address1_7;
+    wire [18:0 ]bullet_address1_8;
+    wire [18:0 ]bullet_address1_9;
+    wire [18:0 ]bullet_address2_0;
+    wire [18:0 ]bullet_address2_1;
+    wire [18:0 ]bullet_address2_2;
+    wire [18:0 ]bullet_address2_3;
+    wire [18:0 ]bullet_address2_4;
+    wire [18:0 ]bullet_address2_5;
+    wire [18:0 ]bullet_address2_6;
+    wire [18:0 ]bullet_address2_7;
+    wire [18:0 ]bullet_address2_8;
+    wire [18:0 ]bullet_address2_9;
 
 bullet
 bullet1_0(
@@ -555,6 +635,7 @@ bullet1_0(
         .game_start    (game_start),
         .torpedo_stop (bullet_1_stop),
         .is_ball   		( is_bullet_1_0  		),
+        .read_address   ( bullet_address1_0)
 );
 bullet
 bullet1_1(
@@ -568,6 +649,8 @@ bullet1_1(
         .game_start    (game_start),
         .torpedo_stop (bullet_1_stop),
         .is_ball   		( is_bullet_1_1  		),
+        .read_address   ( bullet_address1_1)
+
 );
 bullet
 bullet1_2(
@@ -581,6 +664,7 @@ bullet1_2(
         .game_start    (game_start),
         .torpedo_stop (bullet_1_stop),
         .is_ball   		( is_bullet_1_2  		),
+        .read_address   ( bullet_address1_2)
 );
 bullet
 bullet1_3(
@@ -594,6 +678,7 @@ bullet1_3(
         .game_start    (game_start),
         .torpedo_stop (bullet_1_stop),
         .is_ball   		( is_bullet_1_3 		),
+        .read_address   ( bullet_address1_3)
 );
 bullet
 bullet1_4(
@@ -607,6 +692,7 @@ bullet1_4(
         .game_start    (game_start),
         .torpedo_stop (bullet_1_stop),
         .is_ball   		( is_bullet_1_4 		),
+        .read_address   ( bullet_address1_4)
 );
 bullet
 bullet1_5(
@@ -620,6 +706,7 @@ bullet1_5(
         .game_start    (game_start),
         .torpedo_stop (bullet_1_stop),
         .is_ball   		( is_bullet_1_5  		),
+        .read_address   ( bullet_address1_5)
 );
 bullet
 bullet1_6(
@@ -633,6 +720,7 @@ bullet1_6(
         .game_start    (game_start),
         .torpedo_stop (bullet_1_stop),
         .is_ball   		( is_bullet_1_6 		),
+        .read_address   ( bullet_address1_6)
 );
 
 bullet
@@ -647,6 +735,7 @@ bullet1_7(
         .game_start    (game_start),
         .torpedo_stop (bullet_1_stop),
         .is_ball   		( is_bullet_1_7 		),
+        .read_address   ( bullet_address1_7)
 );
 bullet
 bullet1_8(
@@ -660,6 +749,7 @@ bullet1_8(
         .game_start    (game_start),
         .torpedo_stop (bullet_1_stop),
         .is_ball   		( is_bullet_1_8 		),
+        .read_address   ( bullet_address1_8)
 );
 bullet
 bullet1_9(
@@ -673,6 +763,7 @@ bullet1_9(
         .game_start    (game_start),
         .torpedo_stop (bullet_1_stop),
         .is_ball   		( is_bullet_1_9  		),
+        .read_address   ( bullet_address1_9)
 );
 
 bullet
@@ -687,6 +778,7 @@ bullet2_0(
         .game_start    (game_start),
         .torpedo_stop (bullet_2_stop),
         .is_ball   		( is_bullet_2_0  		),
+        .read_address   ( bullet_address2_0)
 );
 bullet
 bullet2_1(
@@ -700,6 +792,8 @@ bullet2_1(
         .game_start    (game_start),
         .torpedo_stop (bullet_2_stop),
         .is_ball   		( is_bullet_2_1 		),
+        .read_address   ( bullet_address2_1)
+
 );
 bullet
 bullet2_2(
@@ -713,6 +807,7 @@ bullet2_2(
         .game_start    (game_start),
         .torpedo_stop (bullet_2_stop),
         .is_ball   		( is_bullet_2_2  		),
+        .read_address   ( bullet_address2_2)
 );
 bullet
 bullet2_3(
@@ -726,6 +821,7 @@ bullet2_3(
         .game_start    (game_start),
         .torpedo_stop (bullet_2_stop),
         .is_ball   		( is_bullet_2_3  		),
+        .read_address   ( bullet_address2_3)
 );
 bullet
 bullet2_4(
@@ -739,6 +835,7 @@ bullet2_4(
         .game_start    (game_start),
         .torpedo_stop (bullet_2_stop),
         .is_ball   		( is_bullet_2_4  		),
+        .read_address   ( bullet_address2_4)
 );
 bullet
 bullet2_5(
@@ -752,6 +849,7 @@ bullet2_5(
         .game_start    (game_start),
         .torpedo_stop (bullet_2_stop),
         .is_ball   		( is_bullet_2_5 		),
+        .read_address   ( bullet_address2_5)
 );
 bullet
 bullet2_6(
@@ -765,6 +863,7 @@ bullet2_6(
         .game_start    (game_start),
         .torpedo_stop (bullet_2_stop),
         .is_ball   		( is_bullet_2_6  		),
+        .read_address   ( bullet_address2_6)
 );
 
 bullet
@@ -779,6 +878,7 @@ bullet2_7(
         .game_start    (game_start),
         .torpedo_stop (bullet_2_stop),
         .is_ball   		( is_bullet_2_7  		),
+        .read_address   ( bullet_address2_7)
 );
 bullet
 bullet2_8(
@@ -792,6 +892,7 @@ bullet2_8(
         .game_start    (game_start),
         .torpedo_stop (bullet_2_stop),
         .is_ball   		( is_bullet_2_8  		),
+        .read_address   ( bullet_address2_8)
 );
 bullet
 bullet2_9(
@@ -805,8 +906,12 @@ bullet2_9(
         .game_start    (game_start),
         .torpedo_stop (bullet_2_stop),
         .is_ball   		( is_bullet_2_9 		),
+        .read_address   ( bullet_address2_9)
 );
 
+		bullet_RAM u_bullet_RAM(.*);
+		bullet_left_RAM u_bullet_left_RAM(.*);
+    
     logic [3:0]background_data;
     background background(.Clk,
                         .DrawX,
@@ -818,15 +923,6 @@ bullet2_9(
         .Clk            ( Clk           ),
         .is_ball1 		( is_ball1 		),
         .is_ball2 		( is_ball2 		),
-        .is_tor1_0  (is_tor1_0),
-        .is_tor1_1  (is_tor1_1),
-        .is_tor1_2  (is_tor1_2),
-        .is_tor1_3  (is_tor1_3),
-        .is_tor2_0  (is_tor2_0),
-        .is_tor2_1  (is_tor2_1),
-        .is_tor2_2  (is_tor2_2),
-        .is_tor2_3  (is_tor2_3),
-
         .is_bullet_1_0 ,
         .is_bullet_1_1 ,
         .is_bullet_1_2 ,
@@ -848,6 +944,22 @@ bullet2_9(
         .is_bullet_2_8 ,
         .is_bullet_2_9 ,
 
+        .is_tor1_0      (is_tor1_0      ),
+        .is_tor1_1      (is_tor1_1      ),
+        .is_tor1_2      (is_tor1_2      ),
+        .is_tor1_3      (is_tor1_3      ),
+        .is_tor2_0      (is_tor2_0      ),
+        .is_tor2_1      (is_tor2_1      ),
+        .is_tor2_2      (is_tor2_2      ),
+        .is_tor2_3      (is_tor2_3      ),
+        .torpedo1_0   ( torpedo1_0),
+        .torpedo1_1   ( torpedo1_1),
+        .torpedo1_2   ( torpedo1_2),
+        .torpedo1_3   ( torpedo1_3),
+        .torpedo2_0   ( torpedo2_0),
+        .torpedo2_1   ( torpedo2_1),
+        .torpedo2_2   ( torpedo2_2),
+        .torpedo2_3   ( torpedo2_3),
         .choose_ship1, 
         .choose_ship2,
         .is_choose_state_data1  ( is_choose_state_data1),
@@ -861,7 +973,8 @@ bullet2_9(
         .DrawY   		( DrawY   		),
         .VGA_R   		( VGA_R   		),
         .VGA_G   		( VGA_G   		),
-        .VGA_B   		( VGA_B   		)
+        .VGA_B   		( VGA_B   		),
+        .*
     );
 
 

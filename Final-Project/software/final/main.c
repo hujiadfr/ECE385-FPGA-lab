@@ -374,6 +374,8 @@ int main(){
 	torpedo_t torpedo1, torpedo2;
 	int game_start = 0;
 	usb_init();		// initialize usb
+	ship_init(&ship1, &ship2);
+	gamefile_update(&game_start, &ship1, &ship2, &torpedo1, &torpedo2, &bullet1, &bullet2);
 	developer_mode = 0;
 	int frame_time = 2;
 	while(1){
