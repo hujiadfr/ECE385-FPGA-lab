@@ -13,8 +13,8 @@
 #define INIT_Y 240
 #define INIT_X2 557
 #define INIT_Y2 240
-#define VY_MOST 6
-#define VX_MOST 8
+#define VY_MOST 3
+#define VX_MOST 4
 #define STATE_COUNT_MAX 1
 #define EXCALIBUR_COUNT_MAX 1
 #define RIGHT 0
@@ -37,17 +37,17 @@ typedef struct ship_t{
     int vx,vy;              // velocity
     int HP;
     int ATK;                // 
-    // 鏀规垚 MoveDirection
+    // 閺�瑙勫灇 MoveDirection
     int FaceDirection; 		// -1 for left and 1 for right
     int state;
     int state_count; 		// frame count for each state
-    // 鏀规垚鍏朵粬姝﹀櫒
+    // 閺�瑙勫灇閸忔湹绮锕�娅�
     int Excalibur_state;	// excalibur animation state
     int Excalibur_count;	// frame clock for excalibur
     int Excalibur_remain;	// the remaining skill times
-    // 鏀规垚isFiring
+    // 閺�瑙勫灇isFiring
     int IsFighting;
-    // 鏀规垚getHit
+    // 閺�瑙勫灇getHit
     int injuring;		// just be attacked
     int Excalibur_damage;
 

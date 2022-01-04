@@ -97,21 +97,27 @@ void upstate_tor(torpedo_t *torpedo, ship_t *ship1, ship_t *ship2){
 			torpedo->vy[i] = 0;
 			torpedo->attack_state[i] = DESTROY;
 		}
-		else if (detect(ship1,torpedo->x[i], torpedo->y[i], 20) && torpedo->target == 0){
+		else if (detect(ship1,torpedo->x[i], torpedo->y[i], 25) && torpedo->target == 0){
 			torpedo->x[i] = 0;
 			torpedo->y[i] = 0;
 			torpedo->vx[i] = 0;
 			torpedo->vy[i] = 0;
 			torpedo->attack_state[i] = HIT;
-			ship1->HP -= 2;
+			if (ship2->choose_ship == 0)
+				ship1->HP -= 2;
+			else
+				ship1->HP -= 4;
 		}
-		else if (detect(ship2,torpedo->x[i], torpedo->y[i], 20) && torpedo->target == 1){
+		else if (detect(ship2,torpedo->x[i], torpedo->y[i], 25) && torpedo->target == 1){
 			torpedo->x[i] = 0;
 			torpedo->y[i] = 0;
 			torpedo->vx[i] = 0;
 			torpedo->vy[i] = 0;
 			torpedo->attack_state[i] = HIT;
-			ship2->HP -= 2;
+			if (ship1->choose_ship == 0)
+				ship2->HP -= 2;
+			else
+				ship2->HP -= 4;
 		}
 		else if (detect(ship1,torpedo->x[i], torpedo->y[i], 150) && torpedo->target == 0) //distance > 150; torpedo Permanently switch to inertial guidance
 		{

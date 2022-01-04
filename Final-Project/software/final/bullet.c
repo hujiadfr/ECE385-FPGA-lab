@@ -49,8 +49,11 @@ void update_bullet(bullet_t *bullet1, bullet_t *bullet2, ship_t *ship1, ship_t *
 				bullet1->vx[i] = 0;
 				bullet1->vy[i] = 0;
 			}
-			if(detect(ship2, bullet1->x[i], bullet1->y[i], 10)){
-				ship2->HP -= 2;
+			if(detect(ship2, bullet1->x[i], bullet1->y[i], 6)){
+				if (ship1->choose_ship == 0)
+					ship2->HP -= 3;
+				else
+					ship2-> HP -= 1;
 				bullet1->x[i] = 1000;
 				bullet1->y[i] = 1000;
 				bullet1->vx[i] = 0;
@@ -82,8 +85,11 @@ void update_bullet(bullet_t *bullet1, bullet_t *bullet2, ship_t *ship1, ship_t *
 				bullet2->vx[i] = 0;
 				bullet2->vy[i] = 0;
 			}
-			if(detect(ship1, bullet2->x[i], bullet2->y[i], 10)){
-				ship1->HP -= 2;
+			if(detect(ship1, bullet2->x[i], bullet2->y[i], 6)){
+				if (ship2->choose_ship == 0)
+					ship1->HP -= 3;
+				else
+					ship1->HP -= 1;
 				bullet2->x[i] = 1000;
 				bullet2->y[i] = 1000;
 				bullet2->vx[i] = 0;

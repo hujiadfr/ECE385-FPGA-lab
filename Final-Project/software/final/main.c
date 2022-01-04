@@ -146,9 +146,9 @@ void key_event(int* game_start, ship_t* ship, ship_t* ship2, torpedo_t *torpedo1
 			press_j(ship, torpedo1, SHIP2);
 			printf("torpedo1 \n");
 		}
-		if(key_array[0] == KEY_SPACE ||key_array[1] == KEY_SPACE||
-				key_array[2] == KEY_SPACE|| key_array[3] == KEY_SPACE||
-				key_array[4] == KEY_SPACE || key_array[5] == KEY_SPACE){
+		if(key_array[0] == KEY_0 ||key_array[1] == KEY_0||
+				key_array[2] == KEY_0|| key_array[3] == KEY_0||
+				key_array[4] == KEY_0 || key_array[5] == KEY_0){
 			press_j(ship2, torpedo2, SHIP1);
 			printf("torpedo2 \n");
 		}
@@ -174,16 +174,16 @@ void key_event(int* game_start, ship_t* ship, ship_t* ship2, torpedo_t *torpedo1
 				key_array[4] == KEY_RIGHT || key_array[5] == KEY_RIGHT ){
 			press_d(ship2);
 		}
-		if (key_array[0] == KEY_Z || key_array[1] == KEY_Z ||
-			key_array[2] == KEY_Z || key_array[3] == KEY_Z ||
-			key_array[4] == KEY_Z || key_array[5] == KEY_Z ){
-			press_z(ship2);
-		}
-		if (key_array[0] == KEY_SLASH || key_array[1] == KEY_SLASH ||
-			key_array[2] == KEY_SLASH || key_array[3] == KEY_SLASH ||
-			key_array[4] == KEY_SLASH || key_array[5] == KEY_SLASH ){
-			press_z(ship2);
-		}
+//		if (key_array[0] == KEY_Z || key_array[1] == KEY_Z ||
+//			key_array[2] == KEY_Z || key_array[3] == KEY_Z ||
+//			key_array[4] == KEY_Z || key_array[5] == KEY_Z ){
+//			press_z(ship2);
+//		}
+//		if (key_array[0] == KEY_SLASH || key_array[1] == KEY_SLASH ||
+//			key_array[2] == KEY_SLASH || key_array[3] == KEY_SLASH ||
+//			key_array[4] == KEY_SLASH || key_array[5] == KEY_SLASH ){
+//			press_z(ship2);
+//		}
 
 //		else{
 //			stop(ship);
@@ -230,13 +230,13 @@ void game_update(int *game_start,ship_t *ship, ship_t *ship2, torpedo_t *torpedo
 	generate_bullet(ship, SHIP2, bullet1);
 	generate_bullet(ship2, SHIP1, bullet2);
 	update_bullet(bullet1, bullet2, ship, ship2);
-	printf("%d\n", bullet1->stop);
 	detect_ship_attack(ship,ship2);
 	update_tor(torpedo1, torpedo2, ship, ship2);
 	if (ship->HP <= 0)
 		ship->state = DEAD;
 	if (ship2->HP <=0)
 		ship2->state = DEAD;
+	printf("%d", ship2->vx);
 	// send the information to the hardware
 	gamefile_update(game_start, ship, ship2, torpedo1, torpedo2, bullet1, bullet2);
 }

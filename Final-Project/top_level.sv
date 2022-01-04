@@ -8,7 +8,7 @@
 //                                                                       --
 //      Fall 2017 Distribution                                           --
 //                                                                       --
-//      For use with ECE 385 Lab 8                                       --
+//      For use with ECE 385 Lab final                                       --
 //      UIUC ECE Department                                              --
 //-------------------------------------------------------------------------
 
