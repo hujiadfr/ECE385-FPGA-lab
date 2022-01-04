@@ -1042,7 +1042,7 @@ alt_after_alt_main:
  8000268:	003fff06 	br	8000268 <__alt_data_end+0xf8000268>
 
 0800026c <generate_bullet>:
- *  Created on: 2022Äê1ÔÂ2ÈÕ
+ *  Created on: 2022ï¿½ï¿½1ï¿½ï¿½2ï¿½ï¿½
  *      Author: jiaru
  */
 #include "bullet.h"

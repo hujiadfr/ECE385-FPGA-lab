@@ -15,7 +15,8 @@
 
 // color_mapper: Decide which color to be output to VGA for each pixel.
 module  color_mapper ( 
-                    input logic  Clk,                             //   or background (computed in ball.sv)
+                    input logic  Clk,         
+                    input logic is_hp,                    //   or background (computed in ball.sv)
                     input logic  is_ball1,          // Whether current pixel belongs to ball
 					input logic is_ball2,
                     input logic is_tor1_0,
@@ -502,7 +503,10 @@ module  color_mapper (
             color = background_color;
         end      
 
-        if (is_ship == 1'b1) begin
+        if (is_hp) begin
+            color = 24'hFF0000;
+        end
+        else if (is_ship == 1'b1) begin
             color = ship_color;
         end  
         else if (is_weapon == 1'b1) begin

@@ -279,7 +279,13 @@ module top_level(
     //     .ship_state 		( ship_state 		)
     // );
 //
-	
+	logic [9:0] ship1_hp, ship2_hp;
+    assign ship1_hp = game_file[137:128];//4
+    assign ship2_hp = game_file[361:352];//11
+    logic is_hp;
+    hp u_hp(.*);
+
+
     logic [3:0] data1_1, data1_2, data1_3, data1_4, data1_5, data1_6, data1_7, data1_8, data1_9, data1_10, data1_11, data1_12, data1_13, data1_14, data1_15;
     logic [3:0] data2_1, data2_2, data2_3, data2_4, data2_5, data2_6, data2_7, data2_8, data2_9, data2_10, data2_11, data2_12, data2_13, data2_14, data2_15;
 
