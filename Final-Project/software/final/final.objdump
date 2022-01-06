@@ -35,49 +35,49 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY
   8 .debug_aranges 00001018  00000000  00000000  00017e00  2**3
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_info   000263cf  00000000  00000000  00018e18  2**0
+  9 .debug_info   000263d2  00000000  00000000  00018e18  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_abbrev 00009be6  00000000  00000000  0003f1e7  2**0
+ 10 .debug_abbrev 00009be6  00000000  00000000  0003f1ea  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_line   0000c7fc  00000000  00000000  00048dcd  2**0
+ 11 .debug_line   0000c78c  00000000  00000000  00048dd0  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_frame  00002910  00000000  00000000  000555cc  2**2
+ 12 .debug_frame  00002910  00000000  00000000  0005555c  2**2
                   CONTENTS, READONLY, DEBUGGING
- 13 .debug_str    000041a5  00000000  00000000  00057edc  2**0
+ 13 .debug_str    000041a7  00000000  00000000  00057e6c  2**0
                   CONTENTS, READONLY, DEBUGGING
- 14 .debug_loc    000178cc  00000000  00000000  0005c081  2**0
+ 14 .debug_loc    000178cc  00000000  00000000  0005c013  2**0
                   CONTENTS, READONLY, DEBUGGING
- 15 .debug_alt_sim_info 00000040  00000000  00000000  00073950  2**2
+ 15 .debug_alt_sim_info 00000040  00000000  00000000  000738e0  2**2
                   CONTENTS, READONLY, DEBUGGING
- 16 .debug_ranges 000018f0  00000000  00000000  00073990  2**3
+ 16 .debug_ranges 000018f0  00000000  00000000  00073920  2**3
                   CONTENTS, READONLY, DEBUGGING
- 17 .thread_model 00000003  00000000  00000000  0007900a  2**0
+ 17 .thread_model 00000003  00000000  00000000  00078f9a  2**0
                   CONTENTS, READONLY
- 18 .cpu          0000000c  00000000  00000000  0007900d  2**0
+ 18 .cpu          0000000c  00000000  00000000  00078f9d  2**0
                   CONTENTS, READONLY
- 19 .qsys         00000001  00000000  00000000  00079019  2**0
+ 19 .qsys         00000001  00000000  00000000  00078fa9  2**0
                   CONTENTS, READONLY
- 20 .simulation_enabled 00000001  00000000  00000000  0007901a  2**0
+ 20 .simulation_enabled 00000001  00000000  00000000  00078faa  2**0
                   CONTENTS, READONLY
- 21 .sysid_hash   00000004  00000000  00000000  0007901b  2**0
+ 21 .sysid_hash   00000004  00000000  00000000  00078fab  2**0
                   CONTENTS, READONLY
- 22 .sysid_base   00000004  00000000  00000000  0007901f  2**0
+ 22 .sysid_base   00000004  00000000  00000000  00078faf  2**0
                   CONTENTS, READONLY
- 23 .sysid_time   00000004  00000000  00000000  00079023  2**0
+ 23 .sysid_time   00000004  00000000  00000000  00078fb3  2**0
                   CONTENTS, READONLY
- 24 .stderr_dev   0000000b  00000000  00000000  00079027  2**0
+ 24 .stderr_dev   0000000b  00000000  00000000  00078fb7  2**0
                   CONTENTS, READONLY
- 25 .stdin_dev    0000000b  00000000  00000000  00079032  2**0
+ 25 .stdin_dev    0000000b  00000000  00000000  00078fc2  2**0
                   CONTENTS, READONLY
- 26 .stdout_dev   0000000b  00000000  00000000  0007903d  2**0
+ 26 .stdout_dev   0000000b  00000000  00000000  00078fcd  2**0
                   CONTENTS, READONLY
- 27 .sopc_system_name 00000009  00000000  00000000  00079048  2**0
+ 27 .sopc_system_name 00000009  00000000  00000000  00078fd8  2**0
                   CONTENTS, READONLY
- 28 .quartus_project_dir 00000033  00000000  00000000  00079051  2**0
+ 28 .quartus_project_dir 00000034  00000000  00000000  00078fe1  2**0
                   CONTENTS, READONLY
- 29 .jdi          0000535a  00000000  00000000  00079084  2**0
+ 29 .jdi          0000535a  00000000  00000000  00079015  2**0
                   CONTENTS, READONLY
- 30 .sopcinfo     001727d8  00000000  00000000  0007e3de  2**0
+ 30 .sopcinfo     001727d8  00000000  00000000  0007e36f  2**0
                   CONTENTS, READONLY
 SYMBOL TABLE:
 08000000 l    d  .entry	00000000 .entry
@@ -1042,7 +1042,7 @@ alt_after_alt_main:
  8000268:	003fff06 	br	8000268 <__alt_data_end+0xf8000268>
 
 0800026c <generate_bullet>:
- *  Created on: 2022ï¿½ï¿½1ï¿½ï¿½2ï¿½ï¿½
+ *  Created on: 2022Äê1ÔÂ2ÈÕ
  *      Author: jiaru
  */
 #include "bullet.h"
@@ -2879,40 +2879,40 @@ void key_event(int* game_start, ship_t* ship, ship_t* ship2, torpedo_t *torpedo1
  80015b8:	21139804 	addi	r4,r4,20064
  80015bc:	80065f80 	call	80065f8 <puts>
 		}
-		if(key_array[0] == KEY_0 ||key_array[1] == KEY_0||
+		if(key_array[0] == KEY_SLASH ||key_array[1] == KEY_SLASH||
  80015c0:	e0bff617 	ldw	r2,-40(fp)
- 80015c4:	108009e0 	cmpeqi	r2,r2,39
+ 80015c4:	10800e20 	cmpeqi	r2,r2,56
  80015c8:	10000f1e 	bne	r2,zero,8001608 <key_event+0x278>
  80015cc:	e0bff717 	ldw	r2,-36(fp)
- 80015d0:	108009e0 	cmpeqi	r2,r2,39
+ 80015d0:	10800e20 	cmpeqi	r2,r2,56
  80015d4:	10000c1e 	bne	r2,zero,8001608 <key_event+0x278>
-				key_array[2] == KEY_0|| key_array[3] == KEY_0||
+				key_array[2] == KEY_SLASH|| key_array[3] == KEY_SLASH||
  80015d8:	e0bff817 	ldw	r2,-32(fp)
 				||key_array[2] == KEY_J ||key_array[3] == KEY_J
 				||key_array[4] == KEY_J ||key_array[5] == KEY_J){
 			press_j(ship, torpedo1, SHIP2);
 			printf("torpedo1 \n");
 		}
-		if(key_array[0] == KEY_0 ||key_array[1] == KEY_0||
- 80015dc:	108009e0 	cmpeqi	r2,r2,39
+		if(key_array[0] == KEY_SLASH ||key_array[1] == KEY_SLASH||
+ 80015dc:	10800e20 	cmpeqi	r2,r2,56
  80015e0:	1000091e 	bne	r2,zero,8001608 <key_event+0x278>
-				key_array[2] == KEY_0|| key_array[3] == KEY_0||
+				key_array[2] == KEY_SLASH|| key_array[3] == KEY_SLASH||
  80015e4:	e0bff917 	ldw	r2,-28(fp)
- 80015e8:	108009e0 	cmpeqi	r2,r2,39
+ 80015e8:	10800e20 	cmpeqi	r2,r2,56
  80015ec:	1000061e 	bne	r2,zero,8001608 <key_event+0x278>
-				key_array[4] == KEY_0 || key_array[5] == KEY_0){
+				key_array[4] == KEY_SLASH || key_array[5] == KEY_SLASH){
  80015f0:	e0bffa17 	ldw	r2,-24(fp)
 				||key_array[4] == KEY_J ||key_array[5] == KEY_J){
 			press_j(ship, torpedo1, SHIP2);
 			printf("torpedo1 \n");
 		}
-		if(key_array[0] == KEY_0 ||key_array[1] == KEY_0||
-				key_array[2] == KEY_0|| key_array[3] == KEY_0||
- 80015f4:	108009e0 	cmpeqi	r2,r2,39
+		if(key_array[0] == KEY_SLASH ||key_array[1] == KEY_SLASH||
+				key_array[2] == KEY_SLASH|| key_array[3] == KEY_SLASH||
+ 80015f4:	10800e20 	cmpeqi	r2,r2,56
  80015f8:	1000031e 	bne	r2,zero,8001608 <key_event+0x278>
-				key_array[4] == KEY_0 || key_array[5] == KEY_0){
+				key_array[4] == KEY_SLASH || key_array[5] == KEY_SLASH){
  80015fc:	e0bffb17 	ldw	r2,-20(fp)
- 8001600:	108009d8 	cmpnei	r2,r2,39
+ 8001600:	10800e18 	cmpnei	r2,r2,56
  8001604:	1000071e 	bne	r2,zero,8001624 <key_event+0x294>
 			press_j(ship2, torpedo2, SHIP1);
  8001608:	000d883a 	mov	r6,zero
@@ -2933,8 +2933,8 @@ void key_event(int* game_start, ship_t* ship, ship_t* ship2, torpedo_t *torpedo1
  8001638:	10000c1e 	bne	r2,zero,800166c <key_event+0x2dc>
 				key_array[2] == KEY_UP || key_array[3] == KEY_UP ||
  800163c:	e0bff817 	ldw	r2,-32(fp)
-				key_array[2] == KEY_0|| key_array[3] == KEY_0||
-				key_array[4] == KEY_0 || key_array[5] == KEY_0){
+				key_array[2] == KEY_SLASH|| key_array[3] == KEY_SLASH||
+				key_array[4] == KEY_SLASH || key_array[5] == KEY_SLASH){
 			press_j(ship2, torpedo2, SHIP1);
 			printf("torpedo2 \n");
 		}
@@ -2947,7 +2947,7 @@ void key_event(int* game_start, ship_t* ship, ship_t* ship2, torpedo_t *torpedo1
  8001650:	1000061e 	bne	r2,zero,800166c <key_event+0x2dc>
 				key_array[4] == KEY_UP || key_array[5] == KEY_UP ){
  8001654:	e0bffa17 	ldw	r2,-24(fp)
-				key_array[4] == KEY_0 || key_array[5] == KEY_0){
+				key_array[4] == KEY_SLASH || key_array[5] == KEY_SLASH){
 			press_j(ship2, torpedo2, SHIP1);
 			printf("torpedo2 \n");
 		}
@@ -4537,9 +4537,9 @@ void ship_init(ship_t *ship, ship_t *ship2){
  80026f0:	e0bfff17 	ldw	r2,-4(fp)
  80026f4:	00c03c04 	movi	r3,240
  80026f8:	10c00215 	stw	r3,8(r2)
-	ship2 -> HP = 5;
+	ship2 -> HP = 50;
  80026fc:	e0bfff17 	ldw	r2,-4(fp)
- 8002700:	00c00144 	movi	r3,5
+ 8002700:	00c00c84 	movi	r3,50
  8002704:	10c00515 	stw	r3,20(r2)
 	ship2 -> ATK = 3;
  8002708:	e0bfff17 	ldw	r2,-4(fp)
