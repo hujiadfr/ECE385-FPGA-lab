@@ -146,9 +146,9 @@ void key_event(int* game_start, ship_t* ship, ship_t* ship2, torpedo_t *torpedo1
 			press_j(ship, torpedo1, SHIP2);
 			printf("torpedo1 \n");
 		}
-		if(key_array[0] == KEY_SLASH ||key_array[1] == KEY_SLASH||
-				key_array[2] == KEY_SLASH|| key_array[3] == KEY_SLASH||
-				key_array[4] == KEY_SLASH || key_array[5] == KEY_SLASH){
+		if(key_array[0] == KEY_0 ||key_array[1] == KEY_0||
+				key_array[2] == KEY_0|| key_array[3] == KEY_0||
+				key_array[4] == KEY_0 || key_array[5] == KEY_0){
 			press_j(ship2, torpedo2, SHIP1);
 			printf("torpedo2 \n");
 		}

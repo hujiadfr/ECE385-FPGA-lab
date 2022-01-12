@@ -30,51 +30,51 @@ module avalon_game_interface (
 	begin
 		if (RESET)				// if reset is active, clear all registers
 			begin
-				Reg_unit[0]  <= 32'h0;	// saber_exist 			  0
-				Reg_unit[1]  <= 32'h0;  // saber_position x	  32
-				Reg_unit[2]  <= 32'h0;  // saber_position y 	  64
-				Reg_unit[3]  <= 32'h0;  // saber state			  96
-				Reg_unit[4]  <= 32'h0;	// saber_figure		  128
-				Reg_unit[5]  <= 32'h0;	// saber_hidden		  160
+				Reg_unit[0]  <= 32'h0;	// ship_exist 			  0
+				Reg_unit[1]  <= 32'h0;  // ship_position x	  32
+				Reg_unit[2]  <= 32'h0;  // ship_position y 	  64
+				Reg_unit[3]  <= 32'h0;  // ship state			  96
+				Reg_unit[4]  <= 32'h0;	// ship_figure		  128
+				Reg_unit[5]  <= 32'h0;	// ship_hidden		  160
 				Reg_unit[6]  <= 32'h0;	
 				Reg_unit[7]  <= 32'h0;  // ship2_exist		  224
 				Reg_unit[8]  <= 32'h0;  // ship2_position x 256
 				Reg_unit[9]  <= 32'h0;  // ship2_position y 288
 				Reg_unit[10] <= 32'h0;  // ship2_state		  320
 				Reg_unit[11] <= 32'h0;  // ship2_figure 	  352
-				Reg_unit[12] <= 32'h0;  
-				Reg_unit[13] <= 32'h0;	// monster2_exist 	  416
-				Reg_unit[14] <= 32'h0;	// monster2_position x 448
-				Reg_unit[15] <= 32'h0;	// monster2_position y 480
-				Reg_unit[16] <= 32'h0;	// monster2_state		  512
-				Reg_unit[17] <= 32'h0;	// monster2_hidden 	  544
-				Reg_unit[18] <= 32'h0;
-				Reg_unit[19] <= 32'h0;  // background_exist    608
-				Reg_unit[20] <= 32'h0;  // home_exist			  640
-				Reg_unit[21] <= 32'h0;  // win_exist			  672
-				Reg_unit[22] <= 32'h0;	// gameover_exist 	  704
+				Reg_unit[12] <= 32'h0;	// torpedo  1    x0       384  
+				Reg_unit[13] <= 32'h0;	// torpedo  1    x1       416	
+				Reg_unit[14] <= 32'h0;	// torpedo  1    x2       448	
+				Reg_unit[15] <= 32'h0;	// torpedo  1    x3       480	
+				Reg_unit[16] <= 32'h0;	// torpedo	1    y0       512	
+				Reg_unit[17] <= 32'h0;	// torpedo  1    y1       544	
+				Reg_unit[18] <= 32'h0;	// y2					  576
+				Reg_unit[19] <= 32'h0;	// torpedo y3             608  
+				Reg_unit[20] <= 32'h0;	// home_exist			  640  
+				Reg_unit[21] <= 32'h0;	// win_exist			  672  
+				Reg_unit[22] <= 32'h0;	// gameover_exist 	  	  704	
 				Reg_unit[23] <= 32'h0;
-				Reg_unit[24] <= 32'h0;	// hp						 768
-				Reg_unit[25] <= 32'h0;	// HP_exist 			 800
-				Reg_unit[26] <= 32'h0;	// blood1_exist 		 832
-				Reg_unit[27] <= 32'h0;	// blood2_exist 		 864
-				Reg_unit[28] <= 32'h0;	// blood1_state 		 896
-				Reg_unit[29] <= 32'h0;	// blood2_state		 928
-				Reg_unit[30] <= 32'h0;	// monster1_attackx   960
-				Reg_unit[31] <= 32'h0;	// monster1_attacky 	 992
-				Reg_unit[32] <= 32'h0;	// monster2_attackx 	 1024
-				Reg_unit[33] <= 32'h0;	// monster2_attacky 	 1056
+				Reg_unit[24] <= 32'h0;	// hp					  768	
+				Reg_unit[25] <= 32'h0;	// HP_exist 			  800	
+				Reg_unit[26] <= 32'h0;	// torpedo2  x0	 		  832	
+				Reg_unit[27] <= 32'h0;	// torpedo2  x2	 	      864	
+				Reg_unit[28] <= 32'h0;	// torpedo2  x3	          896	
+				Reg_unit[29] <= 32'h0;	// torpedo2  x4  		  928	
+				Reg_unit[30] <= 32'h0;	// torpedo2  y0  		  960	
+				Reg_unit[31] <= 32'h0;	// torpedo2  y1  		  992	
+				Reg_unit[32] <= 32'h0;	// torpedo2  y2	 		  1024	
+				Reg_unit[33] <= 32'h0;	// torpedo2  y3	 		  1056	
 				Reg_unit[34] <= 32'h0;
-				Reg_unit[35] <= 32'h0;	// skill_exist			 1120
-				Reg_unit[36] <= 32'h0;	// skill_x				 1152
-				Reg_unit[37] <= 32'h0;	// skill_y				 1184
-				Reg_unit[38] <= 32'h0;	// skill_state			 1216
-				Reg_unit[39] <= 32'h0;	// faceleft 			 1248
+				Reg_unit[35] <= 32'h0;	// skill_exist			 1120	
+				Reg_unit[36] <= 32'h0;	// skill_x				 1152	
+				Reg_unit[37] <= 32'h0;	// torpedo1 stop				 1	
+				Reg_unit[38] <= 32'h0;	// torpedo2 stop			 1216	
+				Reg_unit[39] <= 32'h0;	// faceleft 			 1248	
 				Reg_unit[40] <= 32'h0;
-				Reg_unit[41] <= 32'h0;	// win_exist			 1312
+				Reg_unit[41] <= 32'h0;	
 				Reg_unit[42] <= 32'h0;
-				Reg_unit[43] <= 32'h0;	// Excalibur_icon_number 1376	 	 
-				Reg_unit[44] <= 32'h0;	// Excalibur_exist	 1408
+				Reg_unit[43] <= 32'h0;	 
+				Reg_unit[44] <= 32'h0;	
 				Reg_unit[45] <= 32'h0;
 				Reg_unit[46] <= 32'h0;
 				Reg_unit[47] <= 32'h0;
@@ -90,10 +90,10 @@ module avalon_game_interface (
 				Reg_unit[57] <= 32'h0;
 				Reg_unit[58] <= 32'h0;
 				Reg_unit[59] <= 32'h0;
-				Reg_unit[60] <= 32'h0;
-				Reg_unit[61] <= 32'h0;
-				Reg_unit[62] <= 32'h0;
-				Reg_unit[63] <= 32'h0;
+				Reg_unit[60] <= 32'h0;	// choose_ship1			1920	
+				Reg_unit[61] <= 32'h0;	// choose_ship2			1952
+				Reg_unit[62] <= 32'h0;	// ship1_choose_ready	62*32=1984
+				Reg_unit[63] <= 32'h0;	// ship2_choose_ready	63*32=2016
 			end
 		else if (AVL_WRITE && AVL_CS)
 			// Write

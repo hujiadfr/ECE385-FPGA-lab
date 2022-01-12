@@ -15,49 +15,47 @@
 
 // color_mapper: Decide which color to be output to VGA for each pixel.
 module  color_mapper ( 
-                    input logic  Clk,         
-                    input logic is_hp,                    //   or background (computed in ball.sv)
-                    input logic  is_ball1,          // Whether current pixel belongs to ball
-					input logic is_ball2,
-                    input logic is_tor1_0,
-                    input logic is_tor1_1,
-                    input logic is_tor1_2,
-                    input logic is_tor1_3,
-                    input logic is_tor2_0,
-                    input logic is_tor2_1,
-                    input logic is_tor2_2,
-                    input logic is_tor2_3,
-                    
-                    input logic is_bullet_1_0,
-                    input logic is_bullet_1_1,
-                    input logic is_bullet_1_2,
-                    input logic is_bullet_1_3,
-                    input logic is_bullet_1_4,
-                    input logic is_bullet_1_5,
-                    input logic is_bullet_1_6,
-                    input logic is_bullet_1_7,
-                    input logic is_bullet_1_8,
-                    input logic is_bullet_1_9,
-                    input logic is_bullet_2_0,
-                    input logic is_bullet_2_1,
-                    input logic is_bullet_2_2,
-                    input logic is_bullet_2_3,
-                    input logic is_bullet_2_4,
-                    input logic is_bullet_2_5,
-                    input logic is_bullet_2_6,
-                    input logic is_bullet_2_7,
-                    input logic is_bullet_2_8,
-                    input logic is_bullet_2_9,
+        input logic  Clk,         
+        input logic is_hp,
 
-                    input  logic [3:0] torpedo1_0,
-                    input  logic [3:0] torpedo1_1,
-                    input  logic [3:0] torpedo1_2,
-                    input  logic [3:0] torpedo1_3,
-                    input  logic [3:0] torpedo2_0,
-                    input  logic [3:0] torpedo2_1,
-                    input  logic [3:0] torpedo2_2,
-                    input  logic [3:0] torpedo2_3,
+        // background
+        input logic [3:0] background_data,
 
+        // choose state
+        input logic [2:0] choose_ship1, choose_ship2,
+        input logic is_choose_state_data1,
+        input logic is_choose_state_data2,
+        input logic [3:0] choose_state_data1,
+        input logic [3:0] choose_state_data2,
+
+        // ship
+        input logic is_ball1,
+        input logic is_ball2,
+        input logic [3:0] ball_data1,
+        input logic [3:0] ball_data2,
+
+        // bullet
+        input logic is_bullet_1_0,
+        input logic is_bullet_1_1,
+        input logic is_bullet_1_2,
+        input logic is_bullet_1_3,
+        input logic is_bullet_1_4,
+        input logic is_bullet_1_5,
+        input logic is_bullet_1_6,
+        input logic is_bullet_1_7,
+        input logic is_bullet_1_8,
+        input logic is_bullet_1_9,
+        input logic is_bullet_2_0,
+        input logic is_bullet_2_1,
+        input logic is_bullet_2_2,
+        input logic is_bullet_2_3,
+        input logic is_bullet_2_4,
+        input logic is_bullet_2_5,
+        input logic is_bullet_2_6,
+        input logic is_bullet_2_7,
+        input logic is_bullet_2_8,
+        input logic is_bullet_2_9,
+                                        
                     input logic [3:0] bullet_data1_0,
                     input logic [3:0] bullet_data1_1,
                     input logic [3:0] bullet_data1_2,
@@ -79,14 +77,26 @@ module  color_mapper (
                     input logic [3:0] bullet_data2_8,
                     input logic [3:0] bullet_data2_9,
 
-                    input logic [2:0] choose_ship1, choose_ship2,
-                    input logic is_choose_state_data1,
-                    input logic is_choose_state_data2,
-                    input logic [3:0] background_data,
-                    input logic [3:0] ball_data1,
-                    input logic [3:0] ball_data2,
-                    input logic [3:0] choose_state_data1,
-                    input logic [3:0] choose_state_data2,
+                    // torpedo
+                    input logic is_tor1_0,
+                    input logic is_tor1_1,
+                    input logic is_tor1_2,
+                    input logic is_tor1_3,
+                    input logic is_tor2_0,
+                    input logic is_tor2_1,
+                    input logic is_tor2_2,
+                    input logic is_tor2_3,
+
+                    input logic [3:0] torpedo1_0,
+                    input logic [3:0] torpedo1_1,
+                    input logic [3:0] torpedo1_2,
+                    input logic [3:0] torpedo1_3,
+                    input logic [3:0] torpedo2_0,
+                    input logic [3:0] torpedo2_1,
+                    input logic [3:0] torpedo2_2,
+                    input logic [3:0] torpedo2_3,
+
+                    // pixel location and output
                     input logic [9:0] DrawX, DrawY,      // Current pixel coordinates
                     output logic [7:0] VGA_R, VGA_G, VGA_B // VGA RGB output
                      );
